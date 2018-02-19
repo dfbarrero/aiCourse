@@ -1,0 +1,22 @@
+
+\newcommand{\modo}[1][]{}
+%\renewcommand{\modo}{ASC} % DESCOMENTAR LINEA CORRECTA
+\renewcommand{\modo}{INDUSTRIALES} 
+
+% Iniciamos variables con valores vacios
+\newcommand{\autor}{}
+\newcommand{\asignatura}{}
+\newcommand{\carrera}{}
+
+% Personalizar a partir de aqui
+\IfStrEq{\modo}{ASC}{
+	\renewcommand{\autor}{}
+	\renewcommand{\asignatura}{Advanced Robot Control}
+	\renewcommand{\carrera}{Grado en Ingeniería Informática/Computadores}
+}{}
+
+\IfStrEq{\modo}{INDUSTRIALES}{
+	\renewcommand{\autor}{}
+	\renewcommand{\asignatura}{Inteligencia Artificial en los Sistemas de Control Autónomo}
+	\renewcommand{\carrera}{Máster Universitario en Ingeniería Industrial}
+}{}
