@@ -1,0 +1,23 @@
+\begin{tikzpicture}
+    \robotbase
+	\angann{\thetaone}{$\theta_1$}
+	\lineann[0.7]{\thetaone}{\Lone}{$L_1$}
+	\link(\thetaone:\Lone);
+	\joint
+	\begin{scope}[shift=(\thetaone:\Lone), rotate=\thetaone]
+	     \angann{\thetatwo}{$\theta_2$}
+	     \lineann[-1.5]{\thetatwo}{\Ltwo}{$L_2$}
+	     \link(\thetatwo:\Ltwo);
+	     \joint
+	     \begin{scope}[shift=(\thetatwo:\Ltwo), rotate=\thetatwo]
+	           \angann{\thetathree}{$\theta_3$}
+	           \lineann[0.7]{\thetathree}{\Lthree}{$L_3$}
+	           \draw [dashed, red,rotate=\thetathree] (0,0) -- (1.2\ddx,0pt);
+	           \link(\thetathree:\Lthree);
+	           \joint
+	           \begin{scope}[shift=(\thetathree:\Lthree), rotate=\thetathree]
+	               \grip
+	           \end{scope}
+	     \end{scope}
+    \end{scope}
+\end{tikzpicture}
