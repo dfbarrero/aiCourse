@@ -2,6 +2,8 @@
 
 Assorted contents:
 
+* [Introduction to Artificial Intelligence ](introduction/introduction.pdf)
+
 * [Introduction to Robotics](robotics/robotics.pdf)
 
 * [Aritificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
