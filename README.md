@@ -1,6 +1,10 @@
 # Contents
 
-1.- [Introduction to Robotics](robotics/robotics.pdf)
+Assorted contents:
+
+* [Introduction to Robotics](robotics/robotics.pdf)
+
+* [Aritificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
 
 # Compilation
 

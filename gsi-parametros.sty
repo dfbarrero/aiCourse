@@ -1,7 +1,9 @@
 
 \newcommand{\modo}[1][]{}
 %\renewcommand{\modo}{ASC} % DESCOMENTAR LINEA CORRECTA
-\renewcommand{\modo}{INDUSTRIALES} 
+%\renewcommand{\modo}{MASTER-ESPACIO} 
+\renewcommand{\modo}{VIDEOJUEGOS} 
+%\renewcommand{\modo}{INDUSTRIALES} 
 
 % Iniciamos variables con valores vacios
 \newcommand{\autor}{}
@@ -19,4 +21,16 @@
 	\renewcommand{\autor}{}
 	\renewcommand{\asignatura}{Inteligencia Artificial en los Sistemas de Control Autónomo}
 	\renewcommand{\carrera}{Máster Universitario en Ingeniería Industrial}
+}{}
+
+\IfStrEq{\modo}{MASTER-ESPACIO}{
+	\renewcommand{\autor}{}
+	\renewcommand{\asignatura}{Inteligencia Artificial en los Sistemas de Control Autónomo}
+	\renewcommand{\carrera}{Máster en Ciencia y Tecnología desde el Espacio}
+}{}
+
+\IfStrEq{\modo}{VIDEOJUEGOS}{
+	\renewcommand{\autor}{}
+	\renewcommand{\asignatura}{Videogames Technology}
+	\renewcommand{\carrera}{Asignatura transversal}
 }{}
