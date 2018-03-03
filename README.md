@@ -6,7 +6,9 @@ Assorted contents:
 
 * [Introduction to Robotics](robotics/robotics.pdf)
 
-* [Aritificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
+* [Artificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
+
+* [Introduction to Evolutionary Computation](introEC/introEC.pdf)
 
 # Compilation
 

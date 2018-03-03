@@ -6,7 +6,7 @@ Fitness: Number of ones in the string
 
 Selection: Take two random strings and select the fittest one
 
-Mutation: Flip a random bit with probability $0.05$
+Mutation: Flip a random bit with probability 0.05
 
 Crossover: One-point crossover
 
