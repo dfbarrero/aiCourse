@@ -42,7 +42,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Descomentar para habilitar barra de navegación superior
-\ponerNavegacion
+\setNavigation
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,9 +78,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Use this block for a blue title slide with modified footline
 {\titlepageBlue
-    \setbeamertemplate{headline}{}
-	\setbeamercolor{frametitle}{bg=black}
-	\setbeamercolor{normal text}{bg=black}
     \begin{frame}
         \titlepage
     \end{frame}
@@ -105,8 +102,7 @@
 	\end{block}
 \end{frame}
 
-{
-\eliminarNavegacion
+{ \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
  \frametitle{Table of Contents}
  \tableofcontents
