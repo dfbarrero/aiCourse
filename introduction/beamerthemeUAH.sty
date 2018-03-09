@@ -42,16 +42,7 @@
 \newcommand{\disableNavigation}[1]{
 	\makeatletter
 	\setbeamercolor{section in head/foot}{bg=#1, fg=#1}
-	%\setbeamercolor{author in head/foot}{bg=#1, fg=#1}
-	%\setbeamercolor{subsection in head/foot}{bg=#1, fg=#1}
-	%\setbeamercolor{section name in head/foot}{bg=#1, fg=#1}
-	%\setbeamercolor{subsection name in head/foot}{bg=#1, fg=#1}
-	%\setbeamercolor{section in head/foot shaded}{bg=#1, fg=#1}
 	\setbeamercolor{mini frame}{bg=#1, fg=#1}
-	%\setbeamertemplate{headline}[default]
-	%\setbeamertemplate{headline}{}
-	%\def\beamer@entrycode{\vspace*{-\headheight}}
-	%\def\beamer@entrycode{\vspace{-5em}}
 	\makeatother
 }
 
@@ -75,6 +66,33 @@
   \setbeamercolor{subsection in toc}{bg=white,fg=structure}
   \setbeamertemplate{subsection in toc}{%
     \hspace{1.2em}{\color{oroUAH}\rule[0.3ex]{3pt}{3pt}}~\inserttocsubsection\par}
+
+%%%%
+%% Format syntax highlight
+%%%
+\lstset{ %
+  language=Java,                % the language of the code
+  basicstyle=\footnotesize,           % the size of the fonts that are used for the code
+  %numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  %  backgroundcolor=\color{white},      % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  %frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. commens (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  %title=\lstname,                   % show the filename of files included with \lstinputlisting;
+  keywordstyle=\color{marronUAH},          % keyword style
+  commentstyle=\color{verdeUAH},       % comment style
+  stringstyle=\color{rojoUAH},         % string literal style
+  escapeinside={\%*}{*)},            % if you want to add a comment within your code
+  morekeywords={*,...}               % if you want to add more keywords to the set
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Create Footline for body slides. To modify content,
