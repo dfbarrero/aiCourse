@@ -25,7 +25,7 @@
 	\foreach \source in {1,...,5} 
 	\path (H-\source) edge (O); 
 	% Annotate the layers 
-	%\node[annot,above of=H-1, node distance=1cm] (hl) {Hidden layer}; 
-	%\node[annot,left of=hl] {Input layer}; 
-	%\node[annot,right of=hl] {Output layer};
+	\node[annot,above of=H-1, node distance=1cm] (hl) {\textit{Hidden}}; 
+	\node[annot,left of=hl] {\textit{Input}}; 
+	\node[annot,right of=hl] {\textit{Output}};
 \end{tikzpicture}

@@ -19,27 +19,26 @@
 		  {$w_2$};
   	\node[on chain=2,init] (sigma) 
 		  {$\displaystyle\Sigma$};
-	\node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activation \\ function ($\theta$)}}]   
+	\node[on chain=2,squa,label=above:{\parbox{2cm}{\centering Activate \\ function}}]   
 		  {$g$};
   	\node[on chain=2,label=above:Output,join=by -latex] 
 		  {$y$};
 	\begin{scope}[start chain=1]
 		\node[on chain=1] at (0,1.5cm) 
-		  (x1) {$a_1$};
+		  (x1) {$1$};
 		\node[on chain=1,join=by o-latex] 
-		  (w1) {$w_1$};
+		  (w1) {$w_0$};
 	\end{scope}
 	\begin{scope}[start chain=3]
 		\node[on chain=3] at (0,-1.5cm) 
 		  (x3) {$a_3$};
-	  	\node[on chain=3,label=below:Weights,join=by o-latex] 
+	  	\node[on chain=3,join=by o-latex] 
 	   	  (w3) {$w_3$};
 	\end{scope}
-	%\node[label=above:\parbox{2cm}{}] at (sigma|-w1) (b) {};
+%	\node[label=above:\parbox{2cm}{\centering Bias \\ $w_{0}$}] at (sigma|-w1) (b) {};
 
 	\draw[-latex] (w1) -- (sigma);
 	\draw[-latex] (w3) -- (sigma);
-	%\draw[o-latex] (b) -- (sigma);
+%	\draw[o-latex] (b) -- (sigma);
 
-	\draw[decorate,decoration={brace,mirror}] (x1.north west) -- node[left=10pt] {Inputs} (x3.south west);
 \end{tikzpicture}

@@ -245,7 +245,7 @@
 		\begin{description}
 		\item[$a_i$] Normalized input ($0 \le a_i \le 1$)
 		\item[$w_{i}$] Weight of input $j$ ($0 \le w_{i} \le 1$)
-		\item[$w_{0}$] Bias
+		\item[$\theta$] Threshold
 		\item[$g$] Activation function
 		\end{description}
 
@@ -274,9 +274,9 @@
 	\column{0.60\textwidth}
 	The idealized activation function is a step function
 	\begin{equation*}
-	y =
+	g(x) =
 	  \begin{cases}
-	      1  & \text{if } \sum_{i=1}^{N} w_i x_i > w_0\\
+	      1  & \text{if } \sum_{i=1}^{N} w_i x_i > \theta\\
 		  0  & \text{otherwise}\\
 	  \end{cases}
 	\end{equation*}
@@ -286,9 +286,9 @@
     \begin{tikzpicture}[scale=0.4]
       \begin{axis}[ 
           xlabel=$x$,
-          ylabel={$f(x)$},
+          ylabel={$g(x)$},
 		  xtick={2},
-		  xticklabels={$w_0$}
+		  xticklabels={$\theta$}
       ] 
         %\addplot[mark=none] {2/(1+e^(-2*x))-1}; 
 		\addplot[mark=none, red] coordinates {
@@ -306,82 +306,82 @@
 \end{frame}
 
 \subsection{Logical gates with a neuron}
-\begin{frame}{Artificial neurons}{Example: Logical gates with a neuron}
+\begin{frame}{Artificial neurons}{Logical gates with a neuron}
 	A neuron can implement a logical gate
 
     \begin{columns}
  	   \column{.30\textwidth}
 	   		\centering AND\\
             \input{figs/ann-and.tex}
+
+			 \begin{tabular}{ccc}\hline
+			 $a_1$ & $a_2$ & $y$ \\\hline
+			 $0$ & $0$ & $0$ \\
+			 $0$ & $1$ & $0$ \\
+			 $1$ & $0$ & $0$ \\
+			 $1$ & $1$ & $1$ \\
+			 \end{tabular}
  	   \column{.30\textwidth}
 	   		\centering OR\\
             \input{figs/ann-or.tex}
+
+			 \begin{tabular}{ccc}\hline
+			 $a_1$ & $a_2$ & $y$ \\\hline
+			 $0$ & $0$ & $0$ \\
+			 $0$ & $1$ & $1$ \\
+			 $1$ & $0$ & $0$ \\
+			 $1$ & $1$ & $1$ \\
+			 \end{tabular}
  	   \column{.30\textwidth}
-	   		\centering NOT\\
+	   		\centering NOT\\\bigskip
             \input{figs/ann-not.tex}
+			\vspace{1cm}
+			 \begin{tabular}{cc}\hline
+			 $a_1$ & $y$ \\\hline
+			 $0$ & $1$ \\
+			 $1$ & $0$ \\
+			 \end{tabular}
+
     \end{columns}
 \end{frame}
 
-\begin{frame}{Artificial neurons}{Definition (II)}
-	\centering\includegraphics[width=0.4\linewidth]{figs/learning4.png}
-	\footnotesize{
-		\centering \begin{tabular}{|cc|c|}\hline
-		A & B & Out\\\hline
-		0 & 0 & 0\\
-		0 & 1 & 0\\
-		1 & 0 & 0\\
-		1 & 1 & 1\\\hline
-		\end{tabular}
-	}
+\begin{frame}{Artificial neurons}{Definition of neuron (alternative version)}
+    \input{figs/neuron-alternative.tex}
+
+	\bigskip
+    \begin{columns}
+ 	   \column{.70\textwidth}
+		\begin{description}
+		\item[$a_i$] Normalized input ($0 \le a_i \le 1$)
+		\item[$w_{i}$] Weight of input $j$ ($0 \le w_{i} \le 1$)
+		\item[$w_0$] Bias
+		\item[$g$] Activation function
+		\end{description}
+
+ 	   \column{.30\textwidth}
+	   \begin{block}{Neuron model}
+	   \vspace{-0.5cm}
+	   \begin{equation*}
+	   y=g\left( \sum_{i=0}^n w_{i} a_i \right)
+	   \end{equation*}
+	   \end{block}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Artificial neurons}{Example of biased neuron}
+	AND logical gate with a biased input
+
+	\centering \input{figs/ann-and-biased.tex}
+
 	\footnotesize{
 		\centering \begin{tabular}{|c|c|c|c|c|}\hline
-		$I_1$ & $I_2$ & $I_3$ & Summation & Output\\\hline
+		$a_0$ & $a_1$ & $a_2$ & Summation & Output\\\hline
 		-1    & 0     & 0     & $(-1 * 0.3) + (0*0.5) + (0*0.4) = -0.3$ & 0\\
 		-1    & 0     & 1     & $(-1 * 0.3) + (0*0.5) + (1*0.4) = -0.7$ & 0\\
 		-1    & 1     & 0     & $(-1 * 0.3) + (1*0.5) + (0*0.4) = 0.2$ & 1\\
 		-1    & 1     & 1     & $(-1 * 0.3) + (1*0.5) + (1*0.4) = -0.2$ & 0\\\hline
 		\end{tabular}
 	}
-\end{frame}
-
-
-
-\subsection{Learning example}
-
-\begin{frame}{Artificial neurons}{Learning example (I)}
-	Artificial neuron that learns: AND gate
-	\bigskip
-	\begin{columns}
-	\column{0.30\textwidth}
-		\centering \begin{tabular}{|cc|c|}\hline
-		A & B & Out\\\hline
-		0 & 0 & 0\\
-		0 & 1 & 0\\
-		1 & 0 & 0\\
-		1 & 1 & 1\\\hline
-		\end{tabular}
-
-	\column{0.70\textwidth}
-	\includegraphics[width=\linewidth]{figs/example2.png}
-	\end{columns}
-\end{frame}
-
-\begin{frame}{Artificial neurons}{Learning example (II)}
-	Artificial neuron that learns: AND gate
-	\bigskip
-	\begin{columns}
-	\column{0.30\textwidth}
-		\centering \begin{tabular}{|cc|c|}\hline
-		A & B & Out\\\hline
-		0 & 0 & 0\\
-		0 & 1 & 0\\
-		1 & 0 & 0\\
-		1 & 1 & 1\\\hline
-		\end{tabular}
-
-	\column{0.70\textwidth}
-	\includegraphics[width=\linewidth]{figs/example3.png}
-	\end{columns}
 \end{frame}
 
 \subsection{Activation functions}
@@ -407,7 +407,7 @@
           xlabel=$x$,
           ylabel={$g(x) = \frac{1}{1+e^{-x}}$}
       ] 
-        \addplot[mark=none] {1/(1+e^(-x))}; 
+        \addplot[mark=none, red] {1/(1+e^(-x))}; 
         %\addplot {x^2 - x +4}; 
       \end{axis}
     \end{tikzpicture}
@@ -447,7 +447,7 @@
           xlabel=$x$,
           ylabel={$g(x) = \tanh(x)$}
       ] 
-        \addplot[mark=none] {2/(1+e^(-2*x))-1}; 
+        \addplot[mark=none,red] {2/(1+e^(-2*x))-1}; 
         %\addplot {x^2 - x +4}; 
       \end{axis}
     \end{tikzpicture}
@@ -481,8 +481,6 @@
 	    \end{block}
     \end{columns}
 \end{frame}
-
-
 
 \subsection{Learning limits}
 \begin{frame}{Artificial neurons}{Learning limits (I)}
@@ -589,20 +587,24 @@
 \end{frame}
 
 \begin{frame}{Artificial Neural Networks}{Definition (II)}
-Input: High-dimensional, possibly noisy
+ANN properties
 	\begin{itemize}
-	\item e.g., raw sensor input
+	\item Noise tolerance
+	\item General function approximator
 	\end{itemize}
-Output: Discrete or real vector-valued
+Machine Learning tasks
 	\begin{itemize}
-	\item e.g., low-level control policy for a robot actuator
-	\item e.g., class probability
+	\item Supervised learning (classification and regression)
+	\item Unsupervised learning (known as \alert{self-organizing maps} in ANN terminology)
+		\begin{itemize}
+		\item Autoencoders
+		\end{itemize}
 	\end{itemize}
 Application examples: 
 	\begin{itemize}
 		\item Robotics, vehicle control, computer vision, videogames, spam filtering
 	\end{itemize}
-\textit{Human readability less important than performance}
+\centering \textit{Human readability less important than performance}
 \end{frame}
 
 \begin{frame}{Artificial Neural Networks}{Definition (III)}
@@ -724,7 +726,7 @@ Application examples:
 
 \begin{frame}{Network architecture}{Layered networks (II)}
 	\begin{center}
-	Perceptron: ANN whose input is directly contected with its output
+	\alert{Perceptron}: ANN whose input is directly contected with its output
 	\includegraphics[width=0.5\linewidth]{figs/network.png}
 	\end{center}
 \end{frame}
@@ -811,45 +813,42 @@ Application examples:
 %\end{frame}
 
 \section{Training algorithms}
+\subsection{Problem statement}
 
-\begin{frame}{Training algorithms}
+\begin{frame}{Training algorithms}{Problem statement (I)}
 	ANN can perform different tasks
     \begin{itemize}
         \item Classification, regression, others
     \end{itemize}
-    Classification (or supervised learning) uses a training set
-    \begin{itemize}
-        \item Training set: A collection of labeled examples
-    \end{itemize}
+    Classification (or supervised learning) uses a \textit{training set}
 
     \begin{columns}
+ 	   \column{.10\textwidth}
  	   \column{.50\textwidth}
             \input{figs/ann-optimization.tex}
 
- 	   \column{.50\textwidth}
+ 	   \column{.40\textwidth}
             \begin{table}[]
             \centering
-            \begin{tabular}{|lll|l|}\hline
-              $A_1$ & $A_2$ & $A_3$ & O \\
+            \begin{tabular}{lll|l|l}\hline
+              $A_1$ & $A_2$ & $A_3$ & O & Y \\
                \hline
-              $1.1$ & $2.5$ & $4.5$ & $0.2$   \\
-              $0.9$ & $2.4$ & $1.2$ & $0.5$   \\
-              $1.0$ & $2.0$ & $9.9$ & $0.4$  \\\hline
+              $1.1$ & $2.5$ & $4.5$ & $0.2$ & $-0.1$   \\
+              $0.9$ & $2.4$ & $1.2$ & $0.5$ & $0.4$  \\
+              $1.0$ & $2.0$ & $9.9$ & $0.4$ & $1.2$ \\\hline
             \end{tabular}
             \end{table}
+ 	   \column{.10\textwidth}
     \end{columns}
-    Toss function: Measure of the error $E = \frac{1}{2} (y-o)^2 = f(w)$
+    Toss function: Measure of the error
         \begin{itemize}
+		\item Usually mean squared error (mse): $E = \frac{1}{2} (y-o)^2 = f(w)$
         \item Y and O are the desired and observed outputs
         \end{itemize}
 \end{frame}
 
 \subsection{Gradient descent algorithm}
-\begin{frame}{Training algorithms}{Gradient Descent Algorithm (I)}
-	\small{
-	\begin{columns}
-	\column{0.50\textwidth}
-	Quadratic mean error given by
+\begin{frame}{Training algorithms}{Problem statement (II)}
 		\begin{equation*}
 		E = \frac{1}{2} Err^2 = \frac{1}{2} \left[y-g\left(\sum_{j=0}^n w_j x_j\right)\right]^2
 		\end{equation*}
@@ -861,8 +860,21 @@ Application examples:
 		\item[$x_j$] Input $j$
 		\end{itemize}
 		\end{flushleft}
-	\column{0.50\textwidth}
-	Minimize error
+
+		Problem: Determine $w$ that minimize $f(w)$
+		\begin{itemize}
+			\item This is a classical optimization problem
+			\item Any optimization algorithm can be used
+			\item ... in AI, optimization means search
+		\end{itemize}
+\end{frame}
+
+\begin{frame}{Training algorithms}{Gradient Descent Algorithm (I)}
+	Given the error
+		\begin{equation*}
+		E = \frac{1}{2} Err^2
+		\end{equation*}
+	Take partial derivatives
 		\begin{equation*}
 		\begin{split}
 		\frac{\partial E}{\partial w_j} &= Err \frac{\partial Err}{\partial w_j}\\
@@ -870,9 +882,8 @@ Application examples:
 										&= -Err \times g'(w) \times x_j
 		\end{split}
 		\end{equation*}
-	\end{columns}
-	}
 \end{frame}
+
 
 \begin{frame}{Training algorithms}{Gradient Descent Algorithm (II)}
 	\small{
