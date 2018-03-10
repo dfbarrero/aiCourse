@@ -10,7 +10,7 @@ Assorted contents:
 
 * [Artificial Neural Networks](ann/ann.pdf)
 
-* [Artificial Neural Networks with PyBrain](ann/pybrain.pdf)
+* [Artificial Neural Networks with PyBrain](pybrain/pybrain.pdf)
 
 # Compilation
 
