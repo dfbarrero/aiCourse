@@ -374,12 +374,12 @@
 	\centering \input{figs/ann-and-biased.tex}
 
 	\footnotesize{
-		\centering \begin{tabular}{|c|c|c|c|c|}\hline
-		$a_0$ & $a_1$ & $a_2$ & Summation & Output\\\hline
-		-1    & 0     & 0     & $(-1 * 0.3) + (0*0.5) + (0*0.4) = -0.3$ & 0\\
-		-1    & 0     & 1     & $(-1 * 0.3) + (0*0.5) + (1*0.4) = -0.7$ & 0\\
-		-1    & 1     & 0     & $(-1 * 0.3) + (1*0.5) + (0*0.4) = 0.2$ & 1\\
-		-1    & 1     & 1     & $(-1 * 0.3) + (1*0.5) + (1*0.4) = -0.2$ & 0\\\hline
+		\centering \begin{tabular}{ccc|c}\hline
+		$a_0$ & $a_1$ & $a_2$& Output\\\hline
+		1    & 0     & 0     & 0\\
+		1    & 0     & 1     & 0\\
+		1    & 1     & 0     & 0\\
+		1    & 1     & 1     & 1\\\hline
 		\end{tabular}
 	}
 \end{frame}
@@ -891,7 +891,7 @@ Application examples:
 	\column{0.50\textwidth}
 		Weight update
 		\begin{equation*}
-		w_{j}^{k+1} = w_{j}^k + \alpha \times Err \times g'(in) \times x_j
+		w_{j}^{k+1} = w_{j}^k + \alpha \times Err \times g'(w) \times x_j
 		\end{equation*}
 		with
 		\begin{flushleft}
@@ -926,6 +926,7 @@ Application examples:
 	\column{0.50\textwidth}
 	\vspace{-0.5cm}
 	\begin{center}
+    Learning rate\\
 	\includegraphics[width=0.8\linewidth]{figs/nn_learning.png}\\
 	\includegraphics[width=0.8\linewidth]{figs/nn_learning2.png}\\
 	\scriptsize \href{http://www.turingfinance.com/misconceptions-about-neural-networks/}{(Source)}
