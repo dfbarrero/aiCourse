@@ -27,6 +27,7 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{multicol}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \def\layersep{2.5cm}
@@ -115,8 +116,14 @@
 {
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
- \frametitle{Table of Contents}
- \tableofcontents
+
+ 	\frametitle{Table of Contents}
+  	\begin{multicols}{2}
+  		\tableofcontents
+    \end{multicols}
+
+ %\frametitle{Table of Contents}
+ %\tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
 }
@@ -418,6 +425,7 @@
 
 \end{frame}
 
+\subsection{Learning evaluation}
 \begin{frame}{The data analysis process}{Learning evaluation (I)}
 	We do need to evaluate the trained model
 	\begin{itemize}
@@ -463,6 +471,7 @@
 	\end{columns}
 \end{frame}
 
+\subsection{Model exploitation}
 \begin{frame}{The data analysis process}{Model exploitation}
 	Model explotation depends on the objectives
 		\begin{itemize}
@@ -511,7 +520,7 @@
 \begin{frame}[fragile]{Types of Machine Learning systems}{Supervised learning (I)}
 	In supervised learning input data comes along with the desired output
 	\begin{itemize}
-		\item Usually human beings \alert{label} the output
+		\item Usually human beings label the output (named \alert{labels})
 	\end{itemize}
 
 	\begin{center}
@@ -528,10 +537,14 @@
 
 	 Two main tasks in supervised learning
 	 \begin{itemize}
-	 	\item \textbf{Classification} if $y$ is a categorical attribute\\
-		In this case, the target attributed is named \alert{class}
+	 	\item \textbf{Classification} if $y$ is a categorical attribute. Target attribute named \alert{class}
 		\item \textbf{Regression} if $y$ is numerical 
 	 \end{itemize}
+	 Advanced supervised learning tasks
+	\begin{itemize}
+	 	\item Semi-supervised learning, weakly supervised learning and multilabel classification
+	 \end{itemize}
+
 \end{frame}
 
 \begin{frame}{Types of Machine Learning systems}{Supervised learning (II)}
@@ -653,7 +666,7 @@
 
  	   \column{.70\textwidth}
 	   		\begin{exampleblock}{Decision rules}
-	   		\begin{lstlisting}[firstnumber=1, label=glabels, xleftmargin=10pt] 
+	   		\begin{lstlisting}[firstnumber=1, xleftmargin=10pt] 
 			if colour = light  and  nuclei = 1 
 			then cell = healthy   	
 			            
@@ -678,19 +691,19 @@
 
  	   \column{.70\textwidth}
 	   		\begin{exampleblock}{Hierarchical decision rules}
-	   		\begin{lstlisting}[firstnumber=1, label=glabels, xleftmargin=10pt]
-			if colour = light and nuclei = 1 
-			then cell = healthy   	
+	   		\begin{lstlisting}[firstnumber=1, xleftmargin=10pt]
+if colour = light and nuclei = 1 
+then cell = healthy   	
 			            
-			else 
-				if nuclei = 2 and colour = dark
-				then cell = cancerous
+else 
+	if nuclei = 2 and colour = dark
+	then cell = cancerous
 
-				else 
-					if tails = 1 
-				    then cell = healthy
+	else 
+		if tails = 1 
+	    then cell = healthy
 
-				    else cell = cancerous
+	    else cell = cancerous
 	   		\end{lstlisting}
 	   		\end{exampleblock}
 	\end{columns}
@@ -770,7 +783,7 @@
 
 \subsection{Unsupervised learning}
 \begin{frame}{Types of Machine Learning systems}{Unsupervised learning}
-	In unsupervised learning there is no labels
+	In unsupervised learning there are no labels
 
 	\begin{center}
 	\begin{tabular}{ccccc}\hline
@@ -789,6 +802,7 @@
 		\item Clustering
 		\item Association rules
 		\item Dimensionality reduction
+		\item Anomality detection
 	\end{itemize}
 
 \end{frame}
@@ -944,7 +958,7 @@
 	   \column{.15\textwidth}
 	   \column{.70\textwidth}
 	   		\begin{exampleblock}{Association rules}
-	   		\begin{lstlisting}[firstnumber=1, label=glabels, xleftmargin=10pt] 
+	   		\begin{lstlisting}[firstnumber=1, xleftmargin=10pt] 
 			if diapers=si, then milk=yes (100%, 37%)
 			if eggs=yes, then oil=yes (50%, 25%)
 			if wine=yes, then lettuce=yes (33%, 12%)
@@ -959,7 +973,7 @@
 \begin{frame}{Types of Machine Learning systems}{Unsupervised learning: Dimensionality reduction (I)}
 	Dimensionality reduction transforms data into more convenient representations
 	\begin{itemize}
-		\item Reduce the data dimensionality (variables)
+		\item Reduce data dimensionality
 		\item Visualize multidimensional data
 	\end{itemize}
 
@@ -1020,121 +1034,6 @@
    	\centering \tiny{\href{https://github.com/amueller/introduction_to_ml_with_python/blob/master/03-unsupervised-learning.ipynb}{(Source)}}
 \end{frame}
 
-\section{Case studies}
-
-\subsection{Case study 1}
-\begin{frame}{Case studies}{Case study 1: Bank propensity model}
-	Client
-	\begin{itemize}
-		\item Bank
-	\end{itemize}
-	Business problem
-	\begin{itemize}
-		\item Identify those clientes prone to buy a service
-	\end{itemize}
-	Data
-	\begin{itemize}
-		\item Available on several databases
-		\item Historical data on service adquisition available
-	\end{itemize}
-	Propose a solution to:
-	\begin{itemize}
-		\item Data adquisition
-		\item ML task
-		\item Predictive or explicative model
-		\item Model explotation
-		\item Model maintenance
-	\end{itemize}
-\end{frame}
-
-\subsection{Case study 2: Social media campaign impact}
-\begin{frame}{Case studies}{Case study 2: Social media compaign impact}
-	Client
-	\begin{itemize}
-		\item Car manufacturer
-	\end{itemize}
-	Bussness problem
-	\begin{itemize}
-		\item Real-time analysis of a campaign impact in Twitter
-	\end{itemize}
-	Data
-	\begin{itemize}
-		\item None
-	\end{itemize}
-	Propose a solution to:
-	\begin{itemize}
-		\item Data adquisition
-		\item ML task
-		\item Predictive or explicative model
-		\item Model explotation
-		\item Model maintenance
-	\end{itemize}
-\end{frame}
-
-\subsection{Case study 3: Hubble FGS-3 servo failure prediction}
-\begin{frame}{Case studies}{Case study 3: Hubble FGS-3 servo failure prediction}
-    \begin{columns}
- 	   \column{.50\textwidth}
-	   \small{
-		Client
-		\begin{itemize}
-			\item NASA
-		\end{itemize}
-		Bussness problem
-		\begin{itemize}
-			\item Predict Hubble FGS-3 servo failure
-		\end{itemize}
-		Data
-		\begin{itemize}
-			\item Compensated error telemetry 
-			\item Servo will fail if compensated error exceeds a threshold
-		\end{itemize}
-		Propose a solution to:
-		\begin{itemize}
-			\item ML task
-			\item Predictive or explicative model
-			\item Model explotation
-			\item Model maintenance
-		\end{itemize}
-		}
- 	   \column{.50\textwidth}
-			\includegraphics[width=\linewidth]{figs/hubble.png}
-
-			\tiny \centering \href{https://ti.arc.nasa.gov/m/groups/machinelearningworkshop2017/MLW2017_slides/presentationsPDF/Hamed-Valizadegan.pdf}{(Source of this study case)}
-    \end{columns}
-\end{frame}
-
-\subsection{Case study 4: Fall detection}
-\begin{frame}{Case studies}{Case study 4: Fall detection}
-    \begin{columns}
- 	   \column{.50\textwidth}
-	   \small{
-		Client
-		\begin{itemize}
-			\item Technological start-up
-		\end{itemize}
-		Bussness problem
-		\begin{itemize}
-			\item Detect falls with a smartwatch
-			\item Improve elderly people attention
-		\end{itemize}
-		Data
-		\begin{itemize}
-			\item None
-		\end{itemize}
-		Propose a solution to:
-		\begin{itemize}
-			\item Data adquisition
-			\item ML task
-			\item Data preprocessing
-			\item Model explotation
-			\item Model maintenance
-		\end{itemize}
-		}
- 	   \column{.50\textwidth}
-    \end{columns}
-\end{frame}
-
 \section{Main challenges of Machine Learning}
 
 \subsection{Under and overfitting}
@@ -1188,9 +1087,10 @@
 	\end{itemize}
 	Goal: Reduce dimensionality as much as possible 
 
-	\centering
+	\begin{center}
 	\includegraphics[width=0.8\linewidth]{figs/curseofdimensionality.png}\\
-   	\centering \tiny{\href{http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/}{(Source)}}
+	\tiny{\href{http://www.visiondummy.com/2014/04/curse-dimensionality-affect-classification/}{(Source)}}
+   	\end{center} 
 \end{frame}
 
 \subsection{Other challenges}
@@ -1207,10 +1107,175 @@
     \end{itemize}
 	
 	\bigskip
-	\centering
+	\begin{center}
 	\includegraphics[width=0.6\linewidth]{figs/trainingsample.png}\\
-    \centering \tiny{\href{https://github.com/ageron/handson-ml/blob/master/01_the_machine_learning_landscape.ipynb}{(Source)}}
+    \tiny{\href{https://github.com/ageron/handson-ml/blob/master/01_the_machine_learning_landscape.ipynb}{(Source)}}
+	\end{center}
 \end{frame}
 
+\section{Case studies}
+
+\subsection{Bank propensity model}
+\begin{frame}{Case studies}{Case study 1: Bank propensity model}
+	Client
+	\begin{itemize}
+		\item Bank
+	\end{itemize}
+	Business problem
+	\begin{itemize}
+		\item Identify those clients prone to buy a service
+	\end{itemize}
+	Data
+	\begin{itemize}
+		\item Available on several databases
+		\item Historical data on service adquisition available
+	\end{itemize}
+	Propose a solution to:
+	\begin{itemize}
+		\item Data adquisition
+		\item ML task
+		\item Predictive or explicative model
+		\item Model explotation
+		\item Model maintenance
+	\end{itemize}
+\end{frame}
+
+\subsection{Social media campaign impact}
+\begin{frame}{Case studies}{Case study 2: Social media compaign impact}
+	Client
+	\begin{itemize}
+		\item Car manufacturer
+	\end{itemize}
+	Business problem
+	\begin{itemize}
+		\item Real-time analysis of a campaign impact in Twitter
+		\item Answer if people have a positive reaction to the campaign
+	\end{itemize}
+	Data
+	\begin{itemize}
+		\item None
+	\end{itemize}
+	Propose a solution to:
+	\begin{itemize}
+		\item Data adquisition
+		\item ML task
+		\item Predictive or explicative model
+		\item Model explotation
+		\item Model maintenance
+	\end{itemize}
+\end{frame}
+
+\subsection{Hubble FGS-3 servo failure prediction}
+\begin{frame}{Case studies}{Case study 3: Hubble FGS-3 servo failure prediction}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+	   \small{
+		Client
+		\begin{itemize}
+			\item NASA
+		\end{itemize}
+		Business problem
+		\begin{itemize}
+			\item Predict Hubble FGS-3 servo failure
+		\end{itemize}
+		Data
+		\begin{itemize}
+			\item Compensated error telemetry 
+			\item Servo will fail if compensated error exceeds a threshold
+		\end{itemize}
+		Propose a solution to:
+		\begin{itemize}
+			\item ML task
+			\item Predictive or explicative model
+			\item Model explotation
+			\item Model maintenance
+		\end{itemize}
+		}
+ 	   \column{.50\textwidth}
+			\includegraphics[width=\linewidth]{figs/hubble.png}
+
+			\tiny \centering \href{https://ti.arc.nasa.gov/m/groups/machinelearningworkshop2017/MLW2017_slides/presentationsPDF/Hamed-Valizadegan.pdf}{(Source of this study case)}
+    \end{columns}
+\end{frame}
+
+\subsection{Fall detection with accelerometer}
+\begin{frame}{Case studies}{Case study 4: Fall detection with triaxial accelerometer}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+	   \small{
+		Client
+		\begin{itemize}
+			\item Technological start-up
+		\end{itemize}
+		Business problem
+		\begin{itemize}
+			\item Detect falls with a smartwatch
+			\item Improve elderly people attention
+		\end{itemize}
+		Data
+		\begin{itemize}
+			\item None
+		\end{itemize}
+		Propose a solution to:
+		\begin{itemize}
+			\item Data adquisition
+			\item ML task
+			\item Data preprocessing
+			\item Model explotation
+			\item Model maintenance
+		\end{itemize}
+		}
+ 	   \column{.50\textwidth}
+			\includegraphics[width=\linewidth]{figs/HFall.pdf}
+
+			\centering \href{https://www.slideshare.net/DavidFBarrero/triaxial-accelerometer-located-on-the-wrist-for-elderly-peoples-fall-detection}{(More info)}
+    \end{columns}
+\end{frame}
+
+\subsection{Fall detection with sound}
+\begin{frame}{Case studies}{Case study 5: Fall detection with sound}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+	   \small{
+		Client
+		\begin{itemize}
+			\item Technological start-up
+		\end{itemize}
+		Business problem
+		\begin{itemize}
+			\item Detect falls with sound
+			\item Improve elderly people attention
+		\end{itemize}
+		Data
+		\begin{itemize}
+			\item None
+		\end{itemize}
+		Propose a solution to:
+		\begin{itemize}
+			\item Data adquisition
+			\item ML task
+			\item Data preprocessing
+			\item Model explotation
+			\item Model maintenance
+		\end{itemize}
+		}
+ 	   \column{.50\textwidth}
+			\includegraphics[width=\linewidth]{figs/sound.jpg}
+
+			\footnotesize{
+			\begin{tabular}{ll}
+			\hline 
+			Energy Mean & Energy Std \\
+			Number of Zeros Mean & Number of Zeros Std \\
+			Spectral Flux Mean & Spectral Flux Std \\
+			Roll off Factor Mean & Roll off Factor Std \\
+			Spectral centroid Mean & Spectral Centroid Std \\
+			\hline
+			\end{tabular} 
+			}
+			
+			\centering \href{https://link.springer.com/chapter/10.1007/978-3-319-60042-0_18}{(More info)}
+    \end{columns}
+\end{frame}
 
 \end{document}
