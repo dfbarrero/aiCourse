@@ -8,6 +8,8 @@ Assorted contents:
 
 * [Artificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
 
+* [Machine Learning Foundations](mlfoundations/mlfoundations.pdf)
+
 * [Artificial Neural Networks](ann/ann.pdf)
 
 * [Artificial Neural Networks with PyBrain](pybrain/pybrain.pdf)
