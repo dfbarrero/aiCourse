@@ -2,7 +2,7 @@
 
 Assorted contents:
 
-* [Introduction to Artificial Intelligence ](introduction/introduction.pdf)
+* [Introduction to Artificial Intelligence](introduction/introduction.pdf)
 
 * [Introduction to Robotics](robotics/robotics.pdf)
 
@@ -15,6 +15,12 @@ Assorted contents:
 * [Artificial Neural Networks with PyBrain](pybrain/pybrain.pdf)
 
 * [Search](search/search.pdf) (PPT)
+
+# Practical assignments
+
+* [Introduction to KNIME Analytics Platform](assignments/knime/intro.md)
+
+* [Characterization of exoplanets detection methods with Machine Learning](assignments/introduction.pdf)
 
 # Compilation
 
