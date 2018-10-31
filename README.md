@@ -28,7 +28,7 @@ Assorted contents:
 
 ## Task and path planning
 
-* [https://github.com/munozp/pddl-sim](Integración de planificación PDDL con simulación robótica)
+* [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
 
 # Compilation
 
