@@ -18,9 +18,11 @@ Assorted contents:
 
 # Practical assignments
 
+## Machine Learning
+
 * [Introduction to KNIME Analytics Platform](assignments/knime/intro.md)
 
-* [Characterization of exoplanets detection methods with Machine Learning](assignments/introduction.pdf)
+* [Characterization of exoplanets detection methods with Machine Learning](assignments/explanets/methods.md)
 
 # Compilation
 
