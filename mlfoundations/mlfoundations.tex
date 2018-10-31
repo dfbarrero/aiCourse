@@ -27,7 +27,9 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{hhline} % Confusion matrix
 \usepackage{multicol}
+\usepackage{multirow} % Confusion matrix
 \usepackage{tikz}
 \usepackage{pgfplots}
 \def\layersep{2.5cm}
@@ -84,6 +86,22 @@
 %% Option C: Title, Author and institute
 %\footlineC
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% This is for the confusion matrix, DELETE if not needed
+\def\colorModel{hsb} %You can use rgb or hsb
+
+\newcommand\ColCell[1]{
+   \pgfmathparse{#1<50?1:0}  %Threshold for changing the font color into the cells
+       \ifnum\pgfmathresult=0\relax\color{white}\fi
+   \pgfmathsetmacro\compA{0}      %Component R or H
+   \pgfmathsetmacro\compB{#1/100} %Component G or S
+   \pgfmathsetmacro\compC{1}      %Component B or B
+   \edef\x{\noexpand\centering\noexpand\cellcolor[\colorModel]{\compA,\compB,\compC}}\x #1
+} 
+%\newcolumntype{E}{>{\collectcell\ColCell}m{0.4cm}<{\endcollectcell}}  %Cell width
+\newcommand*\rot{\rotatebox{90}}
+
 
 \begin{document}
 
@@ -241,7 +259,7 @@
 \begin{frame}{The data analysis process}{Data adquisition}
 	Goal: Adquire data to perform ML
 		\begin{itemize}
-		\item From extremely easy (CSV file) to extremely complex (full Big Data system)
+		\item From extremely easy -CSV file- to extremely complex -full Big Data system-
 		\end{itemize}
 
 	Public data repositories
@@ -355,22 +373,22 @@
 	\begin{enumerate}
 		\item Original text\\
 		\begin{lstlisting}[basicstyle=\scriptsize]
-		(1) John likes to watch movies. Mary likes movies too.
-		(2) John also likes to watch football games.
-		\end{lstlisting}
+(1) John likes to watch movies. Mary likes movies too.
+(2) John also likes to watch football games.
+\end{lstlisting}
 		\item Build list\\
 		\begin{lstlisting}[language=Python,basicstyle=\tiny]
-		(1) "John","likes","to","watch","movies","Mary","likes","movies","too"
-		(2) "John", also","likes","to","watch","football","games"
-		\end{lstlisting}
+(1) "John","likes","to","watch","movies","Mary","likes","movies","too"
+(2) "John", also","likes","to","watch","football","games"
+\end{lstlisting}
 		\item Build dictionary\\
 		\begin{lstlisting}[language=Python,basicstyle=\tiny]
-		(1) {"John":1,"likes":2,"to":1,"watch":1,"movies":2,"Mary":1,"too":1};
-		(2) {"John":1,"also":1,"likes":1,"to":1,"watch":1,"football":1,"games":1};
-		\end{lstlisting}
+(1) {"John":1,"likes":2,"to":1,"watch":1,"movies":2,"Mary":1,"too":1};
+(2) {"John":1,"also":1,"likes":1,"to":1,"watch":1,"football":1,"games":1};
+\end{lstlisting}
 	\end{enumerate}
 
-	 \vspace{-0.4cm}
+	 \vspace{-0.5cm}
 
 	\begin{center}
 	\begin{tabular}{cccccccccc}\hline
@@ -397,7 +415,7 @@
 \end{frame}
 
 \subsection{Machine Learning}
-\begin{frame}{The data analysis process}{Machine Learning (I)}
+\begin{frame}{The data analysis process}{Machine Learning}
 	Goal: Train an algorithm to perform a task
 		\begin{itemize}
 		\item As result, we obtain a \alert{model} (or \alert{classifier} or \alert{predictor} depending on the context)
@@ -407,6 +425,7 @@
 		\begin{itemize}
 		\item Supervised learning: \textbf{classification} and regression
 		\item Unsupervised learning: \textbf{clustering}, association, \textbf{dimensionality reduction} and anomality detection
+        \item Reinforcement learning
 		\item Many others
 		\end{itemize}
 
@@ -470,6 +489,54 @@
 		\end{center}
 	\end{columns}
 \end{frame}
+
+\begin{frame}{The data analysis process}{Learning evaluation (III)}
+	\begin{columns}
+ 	   \column{.50\textwidth}
+            Select a measure to evaluate learning
+            \begin{itemize}
+                \item Proper measures depends on the problem
+            \end{itemize}
+            Classification learning measures
+            \begin{itemize}
+                \item Accuracy: Ratio of correct predictions
+                \item F-Measure
+                \item Confusion matrix
+                \item ROC curve
+            \end{itemize}
+            Regression learning measures
+            \begin{itemize}
+                \item Mean Absolute Error (MAE)
+                \item Mean Squared Error (MSE)
+                \item $R^2$
+            \end{itemize}
+
+ 	   \column{.50\textwidth}
+    		\begin{alertblock}{}
+                Validation error must be taken, always, on the validation set
+	    	\end{alertblock}
+
+        	\begin{block}{Confusion matrix}
+                \newcommand\items{3}   %Number of classes
+                %\arrayrulecolor{white} %Table line colors
+                \noindent\begin{tabular}{cc*{\items}{|c}|}
+                    \multicolumn{1}{c}{} &\multicolumn{1}{c}{} &\multicolumn{\items}{c}{\textit{Predicted class}} \\ %\hhline{~*\items{|-}|}
+                    \multicolumn{1}{c}{} & 
+                    \multicolumn{1}{c}{} & 
+                    \multicolumn{1}{c}{\rot{Class A}} & 
+                    \multicolumn{1}{c}{\rot{Class B}} & 
+                    \multicolumn{1}{c}{\rot{Class C}} \\ \hhline{~~*\items{|-}|}
+                    \multirow{\items}{*}{\rotatebox{90}{\textit{Actual class}}} 
+                    &Class A  & 100   & 0  & 10   \\ \hhline{~~*\items{|-}|}
+                    &Class B  & 10   & 80  & 10   \\ \hhline{~~*\items{|-}|}
+                    &Class C  & 30   & 0   & 70   \\ \hhline{~~*\items{|-}|}
+                \end{tabular}\\
+                \tiny \href{https://tex.stackexchange.com/questions/20267/how-to-construct-a-confusion-matrix-in-latex}{(Source)}
+	    	\end{block}
+	\end{columns}
+\end{frame}
+
+
 
 \subsection{Model exploitation}
 \begin{frame}{The data analysis process}{Model exploitation}
@@ -1104,6 +1171,7 @@ else
 		\item Non representative training data
 		\item Poor quality data
 		\item Irrelevant features
+        \item Unbalanced datasets
     \end{itemize}
 	
 	\bigskip
