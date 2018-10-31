@@ -24,6 +24,12 @@ Assorted contents:
 
 * [Characterization of exoplanets detection methods with Machine Learning](assignments/explanets/methods.md)
 
+## Classic search
+
+## Task and path planning
+
+* [https://github.com/munozp/pddl-sim](Integración de planificación PDDL con simulación robótica)
+
 # Compilation
 
 Compile slides with xelatex or lualatex. Custom UAH fonts are needed to properly compile the project. The original template used to format the slides, including the fonts, can be downloaded from [this repository](https://github.com/dfbarrero/UAH-beamer-template).
