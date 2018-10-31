@@ -10,9 +10,21 @@
 
 * Data exploration with KNIME
 
+## Videos sequence
+
+1 [What is a Node, What is a Workflow](https://www.knime.com/knime-introductory-course/chapter1/section2/what-is-a-node-what-is-a-workflow)
+
+2 [Node Repository](https://www.knime.com/knime-introductory-course/chapter1/section2/node-repository)
+
 ## Working environment setup
 
 Blablabla
+
+## Issues to take into account
+
+Data types (http://marcoghislanzoni.com/blog/2016/05/06/knime-for-beginners-part-2/)
+
+Node ports
 
 ## Practical assignment
 
