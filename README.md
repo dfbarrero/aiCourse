@@ -2,7 +2,7 @@
 
 Assorted contents:
 
-* [Introduction to Artificial Intelligence](introduction/introduction.pdf)
+* [Introduction to Artificial Intelligence](introduction/)
 
 * [Introduction to Robotics](robotics/robotics.pdf)
 
