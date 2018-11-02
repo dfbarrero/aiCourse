@@ -8,7 +8,7 @@ FILENAME=$(NAME).tex
 
 .PHONY: all clean view
 
-all : $(TARGETS)
+all: $(TARGETS)
 
 $(TARGETS):
 	$(TEX) -jobname=$(NAME)-$@ "\newcommand{\modo}{$@} \input{$(FILENAME)}" > $(NAME)-$@.log

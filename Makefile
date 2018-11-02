@@ -1,6 +1,6 @@
 .phony: all view clean
 
-EXCLUDE = assignments
+EXCLUDE = "assignments search"
 
 all:
 #	cd mlfoundations ; make all
