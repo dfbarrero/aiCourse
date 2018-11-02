@@ -14,6 +14,12 @@ Assorted contents:
 
 * [Artificial Neural Networks with PyBrain](pybrain/pybrain.pdf)
 
+* [Introduction to Evolutionary Computation](ecintro/ecintro.pdf)
+
+* [Evolutionary Algorithms](ea/ea.pdf)
+
+* [Neuroevolution](neuroevolution/neuroevolution.pdf)
+
 * [Search](search/search.pdf) (PPT)
 
 # Practical assignments
@@ -33,6 +39,18 @@ Assorted contents:
 * [PDDL v1 exercises](assignments/planning/pddl-v1.md)
 
 * [PDDL v2 exercises](assignments/planning/pddl-v2.md)
+
+## Evolutionary Computation
+
+* [One-max problem with a basic Genetic Algorithm](assignments/onemax/onemax.md)
+
+* [Understanding parameters settings in Evolutionary Algorithms](assignments/parameters/parameters.md)
+
+* [Programming Evolutionary Algorithms with Inspyred](assignments/inspyred/inspyred.md)
+
+* [Symbolic regression with Genetic Programming](assignments/regression/regression.md)
+
+* [Optimization of the trajectory of a spacecraft to the Moon](assignments/moonshot/moonshot.md)
 
 # Compilation
 
