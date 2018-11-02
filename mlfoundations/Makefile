@@ -19,7 +19,7 @@ view:
 	open *.pdf
 else
 view:
-	xdg-open *.pdf
+	find -iname '$(NAME)*.pdf' -print0 | xargs -0 -n 1 xdg-open
 endif
 
 clean:
