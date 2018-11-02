@@ -2,23 +2,23 @@
 
 Assorted contents:
 
-* [Introduction to Artificial Intelligence](introduction/introduction.pdf)
+* [Introduction to Artificial Intelligence](introduction/)
 
-* [Introduction to Robotics](robotics/robotics.pdf)
+* [Introduction to Robotics](robotics/)
 
-* [Artificial Intelligence in Videogames](aivideogames/aivideogames.pdf)
+* [Artificial Intelligence in Videogames](aivideogames/)
 
-* [Machine Learning Foundations](mlfoundations/mlfoundations.pdf)
+* [Machine Learning Foundations](mlfoundations/)
 
-* [Artificial Neural Networks](ann/ann.pdf)
+* [Artificial Neural Networks](ann/)
 
-* [Artificial Neural Networks with PyBrain](pybrain/pybrain.pdf)
+* [Artificial Neural Networks with PyBrain](pybrain/)
 
-* [Introduction to Evolutionary Computation](ecintro/ecintro.pdf)
+* [Introduction to Evolutionary Computation](ecintro/)
 
-* [Evolutionary Algorithms](ea/ea.pdf)
+* [Evolutionary Algorithms](ea/)
 
-* [Neuroevolution](neuroevolution/neuroevolution.pdf)
+* [Neuroevolution](neuroevolution/)
 
 * [Search](search/search.pdf) (PPT)
 
