@@ -1,8 +1,8 @@
 
-\newcommand{\modo}[1][]{}
+%\newcommand{\modo}[1][]{}
 %\renewcommand{\modo}{ASC} % DESCOMENTAR LINEA CORRECTA
 %\renewcommand{\modo}{MASTER-ESPACIO} 
-\renewcommand{\modo}{VIDEOJUEGOS} 
+%\renewcommand{\modo}{VIDEOJUEGOS} 
 %\renewcommand{\modo}{INDUSTRIALES} 
 
 % Iniciamos variables con valores vacios
@@ -11,25 +11,25 @@
 \newcommand{\carrera}{}
 
 % Personalizar a partir de aqui
-\IfStrEq{\modo}{ASC}{
+\IfStrEq{\modo}{asc}{
 	\renewcommand{\autor}{}
 	\renewcommand{\asignatura}{Advanced Robot Control}
 	\renewcommand{\carrera}{Grado en Ingeniería Informática/Computadores}
 }{}
 
-\IfStrEq{\modo}{INDUSTRIALES}{
+\IfStrEq{\modo}{muii}{
 	\renewcommand{\autor}{}
 	\renewcommand{\asignatura}{Inteligencia Artificial en los Sistemas de Control Autónomo}
 	\renewcommand{\carrera}{Máster Universitario en Ingeniería Industrial}
 }{}
 
-\IfStrEq{\modo}{MASTER-ESPACIO}{
+\IfStrEq{\modo}{mcyte}{
 	\renewcommand{\autor}{}
 	\renewcommand{\asignatura}{Inteligencia Artificial en los Sistemas de Control Autónomo}
 	\renewcommand{\carrera}{Máster en Ciencia y Tecnología desde el Espacio}
 }{}
 
-\IfStrEq{\modo}{VIDEOJUEGOS}{
+\IfStrEq{\modo}{videojuegos}{
 	\renewcommand{\autor}{}
 	\renewcommand{\asignatura}{Videogames Technology}
 	\renewcommand{\carrera}{Asignatura transversal}
