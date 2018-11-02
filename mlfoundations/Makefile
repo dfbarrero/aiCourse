@@ -11,9 +11,13 @@ FILENAME=$(NAME).tex
 all : $(TARGETS)
 
 $(TARGETS):
-	$(TEX) -jobname=$(NAME)-$@ "\newcommand{\modo}{$@} \input{$(FILENAME)}"
+	$(TEX) -jobname=$(NAME)-$@ "\newcommand{\modo}{$@} \input{$(FILENAME)}" > $(NAME)-$@.log
+
+clean:
+	rm -f *.out *aux *bbl *blg *log *toc *.ptb *.tod *.fls *.fdb_latexmk *.lof *.nav *.snm *.vrb
 
 platform=$(shell uname)
+
 ifeq ($(platform),Darwin)
 view:
 	open *.pdf
@@ -22,5 +26,3 @@ view:
 	find -iname '$(NAME)*.pdf' -print0 | xargs -0 -n 1 xdg-open
 endif
 
-clean:
-	rm -f *.out *aux *bbl *blg *log *toc *.ptb *.tod *.fls *.fdb_latexmk *.lof *.nav *.snm *.vrb
