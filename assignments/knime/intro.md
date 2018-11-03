@@ -54,6 +54,10 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 <img align="center" src="scattermatrix.png" width="200">
 
+7. Train a decision tree classifier to predict the iris species given the measures of a petal and a sepal. (Hint: Open the example 04_Analytics/04_Classification_and__Predictive_Learning/01_Example_for_Learning_a_Decision_Tree)
+
+8. Train a neural network to predict the iris species given the measures of a petal and a sepal. You should notice that a Neural Network should take a normalized input (Hint: Open the example 04_Analytics/04_Classification_and__Predictive_Learning/02_Example_for_Learning_a_Neural_Network, use one hidden layer with five neurons)
+
 ## Working environment setup
 
 Blablabla
