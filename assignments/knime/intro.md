@@ -48,7 +48,7 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 3. Scatterplot are a great tool to visualize the relationship between two variables. Reproduce the scatterplot in the image using the given workflow in KNIME. 
 
-<img align="center" src="scatter.png" width="200"><img align="center" src="scatterwork.png" width="200">
+<img align="center" src="scatter.png" width="300"><img align="center" src="scatterworkflow.png" width="200">
 
 ## Working environment setup
 
