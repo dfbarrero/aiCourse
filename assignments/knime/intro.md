@@ -42,7 +42,7 @@ Open the CSV file with a text editor of your choice to have a look. Count the nu
 
 Create a new workflow group named "exercises" to store the exercises, create a new workflow for each one of the following exercises.
 
-1 Load the Iris dataset with a "File Reader" node and compute its main statistics with the "Statistics" node.
+1 Load the Iris dataset with a "File Reader" node and compute its main statistics (such as mean, median, standard deviation, etc) with the "Statistics" node.
 
 ## Working environment setup
 
