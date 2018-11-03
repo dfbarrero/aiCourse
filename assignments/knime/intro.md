@@ -34,19 +34,15 @@ The iris dataset is widely used in Machine Learning literature as an example. To
 
 (Image taken from [here](http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machine-learning-first-steps-with-the-iris-dataset/).)
 
-Download the famous [iris dataset](iris.csv) in CSV format and store it in an accesible location. 
-Open the file with a text editor of your choice to have a look.
+Download the famous [iris dataset](iris.csv) and store it in an accesible location. Please observe that the file has CSV format, which is a widely used format in Machine Learning because of its simplicity; read [this](https://en.wikipedia.org/wiki/Comma-separated_values#Example) in case you need additional information about CSV.
 
-The datasets contains four attributes (sepa
+Open the CSV file with a text editor of your choice to have a look. Count the number of attributes and instances in the dataset and observe the attributes data types.
 
-
-## Exercises.
-
-
+## Exercises
 
 Create a new workflow group named "exercises" to store the exercises, create a new workflow for each one of the following exercises.
 
-1 Load the Iris dataset and compute its main statistics such.
+1 Load the Iris dataset with a "File Reader" node and compute its main statistics with the "Statistics" node.
 
 ## Working environment setup
 
