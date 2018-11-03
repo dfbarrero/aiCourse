@@ -46,9 +46,13 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 2 Compute the average value of the four numerical attributes for each Iris species. (Hint: Watch this [video](https://www.youtube.com/watch?v=JQ-OWMt48ew)).
 
-3. Scatterplot are a great tool to visualize the relationship between two variables. Reproduce the scatterplot in the image using the given workflow in KNIME. 
+3. Scatterplot are a great tool to visualize the relationship between two variables. Reproduce the scatterplot in the image using the given workflow in KNIME. (Hint: Inspect the output of the "Color Manager" node to better understand what is going on).
 
 <img align="center" src="scatter.png" width="300"><img align="center" src="scatterworkflow.png" width="200">
+
+4. A natural extension of scatterplots to visualize relationships among several attributes is the scatterplot matrix. Implement a KNIME workflow to reproduce the scatterplot matrix given in the figure.
+
+<img align="center" src="scattermatrix.png" width="200">
 
 ## Working environment setup
 
