@@ -24,6 +24,30 @@
 
 6 [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
 
+## Dataset preliminary steps
+
+Perhaps the most famous dataset in Machine Learning is one introduced by Fisher in 1936. The dataset contains measures of three different species of a flower named Iris (petal width, petal height, sepal width and sepal height), along with the species name (Iris setosa, Iris versicolor, Iris virginica). In order to better understand what petal and sepal stands for, please, observe the figure below. 
+
+The iris dataset is widely used in Machine Learning literature as an example. To follow up this tradition, we will use this data set in this introductory assignment.
+
+<img align="center" src="iris_petal_sepal.png" width="400">
+
+(Image taken from [here](http://blog.kaggle.com/2015/04/22/scikit-learn-video-3-machine-learning-first-steps-with-the-iris-dataset/).)
+
+Download the famous [iris dataset](iris.csv) in CSV format and store it in an accesible location. 
+Open the file with a text editor of your choice to have a look.
+
+The datasets contains four attributes (sepa
+
+
+## Exercises.
+
+
+
+Create a new workflow group named "exercises" to store the exercises, create a new workflow for each one of the following exercises.
+
+1 Load the Iris dataset and compute its main statistics such.
+
 ## Working environment setup
 
 Blablabla
@@ -59,9 +83,6 @@ While solution not found
 
 The following figure outlines the algorithm to implement.
 
-<img align="center" src="ga.jpg" width="400">
-
-(Image taken from [here](http://file.scirp.org/Html/1-8302163_41175.htm).)
 
 Once the algorithm is implemented, perform the following tasks:
 
