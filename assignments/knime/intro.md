@@ -16,6 +16,14 @@
 
 2 [Node Repository](https://www.knime.com/knime-introductory-course/chapter1/section2/node-repository)
 
+3 [Workflows and Workflow Groups](https://www.knime.com/knime-introductory-course/chapter1/section3/workflows-and-workflow-groups)
+
+4 [Node Status and Operations](https://www.knime.com/knime-introductory-course/chapter1/section3/node-status-and-operations)
+
+5 [Data Table Structure](https://www.knime.com/knime-introductory-course/chapter1/section3/data-table-structure)
+
+6 [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
+
 ## Working environment setup
 
 Blablabla
