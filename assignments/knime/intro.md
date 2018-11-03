@@ -38,11 +38,13 @@ Download the famous [iris dataset](iris.csv) and store it in an accesible locati
 
 Open the CSV file with a text editor of your choice to have a look. Count the number of attributes and instances in the dataset and observe the attributes data types.
 
-## Exercises
+## Exercises
 
 Create a new workflow group named "exercises" to store the exercises, create a new workflow for each one of the following exercises.
 
 1 Load the Iris dataset with a "File Reader" node and compute its main statistics (such as mean, median, standard deviation, etc) with the "Statistics" node.
+
+2 Compute the average value of the four numerical attributes for each Iris species. (Hint: Watch this [video](https://www.youtube.com/watch?v=JQ-OWMt48ew)).
 
 ## Working environment setup
 
