@@ -24,6 +24,8 @@ First, it is advisable to get a basic knowledge about exoplanets detection metho
 
 The goal of this assignment is to write a report with a characterization of the exoplanets detection methods based on the analysis of exoplanets data. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of models able to characterize the detection methods.
 
-## Data adquisition and preprocessing
+## Data adquisition and preprocessing
 
-Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets).
+Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets). This dataset contains a collection of confirmed exoplanets along with several attributes about them. Download the dataset in CSV format and values-only. You might need to configure your browser to allow the website to open pop-ups.
+
+Once the dataset was downloaded, open it with a text editor to get additional info about the dataset attribute names codification.
