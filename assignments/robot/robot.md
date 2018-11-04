@@ -1,4 +1,4 @@
-# Machine-based robot motion control
+# Machine-Learning based robot motion control
 
 ## Objectives
 
