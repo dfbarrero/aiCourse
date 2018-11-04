@@ -4,55 +4,26 @@
 
 * Deal with a realistic Machine Learning application 
 
-* Plan a Machine Learning project with a real scenario
+* Extract and preprocess a real dataset
 
 * Perform a realistic exploratory analysis
 
-* Extract and preprocess a real dataset
-
 * Implement a realistic Machine Learning workflow
 
-* Get a valuable insight to exoplanets detection methods
+* Get an insight to exoplanets detection methods
 
-## Practical assignment
+## Preliminary steps
+
+First, it is advisable to get a basic knowledge about exoplanets detection methods in order to properly interpret the dataset. The following two readings are a good introduction to the concepts we will be handling in this assignment.
 
 * [Five Ways to Find a Planet](https://exoplanets.nasa.gov/5-ways-to-find-a-planet/)
 
 * [Methods of detecting exoplanets](https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets)
 
-Often, when someone begins to learn a new programming language he implements the famous ``Hello World'' program. The equivalent to this in Evolutionary Computation is the one-max, a trivial problem often used to practice a new EC framework or algorithm. The problem is straitforward: Given a binary chromosome of size $n$, the goal is to maximize the number of ones, i.e., to get an all ones chromosomes. The fitness function is just the sum of ones.
+## Assignment goal
 
-Implement, with any programming language of your choice, a Genetic Algorithm (GA) that solves the one-max problem. Use the following pseudocode as guide.
+The goal of this assignment is to write a report with a characterization of the exoplanets detection methods based on the analysis of exoplanets data. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of models able to characterize the detection methods.
 
-```
-n := Chromosome length
-p := Population size
-pm := Mutation probability
+## Data adquisition and preprocessing
 
-Initialize population with random values
-
-While solution not found
-	i := 0
-	While i < p
-		Select randomly two individuals in the population
-		Compute their fitness
-		Select fittest individual
-
-		If random_number() < pm 
-			Flip a random position of the selected individual
-
-		Store individual in the next population
-
-```
-
-The following figure outlines the algorithm to implement.
-
-<img align="center" src="ga.jpg" width="400">
-
-(Image taken from [here](http://file.scirp.org/Html/1-8302163_41175.htm).)
-
-Once the algorithm is implemented, perform the following tasks:
-
-1. Show the best fitness found in each generation. Execute the algorithm. How does the best fitness evolve?
-2. Compare the execution time with n=10, n=20 and n=100. (Hint: Use the Unix command *time*).
-
+Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets).
