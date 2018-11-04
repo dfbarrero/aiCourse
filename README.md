@@ -28,6 +28,8 @@ Assorted contents:
 
 * [Introduction to KNIME Analytics Platform](assignments/knime/intro.md)
 
+* [Machine-Learning based robot motion control](assignments/robot/robot.md)
+
 * [Characterization of exoplanets detection methods with Machine Learning](assignments/explanets/methods.md)
 
 ## Classic search
