@@ -16,6 +16,10 @@
 
 ## Practical assignment
 
+* [Five Ways to Find a Planet](https://exoplanets.nasa.gov/5-ways-to-find-a-planet/)
+
+* [Methods of detecting exoplanets](https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets)
+
 Often, when someone begins to learn a new programming language he implements the famous ``Hello World'' program. The equivalent to this in Evolutionary Computation is the one-max, a trivial problem often used to practice a new EC framework or algorithm. The problem is straitforward: Given a binary chromosome of size $n$, the goal is to maximize the number of ones, i.e., to get an all ones chromosomes. The fitness function is just the sum of ones.
 
 Implement, with any programming language of your choice, a Genetic Algorithm (GA) that solves the one-max problem. Use the following pseudocode as guide.
