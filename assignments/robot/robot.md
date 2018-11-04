@@ -47,3 +47,7 @@ Firstly, we will train a classifier to predict the best next motion with the 2 s
 7. Hyperparameter optimization (II). We are not satisfied with the model yet. Train a classification tree and compare it with the MPLs of the previous exercises.
 
 8. Improving classifier evaluation. The evaluation of classifiers using training and validation sets is sensible to statistical bias in the data partition. For this reason a common practice is to apply 10-cross validation. 
+
+## Robot motion control with 24 sonars
+
+Apply any learning method at hand to get the highest accuracy classifier with the 24 sonar dataset.
