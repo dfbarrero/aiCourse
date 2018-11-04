@@ -51,3 +51,7 @@ Firstly, we will train a classifier to predict the best next motion with the 2 s
 ## Robot motion control with 24 sonars
 
 Apply any learning method at hand to get the highest accuracy classifier with the 24 sonar dataset.
+
+## Model integration in robotic platform (optional)
+
+Use the four sonars dataset to train a classifier and integrate it with a robot controler under ROS. You can use the [ros stdr ga](https://github.com/dfbarrero/ros_stdr_ga) package as starting point.
