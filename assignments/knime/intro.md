@@ -50,11 +50,11 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 3. Scatterplot are a great tool to visualize the relationship between two variables. Reproduce the scatterplot in the image using the given workflow in KNIME. (Hint: Inspect the output of the "Color Manager" node to better understand what is going on).
 
-<img align="center" src="scatter.png" width="300"><img align="center" src="scatterworkflow.png" width="200">
+<img align="center" src="scatter.png" width="300"><img align="center" src="scatterworkflow.png" width="300">
 
 4. A natural extension of scatterplots to visualize relationships among several attributes is the scatterplot matrix. Implement a KNIME workflow to reproduce the scatterplot matrix given in the figure.
 
-<img align="center" src="scattermatrix.png" width="200">
+<img align="center" src="scattermatrix.png" width="300">
 
 7. Train a decision tree classifier to predict the iris species given the measures of a petal and a sepal. (Hint: Open the example *04_Analytics/04_Classification_and__Predictive_Learning/01_Example_for_Learning_a_Decision_Tree*)
 
