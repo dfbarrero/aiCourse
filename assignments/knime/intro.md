@@ -78,4 +78,4 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 7. Open the example *04_Analytics/03_Clustering/01_Performing_a_k-Means_Clustering and try to understand the workflow*.
 
-8. Browse the examples folder 50_Applications. This folder contains lots of interesting application examples of KNIME, including some pretty advanced ones. Open any application you find interesting and try to understand the workflow.
+8. Browse the examples folder *50_Applications*. This folder contains lots of interesting application examples of KNIME, including some pretty advanced ones. Open any application you find interesting and try to understand the workflow.
