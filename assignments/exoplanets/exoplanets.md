@@ -43,9 +43,13 @@ In order to ease futher data manipulation, insert a node to drop the following a
 
 We are going to split data into two groups: one consideting orbital data (such us eccentricity or orbital period) and another one with mass data.
 
-## Univariable analysis
+## Univariable analysis
 
 Answer the following questions:
+
+1. How many instances and attributes does the dataset contain?
+
+2. How many exoplaters were discovered with each detection method? Which detection methods does the dataset contain?
 
 1. Which are the nominal order-of-magnitude of each attribute? (Hint: Use the Statistics node to get an insight to the data statistics)
 
