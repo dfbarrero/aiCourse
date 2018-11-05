@@ -20,7 +20,7 @@ Of course, we need a labeled dataset to train the classifier. To this end we wil
 * 4 sonars placed looking forward, backwards, left and right (*sensor_readings_4.data*).
 * 24 sonars (*sensor_readings_24.data*).
 
-The dataset provides an additional attribute with the expected robot motion, which is one label out of four: "Move-Forward", "Slight-Right-Turn", Sharp-Right-Turn" and "Slight-Left-Turn"
+The dataset provides an additional attribute with the expected robot motion, which is one label out of four: "Move-Forward", "Slight-Right-Turn", "Sharp-Right-Turn" and "Slight-Left-Turn"
 
 ## Preliminary steps
 
