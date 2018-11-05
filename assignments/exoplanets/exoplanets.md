@@ -29,3 +29,14 @@ The goal of this assignment is to write a report with a characterization of the 
 Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets). This dataset contains a collection of confirmed exoplanets along with several attributes about them. Download the dataset in CSV format and values-only. You might need to configure your browser to allow the website to open pop-ups.
 
 Once the dataset was downloaded, visualize its header using any tool of your choice (Linux command, text editor, etc) to get info about the dataset attributes names codification.
+
+In order to ease futher data manipulation, insert a node to drop the following attributes:
+
+* pl_hostname
+* pl_letter
+* pl_bmassprov
+* pl_ttvflag
+* pl_kepflag
+* pl_k2flag
+* pl_nnotes
+* rowupdate
