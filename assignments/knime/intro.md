@@ -76,6 +76,6 @@ Create a new workflow group named "exercises" to store the exercises, create a n
 
 6. Train a neural network to predict the iris species given the measures of a petal and a sepal. You should notice that a Neural Network should take a normalized input (Hint: Open the example *04_Analytics/04_Classification_and__Predictive_Learning/02_Example_for_Learning_a_Neural_Network*, use one hidden layer with five neurons)
 
-7. Open the example *04_Analytics/03_Clustering/01_Performing_a_k-Means_Clustering and try to understand the workflow*.
+7. Open the example *04_Analytics/03_Clustering/01_Performing_a_k-Means_Clustering* and try to understand the workflow*.
 
 8. Browse the examples folder *50_Applications*. This folder contains lots of interesting application examples of KNIME, including some pretty advanced ones. Open any application you find interesting and try to understand the workflow.
