@@ -4,7 +4,7 @@
 
 * Install KNIME
 
-* First contact with KNIME
+* First steps with KNIME
 
 * Implement basic Machine Learning workflows with KNIME
 
@@ -26,7 +26,9 @@ The KNIME installation instructions along with relevant information for a first 
 
 6. [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
 
-KNIME comes with an excellent collection of examples covering both basic and advanced Machine Learning workflows. Browing those examples is good way to getting down with KNIME and Machine lEARNING. KNIME provides a set of examples locally stores, as well as it has access to an examples server, which reads and download examples on-demand. Go through the following examples trying to understand what is going on. You may want to inspect a node output by right-clicking the node and selectind the data table.
+KNIME comes with an excellent collection of examples covering both basic and advanced Machine Learning workflows. Browing those examples is good way to getting down with KNIME and Machine Learning. KNIME provides a set of local examples, it also has access to an examples server, which reads and downloads examples on-demand. 
+
+Go through the following examples trying to understand what is going on. You may want to inspect a node output by right-clicking the node and selecting the data table.
 
 1. *LOCAL/Basic Examples/Building a Simple Classifier*
 
