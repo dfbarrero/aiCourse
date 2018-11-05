@@ -10,7 +10,9 @@
 
 * Data exploration with KNIME
 
-## Videos sequence
+## KNIME first contact
+
+The KNIME installation instructions along with relevant information for a first contact can be found in this [link](https://www.knime.com/installation). Please, carefully read that document and watch the video contained in it. After that, watch the following videos:
 
 1 [What is a Node, What is a Workflow](https://www.knime.com/knime-introductory-course/chapter1/section2/what-is-a-node-what-is-a-workflow)
 
