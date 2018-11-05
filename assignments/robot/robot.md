@@ -12,7 +12,7 @@
 
 ## Introduction
 
-The goal of this assignment is to develop a robot controller able to follow a wall based on a set of sonar measurements. We will address this problem as a classification task in which the input is composed by several sonar measurements and the output a class is the next robot motion.
+The goal of this assignment is to develop a robot controller able to follow a wall based on a set of sonar measurements. We will address this problem as a classification task in which the input is composed by several sonar measurements and the output class is the next robot motion.
 
 Of course, we need a labeled dataset to train the classifier. To this end we will use the UCI [Wall-Following Robot Navigation Data Data Set](https://archive.ics.uci.edu/ml/datasets/Wall-Following+Robot+Navigation+Data). This dataset contains data for three robot contigurations:
 
@@ -42,7 +42,7 @@ Firstly, we will train a classifier to predict the best next motion with the 2 s
 
 5. Classifier training and evaluation. Split the dataset into a training set (70%) and a validation set (30%). Which is the most suitable sampling method for this problem? Train a multilayer perceptron neural network (MLP) with one hidden layer and five neurons and assess its performance with a confusion matrix. Interpret the result.
 
-6. Hyperparameter optimization (I). We are not satisfied with the previous result, so we will tune its parameters to increase the classifier performance. To this end, please train a new MLP, but this time use two hidden layers and ten hidden neurons. Do not worry if you do not understand the meaning of this change, you only should know that in this way the neural network increases the complexity of the model, and therefore can learn more complex patterns. Compare the accuracy with the accuracy of the previous model.
+6. Hyperparameter optimization (I). We are not satisfied with the previous result, so we will tune its parameters to increase the classifier performance. To this end, please train a new MLP, but this time use two hidden layers and ten hidden neurons. Do not worry if you do not understand the meaning of this change, you only should know that in this way the neural network increases the complexity of the model, and therefore can learn more complex patterns. Compare the accuracy with the accuracy of the previous model. (Hint: PLease, take into account that a neural network expects a normalized input).
 
 7. Hyperparameter optimization (II). We are not satisfied with the model yet. Train a classification tree and compare it with the MPLs of the previous exercises.
 
