@@ -14,17 +14,17 @@
 
 The KNIME installation instructions along with relevant information for a first contact can be found in this [link](https://www.knime.com/installation). Please, carefully read that document and watch the video contained in it. After that, watch the following videos:
 
-1 [What is a Node, What is a Workflow](https://www.knime.com/knime-introductory-course/chapter1/section2/what-is-a-node-what-is-a-workflow)
+1. [What is a Node, What is a Workflow](https://www.knime.com/knime-introductory-course/chapter1/section2/what-is-a-node-what-is-a-workflow)
 
-2 [Node Repository](https://www.knime.com/knime-introductory-course/chapter1/section2/node-repository)
+2. [Node Repository](https://www.knime.com/knime-introductory-course/chapter1/section2/node-repository)
 
-3 [Workflows and Workflow Groups](https://www.knime.com/knime-introductory-course/chapter1/section3/workflows-and-workflow-groups)
+3. [Workflows and Workflow Groups](https://www.knime.com/knime-introductory-course/chapter1/section3/workflows-and-workflow-groups)
 
-4 [Node Status and Operations](https://www.knime.com/knime-introductory-course/chapter1/section3/node-status-and-operations)
+4. [Node Status and Operations](https://www.knime.com/knime-introductory-course/chapter1/section3/node-status-and-operations)
 
-5 [Data Table Structure](https://www.knime.com/knime-introductory-course/chapter1/section3/data-table-structure)
+5. [Data Table Structure](https://www.knime.com/knime-introductory-course/chapter1/section3/data-table-structure)
 
-6 [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
+6. [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
 
 ## Dataset preliminary steps
 
@@ -44,9 +44,9 @@ Open the CSV file with a text editor of your choice to have a look. Count the nu
 
 Create a new workflow group named "exercises" to store the exercises, create a new workflow for each one of the following exercises.
 
-1 Load the Iris dataset with a "File Reader" node and compute its main statistics (such as mean, median, standard deviation, etc) with the "Statistics" node.
+1. Load the Iris dataset with a "File Reader" node and compute its main statistics (such as mean, median, standard deviation, etc) with the "Statistics" node.
 
-2 Compute the average value of the four numerical attributes for each Iris species. (Hint: Watch this [video](https://www.youtube.com/watch?v=JQ-OWMt48ew)).
+2. Compute the average value of the four numerical attributes for each Iris species. (Hint: Watch this [video](https://www.youtube.com/watch?v=JQ-OWMt48ew)).
 
 3. Scatterplot are a great tool to visualize the relationship between two variables. Reproduce the scatterplot in the image using the given workflow in KNIME. (Hint: Inspect the output of the "Color Manager" node to better understand what is going on).
 
