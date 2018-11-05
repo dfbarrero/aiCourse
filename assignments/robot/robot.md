@@ -16,9 +16,9 @@ The goal of this assignment is to develop a robot controller able to follow a wa
 
 Of course, we need a labeled dataset to train the classifier. To this end we will use the UCI [Wall-Following Robot Navigation Data Data Set](https://archive.ics.uci.edu/ml/datasets/Wall-Following+Robot+Navigation+Data). This dataset contains data for three robot contigurations:
 
-* 2 sonars placed looking forward and backwards (sensor_readings_2.data).
-* 4 sonars placed looking forward, backwards, left and right (sensor_readings_4.data).
-* 24 sonars (sensor_readings_24.data).
+* 2 sonars placed looking forward and backwards (*sensor_readings_2.data*).
+* 4 sonars placed looking forward, backwards, left and right (*sensor_readings_4.data*).
+* 24 sonars (*sensor_readings_24.data*).
 
 The dataset provides an additional attribute with the expected robot motion, which is one label out of four: "Move-Forward", "Slight-Right-Turn", Sharp-Right-Turn" and "Slight-Left-Turn"
 
@@ -32,7 +32,7 @@ Open one of the data files with a text editor of your choice and inspect it.
 
 Firstly, we will train a classifier to predict the best next motion with the 2 sonars dataset. Using a single workflow, implement the following tasks:
 
-1. Data adquisition. Read the file sensor_readings_2.data.
+1. Data adquisition. Read the file *sensor_readings_2.data*.
 
 2. Data preprocessing. Observe that the provided dataset lacks columns names, which makes harder futher processing. Add columns names (Sonar1, Sonar2 and Action).
 
