@@ -46,7 +46,7 @@ Go through the following examples trying to understand what is going on. You may
 
 Perhaps the most famous dataset in Machine Learning is one introduced by Fisher in 1936. The dataset contains measures of three different species of a flower named Iris (petal width, petal height, sepal width and sepal height), along with the species name (Iris setosa, Iris versicolor, Iris virginica). In order to better understand what petal and sepal stands for, please, observe the figure below. 
 
-The iris dataset is widely used in Machine Learning literature as an example. To follow up this tradition, we will use this data set in this introductory assignment.
+The iris dataset is widely used in Machine Learning literature as an example. To follow up this tradition, we will use that dataset in this introductory assignment.
 
 <img align="center" src="iris_petal_sepal.png" width="400">
 
