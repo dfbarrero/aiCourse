@@ -40,3 +40,15 @@ In order to ease futher data manipulation, insert a node to drop the following a
 * pl_k2flag
 * pl_nnotes
 * rowupdate
+
+We are going to split data into two groups: one consideting orbital data (such us eccentricity or orbital period) and another one with mass data.
+
+## Univariable analysis
+
+Answer the following questions:
+
+1. Which are the nominal order-of-magnitude of each attribute? (Hint: Use the Statistics node to get an insight to the data statistics)
+
+2. How many instances does the dataset contain?
+
+3. 
