@@ -26,6 +26,20 @@ The KNIME installation instructions along with relevant information for a first 
 
 6. [Document your workflow: Annotations & Comments](https://www.knime.com/knime-introductory-course/chapter1/section3/document-your-workflow-annotations-and-comments)
 
+KNIME comes with an excellent collection of examples covering both basic and advanced Machine Learning workflows. Browing those examples is good way to getting down with KNIME and Machine lEARNING. KNIME provides a set of examples locally stores, as well as it has access to an examples server, which reads and download examples on-demand. Go through the following examples trying to understand what is going on. You may want to inspect a node output by right-clicking the node and selectind the data table.
+
+1. *LOCAL/Basic Examples/Building a Simple Classifier*
+
+2. *LOCAL/Basic Examples/Data Blending*
+
+3. *SERVER/04_Analytics/02_Statistics/01_Simple_Example_with_Statistics*
+
+4. *SERVER/04_Analytics/03_Clustering/01_Performing_a_k-Means_Clustering*
+
+5. *SERVER/04_Analytics/04_Classification_and_Predictive_Models/07_Decision_Tree*
+
+6. *SERVER/04_Analytics/05_Regressions/01_Learning_a_Simple_Regression_Tree*
+
 ## Dataset preliminary steps
 
 Perhaps the most famous dataset in Machine Learning is one introduced by Fisher in 1936. The dataset contains measures of three different species of a flower named Iris (petal width, petal height, sepal width and sepal height), along with the species name (Iris setosa, Iris versicolor, Iris virginica). In order to better understand what petal and sepal stands for, please, observe the figure below. 
