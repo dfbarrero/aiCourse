@@ -410,9 +410,18 @@
 		\item Handle outliers (remove or leave them)
 		\item Sample data (in case there are too much)
 		\item Handle missing values
-		\item Remove irrelevant or redundant features (for instance, social class and salary) \alert{feature selection}
-		\item Compute new attributes (get population density from area and population)
-		\item Discretization, normalization, numerization, ...
+		\item Remove irrelevant or redundant features (\alert{feature selection})
+			\begin{itemize} 
+			\item For instance, attributes ``social class'' and ``salary'' contain highly correlated information
+			\end{itemize}
+		\item Compute new attributes (\alert{feature engineering})
+			\begin{itemize}
+			\item For instance, compute ``population density'' from ``area'' and ``population''
+			\end{itemize}
+		\item Transform attributes
+			\begin{itemize}
+				\item Discretization, normalization, numerization, ...
+			\end{itemize}
 		\end{itemize}
 \end{frame}
 
@@ -423,7 +432,7 @@
 		\item As result, we obtain a \alert{model} (or \alert{classifier} or \alert{predictor} depending on the context)
 		\end{itemize}
 
-	Machine Learning tasks
+	Machine Learning training methods (or ML tasks)
 		\begin{itemize}
 		\item Supervised learning: \textbf{classification} and regression
 		\item Unsupervised learning: \textbf{clustering}, association, \textbf{dimensionality reduction} and anomality detection
