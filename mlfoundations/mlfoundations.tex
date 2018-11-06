@@ -737,14 +737,14 @@
  	   \column{.70\textwidth}
 	   		\begin{exampleblock}{Decision rules}
 	   		\begin{lstlisting}[firstnumber=1, xleftmargin=10pt] 
-			if colour = light  and  nuclei = 1 
-			then cell = healthy   	
+if colour = light  and  nuclei = 1 
+then cell = healthy   	
 			            
-			if nuclei = 2  and  colour = dark
-			then cell = cancerours
+if nuclei = 2  and  colour = dark
+then cell = cancerours
 
-			(and 4 rules more)
-	   		\end{lstlisting}
+(and 4 rules more)
+          \end{lstlisting}
 	   		\end{exampleblock}
 	\end{columns}
 \end{frame}
@@ -766,16 +766,16 @@ if colour = light and nuclei = 1
 then cell = healthy   	
 			            
 else 
-	if nuclei = 2 and colour = dark
-	then cell = cancerous
+    if nuclei = 2 and colour = dark
+    then cell = cancerous
 
-	else 
-		if tails = 1 
-	    then cell = healthy
+   else 
+        if tails = 1 
+        then cell = healthy
 
-	    else cell = cancerous
-	   		\end{lstlisting}
-	   		\end{exampleblock}
+        else cell = cancerous
+       \end{lstlisting}
+	   	\end{exampleblock}
 	\end{columns}
 \end{frame}
 
@@ -1029,13 +1029,18 @@ else
 	   \column{.70\textwidth}
 	   		\begin{exampleblock}{Association rules}
 	   		\begin{lstlisting}[firstnumber=1, xleftmargin=10pt] 
-			if diapers=si, then milk=yes (100%, 37%)
-			if eggs=yes, then oil=yes (50%, 25%)
-			if wine=yes, then lettuce=yes (33%, 12%)
-	   		\end{lstlisting}
+if diapers=yes
+then milk=yes (100%, 37%)
+
+if eggs=yes
+then oil=yes (50%, 25%)
+
+if wine=yes
+then lettuce=yes (33%, 12%)
+           \end{lstlisting}
 	   		\end{exampleblock}
 
-			where (confidence, support)
+ 		where (confidence, support)
 	   \column{.15\textwidth}
 	\end{columns}
 \end{frame}
