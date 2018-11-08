@@ -1,4 +1,4 @@
-# Characterization of exoplanets detection methods with Machine Learning
+# Regression analysis of exoplanets mass
 
 ## Objectives
 
@@ -10,49 +10,52 @@
 
 * Implement a realistic Machine Learning workflow
 
-* Get an insight to exoplanets detection methods
+This assignment assumes a basic knowledge of descriptive Statistics.
 
 ## Preliminary steps
 
-First, it is advisable to get a basic knowledge about exoplanets detection methods in order to properly interpret the dataset. The following two readings are a good introduction to the concepts we will be handling in this assignment.
+First, it is advisable to get a basic knowledge about exoplanets detection methods and orbital elements. The following two readings are a good introduction to some concepts that we will be handling in this assignment.
 
 * [Five Ways to Find a Planet](https://exoplanets.nasa.gov/5-ways-to-find-a-planet/)
 
-* [Methods of detecting exoplanets](https://en.wikipedia.org/wiki/Methods_of_detecting_exoplanets)
+* [Orbital elements](https://en.wikipedia.org/wiki/Orbital_elements)
 
 ## Assignment goal
 
-The goal of this assignment is to write a report with a characterization of the exoplanets detection methods based on the analysis of exoplanets data. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of models able to characterize the detection methods.
+The goal of this assignment is to write a report developing an exoplanet mass predictor. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of regression models able to predict an exoplanet mass.
 
-## Data adquisition and preprocessing
+## Data adquisition and selection
 
-Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets). This dataset contains a collection of confirmed exoplanets along with several attributes about them. Download the dataset in CSV format and values-only. You might need to configure your browser to allow the website to open pop-ups.
+Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets). This dataset contains a collection of confirmed exoplanets along with several attributes about them. Download the dataset in *CSV format* and *values-only*. *You might need to configure your browser to allow the website to open pop-ups*.
 
-Once the dataset was downloaded, visualize its header using any tool of your choice (Linux command, text editor, etc) to get info about the dataset attributes names codification.
+Once the dataset was downloaded (consider only the default attributes), visualize its header using any tool of your choice (Linux command, text editor, etc) to get info about the dataset attributes names codification. If your are interested in getting a more detailed info about the attributes, [read this link](https://exoplanetarchive.ipac.caltech.edu/docs/API_exoplanet_columns.html).
 
-In order to ease futher data manipulation, insert a node to drop the following attributes:
+The first step in any ML project is to get a basic understanding of the data at hand. To this end, apply any technique at your disposal (Statistics, histograms, etc) to answer the following questions:
 
-* pl_hostname
-* pl_letter
-* pl_bmassprov
-* pl_ttvflag
-* pl_kepflag
-* pl_k2flag
-* pl_nnotes
-* rowupdate
+1. How many instances and attributes does the dataset contain? (Hint: Use the Statistics node to get an insight to the data statistics)
 
-We are going to split data into two groups: one consideting orbital data (such us eccentricity or orbital period) and another one with mass data.
+2. How many exoplanets were discovered? How many exoplanets were discovered with each detection method? Which detection methods does the dataset contain? (Hint: The groupBy node is handy in to answer that kind of questions)
+
+3. Does the dataset contain missing values?
 
 ## Univariable analysis
 
-Answer the following questions:
+This assignment is interested in predicting the exoplanet mass, so many of the information contained in the dataset is irrelevant. However, distinguishing between relevant and irrelevant features is, itself, a challenging task most of the times.
 
-1. How many instances and attributes does the dataset contain?
+In a first attempt to better understand our data, we will consider only those attributes which are directly associated with mass. Insert a KNIME node to drop all the attributes, with the exception of the following ones:
 
-2. How many exoplaters were discovered with each detection method? Which detection methods does the dataset contain?
+* pl_dens
+* pl_mass
+* pl_radj
 
-1. Which are the nominal order-of-magnitude of each attribute? (Hint: Use the Statistics node to get an insight to the data statistics)
+Perform a exploratory univariable analysis of those attributes, and in particular identify maximum and minimum values, average value and median value. Identify missing values and outliers. If any, remove missing values and outliers.
 
-2. How many instances does the dataset contain?
+Analyze the results.
 
-3. 
+## Bivariable analysis
+
+Compute the correlation matrix and visualize a scatterplot matrix to identify correlations among the variables. 
+
+Analyze the results.
+
+## Regression analysis
