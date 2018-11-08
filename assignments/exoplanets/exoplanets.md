@@ -1,4 +1,4 @@
-# Regression analysis of exoplanets mass
+# Regression analysis of exoplanets masses
 
 ## Objectives
 
