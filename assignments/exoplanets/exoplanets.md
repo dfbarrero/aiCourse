@@ -65,3 +65,7 @@ Implement a linear regression with pl_mass as target attribute. Train the model 
 Does a linear model fit well the data?
 
 Introduce any change to the model to increase the model fit measired with R2. You can change the regression model, add or remove attributes (perhaps orbital measures?), or build new attributes. Take into account that the model interpretation could provide you valuable information, for instance, the p-values.
+
+<img align="center" src="regression.png" width="300">
+
+A visual comparison between the predicted mass and the actual mass could also provide a valuable insight. 
