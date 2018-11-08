@@ -33,8 +33,6 @@ It is usefull to remember the basic ML steps:
 
 The goal of this assignment is to write a report developing an exoplanet mass predictor. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of regression models able to predict an exoplanet mass.
 
-
-
 ## Data adquisition and selection
 
 Download the exoplanet dataset from the [NASA Exploplanet Archive](https://exoplanetarchive.ipac.caltech.edu/cgi-bin/TblView/nph-tblView?app=ExoTbls&config=planets). This dataset contains a collection of confirmed exoplanets along with several attributes about them. Download the dataset in *CSV format* and *values-only*. *You might need to configure your browser to allow the website to open pop-ups*.
@@ -73,7 +71,7 @@ Analyze the results.
 
 The final goal of this assignment is to predict the exoplanet mass, which in ML terminology means training a regression model.
 
-Implement a linear regression with *pl_mass* as target attribute. Train the model with the 70% of the data, and validate it with the remaining 30% of the data. Compute, on the validation set, the [R2](https://en.wikipedia.org/wiki/Coefficient_of_determination) using a Numeric Scorer node. A complementary tool to assess the model fit is a plot comparing the predicted mass to the actual mass, as the following figure shows. A proper interpretation of the plot should suggest how to improve the regression model.
+Implement a linear regression with *pl_mass* as target attribute. Train the model with the 70% of the data, and validate it with the remaining 30% of the data. Compute, on the validation set, the [R2](https://en.wikipedia.org/wiki/Coefficient_of_determination) using a [Numeric Scorer](https://nodepit.com/node/org.knime.base.node.mine.scorer.numeric.NumericScorerNodeFactory) node. A complementary tool to assess the model fit is a plot comparing the predicted mass to the actual mass, as the following figure shows. A proper interpretation of the plot should suggest how to improve the regression model.
 
 <img align="center" src="regression.png" width="300">
 
