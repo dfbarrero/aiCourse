@@ -31,7 +31,7 @@ Assorted contents:
 
 * [Machine-Learning based robot motion control](assignments/robot/robot.md)
 
-* [Regression analysis of exoplanets mass](assignments/explanets/exoplanets.md)
+* [Regression analysis of exoplanets mass](assignments/exoplanets/exoplanets.md)
 
 ## Classic search
 
