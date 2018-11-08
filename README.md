@@ -31,7 +31,7 @@ Assorted contents:
 
 * [Machine-Learning based robot motion control](assignments/robot/robot.md)
 
-* [Characterization of exoplanets detection methods with Machine Learning](assignments/explanets/methods.md)
+* [Prediction of an exoplanet mass](assignments/explanets/methods.md)
 
 ## Classic search
 
