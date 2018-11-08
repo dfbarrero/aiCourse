@@ -58,4 +58,10 @@ Compute the correlation matrix and visualize a scatterplot matrix to identify co
 
 Analyze the results.
 
-## Regression analysis
+## Regression analysis
+
+Implement a linear regression with pl_mass as target attribute. Train the model with the 70% of the data, and validate it with the remaining 30% of the data. Compute the R2 to assess the model fit. 
+
+Does a linear model fit well the data?
+
+Introduce any change to the model to increase the model fit measired with R2. You can change the regression model, add or remove attributes (perhaps orbital measures?), or build new attributes. Take into account that the model interpretation could provide you valuable information, for instance, the p-values.
