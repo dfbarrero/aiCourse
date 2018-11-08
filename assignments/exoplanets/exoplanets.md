@@ -20,9 +20,20 @@ First, it is advisable to get a basic knowledge about exoplanets detection metho
 
 * [Orbital elements](https://en.wikipedia.org/wiki/Orbital_elements)
 
+It is usefull to remember the basic ML steps:
+
+1. Adquire data.
+2. Select data.
+3. Exploratory analysis of data.
+4. Train the model
+5. Evaluate the model.
+6. Go to 2 until a good enough model is found.
+
 ## Assignment goal
 
 The goal of this assignment is to write a report developing an exoplanet mass predictor. To achieve this goal it is required to perform a descriptive analysis of the dataset complemented with the development of regression models able to predict an exoplanet mass.
+
+
 
 ## Data adquisition and selection
 
@@ -38,7 +49,7 @@ The first step in any ML project is to get a basic understanding of the data at 
 
 3. Does the dataset contain missing values?
 
-## Univariable analysis
+## Univariable exploratory analysis
 
 This assignment is interested in predicting the exoplanet mass, so many of the information contained in the dataset is irrelevant. However, distinguishing between relevant and irrelevant features is, itself, a challenging task most of the times.
 
@@ -52,7 +63,7 @@ Perform a exploratory univariable analysis of those attributes, and in particula
 
 Analyze the results.
 
-## Bivariable analysis
+## Bivariable exploratory analysis
 
 Compute the correlation matrix and visualize a scatterplot matrix to identify correlations among the variables. 
 
@@ -60,12 +71,14 @@ Analyze the results.
 
 ## Regression analysis
 
-Implement a linear regression with pl_mass as target attribute. Train the model with the 70% of the data, and validate it with the remaining 30% of the data. Compute the R2 to assess the model fit. 
+The final goal of this assignment is to predict the exoplanet mass, which in ML terminology means training a regression model.
 
-Does a linear model fit well the data?
-
-Introduce any change to the model to increase the model fit measired with R2. You can change the regression model, add or remove attributes (perhaps orbital measures?), or build new attributes. Take into account that the model interpretation could provide you valuable information, for instance, the p-values.
+Implement a linear regression with *pl_mass* as target attribute. Train the model with the 70% of the data, and validate it with the remaining 30% of the data. Compute, on the validation set, the [R2](https://en.wikipedia.org/wiki/Coefficient_of_determination) using a Numeric Scorer node. A complementary tool to assess the model fit is a plot comparing the predicted mass to the actual mass, as the following figure shows. A proper interpretation of the plot should suggest how to improve the regression model.
 
 <img align="center" src="regression.png" width="300">
 
-A visual comparison between the predicted mass and the actual mass could also provide a valuable insight. 
+The objective of model evaluation is to determine whether the model fit well the data. For the purpose of this assignment, we will consider a satisfactory model that one with R2>0.65.
+
+Introduce any change to the model to increase the model fit. You can change the regression model, add or remove attributes (perhaps orbital measures?), or build new attributes. Take into account that the model interpretation could provide you valuable information, for instance, the p-values or coefficients values.
+
+Analyze the results.
