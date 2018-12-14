@@ -25,14 +25,6 @@ Assorted contents:
 
 # Practical assignments
 
-## Machine Learning
-
-* [Introduction to KNIME Analytics Platform](assignments/knime/intro.md)
-
-* [Machine-Learning based robot motion control](assignments/robot/robot.md)
-
-* [Regression analysis of exoplanets masses](assignments/exoplanets/exoplanets.md)
-
 ## Classic search
 
 ## Task and path planning
