@@ -5,15 +5,7 @@ Assorted contents:
 
 * [Introduction to Artificial Intelligence](introduction/)
 
-* [Introduction to Robotics](robotics/)
-
-* [Artificial Intelligence in Videogames](aivideogames/)
-
-* [Machine Learning Foundations](mlfoundations/)
-
-* [Artificial Neural Networks](ann/)
-
-* [Artificial Neural Networks with PyBrain](pybrain/)
+## Evolutionary Computation
 
 * [Introduction to Evolutionary Computation](ecintro/)
 
@@ -23,7 +15,19 @@ Assorted contents:
 
 * [Search](search/search.pdf) (PPT, Russel & Norvig slides)
 
+## Planning & Scheduling
+
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
+
+## Misc
+
+* [Artificial Intelligence in Videogames](aivideogames/)
+
+* [Introduction to Robotics](robotics/)
+
+* [Artificial Neural Networks](ann/)
+
+* [Artificial Neural Networks with PyBrain](pybrain/)
 
 # Practical assignments
 
