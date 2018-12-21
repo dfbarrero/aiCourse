@@ -26,7 +26,7 @@
 
 * [Introduction to Robotics](robotics/)
 
-* [Control Architectures](controlarchitectures/)
+* [Control Architectures](controlarchitectures/) (PPT)
 
 ## Misc
 
