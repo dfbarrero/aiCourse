@@ -22,11 +22,17 @@
 
 * [Misiones espaciales basadas en control autónomo](aicontrolmissions/aicontrolmissions.ppt) (PPT, Spanish)
 
+## Robotics
+
+* [Introduction to Robotics](robotics/)
+
+* [Control Architectures](controlarchitectures/)
+
 ## Misc
 
 * [Artificial Intelligence in Videogames](aivideogames/)
 
-* [Introduction to Robotics](robotics/)
+
 
 * [Artificial Neural Networks](ann/)
 
