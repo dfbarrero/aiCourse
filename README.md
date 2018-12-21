@@ -16,6 +16,8 @@
 
 ## Planning & Scheduling
 
+* [Planning representation](planningrepresentation/planningrepresentation.pptx)
+
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
 ## Misc
