@@ -20,6 +20,8 @@
 
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
+* [Misiones espaciales basadas en control autónomo](aicontrolmissions/aicontrolmissions) (PPT, Spanish)
+
 ## Misc
 
 * [Artificial Intelligence in Videogames](aivideogames/)
