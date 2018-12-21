@@ -5,7 +5,7 @@ Assorted contents:
 
 * [Introduction to Artificial Intelligence](introduction/)
 
-## Evolutionary Computation
+## Evolutionary Computation
 
 * [Introduction to Evolutionary Computation](ecintro/)
 
@@ -15,11 +15,11 @@ Assorted contents:
 
 * [Search](search/search.pdf) (PPT, Russel & Norvig slides)
 
-## Planning & Scheduling
+## Planning & Scheduling
 
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
-## Misc
+## Misc
 
 * [Artificial Intelligence in Videogames](aivideogames/)
 
