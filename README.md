@@ -21,7 +21,9 @@ Assorted contents:
 
 * [Neuroevolution](neuroevolution/)
 
-* [Search](search/search.pdf) (PPT)
+* [Search](search/search.pdf) (PPT, Russel & Norvig slides)
+
+* [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
 # Practical assignments
 
