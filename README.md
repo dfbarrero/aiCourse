@@ -1,9 +1,10 @@
 # Contents
 
-
-Assorted contents:
+## Introductory
 
 * [Introduction to Artificial Intelligence](introduction/)
+
+* [Search](search/search.pdf) (PPT, Russel & Norvig slides)
 
 ## Evolutionary Computation
 
@@ -12,8 +13,6 @@ Assorted contents:
 * [Evolutionary Algorithms](ea/)
 
 * [Neuroevolution](neuroevolution/)
-
-* [Search](search/search.pdf) (PPT, Russel & Norvig slides)
 
 ## Planning & Scheduling
 
