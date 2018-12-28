@@ -1,4 +1,4 @@
-# Understanding parameters settings in Evoltionary Algorithms
+# Understanding parameters settings in Evolutionary Algorithms
 
 ## Objectives
 
