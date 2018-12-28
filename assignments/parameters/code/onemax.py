@@ -7,6 +7,7 @@ popSize = 50	# Population size
 maxGenerations = 15	# Max. generations
 mutRate = 0.1	# Mutation rate
 elite=0		# Elitism size
+tourSize=2      # Tournament size
 
 def onemax_fitness(candidates, args):
 	fitness = [] 
@@ -26,13 +27,15 @@ prng.seed(time())
     
 ea = inspyred.ec.GA(prng)
 ea.terminator = inspyred.ec.terminators.generation_termination
+ea.selector = inspyred.ec.selectors.tournament_selection
 
 final_pop = ea.evolve(generator=generator, 
-				evaluator=onemax_fitness,
-				pop_size=popSize, 
-				num_elites=elite, 
-				max_generations=maxGenerations, 
-				mutation_rate=mutRate)
+	evaluator=onemax_fitness,
+	pop_size=popSize, 
+        tournament_size=tourSize,
+	num_elites=elite, 
+	max_generations=maxGenerations, 
+	mutation_rate=mutRate)
 
 best = max(final_pop)                          
 print('Best solution: \n{0}'.format(str(best)))
