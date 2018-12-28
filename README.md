@@ -18,6 +18,8 @@
 
 * [Planning representation](planningrepresentation/planningrepresentation.pptx)
 
+* [Planning techniques](planningtechniques/planningtechniques.pptx) (PPTX)
+
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
 * [Misiones espaciales basadas en control autónomo](aicontrolmissions/aicontrolmissions.ppt) (PPT, Spanish)
