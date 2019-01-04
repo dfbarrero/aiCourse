@@ -44,6 +44,10 @@
 
 ## Classic search
 
+* [8-queens with informed search](assignments/search/informed.md)
+
+* [8-queens with non-informed search](assignments/search/non-informed.md)
+
 ## Task and path planning
 
 * [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
