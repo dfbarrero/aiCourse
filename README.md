@@ -34,8 +34,6 @@
 
 * [Artificial Intelligence in Videogames](aivideogames/)
 
-
-
 * [Artificial Neural Networks](ann/)
 
 * [Artificial Neural Networks with PyBrain](pybrain/)
@@ -46,7 +44,7 @@
 
 * [8-queens with informed search](assignments/search/informed.md)
 
-* [8-queens with non-informed search](assignments/search/non-informed.md)
+* [8-queens with non-informed search](assignments/search/noninformed.md)
 
 ## Task and path planning
 
