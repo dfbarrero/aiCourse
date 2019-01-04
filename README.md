@@ -50,6 +50,8 @@
 
 * [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
 
+* [Path-planning exercises](assignments/pathplanning/pathplanning.md)
+
 * [PDDL v1 exercises](assignments/planning/pddl-v1.md)
 
 * [PDDL v2 exercises](assignments/planning/pddl-v2.md)
