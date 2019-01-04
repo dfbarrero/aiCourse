@@ -1,19 +1,17 @@
-# 8-queens with informed search
+# Path-planning exercises
 
 
 ## Objectives
 
-* Implement informed search
+* Implement path-planning algorithms
 
-* Increase knowledge about informed search
-
-* First contact with classical AI problems
+* Increase knowledge about path-planning
 
 ## Preliminary steps
 
 Blablabla
 
-## The 8-queens problem
+## The 8-queens problem
 
 Blablabla
 
