@@ -17,7 +17,7 @@ Check the following link to see how to find a solution to the 4-queens problem:
 
 https://acrogenesis.com/or-tools/documentation/user_manual/manual/introduction/4queens.html#see-what-n-queens-problem-really-is
 
-## The 8-queens problem
+## The 8-queens problem
 
 It is a generalization of the 4-queen problem but in this case we need to place 8-queens instead of 4. It has only 12 solutions (not counting as solutions the symmetry operations of rotation and reflection of the board. If we do, then there are 92 distinct solutions). 
 
@@ -31,7 +31,7 @@ The problem can be solved at least by two search strategy aproaches:
 1) Incrementally, that is, we start by an empty tree node and gradually we add nodes to the tree to comply to the imposed constraints.
 2) Iterative repairing, that is, we start with all queens on the board and then try to count the number of conflicts (attacks), and try to improve the placement of the queens.
 
-Based on these considerations, implement the 8-queens problem using a programming language as Python  and a tree representation. You can provide 1 solution or all of them. You can use an incremental approach or a repairing one. However, the search has to be informed using any of the algorithms explained in the class. Provide at least 2 heuristics and study which one is better and why. 
+Based on these considerations, implement the 8-queens problem using a programming language such as Python (or any other of your election)  and a tree-based representation. You can provide 1 solution or all of them. You can use an incremental approach or a repairing one. However, the search has to be informed using any of the algorithms explained in the class. Provide at least 2 heuristics and study which one is better and why. 
 
 ## One-max problem with inspyred
 
