@@ -1,21 +1,19 @@
-# Understanding parameters settings in Evolutionary Algorithms
+# Path-planning exercises
+
 
 ## Objectives
 
-* Introduce *inspyred*
+* Implement path-planning algorithms
 
-* Understand the parameter settings of a basic GA
-
-* Observe the basic behaviour of an EA
-
-* Customize the parameter settings
-
-* Gather and process the main statistics
+* Increase knowledge about path-planning
 
 ## Preliminary steps
 
-Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix console, just type ```pip install inspyred```.
+Blablabla
 
+## The 8-queens problem
+
+Blablabla
 
 ## One-max problem with inspyred
 

@@ -1,21 +1,21 @@
-# Understanding parameters settings in Evolutionary Algorithms
+# 8-queens with informed search
+
 
 ## Objectives
 
-* Introduce *inspyred*
+* Implement informed search
 
-* Understand the parameter settings of a basic GA
+* Increase knowledge about informed search
 
-* Observe the basic behaviour of an EA
-
-* Customize the parameter settings
-
-* Gather and process the main statistics
+* First contact with classical AI problems
 
 ## Preliminary steps
 
-Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix console, just type ```pip install inspyred```.
+Blablabla
 
+## The 8-queens problem
+
+Blablabla
 
 ## One-max problem with inspyred
 

@@ -18,6 +18,8 @@
 
 * [Planning representation](planningrepresentation/planningrepresentation.pptx)
 
+* [Planning techniques](planningtechniques/planningtechniques.pptx) (PPTX)
+
 * [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
 
 * [Misiones espaciales basadas en control autónomo](aicontrolmissions/aicontrolmissions.ppt) (PPT, Spanish)
@@ -32,8 +34,6 @@
 
 * [Artificial Intelligence in Videogames](aivideogames/)
 
-
-
 * [Artificial Neural Networks](ann/)
 
 * [Artificial Neural Networks with PyBrain](pybrain/)
@@ -42,9 +42,15 @@
 
 ## Classic search
 
+* [8-queens with informed search](assignments/search/informed.md)
+
+* [8-queens with non-informed search](assignments/search/noninformed.md)
+
 ## Task and path planning
 
 * [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
+
+* [Path-planning exercises](assignments/pathplanning/pathplanning.md)
 
 * [PDDL v1 exercises](assignments/planning/pddl-v1.md)
 
