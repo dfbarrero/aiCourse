@@ -13,7 +13,8 @@
 
 The 4-queens puzzle is the problem of placing four chess queens on an 4×4 chessboard so that no two queens threaten each other. A solution requires that no two queens are placed on the same row, column, or diagonal. The 4-queens puzzle is a sub-problem of the more general n queens problem of placing n non-attacking queens on an n×n chessboard. There are no solutions when n=2 or n=3, so n=4 it is first problem where you can find a solution.
 
-Check the following link to see how to find a solution to the 4-queen problem
+Check the following link to see how to find a solution to the 4-queens problem:
+
 https://acrogenesis.com/or-tools/documentation/user_manual/manual/introduction/4queens.html#see-what-n-queens-problem-really-is
 
 ## The 8-queens problem
