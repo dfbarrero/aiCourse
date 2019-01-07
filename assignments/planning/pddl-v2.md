@@ -14,6 +14,7 @@ In order to help in the resolution of problems, one can check the International 
 
 * [IPC 2011 domains](http://www.plg.inf.uc3m.es/ipc2011-deterministic/Domains)
 
+The student should generate one domain file and at least 3 problem files for each exercise.
 
 ## Exercise 1: Mars rover domain with multiple tasks
 
