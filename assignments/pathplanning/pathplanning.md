@@ -15,121 +15,56 @@ http://qiao.github.io/PathFinding.js/visual/
 
 ## Implementation
 
-We want to compare the Dijkstra Algorithm against A* with different heuristics (i.e. Octile, Manhattan, Euclidean and Chebyschev).
+We want to compare the Dijkstra Algorithm against A* with different heuristics (e.g. Octile, Manhattan, Euclidean and Chebyschev).
 You can create your own implementation of both  integrated algorithms or you can reuse previous code. For example:
-
 
 - Here you can find a Dijkstra implementation
 
 https://gist.github.com/econchick/4666413
 
-- And in this other link, an A* Algorithm
+- And in this other link, an A* implementation
 
 https://gist.github.com/jamiees2/5531924
 
+(Be aware of the Python version used)
 
 Perform the following tasks:
 
-1. Execute the script to validate the installation of *Inspyred*.
+1. Get familiar with both algorithms running different scenarios with the Web application.
 
-2. Observe how average and best fitness evolve along the time. Explain their behavior.
+2. Consider the following grid map where the robot is located at the cell labeled with R, and the target is located at the cell labeled with T. All the cells labeled with X are considered as occupied cells and the cells labeled with B are considered free to pass. Run the algorithms and see the results.  
 
-3. Execute the script several times, did it always find the solution? Why?
+X B X X B B B B B B
+B B X X B B B B B B
+B B X X B B B B B B
+B B B B B B B B B B
+T X X X B B X X B B
+B B B X B B X X X B
+B B B X X B B B B X
+B B X X B X B B B B
+X B B B B B B X B X
+B X B B B B B R X X 
 
-4. Change the chromosome length to 30 and repeat the previous questions.
+3. Implement (or resuse) A* and Dijkstra algorithms.
 
-5. Customize the algorithm settings to increase the probability of finding a solution.
+4. Implement the following heuristics for A*: Octile, Manhattan, Euclidean and Chebyschev.
+ 
+    ManhattanDistance (int x1, int x2, int y1, int y2)
+            return Math.Abs(x1 - x2) + Math.Abs(y1 - y2)
+            
+    EuclideanDistance(int x1, int x2, int y1, int y2)
+            return square = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
+            
+    ChebyshevDistance(int x, int y)
+            return 1 * (x + y) + (1 - 2 * 1) * (x - y)
+            
+    OctileDistance (int x, int y)
+            return max(x, y) + (sqrt(2)-1)*min(x, y)
 
-6. Set p_m=0.5. What happen?
 
-7. Set p_m=1.0. What happen?
+5. Run A* with the different heuristics.
 
-8. Set the chromosome length to 50 and customize the algorithm to increase the probability of finding a solution.
+6. Compare to Dijkstra.
 
-## Real number function optimization with Inspyred
-
-This exercise deals with the optimization of a function. We will optimize the parameters of a function named the Schwefel function, that can be formally stated as follows:
-
-<img src="figs/eqn.png">
-
-where *n* represents the number of dimensions and x_i \in [-500, 500] for all i=1,...,n. The input values that optimizes the function is [420.9687, 420.9687, ..., 420.9687], this a minimization task and the best fitness is 0. A graphical representation of this problem for n=2 (two dimensions) follows.
-
-<img src="figs/schwefel.png" width="400">
-
-The code that implemens a GA that solves the Schwefel problem is the next listing. You can download the (code here)[code/ga_example.py]. 
-
-```Python
-from random import Random
-from time import time
-import inspyred
-
-# Do not touch this value
-maxEvaluations=8000
-
-# Customize these parameters
-popSize = X
-mutRate = X
-elitism = X
-tourSize = X
-xoverPoints = X
-
-def showStatistics(population, num_generations, num_evaluations, args):
-    stats = inspyred.ec.analysis.fitness_statistics(population)
-    print('Generation {0}, best fit {1}, avg. fit {2}'.format(
-            num_generations, stats['best'], stats['mean']))
-
-def main(prng=None, display=False):
-    if prng is None:
-        prng = Random()
-        prng.seed(time())
-
-    problem = inspyred.benchmarks.Binary(inspyred.benchmarks.Schwefel(2),
-                                         dimension_bits=30)
-    ea = inspyred.ec.GA(prng)
-    ea.terminator = inspyred.ec.terminators.evaluation_termination
-    ea.observer = showStatistics
-    ea.selector = inspyred.ec.selectors.tournament_selection
-    final_pop = ea.evolve(generator=problem.generator,
-                          evaluator=problem.evaluator,
-                          pop_size=popSize,
-                          maximize=problem.maximize,
-                          bounder=problem.bounder,
-                          max_evaluations=maxEvaluations,
-                          num_elites=elitism,
-                          tournament_size=tourSize,
-                          mutation_rate=mutRate,
-                          num_crossover_points=xoverPoints)
-
-    if display:
-        best = max(final_pop)
-        print('Best Solution: \n{0}'.format(str(best)))
-    return ea
-
-if __name__ == '__main__':
-    main(display=True)
-```
-
-Please observe that the main algorithm parameters have been deleted. The remaining parameters are as follows:
-
-* Representation: Binary
-
-* Chromosome length: 30
-
-* Crossover: n-point crossover
-
-* Mutation: Flip mutation
-
-* Mutation probability: X
-
-* Population size: X
-
-* Termination: 8,000 evaluations
-
-Perform the following tasks:
-
-1. Set the parameters to get a perfect solution (fitness=0).
-
-2. Set the parameters to get the solution as soon as possible.
-
-3. Execute the algorithm 10 times and show a graph relating generation, best fitness and average fitness. To obtain the graph values, average across all the 10 runs. If necessary, change the code and use any external tool (Excel, Matlab, R, Gnuplot, ...) at your convenience.
+7. What is the better algorithm and/or heuristic? Why?
 
