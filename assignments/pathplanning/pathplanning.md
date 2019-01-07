@@ -32,7 +32,7 @@ Perform the following tasks:
 
 1. Get familiar with both algorithms running different scenarios with the Web application.
 
-2. Consider the following grid map (10 X 10) where the robot is located at the cell labeled with R, and the target is located at the cell labeled with T. All the cells labeled with X are considered as occupied cells and the cells labeled with B are considered free to pass. Run the algorithms and see the results.  
+2. Consider the following grid map (10 X 10) where the robot is located at the cell labeled with R, and the target is located at the cell labeled with T. All the cells labeled with X are considered as occupied cells and the white cells are considered free to pass. Run the algorithms and see the results.  
 
  
 <img align="right" src="mapgrid.png" width="250">
