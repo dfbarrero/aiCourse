@@ -31,3 +31,10 @@ Based on these considerations, implement the 8-queens problem using:
 - You can use an incremental approach or a repairing one. 
 
 However, the search has to be informed using any of the algorithms explained in the class. Using a tree-based representation you will be able to integrate any kind of search algorithm for solving your problem. You can also increment or decrement the number of queens. Try to parametrize the problem as much as possible. Provide at least 2 heuristics and study which one is better and why. 
+
+## The 8-puzzle problem
+If the 8-queen problem does not appeal you much, you can insead try to solve the 8-puzzle problem. In this case we have a square board with 9 positions, filled by 8 numbered tiles and one gap. At any point, a tile adjacent to the gap can be moved into the gap, creating a new gap position. In other words the gap can be swapped with an adjacent (horizontally and vertically) tile. The objective in the game is to begin with an arbitrary configuration of tiles, and move them so as to get the numbered tiles arranged in ascending order either running around the perimeter of the board or ordered from left to right, with 1 in the top left-hand position. You can read more in:
+
+http://www.aiai.ed.ac.uk/~gwickler/eightpuzzle-uninf.html
+
+In this case, you only need to provide one solution and it will be incremental. Again, using a tree-based representation will help to use any type of search, quickly introdude heuristics (try at least 2 heurisctic also for this problem) and practice AI!!
