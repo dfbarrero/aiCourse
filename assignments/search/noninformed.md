@@ -22,7 +22,14 @@ The problem can be solved at least by two search strategy aproaches:
 1) Incrementally, that is, we start by an empty tree node and gradually we add nodes to the tree to comply to the imposed constraints.
 2) Iterative repairing, that is, we start with all queens on the board and then try to count the number of conflicts (attacks), and try to improve the placement of the queens.
 
-Based on these considerations, implement the 8-queens problem using a programming language such as Python (or any other of your election)  and a tree-based representation. You can provide 1 solution or all of them. You can use an incremental approach or a repairing one. However, the search has to be uninformed using any of the algorithms explained in the class. 
+Based on these considerations, implement the 8-queens problem using:
+
+- A programming language such as Python (or any other of your election)  
+- A tree-based representation.
+- You can provide 1 solution or all of them.
+- You can use an incremental approach or a repairing one. 
+
+However, the search has to be uninformed using any of the algorithms explained in the class. Using a tree-based representation you will be able to integrate any kind of search algorithm for solving your problem. You can also increment or decrement the number of queens. Try to parametrize the problem as much as possible.
 
 ## One-max problem with inspyred
 
