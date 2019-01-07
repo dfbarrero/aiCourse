@@ -7,83 +7,26 @@
 
 * Increase knowledge about path-planning
 
-## Preliminary steps
+## Preliminary step
 
-Blablabla
+As a first step, the student can get an idea of how Path Planning algorithms work using the following application:
 
-## The 8-queens problem
+http://qiao.github.io/PathFinding.js/visual/
 
-Blablabla
+## Implementation
 
-## One-max problem with inspyred
-
-Copy or [download](code/onemax.py) the following script, which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. All the relevant algorithm parameters are contained in variables defined in the begining of the script.
-
-```Python
-from random import Random
-from time import time
-import inspyred
-
-chrLength = 15	# Chromosome length
-popSize = 50	# Population size
-maxGenerations = 15	# Max. generations
-mutRate = 0.1	# Mutation rate
-elite=0		# Elitism size
-tourSize=2      # Tournament size
-
-def onemax_fitness(candidates, args):
-	fitness = [] 
-	for cs in candidates: 
-		fit = sum(cs)
-		fitness.append(fit)
-	print("Best fit: {0}, avg. fit: {1}".format(max(fitness), 
-		float(sum(fitness))/len(fitness)))
-	return fitness
-
-def generator(random, args):
-    return [random.choice([0, 1]) for _ in range(chrLength)]
+We want to compare the Dijkstra Algorithm against A* with different heuristics (i.e. Octile, Manhattan, Euclidean and Chebyschev).
+You can create your own implementation of both  integrated algorithms or you can reuse previous code. For example:
 
 
-prng = Random()
-prng.seed(time()) 
-    
-ea = inspyred.ec.GA(prng)
-ea.terminator = inspyred.ec.terminators.generation_termination
-ea.selector = inspyred.ec.selectors.tournament_selection
+- Here you can find a Dijkstra implementation
 
-final_pop = ea.evolve(generator=generator, 
-	evaluator=onemax_fitness,
-	pop_size=popSize, 
-        tournament_size=tourSize,
-	num_elites=elite, 
-	max_generations=maxGenerations, 
-	mutation_rate=mutRate)
+https://gist.github.com/econchick/4666413
 
-best = max(final_pop)                          
-print('Best solution: \n{0}'.format(str(best)))
-if (best.fitness == chrLength): 
-	print("Solution found!") 
-else: 
-	print("Solution NOT found")
-```
+- And in this other link, an A* Algorithm
 
-The parameter setting used is the following one:
+https://gist.github.com/jamiees2/5531924
 
-* Representation: Binary
-
-* Chromosome length: 15
-
-* Crossover: 1-point crossover
-
-* Mutation: Flip mutation
-
-* Mutation probability: 0.1
-
-* Population size: 50
-
-* Termination: 15 generations
-
-* Selection: Tournament with size 2
 
 Perform the following tasks:
 
