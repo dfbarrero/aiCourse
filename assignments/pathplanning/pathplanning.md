@@ -58,8 +58,8 @@ B X B B B B B R X X
 
 4. Implement the following heuristics for A*: Octile, Manhattan, Euclidean and Chebyschev.
  
-    ManhattanDistance (int x1, int x2, int y1, int y2)
-            return Math.Abs(x1 - x2) + Math.Abs(y1 - y2)
+    <> ManhattanDistance (int x1, int x2, int y1, int y2)
+    <>        return Math.Abs(x1 - x2) + Math.Abs(y1 - y2)
             
     EuclideanDistance(int x1, int x2, int y1, int y2)
             return square = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
