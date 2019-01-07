@@ -57,19 +57,6 @@ B X B B B B B R X X
 3. Implement (or resuse) A* and Dijkstra algorithms.
 
 4. Implement the following heuristics for A*: Octile, Manhattan, Euclidean and Chebyschev.
- 
-    //#ManhattanDistance (int x1, int x2, int y1, int y2)
-    //#return Math.Abs(x1 - x2) + Math.Abs(y1 - y2)
-            
-    //#EuclideanDistance(int x1, int x2, int y1, int y2)
-            #return square = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2)
-            
-    #ChebyshevDistance(int x, int y)
-            #return 1 * (x + y) + (1 - 2 * 1) * (x - y)
-            
-    #OctileDistance (int x, int y)
-            #return max(x, y) + (sqrt(2)-1)*min(x, y)
-
 
 5. Run A* with the different heuristics.
 
