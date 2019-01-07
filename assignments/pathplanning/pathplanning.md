@@ -34,25 +34,8 @@ Perform the following tasks:
 
 2. Consider the following grid map (10 X 10) where the robot is located at the cell labeled with R, and the target is located at the cell labeled with T. All the cells labeled with X are considered as occupied cells and the cells labeled with B are considered free to pass. Run the algorithms and see the results.  
 
-X B X X B B B B B B
-
-B B X X B B B B B B
-
-B B X X B B B B B B
-
-B B B B B B B B B B
-
-T X X X B B X X B B
-
-B B B X B B X X X B
-
-B B B X X B B B B X
-
-B B X X B X B B B B
-
-X B B B B B B X B X
-
-B X B B B B B R X X 
+ 
+<img align="center" src="mapgrid.png" width="400">
 
 3. Implement (or resuse) A* and Dijkstra algorithms.
 
