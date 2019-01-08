@@ -21,7 +21,7 @@ The first one is easier than the second one!!
 
 The problem can be solved at least by two search strategy aproaches:
 1) Incrementally, that is, we start by an empty tree node and gradually we add nodes to the tree to comply to the imposed constraints.
-2) Iterative repairing, that is, we start with all queens on the board and then try to count the number of conflicts (attacks), and try to improve the placement of the queens.
+2) Iterative repairing, that is, we start with all queens on the board and then count the number of conflicts (attacks), and try to improve the placement of the queens.
 
 Based on these considerations, implement the 8-queens problem using:
 
