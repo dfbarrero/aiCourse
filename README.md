@@ -20,7 +20,11 @@
 
 ## Planning & Scheduling
 
-* [Planning representation](planningrepresentation/planningrepresentation.pptx)
+* [Planning representation](planningrepresentation/planningrepresentation.pptx) (PPTX)
+
+* [PDDL v1](planningrepresentation/PDDL.pdf)
+
+* [PDDL v2](planningrepresentation/PDDL2.pdf)
 
 * [Planning techniques](planningtechniques/planningtechniques.pptx) (PPTX)
 
