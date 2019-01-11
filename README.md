@@ -6,6 +6,10 @@
 
 * [Search](search/search.pdf) (PPT, Russel & Norvig slides)
 
+* [Uninformed Search](search/Uniformed%20Search.pdf) (PPT, Russel & Norvig slides)
+
+* [Informed Search](search/Informed%20Search.pdf) (PPT, Russel & Norvig slides) 
+
 ## Evolutionary Computation
 
 * [Introduction to Evolutionary Computation](ecintro/)
