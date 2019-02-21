@@ -54,6 +54,8 @@
 
 * [8-queens with non-informed search](assignments/search/noninformed.md)
 
+* [Examples for practicing search algorithms](assignments/search/Exercises-Tree/examplesSearch.md)
+
 ## Task and path planning
 
 * [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
