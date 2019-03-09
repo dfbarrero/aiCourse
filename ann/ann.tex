@@ -154,18 +154,27 @@
 
 \subsection{History}
 \begin{frame}{Introduction}{History}
-	\begin{description}
-	\item[1943-McCulloch \& Pitts] First neural network designers
-	\item[1949-Hebb] First learning rule
-	\item[1958-Rosenblatt] Perceptron
-	\item[1969-Minsky \& Papert]  Perceptron limitation - Death of ANN
+    \begin{columns}
+ 	   \column{.80\textwidth}
+
+	\begin{itemize}
+	\item[1888] \textit{Ramón y Cajal}. Discovery of biological neurons
+	\item[1943] \textit{McCulloch \& Pitts}. First neural network designers
+	\item[1949] \textit{Hebb}. First learning rule
+	\item[1958] \textit{Rosenblatt}. Perceptron
+	\item[1969] \textit{Minsky \& Papert}.  Perceptron limitation - Death of ANN
 	\note{Single layer perceonptrons cannot represent (learn) simple functions such as XOR
 	Multi-layer of non-linear units may have greater power but there is no learning rule for such nets
 	Scaling problem: connection weights may grow infinitely}
-	\item[1986 - Rumelhart et al.] Re-emergence of ANN: Backpropagation
+	\item[1986] \textit{Rumelhart et al}. Re-emergence of ANN: Backpropagation
 	\note{Backpropagation learning for multi-layer feed forward nets (with non-linear, differentiable node functions)}
-	\item[2012 - Krizhevsky] Convolutional Neural Networks - Deep learning
-	\end{description}
+	\item[201x] Convolutional Neural Networks (CNNs) - Deep learning
+	\item[2014] \textit{Goodfellow et al.} Generative Adversarial Networks (GANs)
+	\end{itemize}
+
+ 	   \column{.20\textwidth}
+		\includegraphics[width=\linewidth]{figs/neuron-ryc.jpg}
+	   \end{columns}
 \end{frame}
 
 \subsection{Structure of neurons}
@@ -204,23 +213,17 @@
 
 \begin{frame}{Introduction}{Structure of neurons (II)}
 	%\centering\includegraphics[width=0.7\linewidth]{figs/neuronabio.png}\\
-
-    \begin{columns}
- 	   \column{.80\textwidth}
 		A neuron has a cell body ...
 			\begin{itemize}
 			\item ... a branching input structure (dendrite) and 
 			\item ... a branching output structure (axon)
 			\end{itemize}
-		Axons connect to dendrites via synapses
+		Axons connect to dendrites via \alert{synapses}
 		\smallskip
 		\begin{center}
 			\includegraphics[width=0.6\linewidth]{figs/neuron_anatomy.jpg}
+			\includegraphics[width=0.4\linewidth]{figs/sinapsis.jpg}
 		\end{center}
-
- 	   \column{.20\textwidth}
-		\includegraphics[width=\linewidth]{figs/neuron-ryc.jpg}
-	   \end{columns}
 \end{frame}
 
 \begin{frame}{Introduction}{Structure of neurons (III)}
@@ -231,6 +234,9 @@
 	\item Synapses may be either excitatory or inhibitory
 	\end{itemize}
 	Synapses vary in strength
+	\begin{itemize}
+		\item Biological learning involves setting that strength
+	\end{itemize}
 \end{frame}
 
 \section{Artificial neurons}
@@ -246,7 +252,7 @@
  	   \column{.70\textwidth}
 		\begin{description}
 		\item[$a_i$] Normalized input ($0 \le a_i \le 1$)
-		\item[$w_{i}$] Weight of input $j$ ($0 \le w_{i} \le 1$)
+		\item[$w_{i}$] Weight of input $j$
 		\item[$\theta$] Threshold
 		\item[$g$] Activation function
 		\end{description}
@@ -260,7 +266,6 @@
 	   \end{block}
     \end{columns}
 \end{frame}
-
 
 \begin{frame}{Artificial neurons}{Definition (II)}
 	\begin{itemize}
@@ -309,8 +314,6 @@
 
 \subsection{Logical gates with a neuron}
 \begin{frame}{Artificial neurons}{Logical gates with a neuron}
-	A neuron can implement a logical gate
-
     \begin{columns}
  	   \column{.30\textwidth}
 	   		\centering AND\\
@@ -343,8 +346,9 @@
 			 $0$ & $1$ \\
 			 $1$ & $0$ \\
 			 \end{tabular}
-
     \end{columns}
+	\bigskip
+	\centering \href{https://github.com/dfbarrero/aiCourse/raw/master/ann/artificialNeuron.xlsx}{(A neuron in Excel)}
 \end{frame}
 
 \begin{frame}{Artificial neurons}{Definition of neuron (alternative version)}
@@ -355,7 +359,7 @@
  	   \column{.70\textwidth}
 		\begin{description}
 		\item[$a_i$] Normalized input ($0 \le a_i \le 1$)
-		\item[$w_{i}$] Weight of input $j$ ($0 \le w_{i} \le 1$)
+		\item[$w_{i}$] Weight of input $j$
 		\item[$w_0$] Bias
 		\item[$g$] Activation function
 		\end{description}
@@ -375,25 +379,18 @@
 
 	\centering \input{figs/ann-and-biased.tex}
 
-	\footnotesize{
-		\centering \begin{tabular}{ccc|c}\hline
-		$a_0$ & $a_1$ & $a_2$& Output\\\hline
-		1    & 0     & 0     & 0\\
-		1    & 0     & 1     & 0\\
-		1    & 1     & 0     & 0\\
-		1    & 1     & 1     & 1\\\hline
-		\end{tabular}
-	}
+	\bigskip
+
+	\centering \begin{tabular}{ccc|c}\hline
+	$a_0$ & $a_1$ & $a_2$& Output\\\hline
+	1    & 0     & 0     & 0\\
+	1    & 0     & 1     & 0\\
+	1    & 1     & 0     & 0\\
+	1    & 1     & 1     & 1\\\hline
+	\end{tabular}
 \end{frame}
 
 \subsection{Activation functions}
-\begin{frame}{Artificial neurons}{Activation functions}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{figs/funciones.png}\\
-	\scriptsize{(\href{http://www.turingfinance.com/misconceptions-about-neural-networks/}{Source})}
-\end{center}
-\end{frame}
-
 \begin{frame}{Artificial neurons}{Activation functions: Sigmoid function}
 	\begin{itemize}
 		\item S-shaped, continuous and everywhere differentiable
@@ -482,6 +479,13 @@
 	    with  \textbf{z} a K-dimensional vector
 	    \end{block}
     \end{columns}
+\end{frame}
+
+\begin{frame}{Artificial neurons}{Other activation functions}
+\begin{center}
+	\includegraphics[width=0.8\linewidth]{figs/funciones.png}\\
+	\scriptsize{(\href{http://www.turingfinance.com/misconceptions-about-neural-networks/}{Source})}
+\end{center}
 \end{frame}
 
 \subsection{Learning limits}
@@ -598,40 +602,20 @@ Machine Learning tasks
 	\begin{itemize}
 	\item Supervised learning (classification and regression)
 	\item Unsupervised learning (known as \alert{self-organizing maps} in ANN terminology)
-		\begin{itemize}
-		\item Autoencoders
-		\end{itemize}
 	\end{itemize}
-Application examples: 
+Many topologies
 	\begin{itemize}
-		\item Robotics, vehicle control, computer vision, videogames, spam filtering
+		\item Acyclic, recurrent (cyclic), modular, etc
+		\item Feed Forward networks (MLPs)
 	\end{itemize}
 \centering \textit{Human readability less important than performance}
 \end{frame}
 
-\begin{frame}{Artificial Neural Networks}{Definition (III)}
-	In order to learn, it needs at least two components
-	\begin{description}
-	\item[Inputs] Which consists of any normalized information
-	\item[Outputs] Which are the outcome arrived
-	\item[Hidden nodes] (Optional) No direct interaction
-	\end{description}
-
-	\begin{center}
-    \begin{columns}
- 	   \column{.2\textwidth}
- 	   \column{.6\textwidth}
-            \input{figs/ann.tex}
- 	   \column{.2\textwidth}
-    \end{columns}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Artificial Neural Networks}{Definition (IV)}
-\begin{center}
-	\centering\includegraphics[width=0.8\linewidth]{figs/arquitecturas.png}
-\end{center}
-\end{frame}
+%\begin{frame}{Artificial Neural Networks}{Definition (IV)}
+%\begin{center}
+%	\centering\includegraphics[width=0.8\linewidth]{figs/arquitecturas.png}
+%\end{center}
+%\end{frame}
 
 %\begin{frame}{Artificial Neural Networks}{What is a artificial neural network (III)}
 \begin{frame}[plain]{}{}
@@ -661,79 +645,99 @@ Application examples:
 	\scriptsize\href{https://en.wikibooks.org/wiki/Cyberbotics\%27\_Robot\_Curriculum/}{(Source)}
 \end{frame}
 
-\subsection{Separability}
-\begin{frame}{Artificial Neural Networks}{Separability}
-    \begin{center}
-	    \includegraphics[width=0.9\linewidth]{figs/sep.png}
-    \end{center}
-	\centering \href{http://playground.tensorflow.org/}{(Demo online)}
+\begin{frame}{Artificial Neural Networks}{Application examples (III)}
+	\centering\includegraphics[width=0.75\linewidth]{figs/autoencoder.png}\\
+	\centering\includegraphics[width=0.3\linewidth]{figs/autoencoder2.png}\\
+	\scriptsize\href{http://i-systems.github.io/HSE545/machine\%20learning\%20all/KIMM/06\_KIMM\_Autoencoder.html}{(Source)}
 \end{frame}
 
-\subsection{Topologies}
-\begin{frame}{Artificial Neural Networks}{Topologies (I)}
-    Acyclic Networks
-    \begin{itemize}
-        \item Without directed cycles 
-        \item Easy to analyze
-    \end{itemize}
-    Recurrent Networks
-    \begin{itemize}
-        \item With directed cycles
-        \item Much harder to analyze
-        \item Potentially unstable
-    \end{itemize}
-    Modular nets
-    \begin{itemize}
-        \item Consists of several modules
-        \item Each module is itself an ANN
-        \item Sparse connections between modules
-    \end{itemize}
-\end{frame}
+%\subsection{Topologies}
+%\begin{frame}{Artificial Neural Networks}{Topologies (I)}
+%    Acyclic Networks
+%    \begin{itemize}
+%        \item Without directed cycles 
+%        \item Easy to analyze
+%    \end{itemize}
+%    Recurrent Networks
+%    \begin{itemize}
+%        \item With directed cycles
+%        \item Much harder to analyze
+%        \item Potentially unstable
+%    \end{itemize}
+%    Modular nets
+%    \begin{itemize}
+%        \item Consists of several modules
+%        \item Each module is itself an ANN
+%        \item Sparse connections between modules
+%    \end{itemize}
+%\end{frame}
 
-\begin{frame}{Artificial Neural Networks}{Topologies (II)}
-	Asymmetric fully connected networks
-		\begin{itemize}
-		\item Every node is connected to every other node
-		\item Connection may be excitatory (positive), inhibitory (negative), or irrelevant (0)
-		\item Most general
-		\end{itemize}
-		\vspace{-0.7cm}
-		\begin{center}
-	\includegraphics[width=0.5\linewidth]{figs/connected.png}
-	\end{center}
-		\vspace{-0.5cm}
-	Symmetric fully connected nets
-		\begin{itemize}
-		\item Weights are symmetric ($w_{ij}$ = $w_{ji}$)
-		\end{itemize}
-\end{frame}
+%\begin{frame}{Artificial Neural Networks}{Topologies (II)}
+%	Asymmetric fully connected networks
+%		\begin{itemize}
+%		\item Every node is connected to every other node
+%		\item Connection may be excitatory (positive), inhibitory (negative), or irrelevant (0)
+%		\item Most general
+%		\end{itemize}
+%		\vspace{-0.7cm}
+%		\begin{center}
+	%\includegraphics[width=0.5\linewidth]{figs/connected.png}
+%	\end{center}
+%		\vspace{-0.5cm}
+%	Symmetric fully connected nets
+%		\begin{itemize}
+%		\item Weights are symmetric ($w_{ij}$ = $w_{ji}$)
+%		\end{itemize}
+%\end{frame}
 
-\subsection{Layered networks}
-\begin{frame}{Network architecture}{Layered networks (I)}
-		\begin{itemize}
-		\item Nodes are partitioned into subsets, called layers
-		\item No connections from nodes in layer $j$ to those in layer $k$ if $j > k$
-		\end{itemize}
+%\subsection{Layered networks}
+%\begin{frame}{Network architecture}{Layered networks (I)}
+%		\begin{itemize}
+%		\item Nodes are partitioned into subsets, called layers
+%		\item No connections from nodes in layer $j$ to those in layer $k$ if $j > k$
+%		\end{itemize}
+
+%    \begin{columns}
+% 	   \column{.50\textwidth}
+%	\centering\includegraphics[width=\linewidth]{figs/layered.png}
+% 	   \column{.50\textwidth}
+%	   \begin{itemize}
+%	   \item Inputs are applied to nodes in layer 0
+%	   \item Nodes in input layer without computation
+%	   \end{itemize}
+%	   \end{columns}
+%\end{frame}
+
+%\begin{frame}{Network architecture}{Layered networks (II)}
+%	\begin{center}
+%	\alert{Perceptron}: ANN whose input is directly contected with its output
+%	\includegraphics[width=0.5\linewidth]{figs/network.png}
+%	\end{center}
+%\end{frame}
+
+\section{Feedforward networks}
+\subsection{Definition}
+\begin{frame}{Feedforward networks}{Definition (I)}
+	Neurons are arranged in \alert{layers}
+	\begin{description}
+	\item[\textit{Input}] Which consists of any normalized data
+	\item[\textit{Output}] Which are the net outcome
+	\item[\textit{Hidden}] (Optional) No direct interaction
+	\end{description}
+
+	Also known as \textbf{multilayer perceptron} (MLP)
+
+	\bigskip
 
     \begin{columns}
- 	   \column{.50\textwidth}
-	\centering\includegraphics[width=\linewidth]{figs/layered.png}
- 	   \column{.50\textwidth}
-	   \begin{itemize}
-	   \item Inputs are applied to nodes in layer 0
-	   \item Nodes in input layer without computation
-	   \end{itemize}
-	   \end{columns}
+ 	   \column{.2\textwidth}
+ 	   \column{.6\textwidth}
+            \input{figs/ann.tex}
+ 	   \column{.2\textwidth}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{Network architecture}{Layered networks (II)}
-	\begin{center}
-	\alert{Perceptron}: ANN whose input is directly contected with its output
-	\includegraphics[width=0.5\linewidth]{figs/network.png}
-	\end{center}
-\end{frame}
-
-\begin{frame}{Network architecture}{Layered networks (III)}
+\begin{frame}{Feedforward networks}{Definition (II)}
 	The input layer
 	\begin{itemize}
 	\item Introduces input values into the network
@@ -752,23 +756,22 @@ Application examples:
 	\end{itemize}
 \end{frame}
 
-\subsection{Feedforward networks}
-\begin{frame}{Network architecture}{Feedforward networks}
-		\begin{itemize}
-		\item Also known as \textbf{multilayer perceptron} (MLP)
-		\item Most widely used architecture
-		\item A connection is allowed from a node in layer $i$ only to nodes in layer $i + 1$
-		\end{itemize}
-
-%    \begin{columns}
- %	   \column{.50\textwidth}
- \begin{center}
-	\includegraphics[width=0.6\linewidth]{figs/ff.png}
- \end{center}
- %	   \column{.50\textwidth}
-%	   Conceptually, nodes at higher levels successively abstract features from preceding layers
-%	   \end{columns}
+\subsection{Separability}
+\begin{frame}{Feedforward Networks}{Separability}
+    \begin{center}
+	    \includegraphics[width=0.9\linewidth]{figs/sep.png}\\
+		\href{http://playground.tensorflow.org/}{(Online demo)}
+    \end{center}
 \end{frame}
+
+\subsection{Bias in a MLP}
+\begin{frame}{Feedforward Networks}{Bias in a MLP}
+    \begin{center}
+	    \includegraphics[width=0.6\paperheight]{figs/bias.png}\\
+		\tiny \href{https://scikit-learn.org/stable/modules/neural\_networks\_supervised.html}{(Source)}
+    \end{center}
+\end{frame}
+
 
 
 %\section{Learning}
@@ -938,26 +941,33 @@ Application examples:
 
 \subsection{Stochastic Gradient Descent Algorithm}
 \begin{frame}{Training algorithms}{Stochastic Gradient Descent (I)}
-	It approximates the gradient by taking samples of the trainning set
+	SDG approximates the gradient sampling the dataset
 		\begin{description}
 			\item[On-line] One sample
 			\item[Mini-batch] Several samples
-			\item[Batch] All the samples
+			\item[Batch] All the samples (Gradient Descent)
 		\end{description}
 	Weights update rule: $w^{k+1} = w^k - \alpha \nabla g(in)$
 		\begin{itemize}
 			\item where $\alpha$ is the learning rate
 		\end{itemize}
     SGD is slow and prone to local minima
-\end{frame}
+	\end{frame}
 
 \begin{frame}{Training algorithms}{Stochastic Gradient Descent (II)}
-	Usually, a momentum is introduced: $w^{k+1} = w^k - \alpha z^{k+1}$, where $z^{k+1} = \beta z^k + \nabla g(in)$
+	\centering
+	\includegraphics[width=0.5\linewidth]{figs/sdg.png}\\
+	\scriptsize \href{https://wikidocs.net/3413}{(Source)}
+
+	\begin{flushleft}
+	Usually, a \alert{momentum} is introduced: $w^{k+1} = w^k - \alpha z^{k+1}$, where $z^{k+1} = \beta z^k + \nabla g(in)$
 		\begin{itemize}
 			\item $\alpha$ is the learning rate
 			\item $\beta$ is the momentum strength
-            \item If $\beta = 0$ then gradient descend
+            \item If $\beta = 0$ then gradient descent
 		\end{itemize}
+	\end{flushleft}
+
     \href{http://distill.pub/2017/momentum/}{(On-line demo)}
 \end{frame}
 
