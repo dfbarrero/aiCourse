@@ -4,7 +4,8 @@
 
 * Understand the impact of the heuristic selection in path-planning
 
-## Preliminary steps
-Install the R2P2 simulator.
+## Dependencies
+
+Install the R2P2 simulator, which depends on the libraries numpy and matplotlib.
 
 ## Practical assignment
