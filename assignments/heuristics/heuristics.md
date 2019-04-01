@@ -4,4 +4,7 @@
 
 * Understand the impact of the heuristic selection in path-planning
 
+## Preliminary steps
+Install the R2P2 simulator.
+
 ## Practical assignment
