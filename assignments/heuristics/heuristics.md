@@ -6,6 +6,6 @@
 
 ## Dependencies
 
-Install the R2P2 simulator, which depends on the libraries numpy and matplotlib.
+Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on the libraries numpy and matplotlib.
 
 ## Practical assignment
