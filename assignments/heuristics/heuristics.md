@@ -12,14 +12,18 @@ Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on 
 
 Perform the following tasks:
 
-1. Get familiar with the simulator running the example scenarios available in the project.
+1. Get familiar with the simulator. Use the "conf/configPathPlanning.json" file for running it.
 
-2. Consider the following grid map (10 X 10) where the robot is located at the cell labeled with R, and the target is located at the cell labeled with T. All the cells labeled with X are considered as occupied cells and the white cells are considered free to pass. Run the algorithms and see the results.  
- 
-<img align="right" src="r2p2-mapgrid.png" width="250">
+2. Consider the grid map "res/test_2.png". The robot should be located at the position X=27 Y=27 and the goal X=12 Y=12. For setting those values, go to file "conf/controllerPathPlanning.json" and modify "start" and "goal" fields. 
 
-4. Implement the following heuristics for A*: Octile, Manhattan, Euclidean and Chebyschev.
+3. Try other maps available in the res/ folder. Try other goals and start positions.
 
-5. Run A* with the different heuristics.
+4. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the algorithm field of "conf/controllerPathPlanning.json". 
 
-7. What is the better algorithm and/or heuristic? Why?
+5. Implement the following heuristics for A*: Octile, Manhattan and Euclidean.
+
+6. Go to the "r2p2/heuristic.py" file, define the heuristic you want to use, and then, register it. After that, go to "conf/controllerPathPlanning.json" and update the field "heuristic" with the heuristic you want to use. 
+
+7. For the heuristic function, you can use the grid point or the absolute point representation. Compare if anything changes depending on the representation.
+
+8. What is the better algorithm and/or heuristic? Why?
