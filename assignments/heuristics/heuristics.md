@@ -24,6 +24,6 @@ Perform the following tasks:
 
 6. Go to the "r2p2/heuristic.py" file, define the heuristic you want to use, and then, register it. After that, go to "conf/controllerPathPlanning.json" and update the field "heuristic" with the heuristic you want to use. 
 
-7. For the heuristic function, you can use the grid point or the absolute point representation. Compare if anything changes depending on the representation.
+7. For the heuristic function, you can use the grid point or the absolute point representation. Compare if anything changes depending on the representation. Carefully look at "r2p2/node.py" to analyze how to access to the coordinates of each point (represented as a node).
 
 8. What is the better algorithm and/or heuristic? Why?
