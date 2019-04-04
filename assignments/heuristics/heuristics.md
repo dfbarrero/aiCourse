@@ -12,7 +12,9 @@ Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on 
 
 Perform the following tasks:
 
-1. Get familiar with the simulator. Use the "conf/configPathPlanning.json" file for running it.
+1. Get familiar with the simulator. Use the "conf/configPathPlanning.json" file for running it as follows:
+
+python r2p2.py --scenario ../conf/configPathPlanning.json
 
 2. Consider the grid map "res/test_2.png". The robot should be located at the position X=27 Y=27 and the goal X=12 Y=12. For setting those values, go to file "conf/controllerPathPlanning.json" and modify "start" and "goal" fields. 
 
