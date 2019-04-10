@@ -62,6 +62,8 @@
 
 * [Path-planning exercises](assignments/pathplanning/pathplanning.md)
 
+* [Comparison of heuristics for path-planning in the R2P2 simulator](assignments/heuristics/heuristics.md)
+
 * [PDDL v1 exercises](assignments/planning/pddl-v1.md)
 
 * [PDDL v2 exercises](assignments/planning/pddl-v2.md)
