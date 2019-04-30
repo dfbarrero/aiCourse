@@ -2,7 +2,7 @@
 
 ## Objectives
 
-* Integrate the output of PDDL into the R2P2 simulator to execute the actions.
+* Integrate the output of the PDDL rover example into the R2P2 simulator to execute the actions.
 
 ## Dependencies
 
@@ -24,17 +24,18 @@ From the folder ''r2p2'', perform the following tasks:
 
 3. Variables "x" and "y" on the "robot.json" file represent the initial state of the robot. In our case is set to (202, 256).
 
-4. Fix the duration value of your actions as follow: 
+4. Modify the battery value of your actions as follow: 
 
-	 "movement_cost": 7   --> (:durative-action move (= ?duration 7) ...
+	 "movement_cost": 7   --> (decrease (battery-capacity ?r) (move-cost)) where in the problem  (= (move-cost) 7)
 	 
-	 "reading_cost": 10   --> (:durative-action ReadingCo2  (= ?duration 10) ...
+	 "reading_cost": 10   --> (decrease (battery-capacity ?r) (read-cost)) where in the problem  (= (read-cost) 10)
 	 
-	 "picture_cost": 5    --> (:durative-action Take-picture (= ?duration 5) ...
+	 "picture_cost": 5    --> (decrease (battery-capacity ?r) (picture-cost)) where in the problem  (= (picture-cost) 5)
 	 
-	 "generic_cost": 13    --> any other action, (= ?duration 13)
+	 "generic_cost": 1    --> any other action, (decrease (battery-capacity ?r) (generic-cost)) 
+	  where in the problem  (= (generci-cost) 1)
 
-5. The Take_Picture action will take a picture and store it in  the logs/ Folder. 
+5. The action to take a picture should be named "take_picture" action and store a picture in  the "logs/" Folder. 
 
 6. Ignore the rest of the variables since they are not needed for this assignment.
 
