@@ -38,7 +38,7 @@ From the folder ''r2p2'', perform the following tasks:
 
 5. The action to take a picture should be named "take_picture" action and store a picture in  the "logs/" Folder. 
 
-6. Revise that your "move" action as follows:
+6. Revise your "move" action as follows:
 
    (:action move
     
