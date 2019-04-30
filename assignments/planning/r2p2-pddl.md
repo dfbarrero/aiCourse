@@ -33,11 +33,12 @@ From the folder ''r2p2'', perform the following tasks:
 	 "picture_cost": 5    --> (decrease (battery-capacity ?r) (picture-cost)) where in the problem  (= (picture-cost) 5)
 	 
 	 "generic_cost": 1    --> any other action, (decrease (battery-capacity ?r) (generic-cost)) 
-	  where in the problem  (= (generci-cost) 1)
+	  
+    where in the problem  (= (generci-cost) 1)
 
 5. The action to take a picture should be named "take_picture" action and store a picture in  the "logs/" Folder. 
 
-6. Revise that your "move" action is as follows:
+6. Revise that your "move" action as follows:
 
    (:action move
     
