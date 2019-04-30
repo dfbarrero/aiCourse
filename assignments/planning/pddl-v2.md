@@ -20,6 +20,10 @@ The student should generate one domain file and at least 3 problem files for eac
 
 Suppose we have a rover on Mars, and we want it to move from an initial position to a final one. It can perform several taks at various points, such as take pictures, drilling, earth communication, analyse samples, or extend solar panels to  recharge the battery. The positions where those tasks have to be taken should be specified on the goal section. The rover can peform more than one of those activities (e.g. it can take 10 pictures in 10 different positions) and while those activities are performed the rover CANNOT move. In addition, it will be considered that the rover can go at two speeds: fast and slow. The resource to be modelled is the battery. Initially, we can consider that each activity consumes a fixed amount of battery, then it will be changed according to some parameters (for example, distance or speed). Also consider that each task has an initially constant duration and then variable. The plan will have to take into account the consumption of the battery, and when it is low (define a threshold value) should recharge the battery. 
 
+If you want to visualize the output, please go to the following link to use the R2P2 simulator.
+
+https://github.com/dfbarrero/aiCourse/blob/master/assignments/planning/r2p2-pddl.md
+
 ## Exercise 2 
 
 Propose a domain where planning could be useful.
