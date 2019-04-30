@@ -10,7 +10,7 @@ Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on 
 
 ## Practical assignment
 
-Perform the following tasks:
+From the folder ''r2p2'', perform the following tasks:
 
 1. Get familiar with the simulator for PDDL. Use the "scenario-planning.json" file in the "conf" folder for running it as follows:
 
