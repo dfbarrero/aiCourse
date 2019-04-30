@@ -60,6 +60,8 @@
 
 * [Integración de planificación PDDL con simulación robótica](https://github.com/munozp/pddl-sim)
 
+* [PDDL with the R2P2 simulator](assignments/planning/r2p2-pddl.md)
+
 * [Path-planning exercises](assignments/pathplanning/pathplanning.md)
 
 * [Comparison of heuristics for path-planning in the R2P2 simulator](assignments/heuristics/heuristics.md)
