@@ -37,9 +37,17 @@ From the folder ''r2p2'', perform the following tasks:
 
 5. The action to take a picture should be named "take_picture" action and store a picture in  the "logs/" Folder. 
 
-6. Ignore the rest of the variables since they are not needed for this assignment.
+6. Revise that your "move" action is as follows:
 
-7. Edit the "controller-planning.json" file in the "conf" folder and adjust the output of your PDDL domain. By default the output is 
+   (:action move
+    
+    :parameters ?r - rover ?lorig ?ldest - coord ...
+    
+    Where "coord" should be defined as follows: P0811 --> X = 08 Y = 11
+
+7. Ignore the rest of the variables since they are not needed for this assignment.
+
+8. Edit the "controller-planning.json" file in the "conf" folder and adjust the output of your PDDL domain. By default the output is 
    stored in a file called "planning.txt" in the "res/" folder. See the definition of "plan_path" in that file.
    
    That is, when you run you problem and domain you do the following:
