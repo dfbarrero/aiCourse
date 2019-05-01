@@ -16,6 +16,8 @@ From the folder ''r2p2'', perform the following tasks:
 
    python r2p2.py --scenario ../conf/scenario-planning.json
 
+   (make sure you are using the scenario "res/test.png" by properly initialiting the "stage" variable in that file)
+   
 2. Edit the "robot.json" file in the "conf" folder and modify the values according to the predicates used in your problem. For example:
   
    "battery" : 100      --> (= (battery-capacity robot) 100)
