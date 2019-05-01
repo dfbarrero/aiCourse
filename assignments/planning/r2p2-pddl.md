@@ -36,7 +36,7 @@ From the folder ''r2p2'', perform the following tasks:
 	 
 	 "generic_cost": 1    --> any other action, (decrease (battery-capacity ?r) (generic-cost)) 
 	  
-         where in the problem  (= (generic-cost) 1)
+    where in the problem  (= (generic-cost) 1)
 
 5. The action to take a picture should be named "take_picture" action and store a picture in  the "logs/" Folder. 
 
