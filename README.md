@@ -80,6 +80,8 @@
 
 * [Symbolic regression with Genetic Programming](assignments/regression/regression.md)
 
+* [Neuroevolutive robot control with the r2p2 robotic simulator](assignments/neuroevolution/neuroevolution.md)
+
 * [Optimization of the trajectory of a spacecraft to the Moon](assignments/moonshot/moonshot.md)
 
 # Compilation
