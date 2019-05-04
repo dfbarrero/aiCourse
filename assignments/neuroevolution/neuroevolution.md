@@ -23,7 +23,7 @@ In order to ease the development of this assignment and focus on the important c
 
 ## R2p2 contents
 
-The r2p2 simulator provides almost a full implementation of the neuroevolutive controller with the exception of the critical parts that define the ANN topology and its training, along with some utility features that eases development. It is important to understand what features the simulator provides, how it is implemented and what is needed to develop the neurocontroller.
+The r2p2 simulator provides almost a full implementation of the neuroevolutive controller with the exception of the critical parts that define the ANN topology and its training.
 
 R2p2 provides some configuration files:
 
@@ -31,15 +31,17 @@ R2p2 provides some configuration files:
 * **robot-neuro.launch**: Description of the robot used for neuroevolution, by default it contains 5 sonar sensors.
 * **controller-neuro.launch**: Neuronal controller. You can use it to evolve the controller and fix a network weights as well. The network must accept **five inputs** (which correspond to five sonars) and **two outputs** (linear and angular velocities).
 
+You will not need to touch these file, with the exception of the GUI parameter in the scenario configuration.
+
 <img align="center" src="track_2.png" width="300">
 
 The folder *r2p2* contains the simulator code along with two files of interest in this assignment:
 
 * **neurocontroller.py**: Script that partially implements the controller and fitness assessment. The script takes an array of floats with the ANN weights from a temporal file (do not worry by the implementation details), builds the ANN, feeds it with the normalized sensors measures and controls the motion with its output. By default, it runs the simulation for 20 seconds and returns the fitness value. You must modify this file to setup the ANN topology. 
 
-* **evolution.py**: It must implement the evolutive algorithm which will optimize the ANN parameters. This file contains the implementation of the fitness function that must be used, *evaluate_ann()*. You must complete this file to implement the optimization algorithm.
+* **evolution.py**: It must implement the evolutive algorithm which will optimize the ANN weights. This file contains the implementation of the fitness function that must be used, *evaluate_ann()*. You must complete this file to implement the optimization algorithm.
 
-A potential source of problems is that the neuronal controller **must receive a vector with the same number of weights than the ANN**, otherwise it will rise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
+A potential source of problems is that the neuronal controller **must receive a vector with the same number of values than weights has the ANN**, otherwise it will rise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
 
 ## Fitness assessment
 
@@ -97,6 +99,8 @@ There are some issues you must address.
 - Visualization of the robot behaviour may provide a valuable insight to how the controller is learning, but it requires a lot of computational resources. Use it wisely.
 
 - Once you get a suitable network, you can test it setting its weights in the field *weights* of the file *controller-neuro.json*.
+
+- Try to understand the number of weights needed in the ANN with paper and pencil.
 
 ## Bonus track
 
