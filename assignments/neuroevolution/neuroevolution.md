@@ -21,23 +21,23 @@ The goal of this assignment is to develop a neuronal controller for a mobile rob
 
 In order to ease the development of this assignment and focus on the important concepts (algorithm design), most of the code is given.
 
-<img align="center" src="regression.png" width="300">
-
 ## R2p2 contents
 
 The r2p2 simulator provides almost a full implementation of the neuroevolutive controller with the exception of the critical parts that define the ANN topology and its training, along with some utility features that eases development. It is important to understand what features the simulator provides, how it is implemented and what is needed to develop the neurocontroller.
 
 R2p2 provides some configuration files:
 
-* **scenario-neuro.json**: Scenario with a minimalistic track as shown in the figure.
-* **robot-neuro.launch**: Simulation with several obstacles and a custom robot. This simulation must be running when tranining the robot.
-* **controller-neuro.launch**: Executes a teleoperation node. Useful for testing.
+* **scenario-neuro.json**: Scenario with a minimalistic track as shown in the figure. Please observe that you can enable or disable the GUI with the parameter *gui*.
+* **robot-neuro.launch**: Description of the robot used for neuroevolution, by default it contains 5 sonar sensors.
+* **controller-neuro.launch**: Neuronal controller. You can use it to evolve the controller and fix a network weights as well.
 
-The folder *scripts* contains the following interesting files:
+<img align="center" src="track_2.png" width="300">
+
+The folder *r2p2* contains the simulator code along with two files of interest in this assignment:
 
 * **neurocontroller.py**: Node that partially implements the service providing the fitness computation. The service, *computeFitness()*, takes an array of floats with the ANN weights, builds the ANN, feeds it with the sensors measures and controls the motion with its output. It runs the simulation for 3 seconds and returns the fitness value.
 
-* **testFitness.py**: It computes the fitness of an ANN given by argument. This is quite usefull to observe the behaviour of an evolved ANN. Take into account that since *neurocontroller.py* is given without ANN implementation, a call to *testFitness.py* will fail until that code is written. The simulation must be running along with *neurocontroller.py* in order to properly execute this script. Give the ANN weights as an argument, for instance: *./testFitness.py "[0.2, 2.3, 1.1, -3.6, 3.2]"* for a network with five weights.
+* **evolution.py**: It computes the fitness of an ANN given by argument. This is quite usefull to observe the behaviour of an evolved ANN. Take into account that since *neurocontroller.py* is given without ANN implementation, a call to *testFitness.py* will fail until that code is written. The simulation must be running along with *neurocontroller.py* in order to properly execute this script. Give the ANN weights as an argument, for instance: *./testFitness.py "[0.2, 2.3, 1.1, -3.6, 3.2]"* for a network with five weights.
 
 A potential source of problems is that computeFitness() must receive a vector with the same number of weights than the ANN, otherwise there will be unexpected consequences.
 
