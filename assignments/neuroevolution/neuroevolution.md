@@ -10,7 +10,7 @@ This assignment assumes a basic knowledge of ANN and EA and Python programming (
 
 ## Preliminary steps
 
-This assignment requires the [r2p2 robotic simulator](https://github.com/ISG-UAH/r2p2) properly installed. The [r2p2](https://github.com/ISG-UAH/r2p2) project website contains detailed installation instructions, follow them.
+This assignment requires the [r2p2 robotic simulator](https://github.com/ISG-UAH/r2p2) properly installed. The [r2p2](https://github.com/ISG-UAH/r2p2) project website contains detailed installation instructions, follow them. The simulator depends on Python 3.x.
 
 ## Assignment goal
 
@@ -35,24 +35,40 @@ R2p2 provides some configuration files:
 
 The folder *r2p2* contains the simulator code along with two files of interest in this assignment:
 
-* **neurocontroller.py**: Node that partially implements the service providing the fitness computation. The service, *computeFitness()*, takes an array of floats with the ANN weights, builds the ANN, feeds it with the sensors measures and controls the motion with its output. It runs the simulation for 3 seconds and returns the fitness value.
+* **neurocontroller.py**: Script that partially implements the controller and fitness assessment. The script takes an array of floats with the ANN weights from a temporal file (do not worry by the implementation details), builds the ANN, feeds it with the normalized sensors measures and controls the motion with its output. By default, it runs the simulation for 20 seconds and returns the fitness value. You must modify this file to setup the ANN topology.
 
-* **evolution.py**: It computes the fitness of an ANN given by argument. This is quite usefull to observe the behaviour of an evolved ANN. Take into account that since *neurocontroller.py* is given without ANN implementation, a call to *testFitness.py* will fail until that code is written. The simulation must be running along with *neurocontroller.py* in order to properly execute this script. Give the ANN weights as an argument, for instance: *./testFitness.py "[0.2, 2.3, 1.1, -3.6, 3.2]"* for a network with five weights.
+* **evolution.py**: It must implement the evolutive algorithm which will optimize the ANN parameters. This file contains the implementation of the fitness function that must be used, *evaluate_ann()*. You must modify this file to implement the optimization algorithm.
 
-A potential source of problems is that computeFitness() must receive a vector with the same number of weights than the ANN, otherwise there will be unexpected consequences.
+A potential source of problems is that the neuronal controller **must receive a vector with the same number of weights than the ANN**, otherwise it will rise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
+
+## Neuroevolution execution
+
+In order to train the network you must execute the simulator along with the evolutionary algorithm. From the r2p2 folder, execute the following command:
+
+```Bash
+python r2p2.py --scenario ../conf/scenario-neuro.json
+```
+
+In another tab, execute the evolutionary algorithm:
+
+```Bash
+python evolution.py
+```
+Remember that both scripts must work properly in order to evolve the robot behaviour.
 
 ## Fitness assessment
 
-The fitness is computed as the sum of the distance between the initial point and the final point, as measured by its odometry, and the distance traveled by the robot. Take into account that odometry contains noise, and therefore the fitness computation is noisy, which has a big impact in the evolution. The control loop iterates  times, which is enough to measure the robot behaviour while does not takes too much time to run. You can run this node and test *computeFitness()* with the command rosservice.
+The fitness is computed as the sum of the distance traveled by the robot, as measured by the odometry. 
 
-A tricky issue is how to map the array of weights given to *computeFitness()* to the actual weights in the ANN. Fortunately, that is almost irrelevant because the the ANN will eventually learn where each input and output neuron is connected. However, it is critical to keep consistency between the genotype encoding and the order in which the weights are sent to *computeFitness()*, i.e., use always the same mapping.
+A tricky issue is how to map the array of weights given to *evaluate_ann()* to the actual weights in the ANN. Fortunately, that is almost irrelevant because the the ANN will eventually learn where each input and output neuron is connected. However, it is critical to keep consistency between the genotype encoding and the order in which the weights are sent to *evaluate_ann()*, i.e., use always the same mapping.
 
 ## Evolving the neurocontroller
 
 In order to develop a neurocontroller, there are basically two different tasks:
 
 1. Implement the ANN. This is done by editing the file *neurocontroller.py*. Just check out the two "TODO" comments in that file. 
-2. Implement the EA. Do this in an external file. Call the ROS service "/computeFitness" to get the fitness value. You can implement the EA as you prefere (albeit we recommend using the [Inspyred](https://pythonhosted.org/inspyred/) Python Evolutionary Computation framework).
+2. Implement the evolutionary algorithm. This is done by editing the file *neurocontroller.py*. 
+3. Train the ANN. Run both scripts
 
 We describe those tasks in more detail.
 
@@ -64,24 +80,7 @@ There are three issues to implement the ANN:
 
 In this stage, you should be able to use testFitness.py to test the previous steps with random (or zero) weights. Do not expect a good robot behaviour at this point, just random motion, if any. Take into account that you must send the same number of weights that the ANN expects.
 
-Now implement the evolutionary algorithm in *evolution.py*. This is just a regular Python script (i.e., no ROS involved here) using the EA of your choice. Use the following Python code to get the fitness function:
-
-```Python
-from subprocess import call
-
-try:
-	output = check_output(["rosservice", "call", "/computeFitness", string]) 
-	fitness = float(output.split(" ")[1])
-except Exception as e:
-	print(__file__)
-	print(e)
-	return(0)
-
-```
-
-Where string is a string cointaing a vector of weights with Python syntax, for instance *[0.2, 2.3, 1.1, -3.6, 3.2]*.
-
-Once all the previous tasks are completed, you should be able to perform the robot trainning with the following steps:
+Once all the previous tasks are completed, you should be able to perform the robot trainning with the following steps from the folder r2p2:
 
 1. Run the simulation (*roslaunch launch/road.launch*).
 2. Run the robot controller (*neurocontroller.py*).
