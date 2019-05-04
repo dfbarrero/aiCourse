@@ -95,3 +95,7 @@ There are some issues you must address.
 * Type of EA to implement. Inspyred source code and documentation contains lots of examples to begin with.
 
 * EA parameters settings.
+
+## Bonus track
+
+Modify the robot perception design (i.e., the number of sonars and their location) to improve the robot behaviour.
