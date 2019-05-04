@@ -45,7 +45,7 @@ A potential source of problems is that the neuronal controller **must receive a 
 
 ## Fitness assessment
 
-The fitness is computed as the sum of the distance traveled by the robot, as measured by the odometry. 
+The fitness is computed as the sum of the distance traveled by the robot, as measured by the odometry. In case of collision with a wall, the evolution is stopped.
 
 A tricky issue is how to map the array of weights given to *evaluate_ann()* to the actual weights in the ANN. Fortunately, that is almost irrelevant because the the ANN will eventually learn where each input and output neuron is connected. However, it is critical to keep consistency between the genotype encoding and the order in which the weights are sent to *evaluate_ann()*, i.e., use always the same mapping.
 
