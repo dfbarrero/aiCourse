@@ -25,15 +25,17 @@ In order to ease the development of this assignment and focus on the important c
 
 The r2p2 simulator provides almost a full implementation of the neuroevolutive controller with the exception of the critical parts that define the ANN topology and its training.
 
+<img align="center" src="track_2.png" width="300">
+
 R2p2 provides some configuration files:
 
 * **scenario-neuro.json**: Scenario with a minimalistic track as shown in the figure. Please observe that you can enable or disable the GUI with the parameter *gui*.
 * **robot-neuro.launch**: Description of the robot used for neuroevolution, by default it contains 5 sonar sensors.
 * **controller-neuro.launch**: Neuronal controller. You can use it to evolve the controller and fix a network weights as well. The network must accept **five inputs** (which correspond to five sonars) and **two outputs** (linear and angular velocities).
+* **scenario-neuro-simple.json**: Scenario to test a fixed ANN.
+* **controller-neuro-simple.launch**: Neuronal controller with fixed weights, for testing purposes. Please check out that *neurocontroller.py* has the proper ANN topology.
 
-You will not need to touch these file, with the exception of the GUI parameter in the scenario configuration.
-
-<img align="center" src="track_2.png" width="300">
+You will not need to touch these files, with the exception of the GUI parameter in the scenario configuration and the weights in *controller-neuro-simple.launch*.
 
 The folder *r2p2* contains the simulator code along with two files of interest in this assignment:
 
