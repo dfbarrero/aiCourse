@@ -4,7 +4,7 @@
 
 * Implement a full neuroevolutive controller
 
-* Design an ANN topology and optimization evolutionary algorithm.
+* Design an ANN topology and an evolutionary algorithm.
 
 This assignment assumes a basic knowledge of ANN and EA and Python programming (Inspyred and numpy).
 
@@ -47,7 +47,7 @@ The fitness is computed as the sum of the distance traveled by the robot, as mea
 
 A tricky issue is how to map the array of weights given to *evaluate_ann()* to the actual weights in the ANN. Fortunately, that is almost irrelevant because the the ANN will eventually learn where each input and output neuron is connected. However, it is critical to keep consistency between the genotype encoding and the order in which the weights are sent to *evaluate_ann()*, i.e., use always the same mapping.
 
-## Neuroevolution execution
+## Neuroevolution execution
 
 In order to train the network you must execute the simulator along with the evolutionary algorithm. From the r2p2 folder, execute the following command:
 
@@ -94,6 +94,6 @@ There are some issues you must address.
 
 - Test your ANN and evolutionary algorithm individually with some naive scenario, only then try to join them.
 
-## Bonus track
+## Bonus track
 
 Modify the robot perception design (i.e., the number of sonars and their location) to improve the robot behaviour.
