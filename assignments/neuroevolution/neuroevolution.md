@@ -6,7 +6,7 @@
 
 * Design an ANN topology and an evolutionary algorithm.
 
-This assignment assumes a basic knowledge of ANN and EA and Python programming (Inspyred and numpy).
+This assignment assumes a basic knowledge of ANN, EA and Python programming (Inspyred). Numpy is not a requirement.
 
 ## Preliminary steps
 
