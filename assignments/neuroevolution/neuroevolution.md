@@ -94,6 +94,8 @@ There are some issues you must address.
 
 - Test your ANN and evolutionary algorithm individually with some naive scenario, only then try to join them.
 
+- Visualization of the robot behaviour may provide a valuable insight to how the controller is learning, but it requires a lot of computational resources. Use it wisely.
+
 ## Bonus track
 
 Modify the robot perception design (i.e., the number of sonars and their location) to improve the robot behaviour.
