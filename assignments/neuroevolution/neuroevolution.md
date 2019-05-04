@@ -85,3 +85,13 @@ Once all the previous tasks are completed, you should be able to perform the rob
 1. Run the simulation (*roslaunch launch/road.launch*).
 2. Run the robot controller (*neurocontroller.py*).
 3. Run the script that implements the evolutionary trainning (*evolution.py*). You should be able to view in real-time the behaviour of the robot in the STDR window.
+
+There are some issues you must address.
+
+* ANN topology.
+
+* Initialization of network weights.
+
+* Type of EA to implement. Inspyred source code and documentation contains lots of examples to begin with.
+
+* EA parameters settings.
