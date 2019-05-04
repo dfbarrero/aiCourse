@@ -37,7 +37,7 @@ You will not need to touch these file, with the exception of the GUI parameter i
 
 The folder *r2p2* contains the simulator code along with two files of interest in this assignment:
 
-* **neurocontroller.py**: Script that partially implements the controller and fitness assessment. The script takes an array of floats with the ANN weights from a temporal file (do not worry by the implementation details), builds the ANN, feeds it with the normalized sensors measures and controls the motion with its output. By default, it runs the simulation for 20 seconds and returns the fitness value. You must modify this file to setup the ANN topology. 
+* **neurocontroller.py**: Script that partially implements the controller and fitness assessment. The script takes an array of floats with the ANN weights from a temporal file (do not worry by the implementation details), builds the ANN, feeds it with the normalized sensors measures and controls the motion with its output. This scripts already has implemented the input and output layers with five and two neurons. You must modify this file to setup the ANN topology, i.e., the number of hidden layers and the number of neurons in each one. 
 
 * **evolution.py**: It must implement the evolutive algorithm which will optimize the ANN weights. This file contains the implementation of the fitness function that must be used, *evaluate_ann()*. You must complete this file to implement the optimization algorithm.
 
