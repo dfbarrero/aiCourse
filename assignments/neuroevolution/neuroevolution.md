@@ -60,6 +60,7 @@ In another tab, execute the evolutionary algorithm:
 ```Bash
 python evolution.py
 ```
+
 You should be able to view in real-time the behaviour of the robot if enabled in the configuration file (which is activated by default). Remember that both scripts must work properly in order to evolve the robot behaviour, but the order in which they are run does not matter.
 
 ## Evolving the neurocontroller
@@ -94,6 +95,8 @@ There are some issues you must address.
 - Test your ANN and evolutionary algorithm individually with some naive scenario, only then try to join them.
 
 - Visualization of the robot behaviour may provide a valuable insight to how the controller is learning, but it requires a lot of computational resources. Use it wisely.
+
+- Once you get a suitable network, you can test it setting its weights in the field *weights* of the file *controller-neuro.json*.
 
 ## Bonus track
 
