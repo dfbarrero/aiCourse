@@ -30,10 +30,10 @@ The r2p2 simulator provides almost a full implementation of the neuroevolutive c
 R2p2 provides some configuration files:
 
 * **scenario-neuro.json**: Scenario with a minimalistic track as shown in the figure. Please observe that you can enable or disable the GUI with the parameter *gui*.
-* **robot-neuro.launch**: Description of the robot used for neuroevolution, by default it contains 5 sonar sensors.
-* **controller-neuro.launch**: Neuronal controller. You can use it to evolve the controller and fix a network weights as well. The network must accept **five inputs** (which correspond to five sonars) and **two outputs** (linear and angular velocities).
+* **robot-neuro.json**: Description of the robot used for neuroevolution, by default it contains 5 sonar sensors.
+* **controller-neuro.json**: Neuronal controller. You can use it to evolve the controller and fix a network weights as well. The network must accept **five inputs** (which correspond to five sonars) and **two outputs** (linear and angular velocities).
 * **scenario-neuro-simple.json**: Scenario to test a fixed ANN.
-* **controller-neuro-simple.launch**: Neuronal controller with fixed weights for testing purposes. Please check out that *neurocontroller.py* has the proper ANN topology. By default it implements a static robot.
+* **controller-neuro-simple.json**: Neuronal controller with fixed weights for testing purposes. Please check out that *neurocontroller.py* has the proper ANN topology. By default it implements a static robot.
 
 You will not need to touch these files, with the exception of the GUI parameter in the scenario configuration and the weights in *controller-neuro-simple.launch*.
 
