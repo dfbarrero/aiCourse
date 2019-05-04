@@ -41,7 +41,7 @@ The folder *r2p2* contains the simulator code along with two files of interest i
 
 * **evolution.py**: It must implement the evolutive algorithm which will optimize the ANN weights. This file contains the implementation of the fitness function that must be used, *evaluate_ann()*. You must complete this file to implement the optimization algorithm.
 
-A potential source of problems is that the neuronal controller **must receive a vector with the same number of values than weights has the ANN**, otherwise it will rise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
+A potential source of problems is that the neuronal controller **must receive a vector with the same number of values than weights has the ANN**, otherwise it will raise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
 
 ## Fitness assessment
 
@@ -69,16 +69,14 @@ You should be able to view in real-time the behaviour of the robot if enabled in
 
 In order to develop a neurocontroller, there are basically three different tasks:
 
-1. Implement the ANN. This is done by editing the file *neurocontroller.py*. Just check out the "TODO" comments in that file. 
-2. Implement the evolutionary algorithm. This is done by editing the file *neurocontroller.py*. Inspyred source code and documentation contains lots of examples to begin with.
+1. Implement the ANN. This is done by editing the file *neurocontroller.py*. Just check out the "TODO" in that file. 
+2. Implement the evolutionary algorithm. This is done by editing the file *neurocontroller.py*. Inspyred source code and documentation contains lots of examples to begin with. Remember that the functions *evaluate_ann()* already contains the implementation of the fitness functions.
 3. Train the ANN. Try different parameters in order to determine which ones provides better performance.
-
-Once you get a valid network, you can visualize 
 
 Once all the previous tasks are completed, you should be able to perform the robot trainning with the following steps from the folder r2p2:
 
 1. Run the simulation (*python r2p2.py --scenario ../conf/scenario-neuro.json*).
-3. Run the script that implements the evolutionary trainning (*python evolution.py*). 
+3. Run the script that implements the evolutionary trainning (*python evolution.py*). By defaul, this script generates random weights, so do not expect a champion robot.
 
 There are some issues you must address.
 
