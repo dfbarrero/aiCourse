@@ -60,7 +60,7 @@ In another tab, execute the evolutionary algorithm:
 ```Bash
 python evolution.py
 ```
-Remember that both scripts must work properly in order to evolve the robot behaviour, but the order in which they are run does not matter.
+You should be able to view in real-time the behaviour of the robot if enabled in the configuration file (which is activated by default). Remember that both scripts must work properly in order to evolve the robot behaviour, but the order in which they are run does not matter.
 
 ## Evolving the neurocontroller
 
@@ -74,9 +74,8 @@ Once you get a valid network, you can visualize
 
 Once all the previous tasks are completed, you should be able to perform the robot trainning with the following steps from the folder r2p2:
 
-1. Run the simulation (*roslaunch launch/road.launch*).
-2. Run the robot controller (*neurocontroller.py*).
-3. Run the script that implements the evolutionary trainning (*evolution.py*). You should be able to view in real-time the behaviour of the robot in the STDR window.
+1. Run the simulation (*python r2p2.py --scenario ../conf/scenario-neuro.json*).
+3. Run the script that implements the evolutionary trainning (*python evolution.py*). 
 
 There are some issues you must address.
 
@@ -84,7 +83,7 @@ There are some issues you must address.
 
 * Init values of network weights.
 
-* Type of EA to implement. 
+* Type of EA to implement. You can use any optimization algorithm: GA, ES, SA, or any other.
 
 * EA parameters settings.
 
