@@ -14,7 +14,7 @@ This assignment requires the [r2p2 robotic simulator](https://github.com/ISG-UAH
 
 ## Assignment goal
 
-The goal of this assignment is to develop a neuronal controller for a mobile robot. Basicly, there are to linked task to perform:
+The goal of this assignment is to develop a neuronal controller for a mobile robot. Basicly, there are two linked tasks to carry out:
 
 1. Design an ANN topology.
 2. Train the network thought an evolutionary algorithm.
