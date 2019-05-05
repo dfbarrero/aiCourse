@@ -90,6 +90,8 @@ There are some issues you must address.
 
 * EA parameters settings.
 
+* Many short runs or few long runs.
+
 ## Tips 
 
 - Disable the GUI to get the best from your (scarce) computational resources.
