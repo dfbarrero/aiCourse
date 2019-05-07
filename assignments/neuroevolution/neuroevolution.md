@@ -45,7 +45,7 @@ You will not need to touch these files, with the exception of the GUI parameter 
 
 * **evolution.py**: It must implement the evolutive algorithm which will optimize the network weights (i.e. the robot training). This file contains the implementation of the fitness function (*evaluate_ann()*) that must be used. You must complete this file to implement the optimization algorithm.
 
-A potential source of problems is that the neuronal controller **must receive a vector with the same number of values than weights has the network**, otherwise it will raise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias. The simulator shows the number of weights to ease debugging.
+A potential source of problems is that the neuronal controller **must receive a vector with the same number of values than weights has the network**, otherwise it will raise an error (numpy will comply that it is unable to reshape an array). Do not forget that the number of weights in the ANN must include the neurons bias.
 
 A tricky issue is how to map the array of weights given to *evaluate_ann()* to the actual weights in the ANN. Fortunately, that is almost irrelevant because the the network will eventually learn where each input and output neuron is connected to.
 
