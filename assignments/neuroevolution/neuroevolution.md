@@ -41,7 +41,7 @@ R2p2 provides some interesting configuration files:
 
 You will not need to touch these files, with the exception of the GUI parameter in the scenario configuration and the weights in *controller-neuro-simple.launch*.
 
-You need to touch two files:
+You need to customize two files:
 
 * **controller-neuro.json**: This file defines the topology of the hidden layer as a list of integers in the field *hidden_layer*. The simulator defines a fixed input layer with **five neurons** (which correspond to five sonars) and an output layer with **two neurons** (linear and angular velocities). Please observe that this file also let you define the activation function in the hidden layer (by default tanh) along with the simulation time (15 seconds by default, you should not touch it) and whether this controller is going to be evolved or not.
 
