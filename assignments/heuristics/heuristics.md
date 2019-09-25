@@ -12,15 +12,21 @@ Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on 
 
 Perform the following tasks:
 
-1. Get familiar with the simulator. Use the "conf/configPathPlanning.json" file for running it as follows:
+1. Get familiar with the simulator. Run the simulator with the command `python r2p2.py`. it will create a plain scenario with a robot teleoperated by the arrows keys.
 
+2. Run the Path Planning scenario as follows:
+
+   ```
    python r2p2.py --scenario ../conf/configPathPlanning.json
+   ```
 
-2. Consider the grid map "res/test_2.png". The robot should be located at the position X=27 Y=27 and the goal X=12 Y=12. For setting those values, go to file "conf/controllerPathPlanning.json" and modify "start" and "goal" fields. 
+   Observe that the robot is initially located at the position (19,15) and the goal (12,12). The simulator visualizes the computed path. 
+   
+3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point from (19,15) to (27,19).
 
-3. Try other maps available in the res/ folder. Try other goals and start positions.
+4. Which path-planning algorithm is being executed by default? Which heuristic is used by default?
 
-4. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the algorithm field of "conf/controllerPathPlanning.json". 
+5. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the algorithm field of "conf/controllerPathPlanning.json"  (caution, the simulator is case sensitive). Can you observe any difference in the resulting path?
 
 5. Implement the following heuristics for A*: Octile, Manhattan and Euclidean.
 
