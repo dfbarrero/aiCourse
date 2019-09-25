@@ -26,11 +26,11 @@ Perform the following tasks:
 
 4. Which path-planning algorithm is being executed by default? Which heuristic is used by default?
 
-5. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the algorithm field of "conf/controllerPathPlanning.json"  (caution, the simulator is case sensitive). Can you observe any difference in the resulting path?
+5. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the ```algorithm``` field of ```conf/controller-pathplanning.json``` (caution, the simulator is case sensitive). Can you observe any difference in the resulting path?
 
 5. Implement the following heuristics for A*: Octile, Manhattan and Euclidean.
 
-6. Go to the "r2p2/heuristic.py" file, define the heuristic you want to use, and then, register it. After that, go to "conf/controllerPathPlanning.json" and update the field "heuristic" with the heuristic you want to use. 
+6. Go to the ```r2p2/heuristic.py``` file, define the heuristic you want to use, and then, register it. After that, go to "conf/controllerPathPlanning.json" and update the field "heuristic" with the heuristic you want to use. 
 
 7. For the heuristic function, you can use the grid point or the absolute point representation. Compare if anything changes depending on the representation. Carefully look at "r2p2/node.py" to analyze how to access to the coordinates of each point (represented as a node).
 
