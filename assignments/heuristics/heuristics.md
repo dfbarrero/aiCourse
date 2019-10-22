@@ -20,9 +20,9 @@ Perform the following tasks:
    python r2p2.py --scenario ../conf/scenario-pathplanning.json
    ```
 
-   Observe that the robot is initially located at the position (19,15) and the goal (12,12). The simulator visualizes the computed path. 
+   Observe that the robot is initially located at the position (18,19) and the goal (12,12). The simulator visualizes the computed path. 
    
-3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point from (19,15) to (27,19).
+3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point to (27,19).
 
 4. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the ```algorithm``` field of ```conf/controller-pathplanning.json``` (caution, the simulator is case sensitive). Can you observe any difference in the resulting path? Take into account that the default heuristic is naive, which returns a constant (and unrealistic) heuristic.
 
