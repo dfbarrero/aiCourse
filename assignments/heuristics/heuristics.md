@@ -8,6 +8,8 @@
 
 Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on the libraries numpy and matplotlib. Read the README.md file in the project's root folder for instructions about the simulator installation and usage.
 
+Remember to install R2P2 dependencies by executing ```pip install -r requirements.txt``` from the folder that contains R2P2.
+
 ## Practical assignment
 
 Perform the following tasks:
@@ -17,12 +19,12 @@ Perform the following tasks:
 2. Run the Path Planning scenario as follows:
 
    ```
-   python r2p2.py --scenario ../conf/configPathPlanning.json
+   python r2p2.py --scenario ../conf/scenario-pathplanning.json
    ```
 
-   Observe that the robot is initially located at the position (19,15) and the goal (12,12). The simulator visualizes the computed path. 
+   Observe that the robot is initially located at the position (18,19) and the goal (12,12). The simulator visualizes the computed path. 
    
-3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point from (19,15) to (27,19).
+3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point to  (27,19) and the goal point to (8,20).
 
 4. Change the algorithm (A* or Dijkstra) by setting "A*" or "Dijkstra" in the ```algorithm``` field of ```conf/controller-pathplanning.json``` (caution, the simulator is case sensitive). Can you observe any difference in the resulting path? Take into account that the default heuristic is naive, which returns a constant (and unrealistic) heuristic.
 
