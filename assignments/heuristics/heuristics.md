@@ -17,7 +17,7 @@ Perform the following tasks:
 2. Run the Path Planning scenario as follows:
 
    ```
-   python r2p2.py --scenario ../conf/configPathPlanning.json
+   python r2p2.py --scenario ../conf/scenario-pathplanning.json
    ```
 
    Observe that the robot is initially located at the position (19,15) and the goal (12,12). The simulator visualizes the computed path. 
