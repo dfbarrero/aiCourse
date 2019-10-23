@@ -358,24 +358,6 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction}{Real world problems (I): Robotic assembly}
-       \begin{columns}
- 	       \column{.60\textwidth}
-	            \centering \includegraphics[width=\linewidth]{figs/stanford-arm.eps}\\
-	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
-                \begin{exampleblock}{Problem: Robotic assembly}
-                    \begin{itemize}
-                    \item[-] State? $\rightarrow$ \textit{Real-valued coordinates of robot joint angles}
-                    \item[-] Actions? $\rightarrow$ \textit{Continuous motions of joints}
-                    \item[-] Goal test? $\rightarrow$ \textit{Complete assembly}
-                    \item[-] Path cost? $\rightarrow$ \textit{Time to complete}
-                    \end{itemize}
-                \end{exampleblock}
-
-      \end{columns}
-\end{frame}
-
 \begin{frame}{Introduction}{Real world problems (II): Travel Salesman Problem (TSP)}
        \begin{columns}
  	       \column{.40\textwidth}
@@ -729,14 +711,84 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
       \end{itemize}
 \end{frame}
 
-\section{Study cases}
+\section{Case studies}
+%\subsection{Case study I: Robotic assembly}
 
-\begin{frame}{Study case}{Case I: Logistics?}
+%\begin{frame}{Case studies}{Case study I: Robotic assembly}
+%       \begin{columns}
+%	       \column{.60\textwidth}
+%            \centering \includegraphics[width=\linewidth]{figs/stanford-arm.eps}\\
+%            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+%	       \column{.40\textwidth}
+%               \begin{exampleblock}{Problem: Robotic assembly}
+%                   \begin{itemize}
+%                   \item[-] State? $\rightarrow$ \textit{Real-valued coordinates of robot joint angles}
+%                   \item[-] Actions? $\rightarrow$ \textit{Continuous motions of joints}
+%                   \item[-] Goal test? $\rightarrow$ \textit{Complete assembly}
+%                   \item[-] Path cost? $\rightarrow$ \textit{Time to complete}
+%                   \end{itemize}
+%               \end{exampleblock}
+
+%     \end{columns}
+%end{frame}
+
+\subsection{Case study I: Robot arm with two DOF}
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (I)}
+       \begin{columns}
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armPlain.eps}\\
+	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+ 	       \column{.50\textwidth}
+                \begin{exampleblock}{Problem: Move arm}
+                    \begin{itemize}
+                    \item[-] State? $\rightarrow$ \textit{Real-valued coordinates of robot joint angles}
+                    \item[-] Actions? $\rightarrow$ \textit{Continuous motions of joints}
+                    \item[-] Goal test? $\rightarrow$ \textit{Complete assembly}
+                    \item[-] Path cost? $\rightarrow$ \textit{Time to complete}
+                    \end{itemize}
+                \end{exampleblock}
+
+      \end{columns}
+\end{frame}
+
+%\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (I)}
+%       \begin{columns}
+% 	       \column{.50\textwidth}
+%            \centering \includegraphics[width=\linewidth]{figs/armPlain.eps}\\
+%	       \column{.50\textwidth}
+%            \centering \includegraphics[width=\linewidth]{figs/armPlainConfSpace.eps}\\
+%     \end{columns}
+%  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+%end{frame}
+
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (II)}
+       \begin{columns}
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armExampleWorkSpace.eps}\\
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armExampleConfSpace.eps}\\
+      \end{columns}
+	  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+\end{frame}
+
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (III)}
+       \begin{columns}
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armDPwithoutPotentialWorkspaceCoarse.eps}\\
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armDPwithoutPotentialCoarse.eps}\\
+      \end{columns}
+	  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+\end{frame}
+
+\subsection{Case study II: 9\textsuperscript{th} GTOC}
+\begin{frame}{Study case}{Case study II: 9\textsuperscript{th} Global Trajectory Optimization Competition (I)}
     TODO
 \end{frame}
 
-\begin{frame}{Study case}{Case I: GTOC?}
-    TODO
+\subsection{Case study III: Mars orbital insertion}
+\begin{frame}{Study case}{Case study III: Mars orbital insertion}
+    \setlength{\fboxrule}{0pt}
+    \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}} 
 \end{frame}
-
 \end{document}
