@@ -146,16 +146,16 @@
             \end{itemize}
         \item We use this term to abstract the implementation
     \end{itemize}
-
-    Search is a cornerstone in AI
-    \begin{itemize}
-        \item Almost any problem in AI is formulated as a search problem
-    \end{itemize}
 \end{frame}
 
 \section{Search problems}
 \subsection{Types of problems}
 \begin{frame}{Search problems}{Types of problems}
+    Search is a cornerstone in AI
+    \begin{itemize}
+        \item Almost any problem in AI is formulated as a search problem
+    \end{itemize}
+
     Types of problems depending on ...
 	\begin{itemize}
         \item Knowledge
@@ -198,14 +198,18 @@
 
 \subsection{Problem components}
 \begin{frame}{Search problems}{Problem components (I)}
+    We represent the environment as \alert{states}
+        \begin{itemize}
+            \item Contain the information about the world
+        \end{itemize}
+    Any problem formulation requires the following components
 	\begin{itemize}
-        \item[Initial state] State where the search begins
-        \item[Actions] XXX
-        \item[Transition model] XXX
-        \item[Goal test] XXX
-        \item[Path cost] Process of looking a sequence of actions that reach the goal
+        \item Initial state: State where the search begins
+        \item Actions: Behaviour that the agent may exhibit
+        \item Transition model: Which states follow an action in a state
+        \item Goal test: How to determine if a state is a goal
+        \item Path cost: Cost of an action
 	\end{itemize}
-    \alert{Search} is the process of looking a sequence of actions that reach the goal
 \end{frame}
 
 \begin{frame}{Search problems}{Problem components (II)}
@@ -346,11 +350,11 @@
 \end{frame}
 
 \subsection{Travel Salesman Problem}
-\begin{frame}{Search problems}{Travel Salesman Problem (TSP)}
+\begin{frame}{Search problems}{Travelling Salesman Problem (TSP)}
        \begin{columns}
  	       \column{.50\textwidth}
                 \begin{block}{TSP formulation}
-                    A travel salesman must visit a set of cities only one time each. Find the shortest route.
+                    A travelling salesman must visit a set of cities only one time each. Find the shortest route.
                 \end{block}
 
                 TSP is a very big problem in AI!
