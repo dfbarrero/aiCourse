@@ -124,7 +124,7 @@
 
 \section{Introduction}
 
-\begin{frame}{Introduction}{Agents}
+\begin{frame}{Introduction}
     \begin{columns}
  	   \column{.50\textwidth}
         \begin{block}{Agent}
@@ -146,10 +146,16 @@
             \end{itemize}
         \item We use this term to abstract the implementation
     \end{itemize}
+
+    Search is a cornerstone in AI
+    \begin{itemize}
+        \item Almost any problem in AI is formulated as a search problem
+    \end{itemize}
 \end{frame}
 
+\section{Search problems}
 \subsection{Types of problems}
-\begin{frame}{Introduction}{Types of problems}
+\begin{frame}{Search problems}{Types of problems}
     Types of problems depending on ...
 	\begin{itemize}
         \item Knowledge
@@ -172,7 +178,7 @@
     We assume static, observable, discrete and deterministic problems
 \end{frame}
 
-\begin{frame}[fragile]{Introduction}{Types of problems (II)}
+\begin{frame}[fragile]{Search problems}{Types of problems (II)}
     \begin{exampleblock}{Determine problem type}
        \begin{columns}
  	       \column{.50\textwidth}
@@ -191,7 +197,7 @@
 \end{frame}
 
 \subsection{Problem components}
-\begin{frame}{Introduction}{Problem components (I)}
+\begin{frame}{Search problems}{Problem components (I)}
 	\begin{itemize}
         \item[Initial state] State where the search begins
         \item[Actions] XXX
@@ -202,7 +208,7 @@
     \alert{Search} is the process of looking a sequence of actions that reach the goal
 \end{frame}
 
-\begin{frame}{Introduction}{Problem components (II)}
+\begin{frame}{Search problems}{Problem components (II)}
     \begin{center}
 	    \includegraphics[width=0.7\linewidth]{figs/romania-distances.eps}\\
 	    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
@@ -213,14 +219,14 @@
 \end{frame}
 
 \subsection{Toy problems}
-\begin{frame}[fragile]{Introduction}{Toy problems (I): Vacuum world}
+\begin{frame}[fragile]{Search problems}{Toy problems (I): Vacuum world}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	            \centering 
                 \onslide<1> \includegraphics[width=\linewidth]{figs/vacuum2-environment.eps}\\
 	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Clean rooms}
                     \begin{itemize}
                     \item[-] State? $\rightarrow$ 
@@ -235,14 +241,14 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}[fragile]{Introduction}{Toy problems (I): Vacuum world}
+\begin{frame}[fragile]{Search problems}{Toy problems (I): Vacuum world}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	           \centering 
                \includegraphics[width=\linewidth]{figs/vacuum2-state-space.eps}\\
 	           \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Clean rooms}
                     \begin{itemize}
                     \item[-] State? $\rightarrow$ \textit{Dirt and location}
@@ -257,12 +263,12 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction}{Toy problems (II): 8-puzzle}
+\begin{frame}{Search problems}{Toy problems (II): 8-puzzle}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/8puzzle.eps}\\
 	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Solve 8-puzzle}
                     \begin{itemize}
                     \item[-] State? $\rightarrow$ 
@@ -277,12 +283,12 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction}{Toy problems (II): 8-puzzle}
+\begin{frame}{Search problems}{Toy problems (II): 8-puzzle}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/8puzzle.eps}\\
 	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Solve 8-puzzle}
                     \begin{itemize}
                     \item[-] State? $\rightarrow$ \textit{Location of tiles}
@@ -301,12 +307,12 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction}{Toy problems (III): 8-queens}
+\begin{frame}{Search problems}{Toy problems (III): 8-queens}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/8queens.eps}\\
 	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Place 8 queens no queen attacks any other}
                 State?\\
                 Initial state? \\
@@ -319,12 +325,12 @@
       \end{columns}
 \end{frame}
 
-\begin{frame}{Introduction}{Toy problems (III): 8-queens}
+\begin{frame}{Search problems}{Toy problems (III): 8-queens}
        \begin{columns}
- 	       \column{.60\textwidth}
+ 	       \column{.40\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/8queens.eps}\\
 	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
+ 	       \column{.60\textwidth}
                 \begin{exampleblock}{Problem: Place 8 queens no queen attacks any other}
                     \begin{itemize}
                     \item[-] State? $\rightarrow$ \textit{Any arrangement of 0 to 8 queens}
@@ -339,46 +345,43 @@
       \end{columns}
 \end{frame}
 
-\subsection{Real world problems}
-\begin{frame}{Introduction}{Real world problems (I): Robotic assembly}
+\subsection{Travel Salesman Problem}
+\begin{frame}{Search problems}{Travel Salesman Problem (TSP)}
        \begin{columns}
- 	       \column{.60\textwidth}
-	            \centering \includegraphics[width=\linewidth]{figs/stanford-arm.eps}\\
-	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
- 	       \column{.40\textwidth}
-                \begin{exampleblock}{Problem: Place 8 queens no queen attacks any other}
-                State?\\
-                Initial state? \\
-                Goal? \\
-                Actions? \\ 
-                Transition model? \\
-                Goal test? \\
-                Path cost?\\
-                \end{exampleblock}
-      \end{columns}
-\end{frame}
-
-\begin{frame}{Introduction}{Real world problems (II): Travel Salesman Problem (TSP)}
-       \begin{columns}
- 	       \column{.40\textwidth}
-                TSP formulation
-                \begin{itemize}
-                    \item A travel salesman must visit a set of cities
-                    \item One time in each city
-                    \item Find the shortest route
-                \end{itemize}
+ 	       \column{.50\textwidth}
+                \begin{block}{TSP formulation}
+                    A travel salesman must visit a set of cities only one time each. Find the shortest route.
+                \end{block}
 
                 TSP is a very big problem in AI!
                 \begin{itemize}
-                    \item Many real world applications
+                    \item First formulated in 1930 and still a hot research topic!
                     \item NP-hard problem
+                    \item Many real world applications
                 \end{itemize}
 
- 	       \column{.60\textwidth}
-                \begin{center}
-                    \includegraphics[width=\linewidth]{figs/romania-distances.eps}\\
-                    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
-                \end{center}
+ 	       \column{.50\textwidth}
+                \centering 
+                \begin{tikzpicture}[scale=0.6]
+                    \node[shape=circle, draw] (A) at (0,0) {A};
+                    \node[shape=circle, draw] (B) at (0,3) {B};
+                    \node[shape=circle, draw] (C) at (2.5,4) {C};
+                    \node[shape=circle, draw] (D) at (2.5,1) {D};
+                    \node[shape=circle, draw] (E) at (2.5,-2) {E};
+                    \node[shape=circle, draw] (F) at (5,3) {F} ;
+
+                    \path [-] (A) edge node[left] {$5$} (B);
+                    \path [-](B) edge node[left] {$3$} (C);
+                    \path [-](A) edge node[left] {$4$} (D);
+                    \path [-](D) edge node[left] {$3$} (C);
+                    \path [-](A) edge node[right] {$3$} (E);
+                    \path [-](D) edge node[left] {$3$} (E);
+                    \path [-](D) edge node {$3$} (F);
+                    \path [-](C) edge node {$5$} (F);
+                    \path [-](E) edge node[right] {$8$} (F); 
+                \end{tikzpicture}
+
+                \tiny{\href{https://tex.stackexchange.com/questions/270543/draw-a-graph-in-latex-with-tikz}{(Source)}}
       \end{columns}
 \end{frame}
 
@@ -387,17 +390,17 @@
 \begin{frame}{Search strategy (I)}
     In general ...
 	    \begin{itemize}
-    	    \item Each problem has a search graph, or \alert{state space}
+    	    \item Each problem has a search graph, or \textbf{state space}
         	\item Searching means finding a path from the initial state to a goal state
     	\end{itemize}
 
     Basic idea
         \begin{itemize}
             \item Explore search space
-            \item Generate a search tree \alert{expanding states}
+            \item Generate a \textbf{search tree} (i.e., \textbf{expanding nodes})
         \end{itemize}
 
-    A \alert{search strategy} is defined by picking the order of node exansion
+    A search strategy is defined by picking the order of node exansion
         \begin{itemize}
             \item Uninformed search: Only uses the problem definition
             \item Informed search: Uses problem-specific knowledge
@@ -783,7 +786,19 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
 
 \subsection{Case study II: 9\textsuperscript{th} GTOC}
 \begin{frame}{Study case}{Case study II: 9\textsuperscript{th} Global Trajectory Optimization Competition (I)}
-    TODO
+    GTOC: Global Trajectory Optimization Competition
+    \begin{itemize}
+        \item Proposed by ESA Advanced Concepts Team
+        \item Difficult trajectory optimization problems
+    \end{itemize}
+    GTOC 9: The Kesser Run
+    \begin{itemize}
+        \item 123 orbiting debris
+        \item Remove debris
+        \item Design multiple missions
+    \end{itemize}
+    \href{https://www.youtube.com/watch?time_continue=86&v=zvxZx-QnqQ0}{(Video)}
+    \href{https://www.youtube.com/watch?v=5CQNG6OIbZM}{(Suggested video)}
 \end{frame}
 
 \subsection{Case study III: Mars orbital insertion}
