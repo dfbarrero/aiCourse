@@ -207,8 +207,8 @@
         \item Initial state: State where the search begins
         \item Actions: Behaviour that the agent may exhibit
         \item Transition model: Which states follow an action in a state
-        \item Goal test: How to determine if a state is a goal
-        \item Path cost: Cost of an action
+        \item Goal test (\textit{metas}): How to determine if a state is a goal
+        \item Path cost: Cost of a path to a state
 	\end{itemize}
 \end{frame}
 
@@ -605,16 +605,16 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
 \begin{frame}{Informed search}{Introduction (I)}
     Use problem-specific knowledge beyond problem definition
       \begin{itemize}
-        \item Best-first search
+        \item Best-first search (\textit{búsqueda primero el mejor})
             \begin{itemize}
                 \item Greedy best-first search (\textit{Búsqueda voraz})
                 \item A* search
             \end{itemize}
         \item Local search algorithms
             \begin{itemize}
-            \item Hill-climbing search
-            \item Simulated annealing search
-            \item Local beam search
+            \item Hill-climbing search (\textit{búsqueda en escalada})
+            \item Simulated annealing search (\textit{búsqueda de temple simulado})
+            \item Local beam search (\textit{búsqueda de haz local})
             \item Genetic Algorithms 
         \end{itemize}
       \end{itemize}
@@ -630,10 +630,10 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
 
     Most algorithms use a \alert{heuristic function} or just \alert{heuristic} ($h(n)$)
       \begin{itemize}
-        \item Estimated cost of the cheapest path to goal
+        \item Estimated cost from a state to the goal
       \end{itemize}
 
-    Special cases
+    Best-first algorithms
       \begin{itemize}
         \item Greedy best-first search
         \item A*
@@ -681,7 +681,7 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
  	    \column{.50\textwidth}
             It considers the heuristic and the cost
             \begin{itemize}
-                \item $h(n)$: Estimated cost to solution from node n
+                \item $h(n)$: Estimated cost to goal from node n
                 \item $g(n)$: Cost to node n
             \end{itemize}
 
@@ -748,27 +748,45 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
  	       \column{.50\textwidth}
                 \begin{exampleblock}{Problem: Move arm}
                     \begin{itemize}
+                    \item[-] State? $\rightarrow$ 
+                    \item[-] Actions? $\rightarrow$ 
+                    \item[-] Goal test? $\rightarrow$ 
+                    \item[-] Path cost? $\rightarrow$
+                    \end{itemize}
+                \end{exampleblock}
+      \end{columns}
+\end{frame}
+
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (I)}
+       \begin{columns}
+ 	       \column{.50\textwidth}
+	            \centering \includegraphics[width=\linewidth]{figs/armPlain.eps}\\
+	            \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+ 	       \column{.50\textwidth}
+                \begin{exampleblock}{Problem: Move arm}
+                    \begin{itemize}
                     \item[-] State? $\rightarrow$ \textit{Real-valued coordinates of robot joint angles}
                     \item[-] Actions? $\rightarrow$ \textit{Continuous motions of joints}
                     \item[-] Goal test? $\rightarrow$ \textit{Complete assembly}
                     \item[-] Path cost? $\rightarrow$ \textit{Time to complete}
                     \end{itemize}
                 \end{exampleblock}
-
       \end{columns}
 \end{frame}
 
-%\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (I)}
-%       \begin{columns}
-% 	       \column{.50\textwidth}
-%            \centering \includegraphics[width=\linewidth]{figs/armPlain.eps}\\
-%	       \column{.50\textwidth}
-%            \centering \includegraphics[width=\linewidth]{figs/armPlainConfSpace.eps}\\
-%     \end{columns}
-%  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
-%end{frame}
+
 
 \begin{frame}{Case studies}{Case study I: Robot arm with two DOF (II)}
+       \begin{columns}
+ 	       \column{.50\textwidth}
+            \centering \includegraphics[width=\linewidth]{figs/armPlain.eps}\\
+	       \column{.50\textwidth}
+            \centering \includegraphics[width=\linewidth]{figs/armPlainConfSpace.eps}\\
+     \end{columns}
+  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+\end{frame}
+
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (III)}
        \begin{columns}
  	       \column{.50\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/armExampleWorkSpace.eps}\\
@@ -778,7 +796,7 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
 	  \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 \end{frame}
 
-\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (III)}
+\begin{frame}{Case studies}{Case study I: Robot arm with two DOF (IV)}
        \begin{columns}
  	       \column{.50\textwidth}
 	            \centering \includegraphics[width=\linewidth]{figs/armDPwithoutPotentialWorkspaceCoarse.eps}\\
@@ -801,7 +819,7 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
         \item Remove debris
         \item Design multiple missions
     \end{itemize}
-    \href{https://www.youtube.com/watch?time_continue=86&v=zvxZx-QnqQ0}{(Video)}
+    \href{https://www.youtube.com/watch?v=zvxZx-QnqQ0}{(Video)}
     \href{https://www.youtube.com/watch?v=5CQNG6OIbZM}{(Suggested video)}
 \end{frame}
 
