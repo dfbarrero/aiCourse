@@ -467,6 +467,7 @@
       \end{center}
 
       \bigskip
+
       Properties of breadth-first search
       \begin{itemize}
         \item Completeness: Yes
@@ -480,9 +481,10 @@
 \subsection{Uniform-cost search}
 
 \begin{frame}{Uninformed search}{Uniform-cost search (I)}
-    Expand least-cost unexpanded node
+    Special case of breadth-first search
     \begin{itemize}
-        \item Implemented with a queue ordered by path cost
+        \item Expand least-cost unexpanded node
+        \item The queue is sorted by cost
     \end{itemize}
 
     \begin{columns}
@@ -519,7 +521,6 @@
       \end{itemize}
       Space is the biggest problem (more than time)
 \end{frame}
-
 
 \subsection{Depth-first search}
 
@@ -813,6 +814,7 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
         \item Proposed by ESA Advanced Concepts Team
         \item Difficult trajectory optimization problems
     \end{itemize}
+
     GTOC 9: The Kesser Run
     \begin{itemize}
         \item 123 orbiting debris
@@ -828,4 +830,21 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
     \setlength{\fboxrule}{0pt}
     \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}} 
 \end{frame}
+
+\subsection{Case study IV: Transonic wing shape optimization}
+\begin{frame}{Study case}{Case study IV: Transonic wing shape optimization}
+    Problem: Design a wing shape for transonic flight
+        \begin{itemize}
+        \item Maximize lift
+        \end{itemize}
+
+    \setlength{\fboxrule}{0pt}
+    \centering \fbox{\includegraphics[width=0.5\linewidth]{figs/wing-ga.png}} 
+    
+    \small
+    \begin{flushleft}
+    \href{https://link.springer.com/chapter/10.1007/978-94-010-0017-8\_38\#citeas}{Holst T.L., Pulliam T.H. (2003) \textit{Transonic Wing Shape Optimization Using a Genetic Algorithm}. In: IUTAM Symposium Transsonicum IV. Fluid Mechanics and its Applications, vol 73. Springer.}
+    \end{flushleft}
+\end{frame}
+
 \end{document}
