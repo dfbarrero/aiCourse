@@ -27,12 +27,35 @@ The scenario is stored in a JSON file under the conf folder, you can change it w
 ```
 (r2p2) david@arrakis:~/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
 ```
+Check out the scenarios contained in conf and try to run some of them.
 
 You can get all the arguments to R2P2 passing the argument ```--help```.
 
-(Image taken from [here](http://file.scirp.org/Html/1-8302163_41175.htm).)
+# Basic configuration files manipulation
+
+R2P2 stores all its configuration under the folder ```conf```. There are three types of configuration files:
+
+- Scenarios, which contain the physical environment in which the robot is placed in.
+
+- Robots, which describes the robots, including its morphology and sensors.
+
+- Controllers, which configures a robot controller.
+
+R2P2 comes with a collection of scenarios, robots and controllers, each one is stored in a JSON file, which is plain text format with a straightforward syntax, as can be seen in the next example with the default scenarnio:
+
+```
+{
+	"stage": "../res/stage.png",
+	"robot": ["../conf/robot_2.json"],
+	"controller": "../conf/controller-telecom.json",
+	"gui": true
+}
+
+```
+
+The file syntax is self-explicative.
 
 Once the algorithm is implemented, perform the following tasks:
 
-1. Show the best fitness found in each generation. Execute the algorithm. How does the best fitness evolve?
+1. Change the initial location of the robot in the default scenario to the coordinate ().
 2. Compare the execution time with n=10, n=20 and n=100. (Hint: Use the Unix command *time*).
