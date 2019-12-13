@@ -78,3 +78,7 @@ Perform the following tasks:
 ## Wall following behaviour
 
 Implement a new controller (wallfollowing_controller.py) that searches and follows a wall. Use the sandbox scenario for this exercise.
+
+## Wall following behaviour 
+
+Implement a new controller (wallfollowing_fsm_controller.py) that searches and follows a wall using a Finite State Machine (FSM). Use the sandbox scenario for this exercise.
