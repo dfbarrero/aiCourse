@@ -4,42 +4,31 @@
 
 * Install and run R2P2.
 
-* Understand R2P2 configuration files.
+* Understand and customize R2P2 configuration files.
 
-* Develop basic robot controllers.
+* Develop basic robot controllers in R2P2.
 
 ## First steps
 
-Download and install R2P2.
+First of all, download and install R2P2 following the instructions given in the [https://github.com/ISG-UAH/r2p2](R2P2 GitHub repository), please, pay attention to install [https://www.anaconda.com/distribution/](Anaconda) first (a Python distribution that makes everything easier) and R2P2 dependencies. 
 
-Often, when someone begins to learn a new programming language he implements the famous ``Hello World'' program. The equivalent to this in Evolutionary Computation is the one-max, a trivial problem often used to practice a new EC framework or algorithm. The problem is straitforward: Given a binary chromosome of size $n$, the goal is to maximize the number of ones, i.e., to get an all ones chromosomes. The fitness function is just the sum of ones.
-
-Implement, with any programming language of your choice, a Genetic Algorithm (GA) that solves the one-max problem. Use the following pseudocode as guide.
+Check out the installation running a basic scenario with the following command from the folder r2p2:
 
 ```
-n := Chromosome length
-p := Population size
-pm := Mutation probability
-
-Initialize population with random values
-
-While solution not found
-	i := 0
-	While i < p
-		Select randomly two individuals in the population
-		Compute their fitness
-		Select fittest individual
-
-		If random_number() < pm 
-			Flip a random position of the selected individual
-
-		Store individual in the next population
-
+(r2p2) david@arrakis:~/r2p2$ python r2p2.py
 ```
 
-The following figure outlines the algorithm to implement.
+If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys, as the following picture depicts.
 
-<img align="center" src="ga.jpg" width="400">
+<img align="center" src="stage.jpg" width="400">
+
+The scenario is stored in a JSON file under the conf folder, you can change it with the argument --scenario. A very convenient sandbox scenario is provided in R2P2, run it with
+
+```
+(r2p2) david@arrakis:~/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
+```
+
+You can get all the arguments to R2P2 passing the argument ```--help```.
 
 (Image taken from [here](http://file.scirp.org/Html/1-8302163_41175.htm).)
 
