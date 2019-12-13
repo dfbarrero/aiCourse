@@ -8,7 +8,7 @@
 
 * Develop basic robot controllers in R2P2.
 
-## First steps
+## Getting started
 
 First of all, download and install R2P2 following the instructions given in the [https://github.com/ISG-UAH/r2p2](R2P2 GitHub repository), please, pay attention to install [https://www.anaconda.com/distribution/](Anaconda) first (a Python distribution that makes everything easier) and R2P2 dependencies. 
 
@@ -31,8 +31,8 @@ Check out the scenarios contained in conf and try to run some of them.
 
 You can get all the arguments to R2P2 passing the argument ```--help```.
 
-# Basic configuration files manipulation
-
+## Basic configuration files manipulation
+ciudad
 R2P2 stores all its configuration under the folder "conf/". There are three types of configuration files:
 
 - Scenarios, which contain the physical environment in which the robot is placed in.
@@ -58,11 +58,23 @@ The file syntax is self-explicative.
 Perform the following tasks:
 
 1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
+
 2. Change the robot used in the default scenario to "robot.json".
+
 3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder "res/", so you can use any image editor such as Gimp to do it.
 
-# Basic robot control
+## Basic robot control
 
 1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
+
 2.- Open the naîve controller source code (r2p2/controllers/naive_controller.py) and understand its code. You can browse the code with GitHub or any other tool of your choice.
+
 3.- Open the telecom controller source code (r2p2/controllers/telecom_controller.py) and understand its code.
+
+4.- Modify the telecom controller and print in the screen the distance measures.
+
+5.- Modify the telecom controller and print in the screen the odometry.
+
+## Wall following behaviour
+
+Implement a new controller (wallfollowing_controller.py) that searches and follows a wall. Use the sandbox scenario for this exercise.
