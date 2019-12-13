@@ -20,7 +20,7 @@ Check out the installation running a basic scenario with the following command f
 
 If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys, as the following picture depicts.
 
-<img align="center" src="stage.jpg" width="400">
+<img align="center" src="r2p2-stage.png" width="400">
 
 The scenario is stored in a JSON file under the conf folder, you can change it with the argument --scenario. A very convenient sandbox scenario is provided in R2P2, run it with
 
