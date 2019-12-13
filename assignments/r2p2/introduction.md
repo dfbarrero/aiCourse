@@ -60,3 +60,7 @@ Perform the following tasks:
 1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
 2. Change the robot used in the default scenario to "robot.json".
 3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder "res/", so you can use any image editor such as Gimp to do it.
+
+# Basic robot control
+
+1.- Change the controller in the default scenario to the naïve controller ().
