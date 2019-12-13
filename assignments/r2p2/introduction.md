@@ -59,17 +59,17 @@ Perform the following tasks:
 
 1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
 
-2. Change the robot used in the default scenario to "robot.json".
+2. Change the robot used in the default scenario to *robot.json*.
 
-3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder "res/", so you can use any image editor such as Gimp to do it.
+3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder *res/*, so you can use any image editor such as Gimp to do it.
 
 ## Basic robot control
 
 1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
 
-2.- Open the naîve controller source code (r2p2/controllers/naive_controller.py) and understand its code. You can browse the code with GitHub or any other tool of your choice.
+2.- Open the naîve controller source code (*r2p2/controllers/naive_controller.py*) and understand its code. You can browse the code with GitHub or any other tool of your choice.
 
-3.- Open the telecom controller source code (r2p2/controllers/telecom_controller.py) and understand its code.
+3.- Open the telecom controller source code (*r2p2/controllers/telecom_controller.py*) and understand its code.
 
 4.- Modify the telecom controller and print in the screen the distance measures.
 
@@ -77,8 +77,8 @@ Perform the following tasks:
 
 ## Wall following behaviour
 
-Implement a new controller (wallfollowing_controller.py) that searches and follows a wall. Use the sandbox scenario for this exercise.
+Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise.
 
 ## Wall following behaviour 
 
-Implement a new controller (wallfollowing_fsm_controller.py) that searches and follows a wall using a Finite State Machine (FSM). Use the sandbox scenario for this exercise.
+Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using a Finite State Machine (FSM). Use the sandbox scenario for this exercise.
