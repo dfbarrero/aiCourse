@@ -25,7 +25,7 @@ If everything is working properly, you shoud be now watching a basic scenario wi
 The scenario is stored in a JSON file under the conf folder, you can change it with the argument --scenario. A very convenient sandbox scenario is provided in R2P2, run it with
 
 ```
-(r2p2) david@arrakis:~/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
+(r2p2) david@arrakis:~/r2p2/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
 ```
 Check out the scenarios contained in conf and try to run some of them.
 
@@ -33,7 +33,7 @@ You can get all the arguments to R2P2 passing the argument ```--help```.
 
 # Basic configuration files manipulation
 
-R2P2 stores all its configuration under the folder ```conf```. There are three types of configuration files:
+R2P2 stores all its configuration under the folder "conf/". There are three types of configuration files:
 
 - Scenarios, which contain the physical environment in which the robot is placed in.
 
@@ -55,7 +55,8 @@ R2P2 comes with a collection of scenarios, robots and controllers, each one is s
 
 The file syntax is self-explicative.
 
-Once the algorithm is implemented, perform the following tasks:
+Perform the following tasks:
 
-1. Change the initial location of the robot in the default scenario to the coordinate ().
-2. Compare the execution time with n=10, n=20 and n=100. (Hint: Use the Unix command *time*).
+1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
+2. Change the robot used in the default scenario to "robot.json".
+3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder "res/", so you can use any image editor such as Gimp to do it.
