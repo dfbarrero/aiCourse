@@ -63,4 +63,6 @@ Perform the following tasks:
 
 # Basic robot control
 
-1.- Change the controller in the default scenario to the naïve controller ().
+1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
+2.- Open the naîve controller source code (r2p2/controllers/naive_controller.py) and understand its code. You can browse the code with GitHub or any other tool of your choice.
+3.- Open the telecom controller source code (r2p2/controllers/telecom_controller.py) and understand its code.
