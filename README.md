@@ -70,6 +70,10 @@
 
 * [PDDL v2 exercises](assignments/planning/pddl-v2.md)
 
+## Robotics
+
+* [Introduction to the R2P2 robotic simulator](assignments/r2p2/introduction.md)
+
 ## Evolutionary Computation
 
 * [One-max problem with a basic Genetic Algorithm](assignments/onemax/onemax.md)
