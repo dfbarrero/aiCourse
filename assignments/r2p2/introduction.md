@@ -31,8 +31,8 @@ Check out the scenarios contained in conf and try to run some of them.
 
 You can get all the arguments to R2P2 passing the argument ```--help```.
 
-## Basic configuration files manipulation
-ciudad
+## Basic configuration files
+
 R2P2 stores all its configuration under the folder "conf/". There are three types of configuration files:
 
 - Scenarios, which contain the physical environment in which the robot is placed in.
@@ -78,6 +78,8 @@ Perform the following tasks:
 ## Wall following behaviour
 
 Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise.
+
+<img align="center" src="sandbox.png" width="400">
 
 ## Wall following behaviour  with a FSM (optional)
 
