@@ -41,7 +41,7 @@ R2P2 stores all its configuration under the folder "conf/". There are three type
 
 - Controllers, which configures a robot controller.
 
-R2P2 comes with a collection of scenarios, robots and controllers, each one is stored in a JSON file, which is plain text format with a straightforward syntax, as can be seen in the next example with the default scenarnio:
+R2P2 comes with a collection of scenarios, robots and controllers, each one is stored in a JSON file, which is plain text format with a straightforward syntax, as can be seen in the next example with the default scenanio:
 
 ```
 {
