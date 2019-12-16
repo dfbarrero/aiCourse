@@ -79,6 +79,10 @@ Perform the following tasks:
 
 Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise.
 
-## Wall following behaviour 
+## Wall following behaviour  with a FSM (optional)
 
-Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using a Finite State Machine (FSM). Use the sandbox scenario for this exercise.
+1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using a Finite State Machine (FSM).
+
+<img align="center" src="r2p2-stage.png" width="400">
+
+2. Extend the FSM behaviour shown in the previous section, for instance, adding a new state "Emergency stop" to avoid collisions. 
