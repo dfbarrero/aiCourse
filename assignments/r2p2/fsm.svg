@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
-<svg width="10cm" height="4cm" viewBox="77 75 192 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="11cm" height="4cm" viewBox="77 75 217 68" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="Background">
     <g>
       <ellipse style="fill: #ffffff; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000" cx="96.6784" cy="120.422" rx="18.2326" ry="18.2326"/>
@@ -39,6 +39,14 @@
     <g>
       <path style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000" d="M 155.317 107.808 C 156.446,67.1223 181.446,65.1223 182.11,103.691"/>
       <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000" fill-rule="evenodd" points="182.162,106.691 180.093,102.726 182.11,103.691 184.092,102.657 "/>
+    </g>
+    <g>
+      <path style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000" d="M 83.7843 107.528 C 84.9125,66.8413 108.837,64.8413 109.502,103.41"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000" fill-rule="evenodd" points="109.553,106.41 107.485,102.445 109.502,103.41 111.484,102.376 "/>
+    </g>
+    <g>
+      <path style="fill: none; stroke-opacity: 1; stroke-width: 1; stroke: #000000" d="M 262.084 107.609 C 302.445,107.122 303.445,132.622 266.194,134.855"/>
+      <polygon style="fill: #000000; fill-opacity: 1; stroke-opacity: 1; stroke-width: 1; stroke: #000000" fill-rule="evenodd" points="263.2,135.034 267.073,132.799 266.194,134.855 267.312,136.791 "/>
     </g>
   </g>
 </svg>
