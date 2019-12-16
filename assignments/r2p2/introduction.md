@@ -10,7 +10,7 @@
 
 ## Getting started
 
-First of all, download and install R2P2 following the instructions given in the [https://github.com/ISG-UAH/r2p2](R2P2 GitHub repository), please, pay attention to install (https://www.anaconda.com/distribution/)[Anaconda] first (a Python distribution that makes everything easier) and R2P2 dependencies. 
+First of all, download and install R2P2 following the instructions given in the [https://github.com/ISG-UAH/r2p2](R2P2 GitHub repository), please, pay attention to install [https://www.anaconda.com/distribution/](Anaconda) first (a Python distribution that makes everything easier) and R2P2 dependencies. 
 
 Check out the installation running a basic scenario with the following command from the folder r2p2:
 
