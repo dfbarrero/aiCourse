@@ -22,14 +22,14 @@ If everything is working properly, you shoud be now watching a basic scenario wi
 
 <img align="center" src="r2p2-stage.png" width="400">
 
-The scenario is stored in a JSON file under the conf folder, you can change it with the argument --scenario. A very convenient sandbox scenario is provided in R2P2, run it with
+The scenario is stored in a JSON file under the conf folder, you can change it with the argument *--scenario*. A very convenient sandbox scenario is provided in R2P2, run it with
 
 ```
 (r2p2) david@arrakis:~/r2p2/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
 ```
 Check out the scenarios contained in conf and try to run some of them.
 
-You can get all the arguments to R2P2 passing the argument ```--help```.
+You can get all the arguments to R2P2 passing the argument *--help*.
 
 ## Basic configuration files
 
