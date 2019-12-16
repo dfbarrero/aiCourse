@@ -61,9 +61,13 @@ Perform the following tasks:
 
 2. Change the robot used in the default scenario to *robot.json*.
 
-3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is a simple image located in the folder *res/*, so you can use any image editor such as Gimp to do it.
+3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is just an image located in the folder *res/*, so you can use any image editor such as Gimp to do it.
 
 ## Basic robot control
+
+The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and return a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. Read the R2P2 developer manual to get more details about its API.
+
+Perform the following tasks:
 
 1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
 
@@ -77,7 +81,7 @@ Perform the following tasks:
 
 ## Wall following behaviour
 
-Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise.
+1. Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise. You can use the naïve controller (just copy the file) as a template.
 
 <img align="center" src="sandbox.png" width="400">
 
