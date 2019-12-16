@@ -81,7 +81,7 @@ Implement a new controller (*wallfollowing_controller.py*) that searches and fol
 
 ## Wall following behaviour  with a FSM (optional)
 
-1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using a Finite State Machine (FSM).
+1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using the following Finite State Machine (FSM).
 
 <img align="center" src="fsm.svg" width="400">
 
