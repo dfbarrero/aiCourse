@@ -528,57 +528,105 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 \end{frame}
 
 \section{AI applications}
-\subsection{2001: A Space Odyssey}
 
-\begin{frame}{AI applications}{2001: A Space Odyssey (I)}
+%\subsection{2001: A Space Odyssey}
+
+%\begin{frame}{AI applications}{2001: A Space Odyssey (I)}
+%	\begin{columns}
+% 	   \column{.70\textwidth}
+%			2001: Space Odyssey
+%			\begin{itemize}
+%			\item Claimed as the best (and most realistic) sci-fi movie ever
+%			\item Filmed in 1969 by Stanley Kubrick
+%			\item Relates a journey to Jupiter (among many other things)
+%			\end{itemize}
+%			\href{https://www.youtube.com/watch?v=XHjIqQBsPjk}{(Video trailer)}
+% 	   \column{.30\textwidth}
+%		\includegraphics[width=\linewidth]{figs/kubrick1.jpg}\\
+%		\includegraphics[width=\linewidth]{figs/2001-nave.jpg}
+%	\end{columns}
+%\end{frame}
+
+%\begin{frame}{AI applications}{2001: A Space Odyssey (II)}
+%	\begin{columns}
+% 	   \column{.05\textwidth}
+% 	   \column{.65\textwidth}
+%			The main character is Terminator 9000
+%			\begin{itemize}
+%			\item Terminator is an AI that controls an intelligent spaceship (an agent)
+%			\end{itemize}
+%			Terminator has very advanced features
+%			\begin{itemize}
+%			\item Play chess
+%			\item Speak easily with the crew
+%			\item Understand the emotions of the crew
+%			\item Display emotions
+%			\item Navigate the ship
+%			\item Diagnose on-board problems
+%			\item Make life-and-death decisions
+%			\item Recognize the crew faces
+%			\end{itemize}
+% 	   \column{.3\textwidth}
+%	   	\begin{center}
+%		\includegraphics[width=0.8\linewidth]{figs/hal.png}
+%		\end{center}
+%		\begin{block}{}
+%			Terminator was sci-fi in 1969 ... Is it still sci-fi?
+%		\end{block}
+% 	   \column{.05\textwidth}
+%	\end{columns}
+%\end{frame}
+
+\subsection{Building Terminator}
+
+\begin{frame}{AI applications}{Building Terminator (I)}
 	\begin{columns}
  	   \column{.70\textwidth}
-			2001: Space Odyssey
+			Terminator
 			\begin{itemize}
-			\item Claimed as the best (and most realistic) sci-fi movie ever
-			\item Filmed in 1969 by Stanley Kubrick
-			\item Relates a journey to Jupiter (among many other things)
+            \item Come on, do you really do not know what Terminator is?
+			\item Classical action movie filmed in 1984
+			\item Relates a robot from 2029 chasing Sarah Connor
+            \item ... and self-aware AI named Skynet that leads the raise of the machines
 			\end{itemize}
-			\href{https://www.youtube.com/watch?v=XHjIqQBsPjk}{(Video trailer)}
+			\href{https://www.youtube.com/watch?v=k64P4l2Wmeg}{(Video trailer)}
  	   \column{.30\textwidth}
-		\includegraphics[width=\linewidth]{figs/kubrick1.jpg}\\
-		\includegraphics[width=\linewidth]{figs/2001-nave.jpg}
+		\includegraphics[width=\linewidth]{figs/terminator.jpg}\\
 	\end{columns}
 \end{frame}
 
-\begin{frame}{AI applications}{2001: A Space Odyssey (II)}
+\begin{frame}{AI applications}{Building Terminator (II)}
 	\begin{columns}
  	   \column{.05\textwidth}
  	   \column{.65\textwidth}
-			The main character is HAL 9000
+			The main character is a T-800 robot, terminator
 			\begin{itemize}
-			\item HAL is an AI that controls an intelligent spaceship (an agent)
+			\item T-800 is a robot model designed to exterminate humans
 			\end{itemize}
-			HAL has very advanced features
+			T-800 displays very advanced features
 			\begin{itemize}
-			\item Play chess
-			\item Speak easily with the crew
-			\item Understand the emotions of the crew
-			\item Display emotions
-			\item Navigate the ship
+            \item Plan how to exterminate Sarah Connor
+			\item Speak easily with humans
+			\item Recognize human faces
+			\item Navigate vehicles
 			\item Diagnose on-board problems
 			\item Make life-and-death decisions
-			\item Recognize the crew faces
+			\item Understand human emotions
 			\end{itemize}
  	   \column{.3\textwidth}
 	   	\begin{center}
-		\includegraphics[width=0.8\linewidth]{figs/hal.png}
+		\includegraphics[width=0.8\linewidth]{figs/t-800.jpg}
 		\end{center}
 		\begin{block}{}
-			HAL was sci-fi in 1969 ... Is it still sci-fi?
+			Terminator was sci-fi in 1984 ... Is it still sci-fi?
 		\end{block}
  	   \column{.05\textwidth}
 	\end{columns}
 \end{frame}
 
-\subsection{Building HAL}
-\begin{frame}{AI applications}{Building HAL}
-	Imagine we want to build HAL ... What would we need?
+\subsection{Building Terminator}
+\begin{frame}{AI applications}{Building Terminator (II)}
+	Imagine we want to build T-800 ... What would we need?
 	\begin{itemize}
 		\item Fast hardware?
 		\item Chess-playing at grandmaster level?
@@ -590,7 +638,27 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	Let's analyze them
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Hardware (I)}
+\begin{frame}{AI applications}{Building Terminator (III)}
+    \begin{table}
+    \centering
+    \begin{tabular}{l|l}
+    \textsc{Human capability} & \textsc{AI field} \\\hline
+    Motion control & Robotics \\
+    Image reconition & Computer vision \\
+    Speech understanding & Natural Language Processing \\
+    Reasoning & Automatic reasoning \\
+    Plan & Planning \& Scheduling \\
+    Learn & Machine Learning \\
+    Drive vehicles & Control \\
+    Play chess & Search \\
+    \end{tabular}
+    \end{table}
+
+    And, of course, we need some hardware
+\end{frame}
+
+
+\begin{frame}{AI applications}{Building Terminator: Hardware (I)}
 	How complicated is our brain?
 	\begin{itemize}
 		\item A neuron is the basic information processing unit
@@ -605,7 +673,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Hardware (II)}
+\begin{frame}{AI applications}{Building Terminator: Hardware (II)}
 	\begin{columns}
  	   \column{.60\textwidth}
 	\begin{center}
@@ -624,7 +692,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\end{columns}
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Chess (I)}
+\begin{frame}{AI applications}{Building Terminator: Chess (I)}
 	Chess is a classic benchmark in AI
 	\begin{itemize}
 		\item AI techniques: Classic search
@@ -642,7 +710,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	Conclusion: YES
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Chess (II)}
+\begin{frame}{AI applications}{Building Terminator: Chess (II)}
 	\vspace{-2cm}
 
 	\begin{center}
@@ -674,10 +742,10 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\end{columns}
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Speech synthesis}
+\begin{frame}{AI applications}{Building Terminator: Speech synthesis}
 	Three different problems to make computers talk
 	\begin{itemize}
-		\item Speech synthesis, speech recognition and speech understanding
+		\item \href{https://youtu.be/SYJCWStejSc?t=65}{(Speech synthesis)}, speech recognition and speech understanding
 	\end{itemize}
 	Speech synthesis: Generate sound from text
 	\begin{itemize}
@@ -697,7 +765,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Speech recognition}
+\begin{frame}{AI applications}{Building Terminator: Speech recognition}
 \footnotesize{
 	Speech recognition: Map sounds into a list of words
 	\begin{itemize}
@@ -721,7 +789,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 }
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Speech understanding}
+\begin{frame}{AI applications}{Building Terminator: Speech understanding}
 	Speech understanding: What is the meaning of the speech?
 	\begin{itemize}
 		\item Another classic (and difficult) problem in AI
@@ -744,7 +812,30 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	Conclusion: NO
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Learning (I)}
+\begin{frame}{AI applications}{Building Terminator: Image recognition}
+    \begin{table}
+	\begin{tabular}{cc}
+		\includegraphics[width=0.5\linewidth]{figs/segmentation.jpeg} & \includegraphics[width=0.4\linewidth]{figs/detection.png} \\ 
+  	    & \tiny \href{https://joshua19881228.github.io/2017-06-13-An-Introduction-to-CNN-based-Object-Detection/}{(Source)}     \\ 
+	\end{tabular}
+    \end{table}
+    
+    \vspace{-0.5cm}
+
+    \normalsize{
+    Several tasks:
+    \begin{itemize}
+        \item Segmentation, object recognition, \href{https://thispersondoesnotexist.com/}{(image synthesis)}, etc
+    \end{itemize}
+    Technology
+    \begin{itemize}
+        \item Deep neural networks
+    \end{itemize}
+	Conclusion: NO for general recognition, YES for restricted domains
+    }
+\end{frame}
+
+\begin{frame}{AI applications}{Building Terminator: Learning (I)}
 	\begin{columns}
  	   \column{.02\textwidth}
  	   \column{.60\textwidth}
@@ -771,7 +862,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Learning (II)}
+\begin{frame}{AI applications}{Building Terminator: Learning (II)}
 	Another discipline: Expert systems
 	\begin{itemize}
 		\item It maintains a knowledge base, facts base and interence engine
@@ -784,22 +875,22 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	Conclusion: YES
 \end{frame}
 
-\begin{frame}{AI applications}{Building HAL: Image recognition}
-	Recognition vs. understanding (like speech)
-	\begin{itemize}
-		\item Applications: Face recognition, object recognition, object tracking, ... \href{https://www.youtube.com/watch?v=y5NWCjMbOZk}{(Video)}
-		\item Techniques: Computer vision, Machine Learning, Deep Learning, ...
-	\end{itemize}
-	Again, it is a hard problem
-	\begin{center}
-		\includegraphics[width=0.25\linewidth]{figs/captcha.png}\\
-		\tiny{\href{http://www.ohmygeek.net/2015/03/12/podec-troyano-captcha/}{(Source)}}
-	\end{center}
+%\begin{frame}{AI applications}{Building Terminator: Image recognition}
+%	Recognition vs. understanding (like speech)
+%	\begin{itemize}
+%		\item Applications: Face recognition, object recognition, object tracking, ... \href{https://www.youtube.com/watch?v=y5NWCjMbOZk}{(Video)}
+%		\item Techniques: Computer vision, Machine Learning, Deep Learning, ...
+%	\end{itemize}
+%	Again, it is a hard problem
+%	\begin{center}
+%		\includegraphics[width=0.25\linewidth]{figs/captcha.png}\\
+%		\tiny{\href{http://www.ohmygeek.net/2015/03/12/podec-troyano-captcha/}{(Source)}}
+%	\end{center}
+%
+%	Conclusion: NO for general recognition, YES for restricted domains
+%\end{frame}
 
-	Conclusion: NO for general recognition, YES for restricted domains
-\end{frame}
-
-\begin{frame}{AI applications}{Building HAL: Plan and make decisions}
+\begin{frame}{AI applications}{Building Terminator: Plan and make decisions}
 	Intelligence involves solving problems, making decisions and plans
 	\begin{itemize}
 		\item Plan: Sequence of actions to achieve a goal
