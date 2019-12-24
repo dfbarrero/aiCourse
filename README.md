@@ -20,23 +20,23 @@
 
 ## Planning & Scheduling
 
-* [Planning representation](planningrepresentation/planningrepresentation.pptx) (PPTX)
+* [Planning representation](planningrepresentation/planningrepresentation.pdf)
 
-* [PDDL v1](planningrepresentation/PDDL.pdf)
+* [PDDL v1](planningrepresentation/PDDL.pdf) 
 
 * [PDDL v2](planningrepresentation/PDDL2.pdf)
 
-* [Planning techniques](planningtechniques/planningtechniques.pptx) (PPTX)
+* [Planning techniques](planningtechniques/planningtechniques.pdf)
 
-* [Path-planning](plathplanning/pathplanning.pptx) (PPTX)
+* [Path-planning](plathplanning/pathplanning.pdf)
 
-* [Misiones espaciales basadas en control autónomo](aicontrolmissions/aicontrolmissions.ppt) (PPT, Spanish)
+* [Space missions based on autonomous control](aicontrolmissions/aicontrolmissions.pdf)
 
 ## Robotics
 
 * [Introduction to Robotics](robotics/)
 
-* [Control Architectures](controlarchitectures/) (PPT)
+* [Control Architectures](controlarchitectures/controlarchitectures.pdf) 
 
 ## Misc
 
