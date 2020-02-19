@@ -32,62 +32,21 @@ Check out the scenarios contained in conf and try to run some of them.
 
 You can get all the arguments to R2P2 passing the argument *--help*.
 
-## Basic configuration files
+## Assignment objective
 
-R2P2 stores all its configuration under the folder "conf/". There are three types of configuration files:
+The main objective of this assignment is to develop a robot controller that imitates the behaviour of a teleoperated robot. The teleoperation will only consider five outputs: STOPPED, UP, DOWN, LEFT and RIGHT, which corresponds to the cursor keys. We will perform three different tasks in this assignment.
 
-- Scenarios, which contain the physical environment in which the robot is placed in.
+1.- Build a dataset that maps the robot sensons and its output.
 
-- Robots, which describes the robots, including its morphology and sensors.
+2.- Train a classification model.
 
-- Controllers, which configures a robot controller.
+3.- Integrate the model into the robot controller.
 
-R2P2 comes with a collection of scenarios, robots and controllers, each one is stored in a JSON file, which is plain text format with a straightforward syntax, as can be seen in the next example with the default scenanio:
+## Task 1: Build a dataset
 
-```
-{
-	"stage": "../res/stage.png",
-	"robot": ["../conf/robot_2.json"],
-	"controller": "../conf/controller-telecom.json",
-	"gui": true
-}
+1.- Modify the teleoperation controler to display the robot sensors measures and its motion ("UP", "DOWN", "LEFT", "RIGHT", STOPPED"). The output must be in [CSV format](https://en.wikipedia.org/wiki/Comma-separated_values), which is straitforward. You can add a header with the columns names, which will ease futher steps.
 
-```
+2.- Build the dataset. Teleoperate the robot while storing its perception and actions. Remember that this is what the controller will learn, so try to be consistent and do not develop complex behaviours. A very easy way to store the CSV file into disk is to redirect the simulator output (```python r2p2.py --scenario scenario.json > output.csv```).
 
-The file syntax is self-explicative.
+## Task 2: Train a classification model
 
-Perform the following tasks:
-
-1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
-
-2. Change the robot used in the default scenario to *robot.json*.
-
-3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is just an image located in the folder *res/*, so you can use any image editor such as Gimp to do it.
-
-## Basic robot control
-
-The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and return a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. Read the R2P2 developer manual to get more details about its API.
-
-Perform the following tasks:
-
-1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
-
-2.- Open the naîve controller source code (*r2p2/controllers/naive_controller.py*) and understand its code. You can browse the code with GitHub or any other tool of your choice.
-
-3.- Open the telecom controller source code (*r2p2/controllers/telecom_controller.py*) and understand its code.
-
-4.- Modify the telecom controller and print in the screen the distance measures.
-
-5.- Modify the telecom controller and print in the screen the odometry.
-
-## Wall following behaviour
-
-1. Implement a new controller (*wallfollowing_controller.py*) that searches and follows a wall. Use the sandbox scenario for this exercise. You can use the naïve controller (just copy the file) as a template.
-
-<img align="center" src="sandbox.png" width="400">
-
-## Wall following behaviour  with a FSM (optional)
-
-1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using the following Finite State Machine (FSM).
-
-<img align="center" src="fsm.svg" width="400">
