@@ -50,3 +50,25 @@ The main objective of this assignment is to develop a robot controller that imit
 
 ## Task 2: Train a classification model
 
+For this task, we recommend using a Jupyter notebook.
+
+3.- Explore your dataset. Do you need any preprocessing in your data? You will need preprocessing if not all the instances in the dataset are relevant for the training.
+
+4.- Preprocess your data, if needed.
+
+5.- Train a classification model. Try the following algorithms:
+  - K-Nearest Neighbors (K-NN) with k=1.
+  - Classification Tree.
+  - Support Vector Machine.
+
+Do not forget to assess the performance of all your models.
+
+6.- Tune your hyperparameters. Try different values for k (k=1,2,3,4 and 5) in K-NN and plot its performance. Which value of k gives the best performance?
+
+7.- Select one of the previous algorithms to integrate it into the robor controller. You will need to persist the model in disk.
+
+## Task 3: Integrate the model into the robot controller
+
+8.- Develop a new robot controller that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
+
+9.- Assess the robot behaviour. Is it as expected?
