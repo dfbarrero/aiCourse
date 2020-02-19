@@ -59,13 +59,13 @@ Perform the following tasks:
 
 1. Change the initial location of the robot in the default scenario to the top-right corner. Take into account that the coordinates origin is the top-left corner and coordinates are always positive.
 
-2. Change the robot used in the default scenario to *robot.json*.
+2. Change the robot used in the default scenario.
 
 3. Create a new scenario based on the default scenario or any other of your choice. Please, observe that the scenario map is just an image located in the folder *res/*, so you can use any image editor such as Gimp to do it.
 
 ## Basic robot control
 
-The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and return a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. Read the R2P2 developer manual to get more details about its API.
+The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and returns a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. Read the R2P2 developer manual to get more details about its API.
 
 Perform the following tasks:
 
