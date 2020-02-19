@@ -75,9 +75,9 @@ Perform the following tasks:
 
 3.- Open the telecom controller source code (*r2p2/controllers/telecom_controller.py*) and understand its code.
 
-4.- Modify the telecom controller and print in the screen the distance measures.
+4.- Modify the telecom controller and display the distance measures.
 
-5.- Modify the telecom controller and print in the screen the odometry.
+5.- Modify the telecom controller and display the odometry.
 
 ## Wall following behaviour
 
