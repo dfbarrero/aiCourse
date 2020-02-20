@@ -44,17 +44,19 @@ The main objective of this assignment is to develop a robot controller that imit
 
 ## Task 1: Build a dataset
 
-1.- Modify the teleoperation controler to display the robot sensors measures and its motion ("UP", "DOWN", "LEFT", "RIGHT", STOPPED"). The output must be in [CSV format](https://en.wikipedia.org/wiki/Comma-separated_values), which is straitforward. You can add a header with the columns names, which will ease futher steps.
+1.- Use the teleoperation controler as a template for a new controller (Telecom_Controller_ml) to display the robot sensors measures and its motion ("UP", "DOWN", "LEFT", "RIGHT", STOPPED"). The output must be in [CSV format](https://en.wikipedia.org/wiki/Comma-separated_values), which is straitforward. You can add a header with the columns names, which will ease futher steps.
 
-2.- Build the dataset. Teleoperate the robot while storing its perception and actions. Remember that this is what the controller will learn, so try to be consistent and do not develop complex behaviours. A very easy way to store the CSV file into disk is to redirect the simulator output (```python r2p2.py --scenario scenario.json > output.csv```).
+2.- Build the dataset. Teleoperate the robot while storing its perception and actions. Remember that this is what the controller will learn, so try to be consistent and do not develop complex behaviours. A very easy way to store the CSV file into disk is to redirect the simulator output (```python r2p2.py --scenario scenario.json > output.csv```). The success of this assignment highly depends on how you drive the robot in this step, so do it carefully.
+
+3.- Preprocess the dataset. Add a header and perform any task needed to correctly format the CSV. This might need a manual edition of the file with a text editor or Excel.
 
 ## Task 2: Train a classification model
 
 For this task, we recommend using a Jupyter notebook.
 
-3.- Explore your dataset. Do you need any preprocessing in your data? You will need preprocessing if not all the instances in the dataset are relevant for the training.
+1.- Explore your dataset. Do you need any futher preprocessing in your data? You will need preprocessing if not all the instances in the dataset are relevant for the training. 
 
-4.- Preprocess your data, if needed.
+2.- Preprocess your data for the training, if needed. Automatic preprocessing could be a better option in this step. Take into account the sonar range and robot radius.
 
 5.- Train a classification model. Try the following algorithms:
   - K-Nearest Neighbors (K-NN) with k=1.
