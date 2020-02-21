@@ -67,6 +67,8 @@ For this task, we recommend using a Jupyter notebook.
 4.- Train a classification model. Try the following algorithms:
   - K-Nearest Neighbors (K-NN) with k=1.
   - Classification Tree.
+  - Logistic Regression.
+  - Multilayer Perceptron.
   - Support Vector Machine.
 
 Do not forget to assess the performance of all your models. You will need to persist (i.e., store) your trained models, use this [Scikit-learn notebook](https://github.com/dfbarrero/dataCourse/blob/master/mlfoundations/scikit-learn.ipynb) or read [this link](https://wiki.python.org/moin/UsingPickle) for futher information on this topic.
