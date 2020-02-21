@@ -36,7 +36,7 @@ You can get all the arguments to R2P2 passing the argument *--help*.
 
 The main objective of this assignment is to develop a robot controller that imitates the behaviour of a teleoperated robot. The teleoperation will only consider five outputs: STOPPED, UP, DOWN, LEFT and RIGHT, which corresponds to the cursor keys. We will perform three different tasks in this assignment.
 
-1.- Build a dataset that maps the robot sensons and its output.
+1.- Build a dataset that maps the robot sensors readings and its action.
 
 3.- Train a classification model.
 
