@@ -38,11 +38,15 @@ The main objective of this assignment is to develop a robot controller that imit
 
 1.- Build a dataset that maps the robot sensons and its output.
 
-2.- Train a classification model.
+3.- Train a classification model.
 
-3.- Integrate the model into the robot controller.
+4.- Integrate the model into the robot controller.
+
+Use the scenario defined by the file ```scenario-track.json``` for this lab assignment.
 
 ## Task 1: Build a dataset
+
+You may want to check out this [Scikit-learn notebook](https://github.com/dfbarrero/dataCourse/blob/master/mlfoundations/scikit-learn.ipynb) as an example.
 
 1.- Use the teleoperation controler as a template for a new controller (Telecom_Controller_ml) to display the robot sensors measures and its motion ("UP", "DOWN", "LEFT", "RIGHT", STOPPED"). The output must be in [CSV format](https://en.wikipedia.org/wiki/Comma-separated_values), which is straitforward. You can add a header with the columns names, which will ease futher steps.
 
@@ -56,21 +60,23 @@ For this task, we recommend using a Jupyter notebook.
 
 1.- Explore your dataset. Do you need any futher preprocessing in your data? You will need preprocessing if not all the instances in the dataset are relevant for the training. 
 
-2.- Preprocess your data for the training, if needed. Automatic preprocessing could be a better option in this step. Take into account the sonar range and robot radius.
+2.- Plot the two main components of the PCA. Is your data separable? 
 
-5.- Train a classification model. Try the following algorithms:
+3.- Preprocess your data for the training, if needed. Automatic preprocessing could be a better option in this step. Take into account the sonar range and robot radius.
+
+4.- Train a classification model. Try the following algorithms:
   - K-Nearest Neighbors (K-NN) with k=1.
   - Classification Tree.
   - Support Vector Machine.
 
-Do not forget to assess the performance of all your models.
+Do not forget to assess the performance of all your models. You will need to persist (i.e., store) your trained models, use this [Scikit-learn notebook](https://github.com/dfbarrero/dataCourse/blob/master/mlfoundations/scikit-learn.ipynb) or read [this link](https://wiki.python.org/moin/UsingPickle) for futher information on this topic.
 
-6.- Tune your hyperparameters. Try different values for k (k=1,2,3,4 and 5) in K-NN and plot its performance. Which value of k gives the best performance?
+7.- Tune your hyperparameters. Try different values for k (k=1,2,3,4 and 5) in K-NN and plot its performance. Which value of k gives the best performance?
 
-7.- Select one of the previous algorithms to integrate it into the robor controller. You will need to persist the model in disk.
+8.- Select one of the previous algorithms to integrate it into the robor controller. You will need to persist the model in disk.
 
 ## Task 3: Integrate the model into the robot controller
 
-8.- Develop a new robot controller that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
+1.- Develop a new robot controller that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
 
-9.- Assess the robot behaviour. Is it as expected?
+2.- Assess the robot behaviour. Is it as expected?
