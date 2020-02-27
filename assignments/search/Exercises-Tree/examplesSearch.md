@@ -21,7 +21,7 @@ Given the following graph, expand it with *minimum cost* using the uniform cost 
 **Important**: the labels stand for the cost value.
 
 ## Example 3
-Given the following graph, expand it with *minimum cost* using the uniform cost algorithm. 'S' is the initial state and 'G' are the goal states. 
+Given the following graph, expand it with *minimum cost* using the uniform cost algorithm. 'A' is the initial state and 'G' are the goal states. 
 
 <img align="center" src="graph3.png" width="400">
 
