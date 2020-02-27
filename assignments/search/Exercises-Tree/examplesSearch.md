@@ -35,7 +35,7 @@ Given the following graph, expand it with *minimum cost* using the uniform cost 
 **Important**: the labels stand for the cost value.
 
 ## Example 5
-Given the following graph, expand it with *minimum cost* using the uniform cost algorithm. 'S' is the initial state and 'G' is the goal state. 
+Given the following graph, expand it with A* and Greedy Best First Search. 'S' is the initial state and 'G' is the goal state. 
 
 <img align="center" src="graph5.png" width="400">
 
