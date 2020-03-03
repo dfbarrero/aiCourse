@@ -27,6 +27,7 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{multicol}
 \usepackage{tikz}
 \def\layersep{2.5cm}
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
@@ -93,7 +94,7 @@
 \begin{frame}[plain]{}
    \begin{block}{Objectives}
        \begin{itemize}
-        \item Introduce biological evolution
+        \item Describe local search algorithms
         \item Introduce artificial evolution
 		\item Justify the utility of artificial evolution from an engineering perspective
 		\item Overview the components of an Evolutionary Algorithm
@@ -102,7 +103,7 @@
 
    \begin{block}{Bibliography}
    		\begin{itemize}
-       \item Eiben, A.E. and Smith, J.E. \emph{Introduction to Evolutionary Computing}. Springer 2003. 
+	    \item Russell, S., Norvig, P. \textit{Artificial Intelligence: A modern approach}, chapter 4. 3rd edition. Ed. Prentice-Hall. 2009
      	\item Luke, S. \emph{Essentials of Metaheuristics}. 2nd edition. Ed. Lulu, 2010. \href{https://cs.gmu.edu/~sean/book/metaheuristics/Essentials.pdf}{(Link)}
    		\end{itemize}
    \end{block}
@@ -112,12 +113,139 @@
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
  \frametitle{Table of Contents}
- \tableofcontents
+
+    \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
   % You might wish to add the option [pausesections]
 \end{frame}
 }
 
-\section{Biological background}
+
+\section{Local search algorithms}
+\subsection{Introduction}
+
+\begin{frame}{Local search algorithms}{Introduction (I)}
+    \begin{itemize}
+        \item In many optimization problems, the path to the goal is irrelevant; the goal itself is the solution
+        \item State space = set of ``complete'' configurations. Find configuration satisfying constraints, e.g., n-queens
+            \begin{itemize}
+            \item In such cases, we can use \alert{local search algorithms}
+            \end{itemize}
+        \item Keep a single ``current'' state, tray to improve it
+            \begin{itemize}
+            \item Work with one current state and generally moves to the neighboring state
+            \end{itemize}
+        \item The paths followed by the search are not retained
+            \begin{itemize}
+            \item They use little memorty
+            \item You can find reasonable solutions in large state spaces or infinite
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Local search algorithms}{Introduction (II)}
+    Example: Put \textit{n} queens on a $n x n$ board with no two queens on the same row, column or diagonal
+		\begin{center}
+		\includegraphics[width=0.7\linewidth]{figs/nqueen.png}
+		\end{center}
+    Local search algorithms
+        \begin{itemize}
+        \item Hill-climbing search
+        \item Simulated annealing search
+        \item Local beam search
+        \item Genetic Algorithms
+        \end{itemize}
+\end{frame}
+
+\subsection{Hill-climbing search}
+
+\begin{frame}{Local search algorithms}{Hill-climbing (I)}
+    It's just a loop that moves in the direction of increasing value
+        \begin{itemize}
+        \item Ends when it reaches a peak where no neighbor has a higher value
+        \item The search tree is not kept, just a data structure of the current node to check the goal condition and its objective function value
+        \end{itemize}
+   ``Like climbing Everest in the thick fog with amnesia''
+\end{frame}
+
+\begin{frame}{Local search algorithms}{Hill-climbing (II)}
+    Problem: depending on initial state, can get stuck in local maxima
+	    \begin{center}
+		\includegraphics[width=0.75\linewidth]{figs/hill-climbing.eps}
+	    \end{center}
+\end{frame}
+
+\begin{frame}{Local search algorithms}{Hill-climbing (III)}
+    \centering Example: 8-queens problem
+
+ 	\begin{columns}
+ 	   \column{.50\textwidth}
+	    \begin{center}
+		\includegraphics[width=0.7\linewidth]{figs/8queens-successors.eps}
+	    \end{center}
+        
+        \vspace{-0.5cm}
+        \begin{itemize}
+        \item $h =$ number of pairs of queens
+        \item $h = 17$ for the above state
+        \item Values of all sucessors, top successors have $h = 12$
+        \end{itemize}
+
+ 	   \column{.50\textwidth}
+	    \begin{center}
+		\includegraphics[width=0.7\linewidth]{figs/8queens-local-minimum.eps}
+	    \end{center}
+
+        Local minimum with $h=1$ after 5 steps
+ 	\end{columns}
+
+\end{frame}
+
+\begin{frame}{Local search algorithms}{Hill-climbing (IV)}
+    The algorithms gets stuck for several reasons
+    \begin{itemize}
+        \item Local maximum
+        \item Ridges
+        \item Plateau
+    \end{itemize}
+    In the 8-queens, it gets stack in $86\%$ and solve $14\%$
+    \begin{itemize}
+        \item If we allow lateral movements, $94\%$ success
+    \end{itemize}
+    Variants
+    \begin{itemize}
+        \item Stochastic hill-climbing (randomly chooses upward movements)
+        \item Random restart (the initial state is generated randomly)
+    \end{itemize}
+\end{frame}
+
+\subsection{Simulated annealing search}
+
+\begin{frame}{Local search algorithms}{Simulated annealing search}
+    \begin{itemize}
+        \item Simulated annealing is the process of tempering metals by heating and then cooling them gradually
+        \item Idea: escape local maxima by allowing some ``bad'' moves but gradually decrease their frequency
+        \item It combines hill-climing with random generation successor
+        \item One can prove: if T decreases slowly enough, then SA will find a global optimum with probability approaching 1
+        \item Widely used in VLSI layout, airline scheduling, etc
+    \end{itemize}
+    \href{https://en.wikipedia.org/wiki/File:Hill\_Climbing\_with\_Simulated\_Annealing.gif}{(Animation)}
+\end{frame}
+
+\subsection{Local beam search}
+
+\begin{frame}{Local search algorithms}{Local beam search}
+    Idea: Keep track of $k$ states rather than just one
+    \begin{itemize}
+        \item Start with $k$ randomly generated states
+        \item At each iteration, all the successors of all $k$ states are generated
+        \item If any one is a goal, then stop; else select the $k$ best successors from the complete list and repeat
+    \end{itemize}
+    Alternatively stochastic LBS randomly choose $k$ successors, with the probability of choosing a successor as an increasing function of its value
+\end{frame}
+
+\section{Evolutionary Computation background}
 \subsection{Historical review}
 \begin{frame}{Biological background}{Historical review (I)}
  	\begin{columns}
@@ -225,15 +353,12 @@
 		\item Central Dogma of molecular biology
 		\end{itemize}
 
-
  	   \column{.3\textwidth}
 		\centering\includegraphics[width=0.5\linewidth]{figs/mendel.jpg}
 		\centering\includegraphics[width=0.5\linewidth]{figs/weismann.jpg}\\
 		\centering\includegraphics[width=\linewidth]{figs/WatsonCrick.jpg}
 	\end{columns}
 \end{frame}
-
-
 
 \subsection{Theory of Evolution}
 \begin{frame}{Biological background}{Theory of Evolution}
@@ -448,12 +573,12 @@
         \begin{itemize}
 	    \item These are oposite objectives $\Rightarrow$ Need of trade-off
         \end{itemize}
-	Exploration: Search of new regions (\alert{global search})
+	Exploration: Search of new regions% (\alert{global search})
 		\begin{itemize}
 		\item Explore the search space
 		\item Performed, mostly, by mutation
 		\end{itemize}
-	Explotation: Search of local (or global) maxima (\alert{local search})
+	Explotation: Search of local (or global) maxima% (\alert{local search})
 		\begin{itemize}
 		\item Exploit the adquired knowledge
 		\item Performed, mostly, by crossover
@@ -681,56 +806,11 @@
 	\end{center}
 \end{frame}
 
-\section{Working with an Evolutionary Algorithm}
-\subsection{Search phases}
-\begin{frame}{Working with an Evolutionary Algorithm}{Search phases}
-    \begin{columns}
- 	   \column{.70\textwidth}
-	   \textbf{Initial phase}: Random distribution, high genetic diversity\\
-	   \textbf{Advanced phase}: Begins to converge\\
-	   \textbf{Convergence}: Around one or few points, low genetic diversity\\
-	   \bigskip
-	   Premature convergence if population not located in global maxima
- 	   \column{.30\textwidth}
-		\includegraphics[width=\linewidth]{figs/fases.png}\\
-		\centering\href{https://upload.wikimedia.org/wikipedia/commons/f/fe/Visualization\_of\_a\_population\_evolving\_in\_a\_static\_fitness\_landscape.gif}{(Animation)}
-	\end{columns}
-\end{frame}
-
-\subsection{Fitness dynamics}
-\begin{frame}{Working with an Evolutionary Algorithm}{Fitness dynamics}
-    \begin{columns}
- 	   \column{.50\textwidth}
-		\includegraphics[width=\linewidth]{figs/fitness.eps}
- 	   \column{.50\textwidth}
-		\includegraphics[width=\linewidth]{figs/fitness-k2.eps}
-	\end{columns}
-	Few long runs or many short runs?
-\end{frame}
-
-\subsection{When  EAs are useful}
-\begin{frame}{Working with an Evolutionary Algorithm}{When EAs are useful}
-    \begin{columns}
- 	   \column{.70\textwidth}
-		\includegraphics[width=\linewidth]{figs/problems.eps}
-	\end{columns}
-\end{frame}
-
-\subsection{Advanced EAs}
-\begin{frame}{Working with an Evolutionary Algorithm}{Advanced EAs}
-	\begin{itemize}
-	\item Multiobjective Evolutionary Algorithms (MOEAs)
-	\item Optimization with constrains
-	\item Coevolution
-	\item Dinamic optimization
-	\item Islands models
-	\item Memetic algorithms
-	\item Hyperheuristics
-	\end{itemize}
-\end{frame}
+\section{Case studies}
 
 \subsection{EAs examples}
-\begin{frame}{Working with an Evolutionary Algorithm}{Examples}
+
+\begin{frame}{EAs examples}
 	\begin{itemize}
 		\item \href{http://rednuht.org/genetic\_cars\_2/} {(Car design)}
 		\item \href{http://rednuht.org/genetic\_walkers/} {(Genetic Algorithm Walkers)}
@@ -743,5 +823,44 @@
 	\end{itemize}
 \end{frame}
 
+\subsection{Case study I: Transonic wing shape optimization}
+\begin{frame}{Study case}{Case study I: Transonic wing shape optimization}
+    Problem: Design a wing shape for transonic flight
+        \begin{itemize}
+        \item Maximize lift
+        \end{itemize}
+
+    \setlength{\fboxrule}{0pt}
+    \centering \fbox{\includegraphics[width=0.5\linewidth]{figs/wing-ga.png}} 
+    
+    \small
+    \begin{flushleft}
+    \href{https://link.springer.com/chapter/10.1007/978-94-010-0017-8\_38\#citeas}{Holst T.L., Pulliam T.H. (2003) \textit{Transonic Wing Shape Optimization Using a Genetic Algorithm}. In: IUTAM Symposium Transsonicum IV. Fluid Mechanics and its Applications, vol 73. Springer.}
+    \end{flushleft}
+\end{frame}
+
+\subsection{Case study II: Mars orbital insertion}
+\begin{frame}{Study case}{Case study II: Mars orbital insertion}
+    \setlength{\fboxrule}{0pt}
+    \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}}
+\end{frame}
+
+\subsection{Case study III: 9\textsuperscript{th} GTOC}
+\begin{frame}{Study case}{Case study III: 9\textsuperscript{th} Global Trajectory Optimization Competition}
+    GTOC: Global Trajectory Optimization Competition
+    \begin{itemize}
+        \item Proposed by ESA Advanced Concepts Team
+        \item Difficult trajectory optimization problems
+    \end{itemize}
+
+    GTOC 9: The Kesser Run
+    \begin{itemize}
+        \item 123 orbiting debris
+        \item Remove debris
+        \item Design multiple missions
+    \end{itemize}
+    \href{https://www.youtube.com/watch?v=zvxZx-QnqQ0}{(Video)}
+    \href{https://www.youtube.com/watch?v=5CQNG6OIbZM}{(Solution)}
+\end{frame}
 
 \end{document}
