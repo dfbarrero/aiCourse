@@ -31,5 +31,3 @@ Perform the following tasks:
 5. Which path-planning algorithm is being executed by default? Which heuristic is used by default? If needed, use the path-planning visualizer in https://qiao.github.io/PathFinding.js/visual/ to reconstruct the scenario and observe the node expansion using different algorithms.
 
 6. Implement the Manhattan and Euclidean heuristics for A*: Go to the ```r2p2/heuristic.py``` file and fill out the functions ```euclidean``` and ```manhattan```. Both functions take the initial and final points as tuples (X, Y) and must return a float with the heuristic value.
-
-7. By default the simulator creates a navigation mesh based on a grid with a size determined by the parameter ```grid_size```. however, it is able to use a manually defined navigation mesh. Change the algorithm to 'A* mesh' (please check out the space between A and mesh) and observe the path. Take into account that A* takes the navigation mesh given by 'waypoints' and distances in this case are given as pixels.
