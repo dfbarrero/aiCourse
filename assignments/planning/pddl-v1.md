@@ -1,8 +1,8 @@
-# PDDL v1 exercises
+# PDDL 1.2 exercise
 
 ## Objectives
 
-* Practice PDDL v1 syntax.
+* Practice PDDL 1.2 syntax.
 
 * Implement a PDDL domain and problem.
 
