@@ -53,3 +53,5 @@ Define two preferences:
  
  Then, define a constrain that combines and gives different weights to both preferences.
 
+## Exercise 2: Localization of a CO2 source
+
