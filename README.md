@@ -30,7 +30,7 @@
 
 * [Path-planning](pathplanning/pathplanning.pdf)
 
-* [Space missions based on autonomous control](aicontrolmissions/spacemissions.master.pdf)
+* [Space missions based on autonomous control](controlmissions/spacemissions.master.pdf)
 
 ## Robotics
 
