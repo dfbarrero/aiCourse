@@ -28,7 +28,7 @@
 
 * [Planning techniques](planningtechniques/planningtechniques.master.pdf)
 
-* [Path-planning](plathplanning/pathplanning.pdf)
+* [Path-planning](pathplanning/pathplanning.pdf)
 
 * [Space missions based on autonomous control](aicontrolmissions/aicontrolmissions.pdf)
 
