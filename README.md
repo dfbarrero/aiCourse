@@ -22,11 +22,11 @@
 
 * [Planning representation](planningrepresentation/planningrepresentation.pdf)
 
-* [PDDL v1](planningrepresentation/PDDL.pdf) 
+* [PDDL v1](planningrepresentation/PDDL.Master.pdf) 
 
-* [PDDL v2](planningrepresentation/PDDL2.pdf)
+* [PDDL v2](planningrepresentation/PDDL2.x-3.X.Master.pdf)
 
-* [Planning techniques](planningtechniques/planningtechniques.pdf)
+* [Planning techniques](planningtechniques/planningtechniques.master.pdf)
 
 * [Path-planning](plathplanning/pathplanning.pdf)
 
