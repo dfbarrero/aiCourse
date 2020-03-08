@@ -30,7 +30,7 @@
 
 * [Path-planning](pathplanning/pathplanning.pdf)
 
-* [Space missions based on autonomous control](aicontrolmissions/aicontrolmissions.pdf)
+* [Space missions based on autonomous control](aicontrolmissions/spacemissions.master.pdf)
 
 ## Robotics
 
@@ -66,9 +66,9 @@
 
 * [Comparison of heuristics for path-planning in the R2P2 simulator](assignments/heuristics/heuristics.md)
 
-* [PDDL v1 exercises](assignments/planning/pddl-v1.md)
+* [PDDL exercises](assignments/planning/pddl-v1.md)
 
-* [PDDL v2 exercises](assignments/planning/pddl-v2.md)
+* [PDDL2.x/3.x exercises](assignments/planning/pddl-v2.md)
 
 ## Robotics
 
