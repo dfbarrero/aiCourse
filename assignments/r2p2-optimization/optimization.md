@@ -50,7 +50,7 @@ The control logic is given by the controller `r2p2/controllers/inspyred.py`. Thi
 
 <img src="https://latex.codecogs.com/svg.latex?\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" title="\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" />
 
-where $\alpha_{i}$ and $\beta_{i}$ denotes a weight of sensor $i$ and $d_{i}$ the distance measures by sensor $i$. Please, check out the source code to have a better understanding. 
+where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{i}" /> $\alpha_{i}$ and $\beta_{i}$ denotes a weight of sensor $i$ and $d_{i}$ the distance measures by sensor $i$. Please, check out the source code to have a better understanding. 
 
 
 ## Task 1: Build a dataset
