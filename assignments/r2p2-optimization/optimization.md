@@ -56,11 +56,20 @@ where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{
 
 Design an Evolutionary Algorithm to perform the optimization of the weights in the controller. 
 
-When the controller is called, it waits until a list of weights is written in the file `red/weights.json` by an external logic, such as a script running the Evolutionary Algorithm. Basicly, the evolution is run in a script while the fitness assessment is done by R2P2. 
+When the controller is called, it waits until a list of weights is written in the file `red/weights.json` by an external logic, such as a script running the Evolutionary Algorithm (ga-inspyred.py). Basicly, the evolution is run in a script while the fitness assessment is done by R2P2. 
 
-
+Take the following evaluate function to assess a list a weights given by the parameter candidate:
 
 ```Python
+import os
+import inspyred
+
+def write_params(string):
+	f = open('../res/weights.json', 'w+')
+	f.write('{"params": ' + string + '}')
+	f.close()
+
+
 @inspyred.ec.evaluators.evaluator
 def evaluate(candidate, args):
 	global history, cur_best
@@ -86,6 +95,8 @@ def evaluate(candidate, args):
 		print(e)
 		return(0)
 ```
+
+You may want to read the [Inspyred examples](https://pythonhosted.org/inspyred/examples.html). The given function ``evaluate`` implements the fitness evaluation, including the communication between Inspyred and R2P2. This function must be given as evaluator in the provided examples. Pay attention to define a chromosome size with the size that R2P2 expects.
 
 ## Task 2: Train the robot controller
 
