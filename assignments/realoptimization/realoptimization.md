@@ -1,4 +1,4 @@
-Real number optimization with Inspyred
+# Real number optimization with Inspyred
 
 ## Objectives
 
