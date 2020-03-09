@@ -50,44 +50,54 @@ The control logic is given by the controller `r2p2/controllers/inspyred.py`. Thi
 
 <img src="https://latex.codecogs.com/svg.latex?\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" title="\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" />
 
-where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{i}"/> and <img src="https://latex.codecogs.com/svg.latex?\beta_{i}" title="\beta_{i}"/> denotes a weight of sensor *i* and <img src="https://latex.codecogs.com/svg.latex?d_{i}" title="d_{i}"/> the distance measures by sensor *i*. Please, check out the source code to have a better understanding. 
+where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{i}"/> and <img src="https://latex.codecogs.com/svg.latex?\beta_{i}" title="\beta_{i}"/> denotes a weight of sensor *i* and <img src="https://latex.codecogs.com/svg.latex?d_{i}" title="d_{i}"/> the distance measures by sensor *i*. Please, check out the source code to have a better understanding. The point here, of course, is setting the values of the weights, this is the function of the Evolutionary Algorithm. 
+
+## Task 1: Design and code the Evolutionary Algorithm
+
+Design an Evolutionary Algorithm to perform the optimization of the weights in the controller. 
+
+When the controller is called, it waits until a list of weights is written in the file `red/weights.json` by an external logic, such as a script running the Evolutionary Algorithm. Basicly, the evolution is run in a script while the fitness assessment is done by R2P2. 
 
 
-## Task 1: Build a dataset
 
-You may want to check out this [Scikit-learn notebook](https://github.com/dfbarrero/dataCourse/blob/master/mlfoundations/scikit-learn.ipynb) as an example.
+```Python
+@inspyred.ec.evaluators.evaluator
+def evaluate(candidate, args):
+	global history, cur_best
+	string = ''.join(str(candidate)).replace(" ", "")
+	#print("Evaluating: " + string)
+	try:
+		write_params(string)
+		original_time = os.path.getmtime('../res/fitness.txt')
+		while os.path.getmtime('../res/fitness.txt') == original_time:
+			write_params(string)
+			time.sleep(0.5)
+		f = open('../res/fitness.txt', 'r')
+		output = f.read()
+		f.close()
+		output = float(output)
+		print("Fitness: " + str(output))
+		if output >= cur_best:
+			history.write('\n\n['+str(output)+']: '+string)
+			cur_best = output
+		return output
+	except Exception as e:
+		print(__file__)
+		print(e)
+		return(0)
+```
 
-1.- Use the teleoperation controler as a template for a new controller (Telecom_Controller_ml) to display the robot sensors measures and its motion ("UP", "DOWN", "LEFT", "RIGHT", STOPPED"). The output must be in [CSV format](https://en.wikipedia.org/wiki/Comma-separated_values), which is straitforward. You can add a header with the columns names, which will ease futher steps.
+## Task 2: Train the robot controller
 
-2.- Build the dataset. Teleoperate the robot while storing its perception and actions. Remember that this is what the controller will learn, so try to be consistent and do not develop complex behaviours. A very easy way to store the CSV file into disk is to redirect the simulator output (```python r2p2.py --scenario scenario.json > output.csv```). The success of this assignment highly depends on how you drive the robot in this step, so do it carefully.
+Set up the EA parameter settings and run it until you find a satisfactory behaviour. Do not forget to obtain the weights of the best solution.
 
-3.- Preprocess the dataset. Add a header and perform any task needed to correctly format the CSV. This might need a manual edition of the file with a text editor or Excel.
+## Task 3: Implement the controller
 
-## Task 2: Train a classification model
+Based on the weights obtained in the previous task, run the robot with the optimized weights. To this end use the scenario defined by the file ``scenario-inspyred-simple.json``, which uses the ``controller-inspyred-simple.json`` controller. Look for the field ``weights`` and fill a list with your weights, as the example contained in the example shows. Run the scenario and verify that the robot repeats the behaviour.
 
-For this task, we recommend using a Jupyter notebook.
+Please take into account that the robot sensors contain a small amount of noise, and therefore the behaviours might not be exactly equal in different executions.
 
-1.- Explore your dataset. Do you need any futher preprocessing in your data? You will need preprocessing if not all the instances in the dataset are relevant for the training. 
+## Task 4 (optional): Improve the controller
 
-2.- Plot the two main components of the PCA. Is your data separable? 
+Based on the ``Inspyred_controller``, create a new controller with a more complex behaviour. For instance, you may set different coefficients given a certain threshold. Try to get better fitness than the original controller.
 
-3.- Preprocess your data for the training, if needed. Automatic preprocessing could be a better option in this step. Take into account the sonar range and robot radius.
-
-4.- Train a classification model. Try the following algorithms:
-  - K-Nearest Neighbors (K-NN) with k=1.
-  - Classification Tree.
-  - Logistic Regression.
-  - Multilayer Perceptron.
-  - Support Vector Machine.
-
-Do not forget to assess the performance of all your models. You will need to persist (i.e., store) your trained models, use this [Scikit-learn notebook](https://github.com/dfbarrero/dataCourse/blob/master/mlfoundations/scikit-learn.ipynb) or read [this link](https://wiki.python.org/moin/UsingPickle) for futher information on this topic.
-
-7.- Tune your hyperparameters. Try different values for k (k=1,2,3,4 and 5) in K-NN and plot its performance. Which value of k gives the best performance?
-
-8.- Select one of the previous algorithms to integrate it into the robor controller. You will need to persist the model in disk.
-
-## Task 3: Integrate the model into the robot controller
-
-1.- Develop a new robot controller that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
-
-2.- Assess the robot behaviour. Is it as expected?
