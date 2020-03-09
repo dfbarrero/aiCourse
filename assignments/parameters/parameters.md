@@ -81,7 +81,7 @@ Using the default parameter settings as a starting point, change the following p
 
 The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
 
-<img align="center" src="plot.png" width="300">
+<img align="center" src="plot.png" width="400">
 
 You may need to change the maximum number of generations (some configurations may need a longer time to converge), but this number *does not* affect the evolutionary process, it just defines when to stop it.
 
