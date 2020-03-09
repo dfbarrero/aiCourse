@@ -80,6 +80,8 @@
 
 * [One-max problem with a basic Genetic Algorithm](assignments/onemax/onemax.md)
 
+* [Real number optimization with Inspyred](assignments/realoptimization/realoptimization.md)
+
 * [Understanding parameters settings in Evolutionary Algorithms](assignments/parameters/parameters.md)
 
 * [Programming Evolutionary Algorithms with Inspyred](assignments/inspyred/inspyred.md)
