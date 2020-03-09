@@ -74,6 +74,8 @@
 
 * [Introduction to the R2P2 robotic simulator](assignments/r2p2/introduction.md)
 
+* [Optimization of a classical robotic controller through an Evolutionary Algorithm](assignments/r2p2-optimization/optimization.md)
+
 * [Robot control based on a classification model](assignments/r2p2-classification/classification.md)
 
 ## Evolutionary Computation
