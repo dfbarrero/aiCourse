@@ -46,7 +46,7 @@ We will use the `scenario-inspyred.json`, which is based on the `track_2.png` la
 
 The control logic is given by the controller `r2p2/controllers/inspyred.py`. This controller is straitforward, it computes linear and angular velocities as linear combinations of the distance measures. 
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;\text{v}_l = \sum_{i=1}^{N} \alpha_{i} d_{i}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
 
 $\text{v}_l = \sum_{i=1}^{N} \alpha_{i} d_{i}$
 
