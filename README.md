@@ -24,7 +24,7 @@
 
 * [PDDL v1](planningrepresentation/PDDL.Master.pdf) 
 
-* [PDDL v2](planningrepresentation/PDDL2.x-3.X.Master.pdf)
+* [PDDL v2-v3](planningrepresentation/PDDL2.x-3.X.Master.pdf)
 
 * [Planning techniques](planningtechniques/planningtechniques.master.pdf)
 
