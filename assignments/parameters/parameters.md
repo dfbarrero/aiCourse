@@ -14,181 +14,95 @@
 
 ## Preliminary steps
 
-Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix console, just type ```pip install inspyred```.
+First of all, if you are using Windows, you will need to install Python 3.X. Just [download it](https://www.python.org/downloads/) and install it as any other software. In case you where using Linux or Mac, you already has Python in your machine.
+
+Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix or PowerShell console, just type ```pip install inspyred```.
 
 
 ## One-max problem with inspyred
 
-Copy or [download](code/onemax.py) the following script, which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. All the relevant algorithm parameters are contained in variables defined in the begining of the script.
+Download [this script](https://gist.github.com/dfbarrero/ea3f81cd9a7847147e48490dd0b44b50), which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. Once it is in your machine, you need to open a shell and, from the same folder than the script is stored, run the following command:
 
-```Python
-from random import Random
-from time import time
-import inspyred
-
-chrLength = 15	# Chromosome length
-popSize = 50	# Population size
-maxGenerations = 15	# Max. generations
-mutRate = 0.1	# Mutation rate
-elite=0		# Elitism size
-tourSize=2      # Tournament size
-
-def onemax_fitness(candidates, args):
-	fitness = [] 
-	for cs in candidates: 
-		fit = sum(cs)
-		fitness.append(fit)
-	print("Best fit: {0}, avg. fit: {1}".format(max(fitness), 
-		float(sum(fitness))/len(fitness)))
-	return fitness
-
-def generator(random, args):
-    return [random.choice([0, 1]) for _ in range(chrLength)]
-
-
-prng = Random()
-prng.seed(time()) 
-    
-ea = inspyred.ec.GA(prng)
-ea.terminator = inspyred.ec.terminators.generation_termination
-ea.selector = inspyred.ec.selectors.tournament_selection
-
-final_pop = ea.evolve(generator=generator, 
-	evaluator=onemax_fitness,
-	pop_size=popSize, 
-        tournament_size=tourSize,
-	num_elites=elite, 
-	max_generations=maxGenerations, 
-	mutation_rate=mutRate)
-
-best = max(final_pop)                          
-print('Best solution: \n{0}'.format(str(best)))
-if (best.fitness == chrLength): 
-	print("Solution found!") 
-else: 
-	print("Solution NOT found")
+```
+python onemax-ga.py
 ```
 
-The parameter setting used is the following one:
+If everything works, the script must be printing information about the evolutionary process. You can get all the information about the script parameters running:
 
-* Representation: Binary
-
-* Chromosome length: 15
-
-* Crossover: 1-point crossover
-
-* Mutation: Flip mutation
-
-* Mutation probability: 0.1
-
-* Population size: 50
-
-* Termination: 15 generations
-
-* Selection: Tournament with size 2
-
-Perform the following tasks:
-
-1. Execute the script to validate the installation of *Inspyred*.
-
-2. Observe how average and best fitness evolve along the time. Explain their behavior.
-
-3. Execute the script several times, did it always find the solution? Why?
-
-4. Change the chromosome length to 30 and repeat the previous questions.
-
-5. Customize the algorithm settings to increase the probability of finding a solution.
-
-6. Set p_m=0.5. What happen?
-
-7. Set p_m=1.0. What happen?
-
-8. Set the chromosome length to 50 and customize the algorithm to increase the probability of finding a solution.
-
-## Real number function optimization with Inspyred
-
-This exercise deals with the optimization of a function. We will optimize the parameters of a function named the Schwefel function, that can be formally stated as follows:
-
-<img src="figs/eqn.png">
-
-where *n* represents the number of dimensions and x_i \in [-500, 500] for all i=1,...,n. The input values that optimizes the function is [420.9687, 420.9687, ..., 420.9687], this a minimization task and the best fitness is 0. A graphical representation of this problem for n=2 (two dimensions) follows.
-
-<img src="figs/schwefel.png" width="400">
-
-The code that implemens a GA that solves the Schwefel problem is the next listing. You can download the (code here)[code/ga_example.py]. 
-
-```Python
-from random import Random
-from time import time
-import inspyred
-
-# Do not touch this value
-maxEvaluations=8000
-
-# Customize these parameters
-popSize = X
-mutRate = X
-elitism = X
-tourSize = X
-xoverPoints = X
-
-def showStatistics(population, num_generations, num_evaluations, args):
-    stats = inspyred.ec.analysis.fitness_statistics(population)
-    print('Generation {0}, best fit {1}, avg. fit {2}'.format(
-            num_generations, stats['best'], stats['mean']))
-
-def main(prng=None, display=False):
-    if prng is None:
-        prng = Random()
-        prng.seed(time())
-
-    problem = inspyred.benchmarks.Binary(inspyred.benchmarks.Schwefel(2),
-                                         dimension_bits=30)
-    ea = inspyred.ec.GA(prng)
-    ea.terminator = inspyred.ec.terminators.evaluation_termination
-    ea.observer = showStatistics
-    ea.selector = inspyred.ec.selectors.tournament_selection
-    final_pop = ea.evolve(generator=problem.generator,
-                          evaluator=problem.evaluator,
-                          pop_size=popSize,
-                          maximize=problem.maximize,
-                          bounder=problem.bounder,
-                          max_evaluations=maxEvaluations,
-                          num_elites=elitism,
-                          tournament_size=tourSize,
-                          mutation_rate=mutRate,
-                          num_crossover_points=xoverPoints)
-
-    if display:
-        best = max(final_pop)
-        print('Best Solution: \n{0}'.format(str(best)))
-    return ea
-
-if __name__ == '__main__':
-    main(display=True)
+```
+python onemax-ga.py -h
 ```
 
-Please observe that the main algorithm parameters have been deleted. The remaining parameters are as follows:
+For instance, if you want to run the algorithm with a population of 100 chromosomes, type 
 
-* Representation: Binary
+```
+python onemax-ga.py --population 100
+```
 
-* Chromosome length: 30
+To increase the number of generations run by the algorhtm just put it in the corresponding parameters.
 
-* Crossover: n-point crossover
+```
+python onemax-ga.py --population 100 --generations 50
+```
 
-* Mutation: Flip mutation
+## Initial questions
 
-* Mutation probability: X
+Answer the following questions:
 
-* Population size: X
+1. Which is the default configuration?
 
-* Termination: 8,000 evaluations
+2. Execute the script several times, did it always find the solution? Why?
 
-Perform the following tasks:
+3. Observe how average and best fitness evolve along the time. Explain their behavior.
 
-1. Set the parameters to get a perfect solution (fitness=0).
+4. Execute the algorithm with mutation and crossover probability set to 0. Do you observe any evolution?
 
-2. Set the parameters to get the solution as soon as possible.
+5. Execute the algorithm with crossover probability set to 0 and mutation probability to 0.5. Do you observe any evolution?
 
-3. Execute the algorithm 10 times and show a graph relating generation, best fitness and average fitness. To obtain the graph values, average across all the 10 runs. If necessary, change the code and use any external tool (Excel, Matlab, R, Gnuplot, ...) at your convenience.
+6. Change the chromosome length to 100 and run the algorithm. Do you observe any difference?
 
+7. Which is the function implemented by the argument 'jobs'?
+
+## Impact of the parameters setting 
+
+The main objective of the assignment is to assess the impact of the parameter settings into the Genetic Algorithm dynamics. To this end we will execute the algorithm controlling each parameter. Please, take into account that a GA has a stochastic nature, so each time you execute it you usually obtain a different result, so you will need to run it several time in order to assess its variability.
+
+Using the default parameter settings as a starting point, change the following parameter settings and plot the fitness against the generation number of different values of the given parameter:
+
+1. Set crossover probability to 0, 0.5, 0.75 and 1.
+
+2. Set mutation probability to 0, 0.01, 0.05 and 0.1.
+
+3. Set population size to 10, 30, 50 and 100.
+
+4. Set tournament size to 2, 3, 4 and 5.
+
+5. Set chromosome length to 10, 20, 30, 50 and 100.
+
+The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
+
+<img align="center" src="plot.png" width="300">
+
+You may need to change the maximum number of generations (some configurations may need a longer time to converge), but this number *does not* affect the evolutionary process, it just defines when to stop it.
+
+## Final remarks
+
+Take into account that you can easely store the algorithm output to futher processing. Evolution statistics is printed in stderr, while additional information is printed in stderr, it means that you can store the run statistics simply
+
+```
+python onemax-ga.py > output.csv
+```
+
+you can append data to that file with the command 
+
+```
+python onemax-ga.py >> output.csv
+```
+
+It is also possible to store both, statistics and messages, with
+
+```
+python onemax-ga.py > output.csv 2> messages.txt
+```
+
+Remember that CSV is a common file format to store structured data; you can process it with any data processing software such as Excel or SPSS.
