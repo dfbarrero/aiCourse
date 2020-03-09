@@ -46,14 +46,11 @@ We will use the `scenario-inspyred.json`, which is based on the `track_2.png` la
 
 The control logic is given by the controller `r2p2/controllers/inspyred.py`. This controller is straitforward, it computes linear and angular velocities as linear combinations of the distance measures. 
 
-<img src="https://latex.codecogs.com/svg.latex?\text{v}_l=\sum_{i=1}^{N}\alpha_{i}d_{i}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\text{v}_l=\sum_{i=1}^{N}\alpha_{i}d_{i}" title="\text{v}_l=\sum_{i=1}^{N}\alpha_{i}d_{i}" />
 
-$\text{v}_l = \sum_{i=1}^{N} \alpha_{i} d_{i}$
-
-$\text{v}_a = \sum_{i=1}^{N} \beta_{i} d_{i}$
+<img src="https://latex.codecogs.com/svg.latex?\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" title="\text{v}_l=\sum_{i=1}^{N}\beta_{i}d_{i}" />
 
 where $\alpha_{i}$ and $\beta_{i}$ denotes a weight of sensor $i$ and $d_{i}$ the distance measures by sensor $i$. Please, check out the source code to have a better understanding. 
-
 
 
 ## Task 1: Build a dataset
