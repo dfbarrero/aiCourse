@@ -10,7 +10,7 @@
 
 * Customize the parameter settings
 
-* Gather and process the main statistics
+* Gather and process the statistics
 
 ## Preliminary steps
 
@@ -19,15 +19,15 @@ First of all, if you are using Windows, you will need to install Python 3.X. Jus
 Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix or PowerShell console, just type ```pip install inspyred```.
 
 
-## One-max problem with inspyred
+## One-max problem with Inspyred
 
-Download [this script](https://gist.github.com/dfbarrero/ea3f81cd9a7847147e48490dd0b44b50), which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. Once it is in your machine, you need to open a shell and, from the same folder than the script is stored, run the following command:
+Download [this script](https://gist.github.com/dfbarrero/ea3f81cd9a7847147e48490dd0b44b50), which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. This problem is pretty simple, it requires the optimization of the number of ones in a binary chromosome. Once the Inspyred module is installed, you will need to open a shell and, from the same folder than the script is stored, run the script:
 
 ```
 python onemax-ga.py
 ```
 
-If everything works, the script must be printing information about the evolutionary process. You can get all the information about the script parameters running:
+If everything works, the script must be printing stuff about the evolutionary process in the screen. You can get all the information about the script parameters running:
 
 ```
 python onemax-ga.py -h
@@ -49,7 +49,7 @@ python onemax-ga.py --population 100 --generations 50
 
 Answer the following questions:
 
-1. Which is the default configuration?
+1. Which is the default parameter setting?
 
 2. Execute the script several times, did it always find the solution? Why?
 
@@ -59,19 +59,21 @@ Answer the following questions:
 
 5. Execute the algorithm with crossover probability set to 0 and mutation probability to 0.5. Do you observe any evolution?
 
-6. Change the chromosome length to 100 and run the algorithm. Do you observe any difference?
+6. Change the chromosome length to 500 and run the algorithm. Do you observe any difference? Explain it.
 
 7. Which is the function implemented by the argument 'jobs'?
 
 ## Impact of the parameters setting 
 
-The main objective of the assignment is to assess the impact of the parameter settings into the Genetic Algorithm dynamics. To this end we will execute the algorithm controlling each parameter. Please, take into account that a GA has a stochastic nature, so each time you execute it you usually obtain a different result, so you will need to run it several time in order to assess its variability.
+The main objective of this assignment is to assess the impact of the parameter settings in the Genetic Algorithm dynamics. To this end, we will execute the algorithm controlling each parameter. Please, take into account that a GA has a stochastic nature, so each time you execute it you will usually obtain a different result, so proper experimentation requires running the algorithm several times in order to measure its variability.
 
-Using the default parameter settings as a starting point, change the following parameter settings and plot the fitness against the generation number of different values of the given parameter:
+<img align="center" src="plot.png" width="400">
+
+Using the default parameter settings as a starting point, change the following parameter settings and plot (please checkout the figure given as example) the mean fitness against the generation number controlled by the values of the parameter under study as follows.
 
 1. Set crossover probability to 0, 0.5, 0.75 and 1.
 
-2. Set mutation probability to 0, 0.01, 0.05 and 0.1.
+2. Set mutation probability to 0, 0.01, 0.025, 0.05 and 0.1.
 
 3. Set population size to 10, 30, 50 and 100.
 
@@ -81,28 +83,32 @@ Using the default parameter settings as a starting point, change the following p
 
 The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
 
-<img align="center" src="plot.png" width="400">
-
-You may need to change the maximum number of generations (some configurations may need a longer time to converge), but this number *does not* affect the evolutionary process, it just defines when to stop it.
+You may need to change the maximum number of generations (some configurations may need a longer time to converge), but this number *does not* affect the evolutionary process, it just sets when to stop it.
 
 ## Final remarks
 
-Take into account that you can easely store the algorithm output to futher processing. Evolution statistics is printed in stderr, while additional information is printed in stderr, it means that you can store the run statistics simply
+Take into account that you can easely store the algorithm output for futher processing. Evolution statistics is printed in stdout, while additional information is printed in stderr, it means that you can store the run statistics with a simple output redirect:
 
 ```
 python onemax-ga.py > output.csv
 ```
 
-you can append data to that file with the command 
+that command overwrites outout.csv each time it is executed. You also can append data to that file with the command 
 
 ```
 python onemax-ga.py >> output.csv
 ```
 
-It is also possible to store both, statistics and messages, with
+If you want to store both, statistics and messages, execute the script redirecting stderr and stout:
 
 ```
 python onemax-ga.py > output.csv 2> messages.txt
+```
+
+If you are a pro user you can use `tee` to monitor the script outout while redirecting its output to a file:
+
+```
+python onemax-ga.py | tee output.csv 
 ```
 
 Remember that CSV is a common file format to store structured data; you can process it with any data processing software such as Excel or SPSS.
