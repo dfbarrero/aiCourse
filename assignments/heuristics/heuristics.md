@@ -22,7 +22,7 @@ Perform the following tasks:
    python r2p2.py --scenario ../conf/scenario-pathplanning.json
    ```
 
-   Observe that the robot is initially located at the position (18,19) and the goal (12,12). The simulator visualizes the computed path. 
+   Note that the robot is initially located at the position (18,19) and the goal at position (12,12). The simulator visualizes the computed path. 
    
 3. Given that the configuration of the robot controller is located in the file ```conf/controller-pathplanning.json```, change the initial point to  (27,19) and the goal point to (8,20).
 
