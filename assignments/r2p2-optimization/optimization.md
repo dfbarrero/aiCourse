@@ -1,4 +1,4 @@
-# Optimization of a classical robotic controller through an Evolutionary Algorithm
+# Optimization of a robotic controller through an Evolutionary Algorithm
 
 ## Objectives
 
@@ -63,6 +63,9 @@ Take the following evaluate function to assess a list a weights given by the par
 ```Python
 import os
 import inspyred
+
+history = open('../logs/history_'+str(int(time.time()))+'.log', 'a+')
+cur_best = 0
 
 def write_params(string):
 	f = open('../res/weights.json', 'w+')
