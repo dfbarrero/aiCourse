@@ -94,7 +94,7 @@
 \begin{frame}[plain]{}
    \begin{block}{Objectives}
        \begin{itemize}
-        \item Describe local search algorithms
+%        \item Describe local search algorithms
         \item Introduce artificial evolution
 		\item Justify the utility of artificial evolution from an engineering perspective
 		\item Overview the components of an Evolutionary Algorithm
@@ -122,128 +122,128 @@
 }
 
 
-\section{Local search algorithms}
-\subsection{Introduction}
+%\section{Local search algorithms}
+%\subsection{Introduction}
 
-\begin{frame}{Local search algorithms}{Introduction (I)}
-    \begin{itemize}
-        \item In many optimization problems, the path to the goal is irrelevant; the goal itself is the solution
-        \item State space = set of ``complete'' configurations. Find configuration satisfying constraints, e.g., n-queens
-            \begin{itemize}
-            \item In such cases, we can use \alert{local search algorithms}
-            \end{itemize}
-        \item Keep a single ``current'' state, tray to improve it
-            \begin{itemize}
-            \item Work with one current state and generally moves to the neighboring state
-            \end{itemize}
-        \item The paths followed by the search are not retained
-            \begin{itemize}
-            \item They use little memorty
-            \item You can find reasonable solutions in large state spaces or infinite
-            \end{itemize}
-    \end{itemize}
-\end{frame}
+%\begin{frame}{Local search algorithms}{Introduction (I)}
+%    \begin{itemize}
+%        \item In many optimization problems, the path to the goal is irrelevant; the goal itself is the solution
+%        \item State space = set of ``complete'' configurations. Find configuration satisfying constraints, e.g., n-queens
+%            \begin{itemize}
+%            \item In such cases, we can use \alert{local search algorithms}
+%            \end{itemize}
+%        \item Keep a single ``current'' state, tray to improve it
+%            \begin{itemize}
+%            \item Work with one current state and generally moves to the neighboring state
+%            \end{itemize}
+%        \item The paths followed by the search are not retained
+%            \begin{itemize}
+%            \item They use little memorty
+%            \item You can find reasonable solutions in large state spaces or infinite
+%            \end{itemize}
+%    \end{itemize}
+%\end{frame}
 
-\begin{frame}{Local search algorithms}{Introduction (II)}
-    Example: Put \textit{n} queens on a $n x n$ board with no two queens on the same row, column or diagonal
-		\begin{center}
-		\includegraphics[width=0.7\linewidth]{figs/nqueen.png}
-		\end{center}
-    Local search algorithms
-        \begin{itemize}
-        \item Hill-climbing search
-        \item Simulated annealing search
-        \item Local beam search
-        \item Genetic Algorithms
-        \end{itemize}
-\end{frame}
+%\begin{frame}{Local search algorithms}{Introduction (II)}
+%    Example: Put \textit{n} queens on a $n x n$ board with no two queens on the same row, column or diagonal
+%		\begin{center}
+%		\includegraphics[width=0.7\linewidth]{figs/nqueen.png}
+%		\end{center}
+%    Local search algorithms
+%        \begin{itemize}
+%        \item Hill-climbing search
+%        \item Simulated annealing search
+%        \item Local beam search
+%        \item Genetic Algorithms
+%        \end{itemize}
+%\end{frame}
 
-\subsection{Hill-climbing search}
+%\subsection{Hill-climbing search}
 
-\begin{frame}{Local search algorithms}{Hill-climbing (I)}
-    It's just a loop that moves in the direction of increasing value
-        \begin{itemize}
-        \item Ends when it reaches a peak where no neighbor has a higher value
-        \item The search tree is not kept, just a data structure of the current node to check the goal condition and its objective function value
-        \end{itemize}
-   ``Like climbing Everest in the thick fog with amnesia''
-\end{frame}
+%\begin{frame}{Local search algorithms}{Hill-climbing (I)}
+%    It's just a loop that moves in the direction of increasing value
+%        \begin{itemize}
+%        \item Ends when it reaches a peak where no neighbor has a higher value
+%        \item The search tree is not kept, just a data structure of the current node to check the goal condition and its objective function value
+%        \end{itemize}
+%   ``Like climbing Everest in the thick fog with amnesia''
+%\end{frame}
 
-\begin{frame}{Local search algorithms}{Hill-climbing (II)}
-    Problem: depending on initial state, can get stuck in local maxima
-	    \begin{center}
-		\includegraphics[width=0.75\linewidth]{figs/hill-climbing.eps}
-	    \end{center}
-\end{frame}
+%\begin{frame}{Local search algorithms}{Hill-climbing (II)}
+ %   Problem: depending on initial state, can get stuck in local maxima
+%	    \begin{center}
+%		\includegraphics[width=0.75\linewidth]{figs/hill-climbing.eps}
+%	    \end{center}
+%\end{frame}
 
-\begin{frame}{Local search algorithms}{Hill-climbing (III)}
-    \centering Example: 8-queens problem
+%\begin{frame}{Local search algorithms}{Hill-climbing (III)}
+%    \centering Example: 8-queens problem
 
- 	\begin{columns}
- 	   \column{.50\textwidth}
-	    \begin{center}
-		\includegraphics[width=0.7\linewidth]{figs/8queens-successors.eps}
-	    \end{center}
+% 	\begin{columns}
+% 	   \column{.50\textwidth}
+%	    \begin{center}
+%		\includegraphics[width=0.7\linewidth]{figs/8queens-successors.eps}
+%	    \end{center}
         
-        \vspace{-0.5cm}
-        \begin{itemize}
-        \item $h =$ number of pairs of queens
-        \item $h = 17$ for the above state
-        \item Values of all sucessors, top successors have $h = 12$
-        \end{itemize}
+%        \vspace{-0.5cm}
+%        \begin{itemize}
+%        \item $h =$ number of pairs of queens
+%        \item $h = 17$ for the above state
+   %     \item Values of all sucessors, top successors have $h = 12$
+  %      \end{itemize}
 
- 	   \column{.50\textwidth}
-	    \begin{center}
-		\includegraphics[width=0.7\linewidth]{figs/8queens-local-minimum.eps}
-	    \end{center}
+ %	   \column{.50\textwidth}
+%	    \begin{center}
+%		\includegraphics[width=0.7\linewidth]{figs/8queens-local-minimum.eps}
+%	    \end{center}
 
-        Local minimum with $h=1$ after 5 steps
- 	\end{columns}
+%        Local minimum with $h=1$ after 5 steps
+ %	\end{columns}
 
-\end{frame}
+%\end{frame}
 
-\begin{frame}{Local search algorithms}{Hill-climbing (IV)}
-    The algorithms gets stuck for several reasons
-    \begin{itemize}
-        \item Local maximum
-        \item Ridges
-        \item Plateau
-    \end{itemize}
-    In the 8-queens, it gets stack in $86\%$ and solve $14\%$
-    \begin{itemize}
-        \item If we allow lateral movements, $94\%$ success
-    \end{itemize}
-    Variants
-    \begin{itemize}
-        \item Stochastic hill-climbing (randomly chooses upward movements)
-        \item Random restart (the initial state is generated randomly)
-    \end{itemize}
-\end{frame}
+%\begin{frame}{Local search algorithms}{Hill-climbing (IV)}
+%    The algorithms gets stuck for several reasons
+%    \begin{itemize}
+%        \item Local maximum
+%        \item Ridges
+%        \item Plateau
+%    \end{itemize}
+%    In the 8-queens, it gets stack in $86\%$ and solve $14\%$
+%    \begin{itemize}
+%        \item If we allow lateral movements, $94\%$ success
+%    \end{itemize}
+%    Variants
+%    \begin{itemize}
+%        \item Stochastic hill-climbing (randomly chooses upward movements)
+%        \item Random restart (the initial state is generated randomly)
+%    \end{itemize}
+%\end{frame}
 
-\subsection{Simulated annealing search}
+%\subsection{Simulated annealing search}
 
-\begin{frame}{Local search algorithms}{Simulated annealing search}
-    \begin{itemize}
-        \item Simulated annealing is the process of tempering metals by heating and then cooling them gradually
-        \item Idea: escape local maxima by allowing some ``bad'' moves but gradually decrease their frequency
-        \item It combines hill-climing with random generation successor
-        \item One can prove: if T decreases slowly enough, then SA will find a global optimum with probability approaching 1
-        \item Widely used in VLSI layout, airline scheduling, etc
-    \end{itemize}
-    \href{https://en.wikipedia.org/wiki/File:Hill\_Climbing\_with\_Simulated\_Annealing.gif}{(Animation)}
-\end{frame}
+%\begin{frame}{Local search algorithms}{Simulated annealing search}
+%    \begin{itemize}
+%        \item Simulated annealing is the process of tempering metals by heating and then cooling them gradually
+%        \item Idea: escape local maxima by allowing some ``bad'' moves but gradually decrease their frequency
+%        \item It combines hill-climing with random generation successor
+%        \item One can prove: if T decreases slowly enough, then SA will find a global optimum with probability approaching 1
+%        \item Widely used in VLSI layout, airline scheduling, etc
+%    \end{itemize}
+%    \href{https://en.wikipedia.org/wiki/File:Hill\_Climbing\_with\_Simulated\_Annealing.gif}{(Animation)}
+%\end{frame}
 
-\subsection{Local beam search}
+%\subsection{Local beam search}
 
-\begin{frame}{Local search algorithms}{Local beam search}
-    Idea: Keep track of $k$ states rather than just one
-    \begin{itemize}
-        \item Start with $k$ randomly generated states
-        \item At each iteration, all the successors of all $k$ states are generated
-        \item If any one is a goal, then stop; else select the $k$ best successors from the complete list and repeat
-    \end{itemize}
-    Alternatively stochastic LBS randomly choose $k$ successors, with the probability of choosing a successor as an increasing function of its value
-\end{frame}
+%\begin{frame}{Local search algorithms}{Local beam search}
+%    Idea: Keep track of $k$ states rather than just one
+%    \begin{itemize}
+%        \item Start with $k$ randomly generated states
+%        \item At each iteration, all the successors of all $k$ states are generated
+%        \item If any one is a goal, then stop; else select the $k$ best successors from the complete list and repeat
+%    \end{itemize}
+%    Alternatively stochastic LBS randomly choose $k$ successors, with the probability of choosing a successor as an increasing function of its value
+%\end{frame}
 
 \section{Evolutionary Computation background}
 \subsection{Historical review}
@@ -434,13 +434,13 @@
 	We are interested in applying this to Engineering
 \end{frame}
 
-\begin{frame}[plain]{}
-	\note{Poner como ejemplo el perfil de un ala, geometria de una antena microscript e insercion orbital}
-	\vspace{2cm}
-	\begin{center}
-	How can we apply biological evolution to solve engineering problems?
-	\end{center}
-\end{frame}
+%\begin{frame}[plain]{}
+%	\note{Poner como ejemplo el perfil de un ala, geometria de una antena microscript, red neuronal e insercion orbital}
+%	\vspace{2cm}
+%	\begin{center}
+%	How can we apply biological evolution to solve engineering problems?
+%	\end{center}
+%\end{frame}
 
 \section{Evolutionary Algorithms}
 \subsection{Evolution as optimization}
@@ -490,6 +490,10 @@
 	\begin{itemize}
 	\item Inviable in practice
 	\end{itemize}
+    A little less obvious solution: \textbf{hill-climbing}
+    \begin{itemize}
+    \item Cost function may be deceptive or incomplete
+    \end{itemize}
 	How to find a solution efficiently?
 	\begin{itemize}
 		\item With domain knowledge
@@ -506,17 +510,20 @@
 
 \subsection{Metaheuristics}
 \begin{frame}[plain]{Evolutionary Algorithms}{Metaheuristics}
+    \vspace{-0.5cm}
 	\begin{center}
 		\includegraphics[width=0.75\linewidth]{figs/metaheuristics.eps}
 	\end{center}
 \end{frame}
 
 \begin{frame}[plain]{}
-	\vspace{2cm}
-	\begin{center}
-	Again:\\
 	How can we apply biological evolution to solve engineering problems?
-	\end{center}
+    \begin{itemize}
+    \item Microstrip antenna layout design
+    \item Wing shape design
+    \item Artificial Neural Network
+    \item Orbit transfer
+    \end{itemize}
 \end{frame}
 
 \subsection{Basics}
