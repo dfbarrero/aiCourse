@@ -14,7 +14,7 @@ Remember to install R2P2 dependencies by executing ```pip install -r requirement
 
 Perform the following tasks:
 
-1. Get familiar with the simulator. Run the simulator with the command `python r2p2.py`. it will create a plain scenario with a robot teleoperated by the arrows keys.
+1. Get familiar with the simulator. Run the simulator with the command `python r2p2.py`. It will create a plain scenario with a robot teleoperated by the arrows keys.
 
 2. Run the Path Planning scenario as follows:
 
