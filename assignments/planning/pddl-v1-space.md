@@ -20,5 +20,11 @@ This domain is already given.
 
 ## Exercise 2: Planetary exploration on Mars 
 
-Suppose we have a rover on Mars, and we want the rover to move from an initial position to a final one. It can perform several tasks at various points, such as taking pictures, drilling, earth communication, analyse samples and extend solar panels to recharge the battery. The positions where those tasks have to be taken should be specified on the goal section using points that will be declared as an object of type "point". 
+Suppose we have a rover on Mars, and we want the rover to move from an initial position to a final one. It can perform several tasks at various points, such as:
+* Taking a picture 
+* Drilling 
+* Earth communication 
+* Analyse samples 
+
+The positions where those tasks have to be taken should be specified on the goal section using points that will be declared as an object of type "point". 
 The rover can perform more than one of those activities (e.g. it can take 3 pictures in 3 different positions) and while those activities are performed the rover CANNOT move. 
