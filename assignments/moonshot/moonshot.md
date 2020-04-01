@@ -4,6 +4,8 @@
 
 * Solve a non-trivial problem with EAs
 
+* Optimize a real-number function
+
 (It is based on the problem exposed in the inspyted tutorial, do not read it!)
 
 ## Assignment
