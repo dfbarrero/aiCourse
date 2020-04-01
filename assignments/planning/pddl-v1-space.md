@@ -14,11 +14,11 @@ In order to help in the resolution of problems, one can check the International 
 
 * [IPC 2011 domains](http://www.plg.inf.uc3m.es/ipc2011-deterministic/Domains)
 
-## Exercise 0: Gripper domain [https://github.com/Malola2015/planningCourse/blob/master/assignments/Gripper.md]
+## Exercise 1: [Gripper domain] (https://github.com/Malola2015/planningCourse/blob/master/assignments/Gripper.md)
 
 This domain is already given.
 
-## Exercise 1: 
+## Exercise 2: 
 
 ## Planetary exploration on Mars 
 
