@@ -37,9 +37,10 @@ Remember to install R2P2 dependencies by executing ```pip install -r requirement
 
 Run your domain and problem and save the plan solution into a file called <em>planning.txt</em>. Then, replace the file with the same name located in ```../res/planning.txt```. You can modify the path but it will be simpler to just replace that file.
 
-Run the CO2 Planning domain scenario as follows:
+Run the Planning domain scenario as follows:
 
    ```
    python r2p2.py --scenario ../conf/scenario-planning.json
    ``` 
+
 Hope it helps to visualize the results.
