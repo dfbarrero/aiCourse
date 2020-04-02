@@ -16,3 +16,22 @@ Define also one preference:
 * At the END, the battery of the rover is recharged.
  
  Then, define a constrain that uses that preference.
+
+
+## Exercise 2: Use the R2P2 simulator (Optional)
+
+You can use the R2P2 simulator to visualize the previous plan. 
+
+Install the [R2P2](https://github.com/ISG-UAH/R2P2) simulator, which depends on the libraries numpy and matplotlib. Read the README.md file in the project's root folder for instructions about the simulator installation and usage.
+
+Remember to install R2P2 dependencies by executing ```pip install -r requirements.txt``` from the folder that contains R2P2.
+
+Run your domain and problem and save the plan solution into a file called <em>planning.txt</em>. Then, replace the file with the same name located in ```../res/planning.txt```. You can modify the path but it will be simpler to just replace that file.
+
+Run the Planning domain scenario as follows:
+
+   ```
+   python r2p2.py --scenario ../conf/scenario-planning.json
+   ``` 
+
+Hope it helps to visualize the results.
