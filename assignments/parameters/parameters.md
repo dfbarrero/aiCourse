@@ -16,7 +16,7 @@
 
 First of all, if you are using Windows, you will need to install Python 3.X. Just [download it](https://www.python.org/downloads/) and install it as any other software. In case you where using Linux or Mac, you already has Python in your machine.
 
-Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From an Unix or PowerShell console, just type ```pip install inspyred```.
+Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From a Unix or PowerShell console, just type ```pip install inspyred```.
 
 
 ## One-max problem with Inspyred
@@ -93,7 +93,7 @@ Take into account that you can easely store the algorithm output for futher proc
 python onemax-ga.py > output.csv
 ```
 
-that command overwrites outout.csv each time it is executed. You also can append data to that file with the command 
+that command overwrites outout.csv each time it is executed. You can also append data to that file with the command 
 
 ```
 python onemax-ga.py >> output.csv
@@ -105,7 +105,7 @@ If you want to store both, statistics and messages, execute the script redirecti
 python onemax-ga.py > output.csv 2> messages.txt
 ```
 
-If you are a pro user you can use `tee` to monitor the script outout while redirecting its output to a file:
+If you are a pro user you can use `tee` to monitor the script output while redirecting it to a file:
 
 ```
 python onemax-ga.py | tee output.csv 
