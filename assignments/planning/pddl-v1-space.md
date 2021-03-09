@@ -18,7 +18,11 @@ In order to help in the resolution of problems, one can check the International 
 
 This domain is already given. 
 
-## Exercise 2: Planetary exploration on Mars 
+## Exercise 2: [Blocks World] (https://github.com/Malola2015/planningCourse/blob/master/assignments/Blocksworld.md)
+
+This domain is partially provided.
+
+## Exercise 3: Planetary exploration on Mars 
 
 Suppose we have a rover on Mars, and we want the rover to move from an initial position to a final one. It can perform several tasks at various points, such as:
 * Taking a picture 
