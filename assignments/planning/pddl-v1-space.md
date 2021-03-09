@@ -18,7 +18,7 @@ In order to help in the resolution of problems, one can check the International 
 
 This domain is already given. 
 
-## Exercise 2: [Blocks World] (https://github.com/Malola2015/planningCourse/blob/master/assignments/Blocksworld.md)
+## Exercise 2: [Blocks World](https://github.com/Malola2015/planningCourse/blob/master/assignments/Blocksworld.md)
 
 This domain is partially provided.
 
