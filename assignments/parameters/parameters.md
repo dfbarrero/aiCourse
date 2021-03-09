@@ -93,7 +93,7 @@ Take into account that you can easely store the algorithm output for futher proc
 python onemax-ga.py > output.csv
 ```
 
-that command overwrites outout.csv each time it is executed. You can also append data to that file with the command 
+that command overwrites output.csv each time it is executed. You can also append data to that file with the command 
 
 ```
 python onemax-ga.py >> output.csv
