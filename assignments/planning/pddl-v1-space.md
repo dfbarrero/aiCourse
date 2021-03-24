@@ -22,11 +22,11 @@ This domain is already given.
 
 This domain is partially provided.
 
-## Exercise 2: [Pizzeria](https://github.com/Malola2015/planningCourse/blob/master/assignments/Pizza.md)
+## Exercise 3: [Pizzeria](https://github.com/Malola2015/planningCourse/blob/master/assignments/Pizza.md)
 
 This domain must be modelled from scratch.
 
-## Exercise 3: Planetary exploration on Mars 
+## Exercise 4: Planetary exploration on Mars 
 
 Suppose we have a rover on Mars, and we want the rover to move from an initial position to a final one. It can perform several tasks at various points, such as:
 * Taking a picture 
