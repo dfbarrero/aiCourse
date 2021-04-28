@@ -8,9 +8,9 @@
 
 
 
-## Exercise 1: Airport Domain
+## Exercise 1: Airport Domain  
 
-The [Airport domain](https://github.com/dfbarrero/aiCourse/blob/master/planningrepresentation/airport.md) is partially modelled. 
+The [Airport domain](https://github.com/dfbarrero/aiCourse/blob/master/assignments/planning/airport.md) is partially modelled. 
 
 ## Exercise 2: Extended Gripper
 
