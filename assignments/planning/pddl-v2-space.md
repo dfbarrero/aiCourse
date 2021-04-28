@@ -6,6 +6,12 @@
 
 * Implement a domain and problem in that syntax.
 
+
+
+## Exercise 1: Airport Domain
+
+We are going to extend the [Airport domain](https://github.com/Malola2015/planningCourse/blob/master/assignments/airport.md) to use time and preferences. 
+
 ## Exercise 1: Extended Gripper
 
 We are going to extend the [GRIPPER domain](https://github.com/Malola2015/planningCourse/blob/master/assignments/Gripper.md) to use time and preferences. 
