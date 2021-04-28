@@ -10,9 +10,9 @@
 
 ## Exercise 1: Airport Domain
 
-We are going to extend the [Airport domain](https://github.com/Malola2015/planningCourse/blob/master/assignments/airport.md) to use time and preferences. 
+The [Airport domain](https://github.com/Malola2015/planningCourse/blob/master/assignments/airport.md) is partially modelled. 
 
-## Exercise 1: Extended Gripper
+## Exercise 2: Extended Gripper
 
 We are going to extend the [GRIPPER domain](https://github.com/Malola2015/planningCourse/blob/master/assignments/Gripper.md) to use time and preferences. 
 
@@ -22,9 +22,9 @@ Do the following steps:
  3. Add a preference that expresses that the robot is at the end in the living room.
  4. Comment the previous preference and add another preference that expresses that the robot is sometime in another room called `bathroom`. 
 
-## Exercise 2: [Extended Pizzeria](https://github.com/Malola2015/planningCourse/blob/master/assignments/ExtPizza.md)
+## Exercise 3: [Extended Pizzeria](https://github.com/Malola2015/planningCourse/blob/master/assignments/ExtPizza.md)
 
-## Exercise 3: Extended Planetary exploration on Mars 
+## Exercise 4: Extended Planetary exploration on Mars 
 
 Extend the PDDL rover domain to consider time and resources. Let's consider that the rover can go at two speeds: fast and slow. The resource to be modelled is the battery. 
 The consumption of the battery will change according to some parameters (for example, distance or speed). Then, add a new action that extends solar panels to recharge the battery. Each task will have a variable duration. The plan will have to take into account the consumption of the battery, and when is low (defined as a threshold value) recharge the battery.
@@ -35,7 +35,7 @@ Define also one preference:
  Then, define a constrain that uses that preference.
 
 
-## Exercise 4: Use the R2P2 simulator (Optional)
+## Exercise 5: Use the R2P2 simulator (Optional)
 
 You can use the R2P2 simulator to visualize the previous plan. 
 
