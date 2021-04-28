@@ -47,7 +47,7 @@ Create a file called *airport.pddl* and copy the following domain description:
                        
                        
 ```
-Create a new file called *prob1.pddl* and copy the following problem description:
+Create a new file called *air-problem.pddl* and copy the following problem description:
 ```
 (define (problem air-problem) 
 (:domain airport)
