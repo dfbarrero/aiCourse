@@ -4,6 +4,8 @@
 
 * Solve a non-trivial problem with EAs
 
+* Optimize a real-number function
+
 (It is based on the problem exposed in the inspyted tutorial, do not read it!)
 
 ## Assignment
@@ -29,6 +31,6 @@ Where d_m is the mimimum distance from Moon, d the total distance traveled, c Mo
 2. Design and implement an EA that solves the given problem.
 3. Modify the algorithm to consider the following constrains (Hint: Use Bounders): Orbital height in (6e6, 8e6); Satellite mass in (10.0, 40.0); Boost velocity (x, y) in ((3e3, 9e3), (-10000.0, 10000.0)); Initial y velocity in (4000, 6000).
 
-Once you had finished, compare your solution with the one proposed by the tutorial in http://pythonhosted.org/inspyred/tutorial.html\#lunar-explorer.
+Once you had finished, compare your solution with the one proposed by the tutorial in http://pythonhosted.org/inspyred/tutorial.html#lunar-explorer. You can also use the template in https://gist.github.com/dfbarrero/93400a4c1974c9fff73cf48b96e1b77d.
 
 

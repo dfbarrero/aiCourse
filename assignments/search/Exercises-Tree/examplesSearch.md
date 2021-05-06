@@ -7,7 +7,7 @@ Given the following tree, expand it with minimum cost using the following algori
 - Depth-First Search
 - Iterative Deepening Depth-First Search
 - Greedy Search 
-- A* Search
+- A* Search (consider the g=1 for each level)
 
 **Important**: the labels stand for the heuristic value.
 
