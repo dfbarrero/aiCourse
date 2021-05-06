@@ -289,6 +289,8 @@
 \begin{frame}{Basic AI techniques in videogames}{Overview}
 	Basic techniques
  	\begin{itemize}
+ 		\item Heuristics (implemented as \textit{scripts} in videogames)
+        \item Behaviour tree 
  		\item Classic search algorithms
 		\item Finite State Machines
  	\end{itemize}
@@ -300,33 +302,56 @@
 		\item Artificial Neural Networks
 		\item Genetic Algorithms
  	\end{itemize}
-	
+\end{frame}
+
+\begin{frame}{Basic AI techniques in videogames}{Behavior trees}
+   \begin{columns}
+       \column{.50\textwidth}
+        \vspace{-0.2cm}
+        \includegraphics[width=0.9\linewidth]{figs/tree4.png}
+    
+ 	   \column{.50\textwidth}
+		\includegraphics[width=\linewidth]{figs/tree-unreal}
+    \end{columns}
 \end{frame}
 
 \subsection{Search algorithms}
 \begin{frame}{AI techniques in videogames}{Search algorithms (I)}
 	Almost any problem in AI is a search problem
 		\begin{itemize}
-		\item Search the best path
+		\item Search the best path (i.e., \textbf{path-planning})
 		\item Search the best attack
 		\item Search the best strategy
 		\item Search the best move
 		\end{itemize}
 	Any AI search algorithm can be used
 		\begin{itemize}
-		\item A*, Minimax, Depth-first, Dijkstra, ... 
+		\item \textbf{A*}, Minimax, Depth-first, Dijkstra, ... 
 		\end{itemize}
 	The issue is to express the problem in terms of a search task
 \end{frame}
 
 \begin{frame}{Basic AI techniques in videogames}{Search algorithms (II)}
     \begin{columns}
- 	   \column{.60\textwidth}
-		\centering\includegraphics[width=\linewidth]{figs/tree}
- 	   \column{.40\textwidth}
-		\includegraphics[width=\linewidth]{figs/tree2}
+
+ 	   %\column{.40\textwidth}
+		%\includegraphics[width=\linewidth]{figs/tree2}
+
+       \column{.60\textwidth}
+        \vspace{-0.2cm}
+        \includegraphics[width=0.9\linewidth]{figs/tree5.png}\\
+        \tiny
+        Source: Ian Millington, John Funge. ``\textit{Artificial Intelligence for Games}''. Ed. Morgan-Kaufmann. 2009.
 	\end{columns}
 \end{frame}
+
+\begin{frame}{Basic AI techniques in videogames}{Search algorithms (III)}
+    \begin{columns}
+ 	   \column{.60\textwidth}
+		\centering\includegraphics[width=\linewidth]{figs/tree}
+	\end{columns}
+\end{frame}
+
 
 \subsection{Finite State Machines (FSM)}
 \begin{frame}{Basic AI techniques in videogames}{Finite State Machines (FSM) (I)}
