@@ -30,7 +30,7 @@ Extend the PDDL rover domain to consider time and resources. Let's consider that
 The consumption of the battery will change according to some parameters (for example, distance or speed). Then, add a new action that extends solar panels to recharge the battery. Each task will have a variable duration. The plan will have to take into account the consumption of the battery, and when is low (defined as a threshold value) recharge the battery.
 
 Define also one preference:
-* At the END, the battery of the rover is recharged.
+* At the END, the battery of the rover is in the position it was in the initial state.
  
  Then, define a constrain that uses that preference.
 
