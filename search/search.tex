@@ -1,4 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%rch
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MUW Presentation
 % LaTeX Template
 % Version 1.0 (27/12/2016)
@@ -124,7 +125,7 @@
 
 \section{Introduction}
 
-\begin{frame}{Introduction}
+\begin{frame}{Introduction}{Intelligent agent}
     \begin{columns}
  	   \column{.50\textwidth}
         \begin{block}{Agent}
@@ -132,7 +133,7 @@
         \end{block}
 
  	   \column{.50\textwidth}
-        \begin{center}
+       \begin{center}
 	        \includegraphics[width=0.9\linewidth]{figs/agent-environment.eps}\\
 	        \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 	    \end{center}
@@ -148,13 +149,40 @@
     \end{itemize}
 \end{frame}
 
-\section{Search problems}
-\subsection{Types of problems}
-\begin{frame}{Search problems}{Types of problems}
-    Search is a cornerstone in AI
+\begin{frame}{Introduction}{Motivation}
+
+    \begin{columns}
+ 	   \column{.60\textwidth}
+
+    Early AI works were directed to
     \begin{itemize}
-        \item Almost any problem in AI is formulated as a search problem
+        \item Proof of theorems, crosswords, games, ...
     \end{itemize}
+
+    All in AI is search ...
+    \begin{itemize}
+        \item ... not entirely true (obviously) but more than we may imagine
+        \item Find a good/best solution (\alert{solution space}) to a problem among several potential solutions (\alert{search space})
+    \end{itemize}
+
+    \textbf{Enhaustive search} (or brute-force search)
+    \begin{itemize}
+        \item Iterate over all the potential solutions
+        \item Unsuiteable for most real-world problems
+    \end{itemize}
+
+ 	\column{.40\textwidth}
+     \input{figs/search.tex}
+    \end{columns}
+\end{frame}
+
+\section{Problem formulation}
+\subsection{Types of problems}
+\begin{frame}{Problem formulation}{Types of problems}
+    %Search is a cornerstone in AI
+    %\begin{itemize}
+    %    \item Almost any problem in AI is formulated as a search problem
+    %\end{itemize}
 
     Types of problems depending on ...
 	\begin{itemize}
@@ -178,7 +206,7 @@
     We assume static, observable, discrete and deterministic problems
 \end{frame}
 
-\begin{frame}[fragile]{Search problems}{Types of problems (II)}
+\begin{frame}[fragile]{Problem formulation}{Types of problems (II)}
     \begin{exampleblock}{Determine problem type}
        \begin{columns}
  	       \column{.50\textwidth}
@@ -197,30 +225,69 @@
 \end{frame}
 
 \subsection{Problem components}
-\begin{frame}{Search problems}{Problem components (I)}
+\begin{frame}{Problem formulation}{Problem components (I)}
     We represent the environment as \alert{states}
         \begin{itemize}
             \item Contain the information about the world
         \end{itemize}
     Any problem formulation requires the following components
 	\begin{itemize}
-        \item Initial state: State where the search begins
-        \item Actions: Behaviour that the agent may exhibit
-        \item Transition model: Which states follow an action in a state
-        \item Goal test (\textit{metas}): How to determine if a state is a goal
-        \item Path cost: Cost of a path to a state
+        \item \textbf{Initial state}: State where the search begins
+        \item \textbf{Actions}: Behaviour that the agent may exhibit
+        \item \textbf{Transition model}: Which states follow an action in a state (\alert{graph})
+        \item \textbf{Goal test} (\textit{metas}): How to determine if a state is a goal
+        \item \textbf{Path cost}: Cost of a path to a state
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Search problems}{Problem components (II)}
+\begin{frame}{Problem formulation}{Problem components: Example (I)}
     \begin{center}
 	    \includegraphics[width=0.7\linewidth]{figs/romania-distances.eps}\\
 	    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 	\end{center}
+
     \begin{exampleblock}{Problem: Move from Arad to Bucharest}
-        Initial state? Goal? Actions? Transition model? Goal test? Path cost?
+        On holiday in Romania; currently in Arad, flight leaves tomorrow from Bucharest\\
+        Determine: Initial state, goal, states, actions, transition model, goal test and path cost
     \end{exampleblock}
 \end{frame}
+
+\begin{frame}{Problem formulation}{Problem components: Example (II)}
+
+       \begin{columns}
+ 	       \column{.60\textwidth}
+    \begin{center}
+	    \includegraphics[width=\linewidth]{figs/romania-distances.eps}\\
+	    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+	\end{center}
+
+ 	       \column{.50\textwidth}
+    \begin{exampleblock}{Solution}
+        \begin{itemize}
+            \item Initial state: Arad
+            \item Goal: Bucharest
+            \item States: Multiple cities
+            \item Actions: Drive between cities
+            \item Goal test: In Bucharest?
+            \item Path cost: Distance
+        \end{itemize}
+    \end{exampleblock}
+
+       \end{columns}
+\end{frame}
+
+\begin{frame}{Problem formulation}{Problem components: Search}
+    \alert{Search} is the process of finding a solution
+        \begin{itemize}
+            \item A \alert{solution} is a sequence of actions leading from the initial state to a goal state
+            \item \alert{Optimal solution} is a solution with the lowest cost
+            \item Example of solution: Arad $\rightarrow$ Sibiu $\rightarrow$ Fagaras $\rightarrow$ Bucharest
+                \begin{itemize}
+                \item That solution is optimal?
+                \end{itemize}
+        \end{itemize}
+\end{frame}
+
 
 \subsection{Toy problems}
 \begin{frame}[fragile]{Search problems}{Toy problems (I): Vacuum world}
@@ -428,19 +495,19 @@
         \end{itemize}
 \end{frame}
 
-%\section{Uninformed search}
+\section{Uninformed search}
 %\subsection{Introduction}
 
-%\begin{frame}{Uninformed search}{Introduction}
-%    Uninformed search algorithms
-%    \begin{itemize}
-%        \item Breadth-first search (\textit{búsqueda en anchura})
-%        \item Uniform-cost search (\textit{búsqueda de coste uniforme})
-%        \item Depth-first search (\textit{búsqueda en profundidad})
-%        \item Depth-limited search (\textit{búsqueda en profundidad limitada})
-%        \item Iterative deepening search (\textit{búsqueda de profundización iterativa})
-%    \end{itemize}
-%\end{frame}
+\begin{frame}{Uninformed search}
+    Uninformed search algorithms
+    \begin{itemize}
+        \item Breadth-first search (\textit{búsqueda en anchura})
+        \item Uniform-cost search (\textit{búsqueda de coste uniforme})
+        \item Depth-first search (\textit{búsqueda en profundidad})
+        \item Depth-limited search (\textit{búsqueda en profundidad limitada})
+        \item Iterative deepening search (\textit{búsqueda de profundización iterativa})
+    \end{itemize}
+\end{frame}
 
 \subsection{Breadth-first search}
 

@@ -1,0 +1,26 @@
+%\documentclass[border=0.2cm]{standalone}
+ 
+% Required package
+%\usepackage{tikz}
+ 
+ 
+%\begin{document}
+ 
+\begin{tikzpicture}
+ 
+% Circle with label distance 0.5cm
+\node[draw,
+    circle,
+    minimum size = 4cm,
+    %fill=violet!50,
+    label={[yshift=-1cm]:\textit{Search space}}] (circle1) at (0,0){};
+ 
+% Circle with large label font
+\node[draw,
+    circle,
+    minimum size = 2cm,
+    %fill=cyan!50,
+    label={[yshift=-1.5cm]:\textit{Solution space}}] (circle2) at (0.75,0){};
+\end{tikzpicture}
+
+%\end{document}
