@@ -85,7 +85,7 @@ Perform the following tasks:
 
 <img align="center" src="sandbox.png" width="400">
 
-## Wall following behaviour  with a FSM (optional)
+## Wall following behaviour  with a FSM
 
 1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using the following Finite State Machine (FSM).
 
