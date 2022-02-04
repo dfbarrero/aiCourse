@@ -77,7 +77,7 @@ Perform the following tasks:
 
 4.- Modify the telecom controller and print the sonar measures.
 
-5.- Modify the telecom controller and print the odometry.
+5.- Modify the telecom controller and print the odometry. Please, check out the R2P2 source code to identify where it is located.
 
 ## Wall following behaviour
 
