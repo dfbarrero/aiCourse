@@ -18,7 +18,7 @@ Check out the installation running a basic scenario with the following command f
 (r2p2) paul@arrakis:~/r2p2$ python r2p2.py
 ```
 
-If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys, as the following picture depicts.
+If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys or joystick, as the following picture depicts.
 
 <img align="center" src="r2p2-stage.png" width="400">
 
