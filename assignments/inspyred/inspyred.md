@@ -52,7 +52,7 @@ Based on the code of the one-max problem introduced in the previous practical as
 1. Change the selection method to fitness proportionale.
 2. Change the crossover to uniform crossover.
 3. Change the mutation to scramble mutation.
-4. Show the basics statistics (best, worst and average fitness) for each generation. Use the proper observer.
+4. Show the basic statistics (best, worst and average fitness) for each generation. Use the proper observer.
 5. Store all the individuals in a CSV file for futher analysis. Use the proper observer.
 6. Bonus track: Visualize in real-time the basic fitness statistics in a plot. Use the proper observer.
 
