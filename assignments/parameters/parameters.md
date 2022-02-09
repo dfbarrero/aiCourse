@@ -21,7 +21,7 @@ Install *inspyred* following the instructions available on http://pythonhosted.o
 
 ## One-max problem with Inspyred
 
-Download [this script](https://gist.github.com/dfbarrero/ea3f81cd9a7847147e48490dd0b44b50), which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. This problem is pretty simple, it requires the optimization of the number of ones in a binary chromosome. Once the Inspyred module is installed, you will need to open a shell and, from the same folder than the script is stored, run the script:
+Download [this script](https://gist.github.com/dfbarrero/ea3f81cd9a7847147e48490dd0b44b50), which implements the one-max problem with a basic Genetic Algorithm implemented with inspyred. This problem is pretty simple, it requires the maximization of the number of ones in a binary chromosome. Once the Inspyred module is installed, you will need to open a shell and, from the same folder than the script is stored, run the script:
 
 ```
 python onemax-ga.py

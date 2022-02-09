@@ -18,14 +18,14 @@ Check out the installation running a basic scenario with the following command f
 (r2p2) paul@arrakis:~/r2p2$ python r2p2.py
 ```
 
-If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys, as the following picture depicts.
+If everything is working properly, you shoud be now watching a basic scenario with a robot that can be teleoperated with the arrows keys or joystick, as the following picture depicts.
 
 <img align="center" src="r2p2-stage.png" width="400">
 
 The scenario is stored in a JSON file under the conf folder, you can change it with the argument *--scenario*. A very convenient sandbox scenario is provided in R2P2, run it with
 
 ```
-(r2p2) david@arrakis:~/r2p2/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
+(r2p2) paul@arrakis:~/r2p2/r2p2$ python r2p2.py --scenario ../conf/scenario-sandbox.json
 ```
 Check out the scenarios contained in conf and try to run some of them.
 
@@ -77,7 +77,7 @@ Perform the following tasks:
 
 4.- Modify the telecom controller and print the sonar measures.
 
-5.- Modify the telecom controller and print the odometry.
+5.- Modify the telecom controller and print the odometry. Please, check out the R2P2 source code to identify where it is located.
 
 ## Wall following behaviour
 
@@ -85,7 +85,7 @@ Perform the following tasks:
 
 <img align="center" src="sandbox.png" width="400">
 
-## Wall following behaviour  with a FSM (optional)
+## Wall following behaviour  with a FSM
 
 1. Implement a new controller (*wallfollowing_fsm_controller.py*) that searches and follows a wall using the following Finite State Machine (FSM).
 
