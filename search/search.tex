@@ -1,4 +1,3 @@
-%rch
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MUW Presentation
 % LaTeX Template
@@ -45,7 +44,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Presentation Info
-\title[Search algorithm]{Solving Problems by Searching}
+\title[Search]{Search}
 \author{\asignatura\\\carrera}
 \institute{}
 \date{Departamento de Automática}
@@ -103,13 +102,14 @@
          \item Understand the role of search in AI
          \item Describe the importance of trees in search
          \item Express AI problems in terms of search
-         \item Apply classical search algorithms
+         \item Apply classical search algorithms (uninformed, informed and local)
       \end{enumerate} 
    \end{block}
 
    \begin{block}{Bibliography}
 	\begin{itemize}
         \item S. Russell and P. Norvig. Chapter 3, Solving Problems by Searching. \textit{Artificial Intelligence: A Modern Approach}. Pearson. 2017
+        \item S. Russell and P. Norvig. Chapter 4, Beyond Classical Search. \textit{Artificial Intelligence: A Modern Approach}. Pearson. 2017
 	\end{itemize}
    \end{block}
 \end{frame}
@@ -737,8 +737,14 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
         \item Heuristic: Straight-line distance
     \end{itemize}
 
-    \centering \includegraphics[width=0.6\linewidth]{figs/romania-distances.eps}\\
-    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+    \begin{columns}[c]
+ 	    \column{.50\textwidth}
+        \includegraphics[width=\linewidth]{figs/romania-distances.eps}
+ 	    \column{.40\textwidth}
+        \includegraphics[width=\linewidth]{figs/distances.png}\\
+    \end{columns}
+
+    \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 \end{frame}
 
 \begin{frame}[plain,shrink]
