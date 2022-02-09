@@ -568,11 +568,11 @@
     \begin{exampleblock}{Uniform-cost example}
     \small{
     Initialization: $\{[S, 0]\}$\\
-    Iter. 1: $\{[S \rightarrow A, 1], [S \rightarrow G, 12]\}$\\
-    Iter. 2: $\{[S \rightarrow A \rightarrow C, 2], [S \rightarrow A \rightarrow B, 4], [S \rightarrow G, 12]\}$\\
-    Iter. 3: $\{[S \rightarrow A \rightarrow C \rightarrow D, 3], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}$\\
-    Iter. 4: $\{[S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 6], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}$\\
-    Iter. 5: $\{[S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 10], [S \rightarrow G, 12]\}$\\
+    Iter. 1: $\{[S \rightarrow A, 1], [S \rightarrow G, 12]\}; V = S$\\
+    Iter. 2: $\{[S \rightarrow A \rightarrow C, 2], [S \rightarrow A \rightarrow B, 4], [S \rightarrow G, 12]\}; V = S, A$\\
+    Iter. 3: $\{[S \rightarrow A \rightarrow C \rightarrow D, 3], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}; V = S, A, C$\\
+    Iter. 4: $\{[S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 6], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}; V = S,A,C,D $\\
+    Iter. 5: $\{[S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 10], [S \rightarrow G, 12]\}; V = S,A,C,D,B$\\
     Solution: $S \rightarrow A \rightarrow C \rightarrow G$\\
     }
     \end{exampleblock}
