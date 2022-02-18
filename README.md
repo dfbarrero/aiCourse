@@ -78,6 +78,8 @@
 
 * [Robot control based on a classification model](assignments/r2p2-classification/classification.md)
 
+* [Robot control based on a neural regression model](assignments/r2p2-regression/regression.md)
+
 ## Evolutionary Computation
 
 * [One-max problem with a basic Genetic Algorithm](assignments/onemax/onemax.md)
