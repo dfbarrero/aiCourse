@@ -89,4 +89,4 @@ Perform the following tasks:
 
 <img align="center" src="fsm.svg" width="400">
 
-2. Extend the FSM behaviour shown in the previous section, for instance, adding a new state "Emergency stop" to avoid collisions. 
+2. Extend the FSM behaviour shown in the previous section, for instance, adding a new state "Emergency stop" to avoid collisions. Do it in the file *wallfollowing_extended_fsm_controller.py*. 
