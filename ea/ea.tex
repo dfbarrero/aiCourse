@@ -25,6 +25,7 @@
 \usepackage{xcolor}
 \usepackage{xstring}
 \usepackage{listings}
+\usepackage{multicol}
 
 \usetheme{UAH}
 \usecolortheme{UAH}
@@ -103,7 +104,10 @@
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
  \frametitle{Table of Contents}
- \tableofcontents
+
+    \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
   % You might wish to add the option [pausesections]
 \end{frame}
 }
@@ -1044,12 +1048,23 @@
 	\item Multiobjective Evolutionary Algorithms (MOEAs)
 	\item Optimization with constrains
 	\item Coevolution
-	\item Dinamic optimization
+	\item Dynamic optimization
 	\item Islands models
 	\item Memetic algorithms
 	\item Hyperheuristics
 	\end{itemize}
 \end{frame}
+
+\IfStrEq{\modo}{muii}{
+\begin{frame}%{Working with an Evolutionary Algorithm}{Advanced EAs}
+	\begin{block}{Recommended article}
+		Lehman, Joel, et al. "The surprising creativity of digital evolution: A collection of anecdotes from the evolutionary computation and artificial life research communities." Artificial life 26.2 (2020): 274-306. \href{https://direct.mit.edu/artl/article/26/2/274/93255/The-Surprising-Creativity-of-Digital-Evolution-A}{(Link)}
+	\end{block}
+\end{frame}
+
+}{}
+
+\IfStrEq{\modo}{mcyte}{
 
 \section{Case studies}
 
@@ -1094,5 +1109,7 @@
     \href{https://www.youtube.com/watch?v=5CQNG6OIbZM}{(Solution)}
 	\href{https://www.esa.int/gsp/ACT/acta_futura/issue11/}{(\textit{Acta Futura} special issue)}
 \end{frame}
+
+}{}
 
 \end{document}
