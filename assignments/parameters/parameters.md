@@ -79,6 +79,8 @@ Using the default parameter settings as a starting point, change the following p
 
 4. Set tournament size to 2, 3, 4 and 5.
 
+5. Set elitism to 1, 2 and 3.
+
 5. Set chromosome length to 10, 20, 30, 50 and 100.
 
 The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
