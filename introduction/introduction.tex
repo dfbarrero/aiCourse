@@ -204,15 +204,15 @@
 		\item Rational: Doing the right thing
 		\item The right thing: What is expected to maximize goal achievement, given the available information
 	\end{itemize}
-	Two dimensions: Processes (thinking) and result (acting)
+	Two objects of study: Processes (thinking) and result (acting)
 
-	\vspace{-0.5cm}
+	%\vspace{-0.5cm}
 	\begin{center}
 	\begin{tabular}{|p{5cm}|p{5cm}|}\hline
 	\textbf{Thinking humanly} 	& \textbf{Thinking rationally} \\\hline
-	Theories about internal activities of the brain $\Rightarrow$ Neuscience & What are correct arguments? $\Rightarrow$ Logics\\\hline
+	%Theories about internal activities of the brain $\Rightarrow$ Neuscience & What are correct arguments? $\Rightarrow$ Logics\\\hline
 	\textbf{Acting humanly} & \textbf{Acting rationally} \\\hline
-	Can machines think? & Rational agents \\\hline
+	%Can machines think? & Rational agents \\\hline
 	\end{tabular}
 	\end{center}
 \end{frame}
@@ -257,7 +257,7 @@
 [16:31:54] Entity: i have no clue
 		\end{verbatim}
 		\end{exampleblock}
-	   	\begin{exampleblock}{Chat 2} % DFBARRERO: Este es el bot, Eurine Goosman
+	   	\begin{exampleblock}{Chat 2} % DFBARRERO: Este es el bot, Eugene Goosman
 		\begin{verbatim}
 [16:29:04] Judge: how tall are you
 [16:29:10] Entity: My height is about 160 cm – it’s 5 feet 4 inches.
@@ -306,7 +306,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	   	\end{center}
 	   	\textbf{Agent}: Entity that perceives and acts
 		\begin{itemize}
-			\item A robot may be seen as an phisical agent
+			\item A robot may be seen as an pysical agent
 			\item Amazon recommender system
 			\item Spam filter
 		\end{itemize}
@@ -497,11 +497,11 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 		\end{itemize}
 	\item[1995-] AI becomes a science
 		\begin{itemize}
-		\item Integration of learning, reasoning and knowledge representation
 		\item AI used in vision, language, data mining, etc
 		\end{itemize}
 	\item[2000-] Popularity of Soft Computing / Bioinspired algorithms
 	\item[2010-] Machine Learning meets large databases: Big Data
+	\item[2020-] Deep Learning
 	\end{description}
 \end{frame}
 
@@ -520,10 +520,11 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\item During the 1991 Gulf War, US forces deployed an AI logistics planning and scheduling program that involved up to 50,000 vehicles, cargo, and people 
 	\item NASA's on-board autonomous planning program controlled the scheduling of operations for a spacecraft 
 	\item Proverb solves crossword puzzles better than most humans
-	\item Robot driving: DARPA grand challenge 2003-2007
+	%\item Robot driving: DARPA grand challenge 2003-2007
 	\item 2006: Face recognition software available in consumer cameras
 	\item 2011: IBM Watson defeats human players in Jeopardy!
 	\item 2016: First AI to defeat a Go human champion
+    \item 2020: GPT-3
 	\end{itemize}
 \end{frame}
 
@@ -676,8 +677,14 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\begin{columns}
  	   \column{.60\textwidth}
 	\begin{center}
-		\includegraphics[width=\linewidth]{figs/power.jpg}\\
-		\tiny{\href{http://www.sjef.nu/a-basic-introduction-to-singularity-skepticism/}{(Source)}}
+    \begin{block}{Moore's Law}
+    The number of transistors on a microchip doubles every two years and costs halves
+    \end{block}
+%		\includegraphics[width=\linewidth]{figs/power.jpg}\\
+%		\tiny{\href{http://www.sjef.nu/a-basic-introduction-to-singularity-skepticism/}{(Source)}}
+
+		\includegraphics[width=\linewidth]{figs/moore.png}\\
+		\tiny{\href{https://www.extremetech.com/extreme/210872-extremetech-explains-what-is-moores-law}{(Source)}}
 	\end{center}
  	   \column{.40\textwidth}
 	Conclusion
@@ -750,13 +757,13 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 		\item \href{https://youtu.be/SYJCWStejSc?t=65}{(Speech synthesis)}, speech recognition and speech understanding
 	\end{itemize}
 	Speech synthesis: Generate sound from text
-	\begin{itemize}
-		\item Translate text to phonemas: “fictitious”  $\Rightarrow$ fik-tish-es
-		\item Generate sound from phonema: "tish" $\Rightarrow$ Sound
-	\end{itemize}
+	%\begin{itemize}
+		%\item Translate text to phonemas: “fictitious”  $\Rightarrow$ fik-tish-es
+		%\item Generate sound from phonema: "tish" $\Rightarrow$ Sound
+	%\end{itemize}
 	Difficulties
 	\begin{itemize}
-		\item This approach makes sounds unnatural
+		\item Unnatural sound
 		\item Sounds are not indepentent (almost solved)
 		\item Show emotions, emphasis, semantic-aware pronuntiation
 	\end{itemize}
@@ -773,7 +780,6 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	Speech recognition: Map sounds into a list of words
 	\begin{itemize}
 		\item Classic (and difficult) problem in AI
-		\item Techniques: Neural networks, Hidden-Markov Chains, Deep Learning, ...
 	\end{itemize}
 	Recognizing single words from a small vocabulary
 	\begin{itemize}
@@ -788,18 +794,19 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 		\item Background noise, accents, other speakers, ...
 		\item Modern systems with $60\%$-$70\%$ accuracy
 	\end{itemize}
+
+	Techniques: Hidden-Markov Chains, Deep Learning, ...\\
 	Conclusion: YES for restricted problems, NO for normal speech
 }
 \end{frame}
 
 \subsection{Speech undestanding}
 
-\begin{frame}{AI applications}{Building Terminator: Speech understanding}
+\begin{frame}{Building Terminator}{Speech understanding}
 	Speech understanding: What is the meaning of the speech?
 	\begin{itemize}
 		\item Another classic (and difficult) problem in AI
-		\item Same than text mining
-		\item Techniques: Knowledge representation, ontologies, ML, NLP
+		%\item Same than text mining
 	\end{itemize}
 	Very hard problem
 	\begin{itemize}
@@ -810,9 +817,10 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\begin{itemize}
 		\item What does it mean?
 	\end{itemize}
-	Normal speech is too hard $\Rightarrow$ Formal representation of knowledge
+	%Normal speech is too hard $\Rightarrow$ Formal representation of knowledge
+    Technologies
 	\begin{itemize}
-		\item Semantic Web, ontologies, deep neural networks (recently), etc
+		\item Semantic Web, ontologies, Deep Learning (recently), etc
 	\end{itemize}
 	Conclusion: NO
 \end{frame}
@@ -836,7 +844,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
     \end{itemize}
     Technology
     \begin{itemize}
-        \item Deep neural networks
+        \item Deep Learning
     \end{itemize}
 	Conclusion: NO for general recognition, YES for restricted domains
     }
@@ -926,7 +934,7 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 
 \subsection{General Artificial Intelligence}
 
-\begin{frame}{Building Terminator}{Artificial General Intelligence}
+\begin{frame}{Building Terminator}{Artificial General Intelligence (I)}
 	\begin{center}
 		\includegraphics[width=0.3\linewidth]{figs/skynet.jpg}\\
     \end{center}
@@ -941,87 +949,66 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
     General AI is a controversial field
     \begin{itemize}
         \item Eventually, we could develop an \textit{intelligence explosion} ...
+            \begin{itemize}
+                \item The technological singularity, or simply the \textit{singularity}
+            \end{itemize}
         \item ... and a \textit{superintelligence} ...
-        \item ... or even a \textit{strong AI}
+        %\item ... or even a \textit{strong AI}
     \end{itemize}
 \end{frame}
 
-\section{AI applications}
-\subsection{Disciplines and techniques}
-
-\begin{frame}{AI applications}{Disciplines and techniques}
-	\vspace{-0.4cm}
-	\begin{center}
-		\textbf{AI disciplines techniques}
-	\end{center}
+\begin{frame}{Building Terminator}{Artificial General Intelligence (II)}
+%	\vspace{-0.4cm}
+%	\begin{center}
+		%\textbf{AI disciplines techniques}
+%	\end{center}
 	\begin{columns}
 	   \column{.50\textwidth}
-	   		\begin{block}{Disciplines}
-			\begin{itemize}
-			\item Automatic reasoning
-			\item Planning
-			\item Agents
-			\item Expert systems
-			\item Computer vision
-			\item Evolutionary Computation
-			\item Natural Language Processing
-			\item Machine Learning
-			\item Knowledge representation
-			\item ...
-			\end{itemize}
-			\end{block}
+	   		\begin{block}{Strong AI}
+            AI that solves a variety of tasks
+            \end{block}
 	   \column{.50\textwidth}
-	   		\begin{block}{Techniques}
-			\begin{itemize}
-			\item Neural networks
-			\item Search algorithms
-			\item Genetic Algorithms
-			\item Case Based Reasoning
-			\item Logic
-			\item Fuzzy logic
-			\item Web mining
-			\item Ontologies
-			\item ...
-			\end{itemize}
+	   		\begin{block}{Weak AI}
+            AI that solves a specific task
 			\end{block}
 	\end{columns}
 \end{frame}
 
-\subsection{Application domains}
+\section{AI applications}
 
-\begin{frame}{AI applications}{Application domains (I)}
-	Genetic Algorithms
-	\begin{itemize}
-		\item Optimization of production chains
-		\item Optimization of airline planes and crews
-		\item Antenna design
-	\end{itemize}
-	Expert Systems
-	\begin{itemize}
-		\item Decision making in financial markets
-		\item Fraud detection
-		\item Medical diagnosis systems
-	\end{itemize}
-	Neural networks
-	\begin{itemize}
-		\item Face recognition
-		\item Robot control
-		\item OCR
-	\end{itemize}
-\end{frame}
+%\begin{frame}{AI applications}{Application domains (I)}
+%	Genetic Algorithms
+%	\begin{itemize}
+%		\item Optimization of production chains
+%		\item Optimization of airline planes and crews
+%		\item Antenna design
+%	\end{itemize}
+%	Expert Systems
+%	\begin{itemize}
+%		\item Decision making in financial markets
+%		\item Fraud detection
+%		\item Medical diagnosis systems
+%	\end{itemize}
+%	Neural networks
+%	\begin{itemize}
+%		\item Face recognition
+%		\item Robot control
+%		\item OCR
+%	\end{itemize}
+%\end{frame}
 
-\begin{frame}{AI applications}{Application domains (II)}
-	\begin{itemize}
-		\item Handwriting recognition (reading service postcodes USA) 
-		\item Search engines on the Web and Semantic Web 
-		\item Bio(logical) computing 
-		\item Anti-spam email 
-		\item Proof of theorems automatically 
-			\begin{itemize}
-			\item Using new methods of inference to prove new theorems
-			\end{itemize}
-	\end{itemize}
-\end{frame}
+%\begin{frame}{AI applications}{Application domains (II)}
+%	\begin{itemize}
+%		\item Handwriting recognition (reading service postcodes USA) 
+%		\item Search engines on the Web and Semantic Web 
+%		\item Bio(logical) computing 
+%		\item Anti-spam email 
+%		\item Proof of theorems automatically 
+%			\begin{itemize}
+%			\item Using new methods of inference to prove new theorems
+%			\end{itemize}
+%	\end{itemize}
+%\end{frame}
 
 %\begin{frame}{AI applications}{Application domains (III)}
 %	\begin{itemize}
@@ -1039,24 +1026,24 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 %	\end{itemize}	
 %\end{frame}
 
-%\begin{frame}{AI applications}{Application domains (IV)}
-%	AI in Robotics
-%	\begin{itemize}
-%		\item \href{http://www.youtube.com/watch?v=gDvoe091tk4}{(Video Athlete)}
-%		\item \href{https://www.youtube.com/watch?v=M8YjvHYbZ9w}{(Video Spot)}
-%		\item \href{https://www.youtube.com/watch?v=rVlhMGQgDkY}{(Video Atlas)}
-%		\item \href{https://www.youtube.com/watch?v=NhLi1LsNzno}{(Video ExoMars)}
-%		\item \href{http://www.jpl.nasa.gov/news/phoenix/multimedia.php}{(MSL Photos)}
-%%		\item \href{http://www.jpl.nasa.gov/news/phoenix/multimedia.php}{(Video MSL)}
+\begin{frame}{AI applications}%{Application domains (IV)}
+	AI in space Robotics
+	\begin{itemize}
+		\item \href{http://www.youtube.com/watch?v=gDvoe091tk4}{(Video Athlete)}
+		\item \href{https://www.youtube.com/watch?v=M8YjvHYbZ9w}{(Video Spot)}
+		\item \href{https://www.youtube.com/watch?v=rVlhMGQgDkY}{(Video Atlas)}
+		\item \href{https://www.youtube.com/watch?v=NhLi1LsNzno}{(Video ExoMars)}
+		\item \href{http://www.jpl.nasa.gov/news/phoenix/multimedia.php}{(MSL Photos)}
+		\item \href{http://www.jpl.nasa.gov/news/phoenix/multimedia.php}{(Video MSL)}
 %%		\item \href{http://www.youtube.com/watch?v=JI6F1qrsQb0}{(Video MER)}
 %%		\item \href{http://www.youtube.com/watch?v=j72quVM7c9Y}{(Video Phoenix)}
 %%		\item \href{http://www.youtube.com/watch?v=d1coV7XqE1M}{(Video MSL)}
 %%		\item \href{http://www.youtube.com/watch?v=p-ho4IU30Ac}{(Video MSL landing)}
-%	\end{itemize}
-%\end{frame}
+	\end{itemize}
+\end{frame}
 
 
-\IfStrEq{\modo}{mcyte}{
+\IfStrEq{\modo}{mcyteXXX}{
 	\section{AI in space}
 	\subsection{Why is Mars interesting?}
 	\begin{frame}{AI in space}{Why is Mars interesting? (I)}
@@ -1318,14 +1305,14 @@ myself. Like on the question ‘Do you have watch’ – never tell time, but an
 	\end{frame}
 }{}
 
-\begin{frame}[plain]{}
-	\begin{columns}
- 	   \column{.50\textwidth}
-			\begin{block}{Collorary}
-			AI addresses the automatic problems resolution
-			\end{block}
-	\end{columns}
-\end{frame}
+%\begin{frame}[plain]{}
+%	\begin{columns}
+% 	   \column{.50\textwidth}
+%			\begin{block}{Collorary}
+%			AI addresses the automatic problems resolution
+%			\end{block}
+%	\end{columns}
+%\end{frame}
 
 %\begin{frame}{Acknowlegements}
 %	\begin{itemize}

@@ -1,4 +1,3 @@
-%rch
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % MUW Presentation
 % LaTeX Template
@@ -45,7 +44,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Presentation Info
-\title[Search algorithm]{Solving Problems by Searching}
+\title[Search]{Search}
 \author{\asignatura\\\carrera}
 \institute{}
 \date{Departamento de Automática}
@@ -103,13 +102,14 @@
          \item Understand the role of search in AI
          \item Describe the importance of trees in search
          \item Express AI problems in terms of search
-         \item Apply classical search algorithms
+         \item Apply classical search algorithms (uninformed, informed and local)
       \end{enumerate} 
    \end{block}
 
    \begin{block}{Bibliography}
 	\begin{itemize}
         \item S. Russell and P. Norvig. Chapter 3, Solving Problems by Searching. \textit{Artificial Intelligence: A Modern Approach}. Pearson. 2017
+        \item S. Russell and P. Norvig. Chapter 4, Beyond Classical Search. \textit{Artificial Intelligence: A Modern Approach}. Pearson. 2017
 	\end{itemize}
    \end{block}
 \end{frame}
@@ -567,12 +567,12 @@
 \begin{frame}[fragile]{Uninformed search}{Uniform-cost search (II)}
     \begin{exampleblock}{Uniform-cost example}
     \small{
-    Initialization: $\{[S, 0]\}$  V = S\\
-    Iter. 1: $\{[S \rightarrow A, 1], [S \rightarrow G, 12]\}$\\
-    Iter. 2: $\{[S \rightarrow A \rightarrow C, 2], [S \rightarrow A \rightarrow B, 4], [S \rightarrow G, 12]\}$\\
-    Iter. 3: $\{[S \rightarrow A \rightarrow C \rightarrow D, 3], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}$\\
-    Iter. 4: $\{[S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 6], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}$\\
-    Iter. 5: $\{[S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 10], [S \rightarrow G, 12]\}$\\
+    Initialization: $\{[S, 0]\}$\\
+    Iter. 1: $\{[S \rightarrow A, 1], [S \rightarrow G, 12]\}; V = S$\\
+    Iter. 2: $\{[S \rightarrow A \rightarrow C, 2], [S \rightarrow A \rightarrow B, 4], [S \rightarrow G, 12]\}; V = S, A$\\
+    Iter. 3: $\{[S \rightarrow A \rightarrow C \rightarrow D, 3], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}; V = S, A, C$\\
+    Iter. 4: $\{[S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 6], [S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow B \rightarrow D, 7], [S \rightarrow G, 12]\}; V = S,A,C,D $\\
+    Iter. 5: $\{[S \rightarrow A \rightarrow C \rightarrow G, 4], [S \rightarrow A \rightarrow C \rightarrow D \rightarrow G, 10], [S \rightarrow G, 12]\}; V = S,A,C,D,B$\\
     Solution: $S \rightarrow A \rightarrow C \rightarrow G$\\
     }
     \end{exampleblock}
@@ -688,20 +688,25 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
       \end{itemize}
 \end{frame}
 
-\begin{frame}{Informed search}{Introduction (II)}
-    Best-first search
+\subsection{Best-first search}
+
+\begin{frame}{Informed search}{Beast-first search}
+    Use an evaluation function $f(n)$ for each node
       \begin{itemize}
-        \item Use an evaluation function $f(n)$ for each node
-        \item Estimate of ``desirability''
+        \item $f$ is a cost estimate, i.t, its ``desirability''
         \item Expand most desirable unexpanded nodes
+        \item $n$ is a node
       \end{itemize}
 
     Most algorithms use a \alert{heuristic function} or just \alert{heuristic} ($h(n)$)
       \begin{itemize}
         \item Estimated cost from a state to the goal
+        \item $h$ only depends on the state (does not consider the path)
+        \item $h$ is a negative, nonnegative problem-specific function
+        \item If $n$ is a goal node, then $h(n) = 0$
       \end{itemize}
 
-    Best-first algorithms
+    The choice of $f$ determines the search strategy
       \begin{itemize}
         \item Greedy best-first search
         \item A*
@@ -715,7 +720,8 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
  	    \column{.50\textwidth}
             It only considers the heuristic
             \begin{itemize}
-                \item Greedy search expands the node that \textit{appears} to be closest to the goal
+                \item $f(n) = h(n)$
+                \item  Remember: $h$ is the estimate coast from a state to the goal
             \end{itemize}
 
  	    \column{.50\textwidth}
@@ -731,8 +737,14 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
         \item Heuristic: Straight-line distance
     \end{itemize}
 
-    \centering \includegraphics[width=0.6\linewidth]{figs/romania-distances.eps}\\
-    \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
+    \begin{columns}[c]
+ 	    \column{.50\textwidth}
+        \includegraphics[width=\linewidth]{figs/romania-distances.eps}
+ 	    \column{.40\textwidth}
+        \includegraphics[width=\linewidth]{figs/distances.png}\\
+    \end{columns}
+
+    \centering \tiny{\href{http://aima.cs.berkeley.edu/index.html}{(Source)}}
 \end{frame}
 
 \begin{frame}[plain,shrink]
@@ -747,10 +759,16 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
 \begin{frame}{Informed search}{A* (I)}
     \begin{columns}
  	    \column{.50\textwidth}
-            It considers the heuristic and the cost
+            Idea: avoid expanding paths that are already expensive
             \begin{itemize}
-                \item $h(n)$: Estimated cost to goal from node n
-                \item $g(n)$: Cost to node n
+                \item It consider the path to a state (past), and its estimated cost to goal (future)
+            \end{itemize}
+
+            Evaluation function: $f(n) = g(n) + h(n)$
+            \begin{itemize}
+                \item $g(n)$: Cost so far to reach node $n$
+                \item $h(n)$: Estimated cost from node $n$ to goal
+                \item $f(n)$: Estimated total cost of path through $n$ to goal
             \end{itemize}
 
  	    \column{.50\textwidth}
@@ -785,6 +803,122 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
         \item Optimality: Yes
       \end{itemize}
 \end{frame}
+
+\subsection{Local search}
+
+\begin{frame}{Informed search}{Local search: Introduction (I)}
+    In many optimization problems, the path to the gal is irrelevant; the goal itself is the solution
+      \begin{itemize}
+        \item The path is stored in memory
+      \end{itemize}
+    Solution: Keep a single ``current'' state and try to improve it
+      \begin{itemize}
+        \item Generally, moving to the neighboring state
+      \end{itemize}
+    The paths followed by the search are not retained
+    \begin{itemize}
+      \item The use little memory
+      \item They can find reasonable solutions in large or even infinite state spaces
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Informed search}{Local search: Introduction (II)}
+    \begin{exampleblock}{Example: n-queens}
+        Put $n$ queens on an $n \times n$ board with no two queens on the  same row, column or diagonal\\
+    \includegraphics[width=\linewidth]{figs/8queens-local.png}
+    \end{exampleblock}
+\end{frame}
+
+\subsection{Hill-climbing}
+
+\begin{frame}{Informed search}{Hill-climbing search (I)}
+    Its just a loop that moves in the direction of increasing value
+      \begin{itemize}
+        \item Ends when it reaches a peak where no neighbor has a higher value
+        \item No search tree is kept, just a datastructure with the current node
+      \end{itemize}
+    ``Like climbing Everest in thick fog with amnesia''
+\end{frame}
+
+\begin{frame}{Informed search}{Hill-climbing search (II)}
+    Good for pure optimization problems
+      \begin{itemize}
+        \item No obvious cost function for such problems
+        \item \alert{Objective function}: How good a state is
+      \end{itemize}
+
+     \begin{center}
+        \includegraphics[width=0.7\linewidth]{figs/landscape.png}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Informed search}{Hill-climbing search (III)}
+    \center Hill climbing search: 8-queens problem
+
+    \begin{columns}[t]
+ 	    \column{.50\textwidth}
+        \includegraphics[width=0.7\linewidth]{figs/8queens-hill1.png}\\
+        $h$ = number of pairs of queens that are attacking each other
+        \begin{itemize}
+            \item $h = 0$ for the above state
+            \item All successors $h \ge 12$
+        \end{itemize}
+
+ 	    \column{.50\textwidth}
+        \includegraphics[width=0.7\linewidth]{figs/8queens-hill2.png}\\
+        A local minimum ($h=1$)
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Informed search}{Hill-climbing search (IV)}
+    The algorithm gets stuck for several reasons
+    \begin{itemize}
+        \item Local Maximum: it is a peak that is higher than each of its neighbours, but lower than the maximum overall
+        \item Ridges: cause a sequence of local maxima that make navigation difficult
+        \item Plateau (flat): no ascendant exit 
+    \end{itemize}
+    In the 8-queens, it gets stuck in 86\%
+    \begin{itemize}
+        \item If we allow lateral movements $\rightarrow 100\%$
+    \end{itemize}
+    Variants
+    \begin{itemize}
+        \item Stochastically chooses upward movements
+        \item Random restart (random generation of initial state)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Informed search}{Simulated annealing search (I)}
+    Process of tempering or hardeing metals by heating and then cooling them gradually
+    \begin{itemize}
+        \item Idea: escape local maxima by allowing some ``bad'' moves, but gradually decrease their frequency
+    \end{itemize}
+    
+    Combination of hill-climbing with random generation successor
+    \begin{itemize}
+        \item Problem: determine its parameteters, need of experimentation
+    \end{itemize}
+    Application
+    \begin{itemize}
+        \item Good for problems with a large search space, optimum is surrounded by many local optima
+        \item Widely used in VLSI layout, airline scheduling, etc
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Informed search}{Simulated annealing search (II)}
+        \includegraphics[width=0.7\linewidth]{figs/sa.png}\\
+\end{frame}
+
+\begin{frame}{Informed search}{Local beam search}
+    Idea: keep track of $k$ states rather than just one
+    \begin{itemize}
+        \item Start with $k$ randomly generated states
+        \item At each iteration, all the sucessors of all $k$ states are generated
+        \item Ih any one is a goal state, stop, else select the $k$ best succesors from the complete list and repeat
+    \end{itemize}
+\end{frame}
+
+
 
 \section{Case studies}
 %\subsection{Case study I: Robotic assembly}
@@ -841,8 +975,6 @@ Optimal   & Yes$^*$ & Yes & No & No & Yes$^*$ \\
                 \end{exampleblock}
       \end{columns}
 \end{frame}
-
-
 
 \begin{frame}{Case studies}{Case study I: Robot arm with two DOF (II)}
        \begin{columns}
