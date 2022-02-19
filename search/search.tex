@@ -27,6 +27,7 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{multicol}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \def\layersep{2.5cm}
@@ -118,7 +119,9 @@
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
  \frametitle{Table of Contents}
- \tableofcontents
+    \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
   % You might wish to add the option [pausesections]
 \end{frame}
 }
