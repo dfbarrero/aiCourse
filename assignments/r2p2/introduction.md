@@ -65,19 +65,17 @@ Perform the following tasks:
 
 ## Basic robot control
 
-The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and returns a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. Read the [R2P2 developer manual](https://github.com/ISG-UAH/r2p2/wiki/R2p2-documentation) to get more details about its API.
+The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and returns a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. If you are interested, read the [R2P2 developer manual](https://github.com/ISG-UAH/r2p2/wiki/R2p2-documentation) to get more details about its API, but it is not necesary for this assignment.
 
 Perform the following tasks:
 
 1.- Change the controller in the default scenario to the naïve controller and identify which behaviour this controller implements.
 
-2.- Open the naîve controller source code (*r2p2/controllers/naive_controller.py*) and understand its code. You can browse the code with GitHub or any other tool of your choice.
+2.- Open the naîve controller source code (*r2p2/controllers/naive_controller.py*) and understand its code. You can browse the code with GitHub or any other tool of your choice. Ask your instructor if you require assistance.
 
 3.- Open the telecom controller source code (*r2p2/controllers/telecom_controller.py*) and understand its code.
 
 4.- Modify the telecom controller and print the sonar measures.
-
-5.- Modify the telecom controller and print the odometry. Please, check out the R2P2 source code to identify where it is located.
 
 ## Wall following behaviour
 
