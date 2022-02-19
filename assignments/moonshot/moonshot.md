@@ -2,15 +2,11 @@
 
 ## Objectives
 
-* Set the parameters of a EA to solve a non-trivial problem
+* Solve a non-trivial problem with an EA
 
 * Optimize a real-number function
 
-<!-- (It is based on the problem exposed in the inspyted tutorial, do not read it!) -->
-
-## Summary
-
-You will be provided with the implementation of a EA that optimizes the trajectory of a spacecraft to transit the Moon; you will have to set its parameters and get the best solution.
+(It is based on the problem exposed in the inspyted tutorial, do not read it!)
 
 ## Assignment
 
