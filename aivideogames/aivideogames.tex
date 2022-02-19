@@ -27,6 +27,7 @@
 \usepackage{listings}
 
 % Custom packages
+\usepackage{multicol}
 \usepackage{tikz}
 \def\layersep{2.5cm}
 \usetikzlibrary{matrix,chains,positioning,decorations.pathreplacing,arrows}
@@ -106,8 +107,10 @@
 {
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
- \frametitle{Table of Contents}
- \tableofcontents
+    \frametitle{Table of Contents}
+  	\begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
   % You might wish to add the option [pausesections]
 \end{frame}
 }
@@ -290,7 +293,7 @@
 	Basic techniques
  	\begin{itemize}
  		\item Heuristics (implemented as \textit{scripts} in videogames)
-        \item Behaviour tree 
+        \item Behavior tree 
  		\item Classic search algorithms
 		\item Finite State Machines
  	\end{itemize}
@@ -304,6 +307,7 @@
  	\end{itemize}
 \end{frame}
 
+\subsection{Behavior trees}
 \begin{frame}{Basic AI techniques in videogames}{Behavior trees}
    \begin{columns}
        \column{.50\textwidth}
@@ -351,7 +355,6 @@
 		\centering\includegraphics[width=\linewidth]{figs/tree}
 	\end{columns}
 \end{frame}
-
 
 \subsection{Finite State Machines (FSM)}
 \begin{frame}{Basic AI techniques in videogames}{Finite State Machines (FSM) (I)}
