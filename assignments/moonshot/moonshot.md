@@ -2,11 +2,15 @@
 
 ## Objectives
 
-* Solve a non-trivial problem with EAs
+* Set the parameters of a EA to solve a non-trivial problem
 
 * Optimize a real-number function
 
-(It is based on the problem exposed in the inspyted tutorial, do not read it!)
+<!-- (It is based on the problem exposed in the inspyted tutorial, do not read it!) -->
+
+## Summary
+
+You will be provided with the implementation of a EA that optimizes the trajectory of a spacecraft to transit the Moon; you will have to set its parameters and get the best solution.
 
 ## Assignment
 
@@ -17,7 +21,7 @@ This exercise deals with an optimization problem of a real-valued function. The 
 With those considerations, the parameters to optimize are:
 
 * *Orbital height*. The spacescraft begins in a circular orbit over the Earth. This parameter sets its height.
-* *Satellite mass*. 
+* *Satellite mass*. It is self-explicatory.
 * *Boost velocity*. Velocity after the engine boost. It is a bidimensional vector in form (x, y).
 * *Initial y velocity*. Initially, the spacecraft moves in the Y axis with the velocity given by this parameter. It does not move in X.
 
