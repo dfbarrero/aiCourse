@@ -97,6 +97,7 @@
         \item Introduce artificial evolution
 	\item Justify the utility of artificial evolution from an engineering perspective
 	\item Overview the components of an Evolutionary Algorithm
+	\item Understand the main parameters
        \end{itemize}
    \end{block}
 
@@ -626,12 +627,17 @@
 \end{frame}
 
 \begin{frame}{Evolutionary Algorithms}{Basics (II)} 
-	\begin{center}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+		\begin{center}
+		Genetic Algorithm basic flowchart
+		\end{center}
+ 	   \column{.50\textwidth}
 		%Possible basic algorithm\\
 		%\includegraphics[width=0.75\linewidth]{figs/evolution.png}
-		\includegraphics[width=0.45\linewidth]{figs/flow.png}\\
+		\includegraphics[width=0.9\linewidth]{figs/flow.png}\\
 		\tiny{\href{https://www.researchgate.net/figure/The-Genetic-Algorithm-flowchart_fig1_339515126}{(Source)}}\\
-	\end{center}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Evolutionary Algorithms}{Basics (III)}
@@ -909,6 +915,7 @@
 
 \begin{frame}{EAs examples}
 	\begin{itemize}
+		\item \href{http://guillaumebouchetepitech.github.io/geneticAlgorithm_experiment/emscripten/bullet/dist/index.html}{(Self Learning 3D Cars Using A Genetic Algorithm)}
 		\item \href{http://rednuht.org/genetic\_walkers/} {(Genetic Algorithm Walkers)}
 		%\item \href{http://www.blprnt.com/smartrockets/}{(Smart rockets)}
 		\item \href{https://www.youtube.com/watch?v=xcIBoPuNIiw}{(Learn to walk)}
@@ -916,47 +923,8 @@
 		\item \href{https://www.youtube.com/watch?v=qv6UVOQ0F44}{(MarI/O - Machine Learning for Video Games)}
 		\item \href{https://www.youtube.com/watch?v=u2t77mQmJiY}{(A genetic algorithm learns how to fight!)}
 		\item \href{https://www.youtube.com/watch?v=HgWQ-gPIvt4}{(Evolved Electrophysiological Soft Robots)}
+		\item \href{https://www.youtube.com/watch?v=lo4vL7gOuYk}{(4 evolutionary goals, 400 evolved creatures, and their morphological similarity)}
 	\end{itemize}
-\end{frame}
-
-\subsection{Case study I: Transonic wing shape optimization}
-\begin{frame}{Study case}{Case study I: Transonic wing shape optimization}
-    Problem: Design a wing shape for transonic flight
-        \begin{itemize}
-        \item Maximize lift
-        \end{itemize}
-
-    \setlength{\fboxrule}{0pt}
-    \centering \fbox{\includegraphics[width=0.5\linewidth]{figs/wing-ga.png}} 
-    
-    \small
-    \begin{flushleft}
-    \href{https://link.springer.com/chapter/10.1007/978-94-010-0017-8\_38\#citeas}{Holst T.L., Pulliam T.H. (2003) \textit{Transonic Wing Shape Optimization Using a Genetic Algorithm}. In: IUTAM Symposium Transsonicum IV. Fluid Mechanics and its Applications, vol 73. Springer.}
-    \end{flushleft}
-\end{frame}
-
-%\subsection{Case study II: Mars orbital insertion}
-%\begin{frame}{Study case}{Case study II: Mars orbital insertion}
-%    \setlength{\fboxrule}{0pt}
-%    \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}}
-%\end{frame}
-
-\subsection{Case study II: 9\textsuperscript{th} GTOC}
-\begin{frame}{Study case}{Case study II: 9\textsuperscript{th} Global Trajectory Optimization Competition}
-    GTOC: Global Trajectory Optimization Competition
-    \begin{itemize}
-        \item Proposed by ESA Advanced Concepts Team
-        \item Difficult trajectory optimization problems
-    \end{itemize}
-
-    GTOC 9: The Kesser Run
-    \begin{itemize}
-        \item 123 orbiting debris
-        \item Remove debris
-        \item Design multiple missions
-    \end{itemize}
-    \href{https://www.youtube.com/watch?v=zvxZx-QnqQ0}{(Video)}
-    \href{https://www.youtube.com/watch?v=5CQNG6OIbZM}{(Solution)}
 \end{frame}
 
 \end{document}
