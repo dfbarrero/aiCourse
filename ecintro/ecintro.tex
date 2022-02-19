@@ -1,5 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% MUW Presentation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% % MUW Presentation
 % LaTeX Template
 % Version 1.0 (27/12/2016)
 %
@@ -96,8 +95,8 @@
        \begin{itemize}
 %        \item Describe local search algorithms
         \item Introduce artificial evolution
-		\item Justify the utility of artificial evolution from an engineering perspective
-		\item Overview the components of an Evolutionary Algorithm
+	\item Justify the utility of artificial evolution from an engineering perspective
+	\item Overview the components of an Evolutionary Algorithm
        \end{itemize}
    \end{block}
 
@@ -245,7 +244,7 @@
 %    Alternatively stochastic LBS randomly choose $k$ successors, with the probability of choosing a successor as an increasing function of its value
 %\end{frame}
 
-\section{Evolutionary Computation background}
+\section{Biological background}
 \subsection{Historical review}
 \begin{frame}{Biological background}{Historical review (I)}
  	\begin{columns}
@@ -301,8 +300,10 @@
 		\begin{itemize}
 		\item First to propose a theory of evolution
 		\item Transmutation of Species
-		\item Use strengthens/weakens organs
-		\item Heritability of acquired characteristics
+		    \begin{itemize}
+		        \item Use strengthens/weakens organs
+		        \item Heritability of acquired characteristics
+		    \end{itemize}
 		\end{itemize}
 
  	   \column{.25\textwidth}
@@ -340,31 +341,38 @@
 		\end{itemize}
 
 
-		August Weismann (1834 - 1914)
- 	 	\begin{itemize}
-		\item Germ plasm theory
-		\item Germ and somatic cells
-		\item End of Lamarkism
-		\end{itemize}
+		\bigskip
+
+		%August Weismann (1834 - 1914)
+ 	 	%\begin{itemize}
+		%\item Germ plasm theory
+		%\item Germ and somatic cells
+		%\item End of Lamarkism
+		%\end{itemize}
 		
 		J. Watson (1928) and F. Crick (1916 - 2004)
  	 	\begin{itemize}
 		\item Discovery of DNA
 		\item Central Dogma of molecular biology
+ 	 	    \begin{itemize}
+			\item DNA $\Rightarrow$ RNA $\Rightarrow$ Protein
+ 	  	    \end{itemize}
 		\end{itemize}
 
  	   \column{.3\textwidth}
 		\centering\includegraphics[width=0.5\linewidth]{figs/mendel.jpg}
-		\centering\includegraphics[width=0.5\linewidth]{figs/weismann.jpg}\\
+
+		\bigskip
+
+		%\centering\includegraphics[width=0.5\linewidth]{figs/weismann.jpg}\\
 		\centering\includegraphics[width=\linewidth]{figs/WatsonCrick.jpg}
 	\end{columns}
 \end{frame}
 
 \subsection{Theory of Evolution}
 \begin{frame}{Biological background}{Theory of Evolution}
-	Neo-Darwinism: Darwin + Mendel + Weismann
+	Neo-Darwinism, also called Theory of Evolution %Darwin + Mendel % + Weismann
 	\begin{itemize}
-		\item ... also called Theory of Evolution
 		\item Variability + selection = \alert{evolution}
 	\end{itemize}
 	There is variation among individuals
@@ -376,7 +384,7 @@
 		\item \alert{Natural selection}
 		\item Artificial selection
 		\item Sexual selection
-		\item Genetic drift (deriva genética) \href{http://evolution.berkeley.edu/evolibrary/images/evo/beetles\_mech3.gif}{(Link)}
+		\item Genetic drift (deriva genética) \href{https://github.com/dfbarrero/aiCourse/blob/master/ecintro/figs/Genetic-Drift.png}{(Link)}
 	\end{itemize}
 	The \textit{fittest} is the one that survives (not the strongest!)
 \end{frame}
@@ -407,19 +415,27 @@
 \end{frame}
 
 \begin{frame}{Biological background}{Molecular Genetics (III)}
-	Useful biological terms
+	Some useful biological terms
 	\begin{description}
-	\item[Gene] ADN fragment that codifies one protein
-	\item[Allele] The variant form of a gene
+	\item[Chromosome] A long DNA molecule with part of the genetic material
+	\item[Gene] A chromosome fragment that codifies one protein
+	%\item[Allele] The variant form of a gene
+
+	\bigskip
+
 	\item[Genotype] The sequence of DNA
 	\item[Phenotype] Characteristics of an individual
-	\item[Exon] Part of a gene that is transcripted
-	\item[Intron] Part of a gene that is not trascripted
+	%\item[Exon] Part of a gene that is transcripted
+	%\item[Intron] Part of a gene that is not trascripted
 	\end{description}
 
 	\begin{center}
-	\includegraphics[width=0.7\linewidth]{figs/exon.png}\\
-	\tiny \href{https://en.wikipedia.org/wiki/Exon}{(Source)}
+
+	\includegraphics[width=0.5\linewidth]{figs/gene.jpg}\\
+	\tiny \href{https://killowen.com/assets/phenotype.jpg}{(Source)}
+
+	%\includegraphics[width=0.7\linewidth]{figs/exon.png}\\
+	%\tiny \href{https://en.wikipedia.org/wiki/Exon}{(Source)}
 	\end{center}
 \end{frame}
 
@@ -428,19 +444,20 @@
 	Given a population ...
 	\begin{enumerate}
 	\item There are differences among individuals
-	\item Fittest individuals more likely to reproduce
+	\item Fittest individuals are more likely to reproduce
+	\item Good trails increase their presence in the population
 	\item Go to 1
 	\end{enumerate}
 	We are interested in applying this to Engineering
 \end{frame}
 
-%\begin{frame}[plain]{}
+\begin{frame}[plain]{}
 %	\note{Poner como ejemplo el perfil de un ala, geometria de una antena microscript, red neuronal e insercion orbital}
 %	\vspace{2cm}
-%	\begin{center}
-%	How can we apply biological evolution to solve engineering problems?
-%	\end{center}
-%\end{frame}
+	\begin{center}
+	How can we apply biological evolution to solve engineering problems?
+	\end{center}
+\end{frame}
 
 \section{Evolutionary Algorithms}
 \subsection{Evolution as optimization}
@@ -461,15 +478,50 @@
 \end{frame}
 
 \subsection{AI, search and optimization}
+%\begin{frame}{Introduction}{Motivation}
 \begin{frame}{Evolutionary Algorithms}{AI, search and optimization (I)}
     \begin{columns}
+ 	   \column{.60\textwidth}
+
+    %Early AI works were directed to
+    %\begin{itemize}
+    %    \item Proof of theorems, crosswords, games, ...
+    %\end{itemize}
+
+    All in AI is search ...
+    \begin{itemize}
+        \item ... not entirely true (obviously) but more than we may imagine
+        \item Find a good/best solution (\alert{solution space}) to a problem among several potential solutions (\alert{search space})
+    \end{itemize}
+
+    Almost any AI problem can be expressed as a search problem
+
+    %\textbf{Enhaustive search} (or brute-force search)
+    %\begin{itemize}
+    %    \item Iterate over all the potential solutions
+    %    \item Unsuiteable for most real-world problems
+    %\end{itemize}
+
+ 	\column{.40\textwidth}
+    	 \input{figs/search.tex}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Evolutionary Algorithms}{AI, search and optimization (II)}
+    \begin{columns}
  	   \column{.50\textwidth}
-	AI is much related to search a solution for a problem
-	\begin{itemize}
-	\item Search space
-	\item Solution space
-	\end{itemize}
-	Almost any computational problem can be expressed as a search problem
+	%AI is much related to search a solution for a problem
+	%\begin{itemize}
+	%\item Search space
+	%\item Solution space
+	%\end{itemize}
+	%Almost any computational problem can be expressed as a search problem
+	\begin{exampleblock}{Example: Path planning}
+		Task: Find a path from point A to point B\\
+		Search space? Solution space? Optimal solution?
+        \end{exampleblock}
+
 	 	   \column{.50\textwidth}
 	\begin{center}
 	\includegraphics[width=\linewidth]{figs/path.jpg}\\
@@ -478,13 +530,35 @@
 	   \end{columns}
 \end{frame}
 
-\begin{frame}{Evolutionary Algorithms}{AI, search and optimization (II)}
+\begin{frame}{Evolutionary Algorithms}{AI, search and optimization (III)}
+    \begin{columns}
+ 	   \column{.50\textwidth}
+	%AI is much related to search a solution for a problem
+	%\begin{itemize}
+	%\item Search space
+	%\item Solution space
+	%\end{itemize}
+	%Almost any computational problem can be expressed as a search problem
+	\begin{exampleblock}{Example: Mars orbital insertion}
+		Task: Go from Earth to Mars with minimal energy\\
+		Search space? Solution space? Optimal solution?
+        \end{exampleblock}
+
+	\column{.50\textwidth}
+	   \begin{center}
+ 	   \setlength{\fboxrule}{0pt}
+    	   \fbox{\includegraphics[width=\linewidth]{figs/orbits.jpg}}
+	   \end{center}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Evolutionary Algorithms}{AI, search and optimization (IV)}
     \begin{columns}
  	   \column{.60\textwidth}
 	In AI, potential solutions are assessed
 	\begin{itemize}
 		\item Cost function
-		\item Objective: Maximize cost function
+		\item Objective: maximize/minimize cost function
 	\end{itemize}
 	The solution to any problem: \textbf{exhaustive search}
 	\begin{itemize}
@@ -553,8 +627,10 @@
 
 \begin{frame}{Evolutionary Algorithms}{Basics (II)} 
 	\begin{center}
-		Possible basic algorithm
-		\includegraphics[width=0.75\linewidth]{figs/evolution.png}
+		%Possible basic algorithm\\
+		%\includegraphics[width=0.75\linewidth]{figs/evolution.png}
+		\includegraphics[width=0.45\linewidth]{figs/flow.png}\\
+		\tiny{\href{https://www.researchgate.net/figure/The-Genetic-Algorithm-flowchart_fig1_339515126}{(Source)}}\\
 	\end{center}
 \end{frame}
 
@@ -668,25 +744,25 @@
 	The fitness assigns a numerical value to a phenotype
 	\begin{itemize}
 		\item Caution, phenotype, not genotype
-		\item Multiobjective algorithms use several fitnesses
+		\item \textbf{Multiobjective algorithms} (MOEA) use several fitnesses
 	\end{itemize}
 	Evaluation uses to be a bottleneck
 	\begin{itemize}
 		\item Many times it involves simulating a system
+		\item $\Rightarrow$ Minimize number of evaluations
 	\end{itemize}
-	Minimize number of evaluations
 \end{frame}
 
 \begin{frame}{EAs components}{Evaluation (II)} 
 	Example: 8 queens
 	\begin{itemize}
 		\item The fitness may be the number of threaded pieces
-		\item Objective: Minimize fitness (minimation problem)
+		\item Objective: minimize fitness (minimation problem)
 	\end{itemize}
 	Example: Regression
 	\begin{itemize}
-		\item The fitness may be the quadratic average error
-		\item Objective: Minimize fitness (minimation problem)
+		\item The fitness may be the mean squared error (MSE)
+		\item Objective: minimize fitness (minimation problem)
 	\end{itemize}
 \end{frame}
 
@@ -740,18 +816,18 @@
 	
 	Two basic strategies
 	\begin{itemize}
-		\item Generational algorithms: Replace all the offspring
+		\item Generational algorithms: replace all the offspring
 		\begin{itemize}
 			\item Iterations are named \alert{generations}
 			\item Time is usually measured in generations
 		\end{itemize}
-		\item Steady-stade: Replace part of the offscript
+		\item Steady-stade: replace part of the offscript
 		\begin{itemize}
-			\item Criteria: Age, fitness, selection, etc
+			\item Criteria: age, fitness, selection, etc
 			\item Lower memory consumption
 		\end{itemize}
 	\end{itemize}
-	Hybrid strategy: \alert{Elitism}
+	Hybrid strategy: \alert{elitism}
 		\begin{itemize}
 			\item Replace the population, except the $n$ fittest individuals
 			\item $n$ fittest individuals guaranteed to survive
@@ -834,7 +910,7 @@
 \begin{frame}{EAs examples}
 	\begin{itemize}
 		\item \href{http://rednuht.org/genetic\_walkers/} {(Genetic Algorithm Walkers)}
-		\item \href{http://www.blprnt.com/smartrockets/}{(Smart rockets)}
+		%\item \href{http://www.blprnt.com/smartrockets/}{(Smart rockets)}
 		\item \href{https://www.youtube.com/watch?v=xcIBoPuNIiw}{(Learn to walk)}
 		\item \href{https://www.youtube.com/watch?v=pgaEE27nsQw}{(Flexible Muscle-Based Locomotion for Bipedal Creatures)}
 		\item \href{https://www.youtube.com/watch?v=qv6UVOQ0F44}{(MarI/O - Machine Learning for Video Games)}
@@ -859,14 +935,14 @@
     \end{flushleft}
 \end{frame}
 
-\subsection{Case study II: Mars orbital insertion}
-\begin{frame}{Study case}{Case study II: Mars orbital insertion}
-    \setlength{\fboxrule}{0pt}
-    \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}}
-\end{frame}
+%\subsection{Case study II: Mars orbital insertion}
+%\begin{frame}{Study case}{Case study II: Mars orbital insertion}
+%    \setlength{\fboxrule}{0pt}
+%    \fbox{\includegraphics[width=0.7\linewidth]{figs/orbits.jpg}}
+%\end{frame}
 
-\subsection{Case study III: 9\textsuperscript{th} GTOC}
-\begin{frame}{Study case}{Case study III: 9\textsuperscript{th} Global Trajectory Optimization Competition}
+\subsection{Case study II: 9\textsuperscript{th} GTOC}
+\begin{frame}{Study case}{Case study II: 9\textsuperscript{th} Global Trajectory Optimization Competition}
     GTOC: Global Trajectory Optimization Competition
     \begin{itemize}
         \item Proposed by ESA Advanced Concepts Team
