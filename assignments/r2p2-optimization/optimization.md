@@ -113,5 +113,5 @@ Please take into account that the robot sensors contain a small amount of noise,
 
 ## Task 4 (optional): Improve the controller
 
-Based on the ``Inspyred_controller``, create a new controller with a more complex behaviour. For instance, you may set different coefficients given a certain threshold. Try to get better fitness than the original controller.
+Based on the ``Inspyred_controller``, create a new controller with a more complex behaviour. For instance, you may set different coefficients given a certain threshold. Try to get better fitness than the original controller. You will new to develop a new controller (*GA_Extended_Controller.py*) and a new implementation of the evolutionary algorithm (*ga-inspired-extended.py*)
 
