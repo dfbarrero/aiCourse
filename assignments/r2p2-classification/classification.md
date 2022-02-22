@@ -77,6 +77,6 @@ Do not forget to assess the performance of all your models. You will need to per
 
 ## Task 3: Integrate the model into the robot controller
 
-1.- Develop a new robot controller that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
+1.- Develop a new robot controller (ML_Controller.py) that reads the classification model from disk, and then integrate it with the sensor outputs and actions output.
 
 2.- Assess the robot behaviour. Is it as expected?
