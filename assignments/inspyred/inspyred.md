@@ -60,8 +60,8 @@ Based on the code of the one-max problem introduced in the previous practical as
 
 We are going to use a variant of the one-max problem. Instead of an all-ones chromosomes, we want to generate a chromosome with the pattern [0,1,1,1] repeated k times, for instance, [0,1,1,1,0,1,1,1,0,1,1,1] with k=3. 
 
-Implement a GA to solve the previously described problem. Divide this task into the following steps.
+Implement a GA to solve the previously described problem and store it in a file named *ga-custom.py*. Divide this task into the following steps.
 
 1. Implement an skeleton of the algorithm with *Inspyred* with default components.
 2. Define and implement the fitness function.
-3. Implement a customized crossover operator that only splits chromosomes in the boundaries of the repeated pattern [0,1,1,1]. Compare this operator with one-point crossover.
+3. Implement a customized crossover operator that only splits chromosomes in the boundaries of the repeated pattern [0,1,1,1]. Compare this operator with one-point crossover (optional).
