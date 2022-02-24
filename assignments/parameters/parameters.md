@@ -14,7 +14,7 @@
 
 ## Preliminary steps
 
-First of all, if you are using Windows, you will need to install Python 3.X. Just [download it](https://www.python.org/downloads/) and install it as any other software. In case you where using Linux or Mac, you already has Python in your machine.
+First of all, if you are using Windows, you will need to install Python 3.X. DO NOT USE PYTHON 3.10 BECAUSE IT IS NOT SUPPORTED BY THE EC LIBRARY. Just [download it](https://www.python.org/downloads/) and install it as any other software. In case you where using Linux or Mac, you already has Python in your machine.
 
 Install *inspyred* following the instructions available on http://pythonhosted.org/inspyred/. Basically, *inspyred* is a Python module that can be installed like any other module. From a Unix or PowerShell console, just type ```pip install inspyred```. You may need also install the package statistics, in that case execute the command ```pip install statistics```.
 
