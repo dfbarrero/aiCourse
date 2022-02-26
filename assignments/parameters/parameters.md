@@ -81,7 +81,7 @@ Using the default parameter settings as a starting point, change the following p
 
 6. Set chromosome length to 10, 20, 30, 50 and 100.
 
-The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
+The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results. Use a data analytics software of your choice, for instance Excel or Matlab.
 
 You may need to change the maximum number of generations (some configurations may need a longer time to converge), but this number *does not* affect the evolutionary process, it just sets when to stop it.
 
