@@ -88,6 +88,8 @@
 
 * [Understanding parameters settings in Evolutionary Algorithms](assignments/parameters/parameters.md)
 
+* [Understanding parameters settings in Evolutionary Algorithms (Google Colab)](https://colab.research.google.com/drive/1HOzOUuTYJOGQ5JvFww40u2NC7FNXf1SV?usp=sharing)
+
 * [Programming Evolutionary Algorithms with Inspyred](assignments/inspyred/inspyred.md)
 
 * [Symbolic regression with Genetic Programming](assignments/regression/regression.md)
