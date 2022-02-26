@@ -69,7 +69,7 @@ The main objective of this assignment is to assess the impact of the parameter s
 
 <img align="center" src="plot.png" width="400">
 
-Using the default parameter settings as a starting point, change the following parameter settings and plot (please checkout the figure given as example) the mean fitness against the generation number controlled by the values of the parameter under study as follows.
+Using the default parameter settings as a starting point, change the following parameter settings and plot (please checkout the figure given as example) the mean fitness against the generation number controlled by the values of the parameter under study as follows. Please, maintain the rest of parameters with its default value.
 
 1. Set crossover probability to 0, 0.5, 0.75 and 1.
 
@@ -81,7 +81,7 @@ Using the default parameter settings as a starting point, change the following p
 
 5. Set elitism to 1, 2 and 3.
 
-5. Set chromosome length to 10, 20, 30, 50 and 100.
+6. Set chromosome length to 10, 20, 30, 50 and 100.
 
 The final goal is to obtain a collecion of figures like the one showed here, along with an interpretation of the results.
 
