@@ -2,8 +2,6 @@
 
 ## Objectives
 
-* Introduce *inspyred*
-
 * Understand the parameter settings of a basic GA
 
 * Observe the basic behaviour of an EA
