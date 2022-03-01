@@ -65,7 +65,7 @@ Perform the following tasks:
 
 ## Basic robot control
 
-The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and returns a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. If you are interested, read the [R2P2 developer manual](https://github.com/ISG-UAH/r2p2/wiki/R2p2-documentation) to get more details about its API, but it is not necesary for this assignment.
+The basics of robot control with R2P2 is straightforward, there is a control function that receives a vector of distances and returns a tuple with linear and angular velocities. This function is invoked from within the control loop, wich is transparent to the programmer. If you are interested, read the [R2P2 controller developer guide](https://github.com/ISG-UAH/r2p2/wiki/Controller-development-guide) to get more details about its API, but it is not necesary for this assignment.
 
 Perform the following tasks:
 
