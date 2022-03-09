@@ -89,7 +89,13 @@
 \begin{frame}[plain]{}
    \begin{block}{Objectives}
        \begin{itemize}
-        \item Describe the most relevant EAs
+            \item Describe the most relevant EAs
+            \begin{itemize}
+                \item Genetic Algorithms
+                \item Genetic Programming
+                \item Evolution Strategies
+            \end{itemize}
+            \item Practical application of EAs
        \end{itemize}
    \end{block}
 
@@ -261,17 +267,17 @@
 		\item Range of valid numbers
 		\item Special genetic operators
   	\end{itemize}
-	Information can be contained in
-	\begin{itemize}
-		\item The locus (position)
-		\begin{itemize}
-		\item[] $[3,1,2,4] \Rightarrow [C,A,B,D]$
-		\end{itemize}
-		\item The allele (value)
-		\begin{itemize}
-		\item[] $[3,1,2,4] \Rightarrow [B,C,A,D]$
-		\end{itemize}
-	\end{itemize}
+%	Information can be contained in
+%	\begin{itemize}
+%		\item The locus (position)
+%		\begin{itemize}
+%		\item[] $[3,1,2,4] \Rightarrow [C,A,B,D]$
+%		\end{itemize}
+%		\item The allele (value)
+%		\begin{itemize}
+%		\item[] $[3,1,2,4] \Rightarrow [B,C,A,D]$
+%		\end{itemize}
+%	\end{itemize}
  	   \column{.50\textwidth}
 	\begin{center}
 	\includegraphics[width=\linewidth]{figs/codification.eps}\\
@@ -286,7 +292,6 @@
 	\textbf{Mutation}: Genetic operator that uses one parent
 	\begin{itemize}
 		\item Introduces randomness into the genotype
-		\item Depends on representation
   	\end{itemize}
 	Main objectives
 	\begin{itemize}
@@ -298,6 +303,7 @@
 		\item Significant influence in the algorithm behaviour
 		\item Higher mutation rate, higher exploration
 	\end{itemize}
+	Mutation depends on representation
 \end{frame}
 
 \begin{frame}{Genetic Algorithms}{Mutation for binary representations}
@@ -330,7 +336,7 @@
 	Set new value with value drawn from a distribution
 	\begin{itemize}
 		\item \textbf{Uniform mutation} Choose new random value from $[L, U]$ with $p_m$
-		\item \textbf{Non-uniform mutation} Usually adding a value drawn from a zero-mean gaussian  distribution
+		\item \textbf{Non-uniform mutation (Gaussian mutation)} Usually adding a value drawn from a zero-mean gaussian  distribution
 	\end{itemize}
 	\begin{center}
 	\includegraphics[width=0.4\linewidth]{figs/uniform.png}
@@ -372,7 +378,7 @@
 	Usually applied to all new individuals
 	\begin{itemize}
 		\item Not used when elitism is applied
-		\item Sometimes applied with $p_c \in [0.5, 1]$ 
+		\item Sometimes applied with $p_c \lesssim 1$ 
 	\end{itemize}
 	Objectives of recombination
 	\begin{itemize}
@@ -473,26 +479,23 @@
 
 \begin{frame}{Genetic Algorithms}{Selection: Fitness Proportional Selection}
     \begin{columns}
- 	   \column{.60\textwidth}
+ 	   \column{.7\textwidth}
 	Selection probability proportional to fitness 
 	\begin{itemize}
-		\item Premature convergence
+	    \item Historically relevant
+		\item Dominance of high fitness chromosomes
 		\item Lack of selective pressure for close fitness values
-		\item Selective pressure not customizable
-		\item Susceptibility to function transposition
   	\end{itemize}
-	Historically relevant
-	    \column{.40\textwidth}
-	\begin{center}
-    \begin{columns}
- 	   \column{.60\textwidth}
-	\begin{block}{}
-	$p_s = \frac{f_i}{\sum_{j=1}^\mu f_j}$
-	\end{block}
-	\end{columns}
-	\bigskip
-	\includegraphics[width=\linewidth]{figs/fps.eps}
-	\end{center}
+		Selective pressure not customizable
+
+ 	   \column{.3\textwidth}
+	    \begin{block}{Fitness proportional}
+	    $p_s = \frac{f_i}{\sum_{j=1}^\mu f_j}$
+	    \end{block}
+
+	 %   \bigskip
+     %   \bigskip
+	 %   \includegraphics[width=0.7\linewidth]{figs/fps.eps}
 	\end{columns}
 \end{frame}
 
@@ -540,9 +543,9 @@
  	   \column{.50\textwidth}
 	Customizable selective pressure
 	\begin{itemize}
-		\item Depends on $k$ and $\mu$
+		\item Depends on $k$
 	\end{itemize}
-	De facto standard
+	\textit{De facto} standard
 	\begin{itemize}
 		\item Good for parallel computation
 		\item Efficient implementation
@@ -588,12 +591,12 @@
 	\end{itemize}
  	   \column{.30\textwidth}
 	   \begin{center}
+		Simulation\\
+	\includegraphics[width=\linewidth]{figs/simulation.eps}\\\bigskip
 	   Optimization\\
 	\includegraphics[width=\linewidth]{figs/optimization.eps}\\\bigskip
 		Modelling\\
-	\includegraphics[width=\linewidth]{figs/modelling.eps}\\\bigskip
-		Simulation\\
-	\includegraphics[width=\linewidth]{figs/simulation.eps}\\
+	\includegraphics[width=\linewidth]{figs/modelling.eps}\\
 	\end{center}
 	   \end{columns}
 \end{frame}
@@ -671,11 +674,11 @@
 	    	Program
 			\includegraphics[width=\linewidth]{figs/programtree.eps}\\
 			\begin{verbatim}
-			i=1;
-			while (i<20) {
-				i = i+1;
-			}
-			\end{verbatim}	
+i=1;
+while (i<20) {
+    i = i+1;
+}
+\end{verbatim}	
 			\end{center}
 	\end{columns}
 \end{frame}
@@ -948,32 +951,32 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Mutation}
-\begin{frame}{Evolution Strategies}{Mutation}
-	%New values are computed as $x_i = x_i + N(0, \sigma)$
-	%\begin{itemize}
-%		\item $\sigma$ coevolves with the solutions
+%\subsection{Mutation}
+%\begin{frame}{Evolution Strategies}{Mutation}
+%	%New values are computed as $x_i = x_i + N(0, \sigma)$
+%%\begin{itemize}
+%%	\item $\sigma$ coevolves with the solutions
+%%\end{itemize}
+%	Genetic operators to modify $\sigma$
+%	\begin{itemize}
+%		\item Mutation with one step size: 
+%		\begin{subequations}
+%		\begin{align*}
+%		x_i' = & x_i + N_i(0, \sigma')\\
+%		\sigma' = & \sigma \cdot e^{\cdot N(0, \tau)} \text{, } \tau \propto 1/\sqrt{n}
+%		\end{align*}
+%		\end{subequations}
+%		$\tau$ is analogous to learning rate in ANN
+%		\item Mutation with n step sizes:
+%		\begin{subequations}
+%		\begin{align*}
+%		x_i' = & x_i + N_i(0, \sigma_i)\\
+%		\sigma' = & \sigma \cdot e^{\cdot N(0, \tau')+N_i(0, \tau}
+%		\end{align*}
+%		\end{subequations}
+%		with $ \tau' \propto 1/\sqrt{2n}$  and $\tau \propto 1/\sqrt{2\sqrt{n}}$
 %	\end{itemize}
-	Genetic operators to modify $\sigma$
-	\begin{itemize}
-		\item Mutation with one step size: 
-		\begin{subequations}
-		\begin{align*}
-		x_i' = & x_i + N_i(0, \sigma')\\
-		\sigma' = & \sigma \cdot e^{\cdot N(0, \tau)} \text{, } \tau \propto 1/\sqrt{n}
-		\end{align*}
-		\end{subequations}
-		$\tau$ is analogous to learning rate in ANN
-		\item Mutation with n step sizes:
-		\begin{subequations}
-		\begin{align*}
-		x_i' = & x_i + N_i(0, \sigma_i)\\
-		\sigma' = & \sigma \cdot e^{\cdot N(0, \tau')+N_i(0, \tau}
-		\end{align*}
-		\end{subequations}
-		with $ \tau' \propto 1/\sqrt{2n}$  and $\tau \propto 1/\sqrt{2\sqrt{n}}$
-	\end{itemize}
-\end{frame}
+%\end{frame}
 
 \subsection{Recombination}
 \begin{frame}{Evolution Strategies}{Recombination}
@@ -988,24 +991,24 @@
 	\end{itemize}
 \end{frame}
 
-\subsection{Parent and survivor selection}
-\begin{frame}{Evolution Strategies}{Parent and survivor selection}
-	The whole population is seen as parent
-	\begin{itemize}
-		\item Select individual with uniform probability
-		\item No selective pressure in parent selection
-	\end{itemize}
-	After creating the offspring, the $\lambda$ fittests individuals are selected
-	\begin{itemize}
-		\item Deterministic procedure
-	\end{itemize}
-	Two selection mechamisms depending on who can be selected
-	\begin{itemize}
-		\item \textbf{$(\mu, \lambda)$ selection}. Only the offpring.  
-		\item \textbf{$(\mu + \lambda)$ selection}. Parents and offpring
-	\end{itemize}
-	$(\mu, \lambda)$ selection is more popular
-\end{frame}
+%\subsection{Parent and survivor selection}
+%\begin{frame}{Evolution Strategies}{Parent and survivor selection}
+%	The whole population is seen as parent
+%	\begin{itemize}
+%		\item Select individual with uniform probability
+%		\item No selective pressure in parent selection
+%	\end{itemize}
+%	After creating the offspring, the $\lambda$ fittests individuals are selected
+%	\begin{itemize}
+%		\item Deterministic procedure
+%	\end{itemize}
+%	Two selection mechamisms depending on who can be selected
+%	\begin{itemize}
+%		\item \textbf{$(\mu, \lambda)$ selection}. Only the offpring.  
+%		\item \textbf{$(\mu + \lambda)$ selection}. Parents and offpring
+%	\end{itemize}
+%	$(\mu, \lambda)$ selection is more popular
+%\end{frame}
 
 \section{Working with an Evolutionary Algorithm}
 \subsection{Search phases}
