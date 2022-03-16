@@ -100,6 +100,8 @@
 
 * [Optimization of the trajectory of a spacecraft to the Moon (no coding)](assignments/moonshot/moonshot-nocoding.md)
 
+* [Optimization of the trajectory of a spacecraft to the Moon (no coding, Google Colab)](https://colab.research.google.com/drive/1u5g9wm7q44OKgBEAqfowiAtm7j3r7mAC?usp=sharing)
+
 * [Paper 'Automated Design of CubeSats and Small Spacecrafts'](assignments/papers/cubesats.md)
 
 # Compilation
