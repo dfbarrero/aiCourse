@@ -12,7 +12,7 @@ Descargar el [paper](https://arxiv.org/pdf/1701.01742.pdf).
 
 - ¿Qué problema aborda el paper? 
 - ¿Qué es el "design space" que se menciona en el último párrafo de la sección 1 (página 2)?
-- ¿Qué es el problema de Knapsack (problema de la mochila)? 
+- ¿Qué es el Problema de Knapsack (problema de la mochila)? 
 - ¿Qué tipo de satélite pretende diseñar? 
 
 ## Preguntas sobre el genético
