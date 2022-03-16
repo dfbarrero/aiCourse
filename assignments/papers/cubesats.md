@@ -12,7 +12,7 @@ Descargar el [paper](https://arxiv.org/pdf/1701.01742.pdf).
 
 - ¿Qué problema aborda el paper? 
 - ¿Qué es el "design space" que se menciona en el último párrafo de la sección 1 (página 2)?
-- ¿Qué es el Problema de Knapsack (problema de la mochila)? 
+- ¿Qué es el Problema de Knapsack (problema de la mochila)? Usa Google si lo necesitas.
 - ¿Qué tipo de satélite pretende diseñar? 
 - En el resumen se afirma "In this work we present a compelling alternative approach that extends the capabilities of a spacecraft engineering design team to search for and identify near-optimal solutions using machine learning". 
    * ¿Por qué se utiliza el término "near-optimal" en vez de simplemente "optimal"? 
