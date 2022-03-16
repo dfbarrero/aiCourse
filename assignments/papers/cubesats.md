@@ -6,7 +6,7 @@
 
 ## Prerrequisitos
 
-Descargar el [https://arxiv.org/pdf/1701.01742.pdf](paper).
+Descargar el (https://arxiv.org/pdf/1701.01742.pdf)[paper].
 
 ## Preguntas generales
 
