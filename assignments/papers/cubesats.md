@@ -27,4 +27,7 @@ Descargar el [paper](https://arxiv.org/pdf/1701.01742.pdf).
 - ¿Cómo se implementa el crossover? 
 - ¿Cómo se implementa la mutación? 
 - ¿Por qué hace cálculos de dinámica orbital?
+
+## Resultados
+
 - Observa las figuras 8, 9 y 10. El texto dice que el algoritmo maximiza la potencia mientras minimiza coste y peso, ¿te parece correcta esta afirmación? 
