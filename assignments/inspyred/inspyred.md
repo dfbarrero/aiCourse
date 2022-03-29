@@ -33,7 +33,7 @@ Inspyred is a well-documented project. Go to the project website in http://pytho
 
 * Read the "Overview". Pay special attention to the section "Design Methodology";
 * *Do not* read the tutorial (the following exercises are inspired in those examples);
-* Examine the examples "Genetic Algorithm" and "Evolution Strategy" within the "Examples" section;
+* Examine the examples "Genetic Algorithm" and "Evolution Strategy" within the "Examples" section. You might need futher information about [Schewefel](https://duckduckgo.com/?q=Schwefel+genetic&t=ffab&iar=images&iax=images&ia=images&iai=https%3A%2F%2Fjenyay.net%2Fblog%2Fwp-content%2Fuploads%2F2019%2F11%2Fschwefel_2d-1536x842.png) and [Rosenbrock](https://duckduckgo.com/?q=rosenbrock+function&t=ffab&iar=images&iax=images&ia=images), both are two well-known functions commonly used to test optimization algorithms;
 * Read carefully the subsection "Customized Algorithms",  within the "Examples" section.
 
 Once you got a general understanding on the structure of Inspyred, you should get used to handle its reference manual and source code. Much of the features are not documented, and many times there are doubs that requires reading the source code. Based on the reference library (located in http://pythonhosted.org/inspyred/reference.html), answer the following questions:
