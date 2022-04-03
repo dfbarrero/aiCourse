@@ -107,7 +107,7 @@ Set up the evolutionary parameter settings and run it until you find a satisfact
 
 ## Task 3: Implement the controller
 
-Based on the weights obtained in the previous task, hard code your own controller (*eccontroller.py*). You may want to use code from the controller `r2p2/controllers/inspyred.py`.
+Based on the weights obtained in the previous task, hard code your own controller (*EC_Controller.py*). You may want to use code from the controller `r2p2/controllers/inspyred.py`.
 
 <!--
 Based on the weights obtained in the previous task, run the robot with the optimized weights. To this end use the scenario defined by the file ``scenario-inspyred-simple.json``, which uses the ``controller-inspyred-simple.json`` controller. Look for the field ``weights`` and fill a list with your weights, as the example contained in the example shows. Run the scenario and verify that the robot repeats the behaviour.-->
