@@ -50,7 +50,7 @@ The control logic is given by the controller `r2p2/controllers/inspyred.py`. Thi
 
 <img src="https://latex.codecogs.com/svg.latex?\text{v}_a=\sum_{i=1}^{N}\beta_{i}d_{i}" title="\text{v}_a=\sum_{i=1}^{N}\beta_{i}d_{i}" />
 
-where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{i}"/> and <img src="https://latex.codecogs.com/svg.latex?\beta_{i}" title="\beta_{i}"/> denotes a weight of sensor *i* and <img src="https://latex.codecogs.com/svg.latex?d_{i}" title="d_{i}"/> the distance measured by sensor *i*. Please, check out the source code to have a better understanding. The point here, of course, is setting the values of the weights, this is the function of the Evolutionary Algorithm. 
+where <img src="https://latex.codecogs.com/svg.latex?\alpha_{i}" title="\alpha_{i}"/> and <img src="https://latex.codecogs.com/svg.latex?\beta_{i}" title="\beta_{i}"/> denotes a weight of sensor *i* and <img src="https://latex.codecogs.com/svg.latex?d_{i}" title="d_{i}"/> the distance measured by sensor *i*. The Chromosome includes two additional genes to optimize the maximum linear and angular velocities. Please, check out the source code (*set_network_params()* to have a better understanding. The point here, of course, is setting the values of the weights, which is the responsability of the Evolutionary Algorithm. 
 
 ## Task 1: Design and code the Evolutionary Algorithm
 
