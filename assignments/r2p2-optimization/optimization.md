@@ -58,7 +58,7 @@ Design an Evolutionary Algorithm to perform the optimization of the weights in t
 
 When the controller is called, it waits until a list of weights is written in the file `res/weights.json` by an external logic, such as a script running the Evolutionary Algorithm (*ga-inspyred.py*). The evolution is run in a script while the fitness assessment is done by R2P2. 
 
-Take the following evaluate function to assess a list a weights given by the parameter candidate:
+Take the following fitness function that send to R2P2 a list of network weights:
 
 ```Python
 import os
@@ -99,19 +99,22 @@ def evaluate(candidate, args):
 		return(0)
 ```
 
-You may want to read the [Inspyred examples](https://pythonhosted.org/inspyred/examples.html). The given function ``evaluate`` implements the fitness evaluation, including the communication between Inspyred and R2P2. This function must be given as evaluator in the provided examples. Pay attention to define a chromosome size with the size that R2P2 expects.
+You may want to read the [Inspyred examples](https://pythonhosted.org/inspyred/examples.html). The given function ``evaluate`` implements the fitness evaluation, including the communication between Inspyred and R2P2. The function *write_params()* is required by *evaluate()* and you will not to invoke it. The function *evaluate()* should be used as fitness function by the evolutionary algorithm. Please pay special attention to define a chromosome size with the size that R2P2 expects, otherwise the code will fail.
 
 ## Task 2: Train the robot controller
 
-Set up the EA parameter settings and run it until you find a satisfactory behaviour. Do not forget to obtain the weights of the best solution.
+Set up the evolutionary parameter settings and run it until you find a satisfactory behaviour. Do not forget to obtain the weights of the best solution.
 
 ## Task 3: Implement the controller
 
-Based on the weights obtained in the previous task, run the robot with the optimized weights. To this end use the scenario defined by the file ``scenario-inspyred-simple.json``, which uses the ``controller-inspyred-simple.json`` controller. Look for the field ``weights`` and fill a list with your weights, as the example contained in the example shows. Run the scenario and verify that the robot repeats the behaviour.
+Based on the weights obtained in the previous task, hard code your own controller (*eccontroller.py*). You may want to use code from the controller `r2p2/controllers/inspyred.py`.
+
+<!--
+Based on the weights obtained in the previous task, run the robot with the optimized weights. To this end use the scenario defined by the file ``scenario-inspyred-simple.json``, which uses the ``controller-inspyred-simple.json`` controller. Look for the field ``weights`` and fill a list with your weights, as the example contained in the example shows. Run the scenario and verify that the robot repeats the behaviour.-->
 
 Please take into account that the robot sensors contain a small amount of noise, and therefore the behaviours might not be exactly equal in different executions.
 
 ## Task 4 (optional): Improve the controller
 
-Based on the ``Inspyred_controller``, create a new controller with a more complex behaviour. For instance, you may set different coefficients given a certain threshold. Try to get better fitness than the original controller. You will new to develop a new controller (*GA_Extended_Controller.py*) and a new implementation of the evolutionary algorithm (*ga-inspired-extended.py*)
+Based on ``Inspyred_controller``, create a new controller with a different behaviour able to outperform the previous controller. For instance, you may set different coefficients for different distance ranges. You can modify the controller as much as you want, but do not modify the robot. Develop a new controller (*GA_Extended_Controller.py*) and a new implementation of the evolutionary algorithm (*ga-inspired-extended.py*)
 
