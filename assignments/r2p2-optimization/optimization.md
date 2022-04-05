@@ -63,6 +63,7 @@ Take the following fitness function that send to R2P2 a list of network weights:
 ```Python
 import os
 import inspyred
+import times
 
 history = open('../logs/history_'+str(int(time.time()))+'.log', 'a+')
 cur_best = 0
