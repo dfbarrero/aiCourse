@@ -25,8 +25,10 @@
 \usepackage{xcolor}
 \usepackage{xstring}
 \usepackage{listings}
+\usepackage{multicol}
 
 % Custom packages
+\usepackage{algpseudocode}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \def\layersep{2.5cm}
@@ -119,7 +121,10 @@
 \disableNavigation{white}
 \begin{frame}[shrink]{Table of Contents}
  \frametitle{Table of Contents}
- \tableofcontents
+
+    \begin{multicols}{2}
+    \tableofcontents
+    \end{multicols}
   % You might wish to add the option [pausesections]
 \end{frame}
 }
@@ -393,71 +398,71 @@
 \subsection{Activation functions}
 \begin{frame}{Artificial neurons}{Activation functions: Sigmoid function}
 	\begin{itemize}
+		\item Biological motivation
 		\item S-shaped, continuous and everywhere differentiable
 		\item Asymptotically approach saturation points
 		\item Derivative fast computation
         \item Range $\in [0, 1]$
 	\end{itemize}
-    \begin{columns}
+
+	\medskip
+
+	\begin{columns}[T]
  	   \column{.60\textwidth}
 
-    \begin{tikzpicture}[scale=0.5]
-      \begin{axis}[ 
-          xlabel=$x$,
-          ylabel={$g(x) = \frac{1}{1+e^{-x}}$}
-      ] 
-        \addplot[mark=none, red] {1/(1+e^(-x))}; 
-        %\addplot {x^2 - x +4}; 
-      \end{axis}
-    \end{tikzpicture}
+    		\begin{tikzpicture}[scale=0.5]
+      			\begin{axis}[ 
+          			xlabel=$x$,
+          			ylabel={$g(x) = \frac{1}{1+e^{-x}}$}
+      			] 
+        		\addplot[mark=none, red] {1/(1+e^(-x))}; 
+      			\end{axis}
+    		\end{tikzpicture}
                       
                       
-	%	\centering\includegraphics[width=\linewidth]{figs/sigmoid.png}
  	   \column{.40\textwidth}
-	%\begin{equation*}
-	%\lim_{net \to -\infty} f(net) = a, \lim_{net \to \infty} f(net) = b
-	%\end{equation*}
-	\begin{block}{Sigmoid function}
-	\begin{equation*}
-	g(x) = \frac{1}{1+e^{-x}}
-	\end{equation*}
-	\begin{equation*}
-	g'(x) = g(x) (1-g(x))
-	\end{equation*}
-	\end{block}
-	%\begin{equation*}
-	%f(net) = z + \frac{1}{1+\exp(-x \dot net + y)}
-	%\end{equation*}
-    \end{columns}
+		\vspace{-0.5cm}
+
+		\begin{block}{Sigmoid function}
+		\begin{equation*}
+		g(x) = \frac{1}{1+e^{-x}}
+		\end{equation*}
+		\begin{equation*}
+		g'(x) = g(x) (1-g(x))
+		\end{equation*}
+		\end{block}
+    	\end{columns}
 \end{frame}
 
 \begin{frame}{Artificial neurons}{Activation functions: Tanh function}
     \begin{itemize}
-	    \item Asymptotically approach saturation points
+	\item Asymptotically approach saturation points
         \item Range $\in [-1, 1]$
         \item Bigger derivative than sigmoid (faster training)
     \end{itemize}
 
-    \begin{columns}
- 	   \column{.50\textwidth}
+    \begin{columns}[T]
+ 	\column{.50\textwidth}
 
-    \begin{tikzpicture}[scale=0.5]
-      \begin{axis}[ 
-          xlabel=$x$,
-          ylabel={$g(x) = \tanh(x)$}
-      ] 
-        \addplot[mark=none,red] {2/(1+e^(-2*x))-1}; 
-        %\addplot {x^2 - x +4}; 
-      \end{axis}
-    \end{tikzpicture}
+     	    \begin{tikzpicture}[scale=0.5]
+      		\begin{axis}[ 
+          		xlabel=$x$,
+          		ylabel={$g(x) = \tanh(x)$}
+      		] 
+        	\addplot[mark=none,red] {2/(1+e^(-2*x))-1}; 
+        	%\addplot {x^2 - x +4}; 
+      		\end{axis}
+    		\end{tikzpicture}
                  
- 	   \column{.50\textwidth}
+ 	\column{.50\textwidth}
 	    \begin{block}{Tanh function}
+		\vspace{-0.5cm}
+
 	        \begin{equation*}
 	        g(x) = \tanh(x) = \frac{2}{1+e^{-2x}}-1
 	        \end{equation*}
 	        \begin{equation*}
-            g'(x) = 1 - g(x)^2
+           	g'(x) = 1 - g(x)^2
 	        \end{equation*}
 	    \end{block}
     \end{columns}
@@ -470,22 +475,87 @@
 		\item Asymptotically approach saturation points
 	\end{itemize}
 
-    \begin{columns}
+	\begin{columns}[T]
  	   \column{.60\textwidth}
 	    \begin{block}{Softmax function}
-	    \begin{equation*}
-	    g(\pmb z)_j = \frac{e^{z_j}}{\sum_{k=1}^{K}e^{z_k}} \text{ for } j=1, ...,K
-	    \end{equation*}
-	    with  \textbf{z} a K-dimensional vector
+	        \vspace{-0.25cm}
+
+	        \begin{equation*}
+	        g(\pmb z)_j = \frac{e^{z_j}}{\sum_{k=1}^{K}e^{z_k}} \text{ for } j=1, ...,K
+	        \end{equation*}
+	        with  \textbf{z} a K-dimensional vector
 	    \end{block}
     \end{columns}
 \end{frame}
 
 \begin{frame}{Artificial neurons}{Other activation functions}
-\begin{center}
-	\includegraphics[width=0.8\linewidth]{figs/funciones.png}\\
-	\scriptsize{(\href{http://www.turingfinance.com/misconceptions-about-neural-networks/}{Source})}
-\end{center}
+	\begin{columns}[T]
+ 	   \column{.30\textwidth}
+
+		\centering Linear function
+	    	\smallskip
+
+    		\begin{tikzpicture}[scale=0.4]
+      		\begin{axis}[ 
+          		xlabel=$x$,
+          		ylabel={$g(x) = x$}
+      		] 
+        		\addplot[mark=none,red] {x}; 
+      		\end{axis}
+    		\end{tikzpicture}
+
+	   	\begin{itemize}
+		   \item Used in regression
+	   	\end{itemize}
+ 
+ 	   \column{.30\textwidth}
+	   	\centering Rectified Linear (ReLU)
+	    	\medskip
+
+    		\begin{tikzpicture}[scale=0.4]
+      		\begin{axis}[ 
+          		xlabel=$x$,
+          		ylabel={$g(x)$}
+      		] 
+		\addplot[mark=none, red] coordinates {
+			(-6,0)
+			(0,0)
+			(6,6)
+		};
+      		\end{axis}
+    		\end{tikzpicture}
+
+
+	   	\begin{itemize}
+		   \item Faster derivate
+		   \item Popular in DL
+	   	\end{itemize}
+
+ 	   \column{.30\textwidth}
+	    \centering Leaky ReLU
+	    \medskip
+
+    		\begin{tikzpicture}[scale=0.4]
+      		\begin{axis}[ 
+          		xlabel=$x$,
+          		ylabel={$g(x)$}
+      		] 
+		\addplot[mark=none, red] coordinates {
+			(-6,-0.25)
+			(0,0)
+			(6,6)
+		};
+      		\end{axis}
+    		\end{tikzpicture}
+
+	   	\begin{itemize}
+		   \item More informative derivate
+		   \item Popular in DL
+	   	\end{itemize}
+    \end{columns}
+
+    \bigskip
+    The lack of non-linear activation function makes a network a simple linear regression
 \end{frame}
 
 \subsection{Learning limits}
@@ -505,117 +575,55 @@
 	Solution: Neuronal networks
 \end{frame}
 
-%\subsection{Biological and artificial neuron comparison}
-%\begin{frame}{Artificial neurons}{Biological and artificial neuron comparison}
-%    \begin{columns}
-% 	   \column{.50\textwidth}
-%		\begin{block}{Biological}
-%		Cell body
-% 	 		\begin{itemize}
-%			\item Signal from other neuron
-%			\item Firing frecuency
-%			\item Firing mechanism
-%			\end{itemize}
-%		Synapses
-% 	 		\begin{itemize}
-%			\item Synaptic strength
-%			\end{itemize}
-%		\end{block}
-
-% 	   \column{.50\textwidth}
-%		\begin{block}{Artificial}
-%		Nodes
- %	 	\begin{itemize}
-%		\item Input
-%		\item Output
-%		\item Node function
-%		\end{itemize}
-%		Connections
- %	 	\begin{itemize}
-%		\item Connections strength
-%		\end{itemize}
-%		\end{block}
-
-%	\end{columns}
-%\end{frame}
-
-
-%\begin{frame}{Artificial Neural Network}{Activation functions}
-%    \begin{columns}
-% 	   \column{.50\textwidth}
-%	\begin{itemize}
-%	\item Identity function: $f(net) \ll net$
-%	\item Constant function: $f(net) \ll c$
-%	\item Step function
-%	\begin{equation*}
-%	f(net) =
-%	  \begin{cases}
-%	      a  & \text{if } net < c\\
-%		  b  & \text{if } net > c\\
-%	  \end{cases}
-%	\end{equation*}
-%	\item Ramp function
-%	\begin{equation*}
-%	f(net) =
-%	  \begin{cases}
-%	      a  & \text{if } net \le c\\
-%		  b  & \text{if } net \ge d\\
-%		  a+\frac{(net-c)(b-a)}{(d-c)}  & \text{otherwhise}\\
-%	  \end{cases}
-%	\end{equation*}
-%	\end{itemize}
- %	   \column{.50\textwidth}
-%	\centering\includegraphics[width=0.9\linewidth]{figs/step.png}\\
-%	Step function\\
-%	\centering\includegraphics[width=0.9\linewidth]{figs/ramp.png}\\
-%	Ramp function
-%	\end{columns}
-%\end{frame}
-
 \section{Artificial Neural Networks}
 \subsection{Definition}
 
-\begin{frame}{Artificial Neural Networks}{Definition (I)}
-	\begin{itemize}
-	\item A very much simplified version of biological nerve systems
-	\item A set of nodes (neurons) 
-		\begin{itemize}
-		\item Each node has input and output
-		\item Each node performs a simple computation 
-		\end{itemize}
-	\item Weighted connections between nodes
-		\begin{itemize}
-		\item Connectivity gives the structure of the net
-		\item What can be computed by an ANN is primarily determined by the connections and their weights
-		\end{itemize}
-	\item It can \alert{recognize patterns}, \alert{learn} and \alert{generalize}
-	\end{itemize}
-\end{frame}
+%\begin{frame}{Artificial Neural Networks}{Definition (I)}
+
+%    \begin{columns}
+% 	   \column{.80\textwidth}
+%	\begin{itemize}
+%	\item A very much simplified version of biological nerve systems
+%	\item A set of nodes (neurons) 
+%		\begin{itemize}
+%		\item Each node has input and output
+%		\item Each node performs a simple computation 
+%		\end{itemize}
+%	\item Weighted connections between nodes
+%		\begin{itemize}
+%		\item Connectivity gives the structure of the net
+%		\item What can be computed by an ANN is primarily determined by the connections and their weights
+%		\end{itemize}
+%	\item It can \alert{recognize patterns}, \alert{learn} and \alert{generalize}
+%	\end{itemize}
+
+ %	   \column{.40\textwidth}
+%	\includegraphics[width=\linewidth]{figs/network2.png}
+%	\tiny{\href{https://tex.stackexchange.com/questions/540287/tikz-randomly-drop-connections-in-neural-network}{(Source)}}
+ %   \end{columns}
+%\end{frame}
 
 \begin{frame}{Artificial Neural Networks}{Definition (II)}
-ANN properties
+	ANN properties
 	\begin{itemize}
 	\item Noise tolerance
 	\item General function approximator
 	\end{itemize}
-Machine Learning tasks
+
+	Machine Learning tasks
 	\begin{itemize}
 	\item Supervised learning (classification and regression)
 	\item Unsupervised learning (known as \alert{self-organizing maps} in ANN terminology)
 	\end{itemize}
-Many topologies
+
+	Many topologies
 	\begin{itemize}
 		\item Acyclic, recurrent (cyclic), modular, etc
 		\item Feed Forward networks (MLPs)
 	\end{itemize}
-\centering \textit{Human readability less important than performance}
-\end{frame}
 
-%\begin{frame}{Artificial Neural Networks}{Definition (IV)}
-%\begin{center}
-%	\centering\includegraphics[width=0.8\linewidth]{figs/arquitecturas.png}
-%\end{center}
-%\end{frame}
+	\centering \textit{Human readability less important than performance}
+\end{frame}
 
 %\begin{frame}{Artificial Neural Networks}{What is a artificial neural network (III)}
 \begin{frame}[plain]{}{}
@@ -640,13 +648,17 @@ Many topologies
 \end{frame}
 
 \begin{frame}{Artificial Neural Networks}{Application examples (III)}
-	\centering\includegraphics[width=0.5\linewidth]{figs/world.png}
-	\centering\includegraphics[width=0.5\linewidth]{figs/worldann.png}\\
-	\scriptsize\href{https://en.wikibooks.org/wiki/Cyberbotics\%27\_Robot\_Curriculum/}{(Source)}
+    \begin{columns}
+ 	   \column{.5\textwidth}
+	\centering\includegraphics[width=\linewidth]{figs/world.png}
+ 	   \column{.5\textwidth}
+	\centering\includegraphics[width=\linewidth]{figs/worldann.png}
+    \end{columns}
+    \centering \scriptsize\href{https://en.wikibooks.org/wiki/Cyberbotics\%27\_Robot\_Curriculum/}{(Source)}
 \end{frame}
 
-\begin{frame}{Artificial Neural Networks}{Application examples (III)}
-	\centering\includegraphics[width=0.75\linewidth]{figs/autoencoder.png}\\
+\begin{frame}{Artificial Neural Networks}{Application examples (IV)}
+	\centering\includegraphics[width=0.75\linewidth]{figs/autoencoder.png}\\\smallskip
 	\centering\includegraphics[width=0.3\linewidth]{figs/autoencoder2.png}\\
 	\scriptsize\href{http://i-systems.github.io/HSE545/machine\%20learning\%20all/KIMM/06\_KIMM\_Autoencoder.html}{(Source)}
 \end{frame}
@@ -756,11 +768,17 @@ Many topologies
 	\end{itemize}
 \end{frame}
 
+\subsection{Demo}
+\begin{frame}{Feedforward Networks}{Demo}
+    \begin{center}
+	\href{http://playground.tensorflow.org/}{(Online demo)}
+    \end{center}
+\end{frame}
+
 \subsection{Separability}
 \begin{frame}{Feedforward Networks}{Separability}
     \begin{center}
-	    \includegraphics[width=0.9\linewidth]{figs/sep.png}\\
-		\href{http://playground.tensorflow.org/}{(Online demo)}
+	    \includegraphics[width=0.9\linewidth]{figs/sep.png}
     \end{center}
 \end{frame}
 
@@ -773,61 +791,17 @@ Many topologies
 \end{frame}
 
 
-
-%\section{Learning}
-%\begin{frame}{Example (AND)}
-%	\centering\includegraphics[width=0.4\linewidth]{figs/learning2.png}
-%\end{frame}
-
-%\begin{frame}{Learning weights}
-%	\centering\includegraphics[width=0.4\linewidth]{figs/learning3.png}
-%	\footnotesize{
-%		\centering \begin{tabular}{|cc|c|}\hline
-%		A & B & Out\\\hline
-%		0 & 0 & 0\\
-%		0 & 1 & 0\\
-%		1 & 0 & 0\\
-%		1 & 1 & 1\\\hline
-%		\end{tabular}
-%	}
-%What are the weight values? 
-%\end{frame}
-
-%\begin{frame}{Multilayer perceptron}
-%	\centering\includegraphics[width=0.9\linewidth]{figs/mperceptron.png}
-%\end{frame}
-
-%\begin{frame}{Gaussian function}
-%    \begin{columns}
-% 	   \column{.50\textwidth}
-%	\begin{itemize}
-%	\item Bell-shaped (radial basis)
-%	\item Continuous
-%	\item f(net) asymptotically approaches 0 (or some constant) when |net| is large
-%	\item Single maximum
-%	\end{itemize}
- %	   \column{.50\textwidth}
-	
-%	\centering\includegraphics[width=0.9\linewidth]{figs/gaussian.png}\\
-%	Gaussian function
-%	\end{columns}
-
-%	\begin{equation*}
-%	f(net) = \frac{1}{\sqrt{2\pi\sigma}} \exp  \left[ - \frac{1}{2} \left(\frac{net - \mu}{\sigma} \right)^2 \right]
-%	\end{equation*}
-%\end{frame}
-
 \section{Training algorithms}
 \subsection{Problem statement}
 
 \begin{frame}{Training algorithms}{Problem statement (I)}
-	ANN can perform different tasks
+    ANNs can perform different tasks
     \begin{itemize}
         \item Classification, regression, others
     \end{itemize}
     Classification (or supervised learning) uses a \textit{training set}
 
-    \begin{columns}
+	\begin{columns}[c]
  	   \column{.10\textwidth}
  	   \column{.50\textwidth}
             \input{figs/ann-optimization.tex}
@@ -847,135 +821,187 @@ Many topologies
     \end{columns}
     Toss function: Measure of the error
         \begin{itemize}
-		\item Usually mean squared error (mse): $E = \frac{1}{2} (y-o)^2 = f(w)$
-        \item Y and O are the desired and observed outputs
+        	\item Y and O are the desired and observed outputs
+		\item Usually mean squared error (MSE): $f(w) = E = \frac{1}{2} (y-o)^2$
         \end{itemize}
 \end{frame}
 
 \subsection{Gradient descent algorithm}
 \begin{frame}{Training algorithms}{Problem statement (II)}
-		\begin{equation*}
-		E = \frac{1}{2} Err^2 = \frac{1}{2} \left[y-g\left(\sum_{j=0}^n w_j x_j\right)\right]^2
-		\end{equation*}
-		where
-		\begin{flushleft}
-		\begin{itemize}
-		\item[$y$] Desired output
-		\item[$w_j$] Weight connection $j$
-		\item[$x_j$] Input $j$
-		\end{itemize}
-		\end{flushleft}
+		%\begin{equation*}
+		%E = \frac{1}{2} Err^2 = \frac{1}{2} \left[y-g\left(\sum_{j=0}^n w_j x_j\right)\right]^2
+		%\end{equation*}
+		%where
+		%\begin{flushleft}
+		%\begin{itemize}
+		%\item[$y$] Desired output
+		%\item[$w_j$] Weight connection $j$
+		%\item[$x_j$] Input $j$
+		%\end{itemize}
+		%\end{flushleft}
 
-		Problem: Determine $w$ that minimize $f(w)$
+		Problem: Determine $\vec{w}$ that minimize $f(\vec{w})$
 		\begin{itemize}
+			\item Remember, $\vec{w}$ is our network
 			\item This is a classical optimization problem
 			\item Any optimization algorithm can be used
 			\item ... in AI, optimization means search
 		\end{itemize}
+		We do know anatically $f(\vec{w})$ $\Rightarrow$ Optimization based on gradients
 \end{frame}
 
-\begin{frame}{Training algorithms}{Gradient Descent Algorithm (I)}
-	Given the error
-		\begin{equation*}
-		E = \frac{1}{2} Err^2
-		\end{equation*}
-	Take partial derivatives
-		\begin{equation*}
-		\begin{split}
-		\frac{\partial E}{\partial w_j} &= Err \frac{\partial Err}{\partial w_j}\\
-										&= Err \frac{\partial}{\partial w_j} g\left(y-\sum_{j=0}^n w_j x_j\right)\\
-										&= -Err \times g'(w) \times x_j
-		\end{split}
-		\end{equation*}
-\end{frame}
+\begin{frame}[fragile]{Training algorithms}{Gradient Descent (I)}
+	Calculate the gradient of the loss function with respect weights
+	\begin{itemize}
+		\item Adjust weights along gradient direction
+		\item Gradient provides the direction
+		\item $\alpha$ is the \alert{learning rate} ($|\alpha|<1$)
+	\end{itemize}
 
+	\begin{columns}[c]
+ 	   \column{.50\textwidth}
 
-\begin{frame}{Training algorithms}{Gradient Descent Algorithm (II)}
-	\small{
-	\begin{columns}
-	\column{0.50\textwidth}
-		Weight update
-		\begin{equation*}
-		w_{j}^{k+1} = w_{j}^k + \alpha \times Err \times g'(w) \times x_j
-		\end{equation*}
-		with
-		\begin{flushleft}
-		\begin{itemize}
-		\item[$\alpha$] Learning rate ($|\alpha|<1$)
-		\item[$err$] Difference desired and current output
-		\item[$g'$] Derivate of activation function
-		\item[$x_j$] Input $j$
-		\end{itemize}
-		\end{flushleft}
-		Each iteration is named \alert{epoch}
-	\column{0.50\textwidth}
-		\begin{block}{Learning algorithm (single neuron)}
-		\begin{enumerate}
-		\item Apply input signal and compute outout
-		\item If output $==$ desired output, do nothing
-		\item If output $<$ desired output, increase weights
-		\item If output $>$ desired output, decrease weights
-		\end{enumerate}
+		\begin{block}{Gradient descent}
+		\begin{algorithmic}[1]
+		\State $\vec{w} \gets random()$
+		\While{Not converged}
+			\ForAll {$w_i \in \vec{w} $}
+			\State $w_i \gets w_i - \alpha \frac{\partial}{\partial w_i} f(\vec{w})$
+			\EndFor
+		\EndWhile
+		\end{algorithmic}
+
 		\end{block}
+
+ 	   \column{.10\textwidth}
+ 	   \column{.40\textwidth}
+
+		\includegraphics[width=\linewidth]{figs/descent.png}\\
+
 	\end{columns}
-	}
 \end{frame}
 
-\begin{frame}{Training algorithms}{Gradient Descent Algorithm (III)}
-	\begin{columns}
-	\column{0.50\textwidth}
+
+%\begin{frame}{Training algorithms}{Gradient Descent (I)}
+%	Calculate the gradient of the loss function with respect weights
+%	\begin{itemize}
+%		\item Adjust weights along gradient direction
+%		\item Apply the chain rule
+%	\end{itemize}
+%	Given the error
+%		\begin{equation*}
+%		E = \frac{1}{2} Err^2
+%		\end{equation*}
+%	Take partial derivatives
+%		\begin{equation*}
+%		\begin{split}
+%		\frac{\partial E}{\partial w_j} &= Err \frac{\partial Err}{\partial w_j}\\
+%										&= Err \frac{\partial}{\partial w_j} g\left(y-\sum_{j=0}^n w_j x_j\right)\\
+%										&= -Err \times g'(w) \times x_j
+%		\end{split}
+%		\end{equation*}
+%\end{frame}
+
+
+
+%\begin{frame}{Training algorithms}{Gradient Descent (II)}
+%	\small{
+%	\begin{columns}
+%	\column{0.50\textwidth}
+%		Weight update
+%		\begin{equation*}
+%		w_{j}^{k+1} = w_{j}^k + \alpha \times Err \times g'(w) \times x_j
+%		\end{equation*}
+%		with
+%		\begin{flushleft}
+%		\begin{itemize}
+%		\item[$\alpha$] Learning rate ($|\alpha|<1$)
+%		\item[$err$] Difference desired and current output
+%		\item[$g'$] Derivate of activation function
+%		\item[$x_j$] Input $j$
+%		\end{itemize}
+%		\end{flushleft}
+%		Each iteration is named \alert{epoch}
+%	\column{0.50\textwidth}
+%		\begin{block}{Learning algorithm (single neuron)}
+%		\begin{enumerate}
+%		\item Apply input signal and compute outout
+%		\item If output $==$ desired output, do nothing
+%		\item If output $<$ desired output, increase weights
+%		\item If output $>$ desired output, decrease weights
+%		\end{enumerate}
+%		\end{block}
+%	\end{columns}
+%	}
+%\end{frame}
+
+\begin{frame}{Training algorithms}{Gradient Descent (II)}
+    \begin{columns}
+    \column{0.50\textwidth}
+	Each iteration is named \alert{epoch}
 	\begin{center}
 	\includegraphics[width=\linewidth]{figs/nn_learncurve.png}\\
 	\scriptsize \href{http://sujitpal.blogspot.com.es/2014/07/handwritten-digit-recognition-with.html}{(Source)}
 	\end{center}
-	\column{0.50\textwidth}
+
+    \column{0.50\textwidth}
 	\vspace{-0.5cm}
 	\begin{center}
-    Learning rate\\
+        Learning rate\\
 	\includegraphics[width=0.8\linewidth]{figs/nn_learning.png}\\
 	\includegraphics[width=0.8\linewidth]{figs/nn_learning2.png}\\
 	\scriptsize \href{http://www.turingfinance.com/misconceptions-about-neural-networks/}{(Source)}
 	\end{center}
-	\end{columns}
+     \end{columns}
 \end{frame}
 
-\subsection{Stochastic Gradient Descent Algorithm}
+\subsection{Stochastic Gradient Descent}
 \begin{frame}{Training algorithms}{Stochastic Gradient Descent (I)}
 	SDG approximates the gradient sampling the dataset
 		\begin{description}
-			\item[On-line] One sample
-			\item[Mini-batch] Several samples
-			\item[Batch] All the samples (Gradient Descent)
+		\item[On-line] One sample
+		\item[Mini-batch] Several samples
+		\item[Batch] All the samples (Gradient Descent)
 		\end{description}
-	Weights update rule: $w^{k+1} = w^k - \alpha \nabla g(in)$
-		\begin{itemize}
-			\item where $\alpha$ is the learning rate
-		\end{itemize}
-    SGD is slow and prone to local minima
-	\end{frame}
+	%Weights update rule: $w^{k+1} = w^k - \alpha \nabla g(in)$
+	%	\begin{itemize}
+	%		\item where $\alpha$ is the learning rate
+	%	\end{itemize}
+    	Computations are faster ...
+	\begin{itemize}
+		\item ... but gradient estimation looses accuracy
+	\end{itemize}
+
+	\centering
+	\includegraphics[width=0.4\linewidth]{figs/sdg.png}\\
+	\scriptsize \href{https://wikidocs.net/3413}{(Source)}
+\end{frame}
 
 \begin{frame}{Training algorithms}{Stochastic Gradient Descent (II)}
-	\centering
-	\includegraphics[width=0.5\linewidth]{figs/sdg.png}\\
-	\scriptsize \href{https://wikidocs.net/3413}{(Source)}
-
-	\begin{flushleft}
-	Usually, a \alert{momentum} is introduced: $w^{k+1} = w^k - \alpha z^{k+1}$, where $z^{k+1} = \beta z^k + \nabla g(in)$
-		\begin{itemize}
-			\item $\alpha$ is the learning rate
-			\item $\beta$ is the momentum strength
-            \item If $\beta = 0$ then gradient descent
-		\end{itemize}
-	\end{flushleft}
+    Usually, a \alert{momentum} is introduced as
+	\begin{equation*}
+	w^{k+1} = w^k - \alpha z^{k+1}
+        \end{equation*}
+with
+	\begin{equation*}
+	z^{k+1} = \beta z^k + \nabla g(in)
+        \end{equation*}
+    where ...
+    \begin{itemize}
+	\item $\alpha$ is the learning rate
+	\item $\beta$ is the momentum strength
+        \item If $\beta = 0$ then gradient descent
+    \end{itemize}
 
     \href{http://distill.pub/2017/momentum/}{(On-line demo)}
+
 \end{frame}
 
 \subsection{Other optimization algorithms}
-\begin{frame}{Training algorithms}{Other optimization algorithms}
+\begin{frame}{Training algorithms}{Other optimization algorithms (I)}
 	\begin{columns}
 	\column{0.50\textwidth}
-		Other optimization algorithms
+		Other second derivative-based optimization algorithms
 		\begin{itemize}
 			\item Newton's method
 			\item Quasi-Newton's method
@@ -991,54 +1017,70 @@ Many topologies
 	\end{columns}
 \end{frame}
 
-\subsection{Backpropagation algorithm}
-\begin{frame}{Training algorithms}{Backpropagation algorithm (I)}
-Efficient learning algorithm for multilayer perceptrons. Three steps
-\begin{enumerate}
-\item \textbf{Feed-forward step}. Feed input, compute output and error
-\item \textbf{Feed-backward step}. Compute individual contribution to error
-\item \textbf{Adjust weights}. Modify weights to minimize error: Input, output and hidden layers
-\end{enumerate}
+\begin{frame}{Training algorithms}{Other optimization algorithms (II)}
+	Learning reate / momentum  adaptative methods
+	\begin{itemize}
+		\item AdaGrad - Adaptative Gradient Algorithm
+		\item RMSProp - Root Mean Square Propagation
+		\item Adam - Adaptive Moment Estimation
+	\end{itemize}
 \end{frame}
 
-\begin{frame}{Training algorithms}{Backpropagation algorithm (II)}
-    \begin{columns}
- 	   \column{.50\textwidth}
-	\centering\includegraphics[width=\linewidth]{figs/russell.png}
+\subsection{Backpropagation}
 
- 	   \column{.50\textwidth}
-	Output layer: Same as single neuron
-	\begin{equation*}
-	W_j \leftarrow W_j + \alpha \times Err \times g'(in) \times x_j
-	\end{equation*}
-	Define modified error as $\Delta_i = Err_i \times g'(in_i) $, then
-	\begin{equation*}
-	W_{j,i} \leftarrow W_{j,i} + \alpha \times a_j \times \Delta_i
-	\end{equation*}
-	\end{columns}
-\end{frame}
+%\begin{frame}{Training algorithms}{Backpropagation algorithm (I)}
+%Efficient learning algorithm for multilayer perceptrons. Three steps
+%\begin{enumerate}
+%\item \textbf{Feed-forward step}. Feed input, compute output and error
+%\item \textbf{Feed-backward step}. Compute individual contribution to error
+%\item \textbf{Adjust weights}. Modify weights to minimize error: Input, output and hidden layers
+%\end{enumerate}
+%\end{frame}
 
-\begin{frame}{Training algorithms}{Backpropagation algorithm (III)}
-Hidden layer: Propagate error
-\begin{equation*}
-W_{k,j} \leftarrow W_{k,j} + \alpha \times a_k \times \Delta_j
-\end{equation*}
-where
-\begin{equation*}
-\Delta_j = g'(in) \times \sum_j W_{j,i}\Delta_i
-\end{equation*}
+%\begin{frame}{Training algorithms}{Backpropagation algorithm (II)}
+%    \begin{columns}
+% 	   \column{.50\textwidth}
+%	\centering\includegraphics[width=\linewidth]{figs/russell.png}
+%
+% 	   \column{.50\textwidth}
+%	Output layer: Same as single neuron
+%	\begin{equation*}
+%	W_j \leftarrow W_j + \alpha \times Err \times g'(in) \times x_j
+%	\end{equation*}
+%	Define modified error as $\Delta_i = Err_i \times g'(in_i) $, then
+%	\begin{equation*}
+%	W_{j,i} \leftarrow W_{j,i} + \alpha \times a_j \times \Delta_i
+%	\end{equation*}
+%	\end{columns}
+%\end{frame}
 
-\begin{block}{Backpropagation algorithm}
-\begin{enumerate}
-\item Compute output
-\item Compute output error $\Delta$
-\item For each layer, repeat the following steps
-\begin{enumerate}
-	\item Propagate $Delta$ backwards
-	\item Update weights between two layers
-\end{enumerate}
-\end{enumerate}
-\end{block}
+\begin{frame}{Training algorithms}{Backpropagation}
+%Hidden layer: Propagate error
+%\begin{equation*}
+%W_{k,j} \leftarrow W_{k,j} + \alpha \times a_k \times \Delta_j
+%\end{equation*}
+%where
+%\begin{equation*}
+%\Delta_j = g'(in) \times \sum_j W_{j,i}\Delta_i
+%\end{equation*}
+
+        Backpropagation is an efficient algorithm to compute gradients
+        \begin{itemize}
+                \item It applyes the chain rule to propagate errors
+		\item Implicit in optimization algorithms
+        \end{itemize}
+
+	\begin{block}{Backpropagation algorithm}
+	\begin{enumerate}
+	\item Compute output
+	\item Compute error
+	\item For each layer, repeat the following steps
+	\begin{enumerate}
+		\item Propagate errors backwards
+		\item Update weights between two layers
+	\end{enumerate}
+	\end{enumerate}
+	\end{block}
 \end{frame}
 
 %\subsection{Backpropagation algorithm formalization}
