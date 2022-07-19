@@ -16,8 +16,6 @@
 
 * [Evolutionary Algorithms](ea/)
 
-* [Neuroevolution](neuroevolution/)
-
 ## Planning & Scheduling
 
 * [Planning representation](planningrepresentation/planningrepresentation.pdf)
@@ -41,8 +39,6 @@
 ## Misc
 
 * [Artificial Intelligence in Videogames](aivideogames/)
-
-* [Artificial Neural Networks](ann/)
 
 * [Artificial Neural Networks with PyBrain](pybrain/)
 
