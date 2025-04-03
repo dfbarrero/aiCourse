@@ -56,7 +56,7 @@
 %% Opacidad de los logotipos
 \newcommand{\opacidad}{1}
 %% Descomentar para habilitar logotipo en pié de página de portada
-\renewcommand{\logoUno}{Images/isg.png}
+%\renewcommand{\logoUno}{Images/isg.png}
 %% Descomentar para habilitar logotipo en pié de página de portada
 %\renewcommand{\logoDos}{Images/CCLogo.png}
 %% Descomentar para habilitar logotipo en pié de página de portada
@@ -117,7 +117,7 @@
 
 \section{Introduction}
 
-\begin{frame}{Introduction}
+\begin{frame}{Introduction (I)}
     \begin{columns}
 	\vspace{-0.5cm}
  	   \column{.90\textwidth}
@@ -127,33 +127,67 @@
 		\raggedleft{ \textit{I. Millington, ``AI for games''}}
 		\end{block}
 	\end{columns}
+
 		\vspace{0.25cm}
-	AI is a key component in any videogame: \alert{Emotional stimulus}
-	\begin{itemize}
-		\item AI provides a challenge
-		\item Hard enough to be a challenge ...
-		\item ... easy enough to avoid frustration
-  	\end{itemize}
-	AI in videogames aims to give fun
-	\begin{itemize}
-		\item Classical AI seeks optimal solutions
-		\item AI in videogames optimizes fun: Realistic behavior
-  	\end{itemize}
+
+    \begin{table}
+    \centering
+    \begin{tabular}{l|l}
+    \textsc{Human skill} & \textsc{AI field} \\\hline
+    Motion control & Robotics \\
+    Image reconition & Computer vision \\
+    Speech understanding & Natural Language Processing \\
+    Reasoning & Automatic reasoning \\
+    Plan & Planning \& Scheduling \\
+    Learn & Machine Learning \\
+    Drive vehicles & Control \\
+    Play chess & Search \\
+    \end{tabular}
+    \end{table}
 \end{frame}
+
+\begin{frame}{Introduction (II)}
+
+    \begin{columns}
+	\vspace{-0.5cm}
+ 	   \column{.70\textwidth}
+	    AI is a key component: \alert{Emotional stimulus}
+	        \begin{itemize}
+	    	\item AI provides a challenge
+	    	\item Hard enough to be a challenge ...
+	    	\item ... easy enough to avoid frustration
+    	    \end{itemize}
+    	AI in videogames aims to give fun
+	        \begin{itemize}
+		    \item Classical AI seeks optimal solutions
+		    \item AI in videogames optimizes fun: Realistic behavior
+  	        \end{itemize}
+
+ 	   \column{.30\textwidth}
+		    \includegraphics[width=\linewidth]{figs/fifa.png}\\
+            \bigskip
+		    \includegraphics[width=\linewidth]{figs/thesims.jpg}
+    \end{columns}
+\end{frame}
+
 
 \section{Basic concepts}
 \subsection{Turing test}
 \begin{frame}{Basic concepts}{Turing test}
 	   Turing test: Is a person able to distinguish between another person and an AI?\\
+       \smallskip
 		\centering{\includegraphics[width=0.35\linewidth]{figs/turing-test}\hspace{0.5cm}
 		\includegraphics[width=0.2\linewidth]{figs/turingtestjoke}}\\
-		\raggedright Turing test in videogames: Does an AI play like a human?
+       \smallskip
+		\raggedright Turing test in videogames
  	 	\begin{itemize}
-		\item Chess games, shooters, etc
+        \item Does an AI play like a human? Chess games, shooters, etc
+        \item Does an AI design levels like a human?
+        \item Does an AI design art like an human?
 		\end{itemize}
 		Better AI with more computational resources
  	 	\begin{itemize}
-		\item Computational resources are limited
+		\item Computational resources are limited!
 		\end{itemize}
 \end{frame}
 
@@ -166,12 +200,15 @@
 	\end{itemize}
 	Many na\"ive (yet very useful) techniques
 	\begin{itemize}
-		\item Modify NPC state: More life, stamina or speed
 		\item Damage vs. impact point
+		\item Modify NPC state: More life, stamina or speed
 	\end{itemize}
+
+    \bigskip
+
 	\begin{center}
 		\includegraphics[width=0.2\linewidth]{figs/diana}
-		\vspace{1cm}
+		\vspace{2cm}
 		\includegraphics[width=0.15\linewidth]{figs/halo}
 	\end{center}
 \end{frame}
@@ -181,11 +218,12 @@
 	Complex behaviors are better?
   	\begin{itemize}
 		\item Good AI matches the right behavior to the right algorithm
+        \item KISS: Keep It Simple, Stupid!
 	\end{itemize}
-	Study case: Pac-Mac
+	Study case: Ghost behaviour in Pac-Mac
 	\begin{itemize}
 		\item Ghosts with two states: normal and frightened (FSM)
-		\item In normal state ghosts moves in a straight line
+		\item In normal state ghosts move in a straight line
 		\item When finds a junction semi-randomly chooses a route
 		\begin{itemize}
 			\item Blinky (red): Follows Pac-Man (no path-planning)
@@ -290,6 +328,8 @@
 \section{Basic AI techniques in videogames}
 \subsection{Overview}
 \begin{frame}{Basic AI techniques in videogames}{Overview}
+    \begin{columns}
+	  	   \column{.40\textwidth}
 	Basic techniques
  	\begin{itemize}
  		\item Heuristics (implemented as \textit{scripts} in videogames)
@@ -305,6 +345,11 @@
 		\item Artificial Neural Networks
 		\item Genetic Algorithms
  	\end{itemize}
+	  	   \column{.60\textwidth}
+        \includegraphics[width=0.9\linewidth]{figs/unity-overview.png}\\
+		\centering \tiny{\href{https://code.visualstudio.com/docs/other/unity}{(Source)}}
+    \end{columns}
+        %\includegraphics[width=0.9\linewidth]{figs/unity-overview.png}\\
 \end{frame}
 
 \subsection{Behavior trees}
@@ -409,7 +454,7 @@
  	   \column{.50\textwidth}
 	   \vspace{-0.8cm}
 		\begin{block}{Fuzzy logic}
-		Fuzzy logic, in opposition to digital logic, considers different levels of truee values
+		Fuzzy logic, in opposition to digital logic, considers different levels of true values
 		\end{block}
  	   \column{.50\textwidth}
 		Properties
@@ -425,23 +470,21 @@
 
 \begin{frame}{Advanced AI techniques in videogames}{Fuzzy logic (II)}
 	\centering Application examples
-		\begin{block}{Fun control}
-		\texttt{
-IF temperature IS very cold THEN stop fan\\
+		\begin{exampleblock}{Fun control}
+		\texttt{IF temperature IS very cold THEN stop fan\\
 IF temperature IS cold THEN turn down fan\\
 IF temperature IS normal THEN maintain level\\
 IF temperature IS hot THEN speed up fan\\
 }
 		%	\end{verbatim}
-		\end{block}
-		\begin{block}{Game control}
+		\end{exampleblock}
+		\begin{exampleblock}{Game control}
 %			\begin{verbatim}
-\texttt{
-IF distance IS [very small, small] AND \\
+\texttt{IF distance IS [very small, small] AND \\
 	enemy\_strengh IS [low, regular] THEN attack		
 	}
 %			\end{verbatim}
-		\end{block}
+		\end{exampleblock}
 \end{frame}
 
 
@@ -562,35 +605,47 @@ IF distance IS [very small, small] AND \\
 \end{frame}
 
 \subsection{Genetic Algorithms}
-\begin{frame}{Advanced AI techniques in videogames}{Genetic Algorithms (I)} 
-	Large number of Evolutionary Algorithms
+\begin{frame}{Advanced AI techniques in videogames}{Genetic Algorithms} 
+	Genetic Algorithms are used in \textit{optimization} problems
 	\begin{itemize}
-		\item There is no ``canonical'' algorithm
+		\item Usually in black-box problems
 		\item They all imitate biological evolution
 		\item Stochastic search (interesting for videogames)
 	\end{itemize}
+
 	They use a population
 	\begin{itemize}
 		\item Each individual represents a (potential) solution
-	\end{itemize}
-	Population is modified
-	\begin{itemize}
-		\item Mutation and crossover
+        \item Population is modified: Mutation and crossover
 	\end{itemize}
 	Selection that imitates natural selection
 	\begin{itemize}
 		\item Based on a \textbf{fitness} function
 	\end{itemize}
-	Iterative process
+	Iterative process - generations\\
+
+    %\hspace{5cm}\begin{tikzpicture}
+    %% Definición de nodos
+    %\node (entrada) at (0,0) {\textbf{x}};
+    %\node[draw, rectangle, minimum width=1cm, minimum height=1cm, right=0.5cm of entrada] (sistema) {\textbf{f(x)}};
+    %\node[right=0.5cm of sistema] (salida) {\textbf{y}};
+
+    % Flechas
+    %\draw[->, thick] (entrada.east) -- (sistema.west);
+    %\draw[->, thick] (sistema.east) -- (salida.west);
+    %\end{tikzpicture}
+    \smallskip
+	\href{http://rednuht.org/genetic_cars_2/}{(Demo)}
+
 \end{frame}
 
-\begin{frame}{Advanced AI techniques in videogames}{Genetic Algorithms (II)} 
-	\begin{center}
-		Possible basic algorithm
-		\includegraphics[width=0.75\linewidth]{figs/evolution.png}
-	\end{center}
-	\href{http://rednuht.org/genetic_cars_2/}{(Demo)}
-\end{frame}
+%\begin{frame}{Advanced AI techniques in videogames}{Genetic Algorithms (II)} 
+%	\begin{center}
+%		Possible basic algorithm
+%		\includegraphics[width=0.75\linewidth]{figs/evolution.png}
+%	\end{center}
+%	\href{http://rednuht.org/genetic_cars_2/}{(Demo)}
+%\end{frame}
 
 
 
